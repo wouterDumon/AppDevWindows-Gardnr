@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gardenr.Mesages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -40,6 +41,14 @@ namespace Gardenr
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
+        private void NavigateToPage(GoToPageMessage message)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            /*if (message.PageNumber == 1)
+            {
+                rootFrame.Navigate(typeof(Page2));
+            }*/
+        }
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
