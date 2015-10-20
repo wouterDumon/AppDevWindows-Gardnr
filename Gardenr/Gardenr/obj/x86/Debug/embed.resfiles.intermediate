@@ -2,6 +2,7 @@ App.xbf
 MainPage.xbf
 UserClass\Home_Newsfeed.xbf
 UserClass\Home_Notificatie.xbf
+UserClass\Menu.xbf
 Views\Catalogus.xbf
 Views\Contact.xbf
 Views\Home.xbf

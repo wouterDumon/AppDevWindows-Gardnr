@@ -16,5 +16,22 @@ namespace Gardenr.Models
         public DateTime ZaaiEind { get; set;}
         public DateTime OogstBegin { get; set; }
         public DateTime Oogstbegin { get; set; }
+
+        public List<Plant> GetPlanten()
+        {
+            List<Plant> temp = new List<Plant>();
+
+            return temp;
+        }
+        public Plant GetPlantByID(int id)
+        {
+            Plant temp = new Plant();
+
+            return temp;
+        }
+
     }
+
+    
+
 }
