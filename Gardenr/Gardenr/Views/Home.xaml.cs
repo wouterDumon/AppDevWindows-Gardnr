@@ -26,5 +26,7 @@ namespace Gardenr.Views
         {
             this.InitializeComponent();
         }
+
+      
     }
 }
