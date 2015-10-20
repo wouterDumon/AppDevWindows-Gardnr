@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?><XamlCompilerSaveState><ReferenceAssemblyList /><XamlSourceFileDataList><XamlSourceFileData XamlFileName="App.xaml" ClassFullName="Gardenr.App" XamlFileTimeAtLastCompileInTicks="635809518428399952" HasBoundEventAssignments="False" /><XamlSourceFileData XamlFileName="MainPage.xaml" ClassFullName="Gardenr.MainPage" XamlFileTimeAtLastCompileInTicks="635809518428468382" HasBoundEventAssignments="False" /></XamlSourceFileDataList></XamlCompilerSaveState>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?><XamlCompilerSaveState><ReferenceAssemblyList /><XamlSourceFileDataList><XamlSourceFileData XamlFileName="App.xaml" ClassFullName="Gardenr.App" XamlFileTimeAtLastCompileInTicks="635809525300447109" HasBoundEventAssignments="False" /><XamlSourceFileData XamlFileName="MainPage.xaml" ClassFullName="Gardenr.MainPage" XamlFileTimeAtLastCompileInTicks="635809525300522149" HasBoundEventAssignments="False" /></XamlSourceFileDataList></XamlCompilerSaveState>
+>>>>>>> origin/master
