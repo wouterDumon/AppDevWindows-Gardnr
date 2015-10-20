@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Gardenr.Views.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gardenr.Views"
+    xmlns:uc ="using:Gardenr.UserClass"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="41"/>
+            <RowDefinition Height="237*"/>
+            <RowDefinition Height="41"/>
+            <RowDefinition Height="158*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:ConnectionId='1' Text="MENU" Grid.Row="0" x:Name="tx" ></TextBlock>
+        <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
+        <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
+        <uc:Home_Notificatie x:ConnectionId='2' x:Name="notificatie" Grid.Row="3" Width="Auto" Height="Auto" Margin="110,0,110,2" ></uc:Home_Notificatie>
+        <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
+          
+        </TextBlock>
+        <uc:Home_Newsfeed x:ConnectionId='3' Grid.Row="5" x:Name="News"></uc:Home_Newsfeed>
+    </Grid>
+</Page>
+

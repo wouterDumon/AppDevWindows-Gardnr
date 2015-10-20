@@ -111,6 +111,9 @@
     <Compile Include="UserClass\Home_Notificatie.xaml.cs">
       <DependentUpon>Home_Notificatie.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserClass\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\MainPageVM.cs" />
     <Compile Include="Views\Catalogus.xaml.cs">
       <DependentUpon>Catalogus.xaml</DependentUpon>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserClass\Home_Notificatie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserClass\Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -40,6 +40,8 @@
     </RootType>
     <RootType FullName="Gardenr.UserClass.Home_Notificatie">
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Gardenr.Views.Catalogus" />
     <RootType FullName="Gardenr.Views.Contact" />
