@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Gardenr.Views.Catalogus"
+    x:Class="Gardenr.Views.CatalogusPlant"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Gardenr.Views"
@@ -11,4 +11,3 @@
 
     </Grid>
 </Page>
-
