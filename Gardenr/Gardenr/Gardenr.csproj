@@ -154,6 +154,9 @@
     <Compile Include="Views\Profiel_Huidig.xaml.cs">
       <DependentUpon>Profiel_Huidig.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Profiel_PlantInfo.xaml.cs">
+      <DependentUpon>Profiel_PlantInfo.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -231,6 +234,10 @@
     <Page Include="Views\Profiel_Huidig.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Profiel_PlantInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
