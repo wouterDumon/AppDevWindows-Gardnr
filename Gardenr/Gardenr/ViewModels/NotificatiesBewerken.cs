@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gardenr.ViewModels    
+namespace Gardenr.ViewModels
 {
-    class InstellingenVM
+    class NotificatiesBewerken
     {
     }
 }
