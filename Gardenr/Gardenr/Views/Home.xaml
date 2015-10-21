@@ -20,10 +20,23 @@
         <TextBlock Text="MENU" Grid.Row="0" x:Name="tx" ></TextBlock>
         <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
         <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
-        <uc:Home_Notificatie x:Name="notificatie" Grid.Row="3" Width="Auto" Height="Auto" Margin="110,0,110,2" ></uc:Home_Notificatie>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <uc:Home_Notificatie></uc:Home_Notificatie>
+            <uc:Home_Notificatie></uc:Home_Notificatie>
+            <uc:Home_Notificatie></uc:Home_Notificatie>
+            <uc:Home_Notificatie></uc:Home_Notificatie>
+        </StackPanel>
+       
         <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
           
         </TextBlock>
-        <uc:Home_Newsfeed Grid.Row="5" x:Name="News"></uc:Home_Newsfeed>
+        <StackPanel  Grid.Row="5" Orientation="Horizontal">
+            <uc:Home_Newsfeed></uc:Home_Newsfeed>
+            <uc:Home_Newsfeed></uc:Home_Newsfeed>
+            <uc:Home_Newsfeed></uc:Home_Newsfeed>
+            <uc:Home_Newsfeed></uc:Home_Newsfeed>
+
+        </StackPanel>
+      
     </Grid>
 </Page>

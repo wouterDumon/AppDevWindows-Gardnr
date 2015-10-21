@@ -119,6 +119,15 @@
     <Compile Include="UserClass\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserClass\Profiel_Favorieten.xaml.cs">
+      <DependentUpon>Profiel_Favorieten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserClass\Profiel_Historiek.xaml.cs">
+      <DependentUpon>Profiel_Historiek.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserClass\Profiel_Huidig.xaml.cs">
+      <DependentUpon>Profiel_Huidig.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\CatalogusPlantVM.cs" />
     <Compile Include="ViewModels\CatalogusVM.cs" />
     <Compile Include="ViewModels\ContactVMµ.cs" />
@@ -136,8 +145,14 @@
     <Compile Include="Views\Instellingen.xaml.cs">
       <DependentUpon>Instellingen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Profiel.xaml.cs">
-      <DependentUpon>Profiel.xaml</DependentUpon>
+    <Compile Include="Views\Profiel_Favorieten.xaml.cs">
+      <DependentUpon>Profiel_Favorieten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Profiel_Historiek.xaml.cs">
+      <DependentUpon>Profiel_Historiek.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Profiel_Huidig.xaml.cs">
+      <DependentUpon>Profiel_Huidig.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +192,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserClass\Profiel_Favorieten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserClass\Profiel_Historiek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserClass\Profiel_Huidig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Catalogus.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -193,7 +220,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Profiel.xaml">
+    <Page Include="Views\Profiel_Favorieten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Profiel_Historiek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Profiel_Huidig.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
