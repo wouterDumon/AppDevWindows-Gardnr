@@ -15,5 +15,6 @@ namespace Gardenr.Models
         public int TuinId { get; set; }
         public string Facebook { get; set; }
         public string Gmail { get; set; }
+        public bool Active { get; set; }
     }
 }

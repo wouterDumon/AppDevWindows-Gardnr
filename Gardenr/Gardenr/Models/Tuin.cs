@@ -14,15 +14,7 @@ namespace Gardenr.Models
        public List<Notificaties> Notificatie { get; set; }
        public int GebruikerID { get; set; }
 
-        public Tuin GetTuinById(int id)
-        {
-            Tuin Temptuin = new Tuin();
-            string sql = "selecteer keer nen tuin me die id";
-
-
-
-            return Temptuin;
-        }
+       
 
     }
 }
