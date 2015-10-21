@@ -100,6 +100,12 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BaseViewModelLocator.cs" />
+    <Compile Include="DataAcces\CatalogusDA.cs" />
+    <Compile Include="DataAcces\Database.cs" />
+    <Compile Include="DataAcces\GebruikersDA.cs" />
+    <Compile Include="DataAcces\InstellingenDA.cs" />
+    <Compile Include="DataAcces\NotificatiesDA.cs" />
+    <Compile Include="DataAcces\PlantenDA.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -267,7 +273,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataAcces\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
