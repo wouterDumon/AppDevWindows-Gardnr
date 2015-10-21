@@ -132,7 +132,9 @@
     <Compile Include="ViewModels\CatalogusVM.cs" />
     <Compile Include="ViewModels\ContactVMµ.cs" />
     <Compile Include="ViewModels\HomeVM.cs" />
+    <Compile Include="ViewModels\InstellingenVM.cs" />
     <Compile Include="ViewModels\MainPageVM.cs" />
+    <Compile Include="ViewModels\ProfielVM.cs" />
     <Compile Include="Views\Catalogus.xaml.cs">
       <DependentUpon>Catalogus.xaml</DependentUpon>
     </Compile>
