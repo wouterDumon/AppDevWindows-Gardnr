@@ -132,7 +132,7 @@ namespace Gardenr.Gardenr_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[16];
+            _typeNameTable = new string[21];
             _typeNameTable[0] = "Gardenr.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -143,14 +143,19 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             _typeNameTable[7] = "Gardenr.UserClass.Profiel_Historiek";
             _typeNameTable[8] = "Gardenr.UserClass.Profiel_Huidig";
             _typeNameTable[9] = "Gardenr.Views.Catalogus";
-            _typeNameTable[10] = "Gardenr.Views.Contact";
-            _typeNameTable[11] = "Gardenr.Views.Home";
-            _typeNameTable[12] = "Gardenr.Views.Instellingen";
-            _typeNameTable[13] = "Gardenr.Views.Profiel_Favorieten";
-            _typeNameTable[14] = "Gardenr.Views.Profiel_Historiek";
-            _typeNameTable[15] = "Gardenr.Views.Profiel";
+            _typeNameTable[10] = "Gardenr.Views.CatalogusPlant";
+            _typeNameTable[11] = "Gardenr.Views.Contact";
+            _typeNameTable[12] = "Gardenr.Views.Home";
+            _typeNameTable[13] = "Gardenr.Views.Instellingen";
+            _typeNameTable[14] = "Gardenr.Views.Notificaties";
+            _typeNameTable[15] = "Gardenr.Views.NotificatiesBewerken";
+            _typeNameTable[16] = "Gardenr.Views.PlantBewerken";
+            _typeNameTable[17] = "Gardenr.Views.Profiel_Favorieten";
+            _typeNameTable[18] = "Gardenr.Views.Profiel_Historiek";
+            _typeNameTable[19] = "Gardenr.Views.Profiel";
+            _typeNameTable[20] = "Gardenr.Views.Profiel_PlantInfo";
 
-            _typeTable = new global::System.Type[16];
+            _typeTable = new global::System.Type[21];
             _typeTable[0] = typeof(global::Gardenr.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -161,12 +166,17 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             _typeTable[7] = typeof(global::Gardenr.UserClass.Profiel_Historiek);
             _typeTable[8] = typeof(global::Gardenr.UserClass.Profiel_Huidig);
             _typeTable[9] = typeof(global::Gardenr.Views.Catalogus);
-            _typeTable[10] = typeof(global::Gardenr.Views.Contact);
-            _typeTable[11] = typeof(global::Gardenr.Views.Home);
-            _typeTable[12] = typeof(global::Gardenr.Views.Instellingen);
-            _typeTable[13] = typeof(global::Gardenr.Views.Profiel_Favorieten);
-            _typeTable[14] = typeof(global::Gardenr.Views.Profiel_Historiek);
-            _typeTable[15] = typeof(global::Gardenr.Views.Profiel);
+            _typeTable[10] = typeof(global::Gardenr.Views.CatalogusPlant);
+            _typeTable[11] = typeof(global::Gardenr.Views.Contact);
+            _typeTable[12] = typeof(global::Gardenr.Views.Home);
+            _typeTable[13] = typeof(global::Gardenr.Views.Instellingen);
+            _typeTable[14] = typeof(global::Gardenr.Views.Notificaties);
+            _typeTable[15] = typeof(global::Gardenr.Views.NotificatiesBewerken);
+            _typeTable[16] = typeof(global::Gardenr.Views.PlantBewerken);
+            _typeTable[17] = typeof(global::Gardenr.Views.Profiel_Favorieten);
+            _typeTable[18] = typeof(global::Gardenr.Views.Profiel_Historiek);
+            _typeTable[19] = typeof(global::Gardenr.Views.Profiel);
+            _typeTable[20] = typeof(global::Gardenr.Views.Profiel_PlantInfo);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -209,12 +219,17 @@ namespace Gardenr.Gardenr_XamlTypeInfo
         private object Activate_7_Profiel_Historiek() { return new global::Gardenr.UserClass.Profiel_Historiek(); }
         private object Activate_8_Profiel_Huidig() { return new global::Gardenr.UserClass.Profiel_Huidig(); }
         private object Activate_9_Catalogus() { return new global::Gardenr.Views.Catalogus(); }
-        private object Activate_10_Contact() { return new global::Gardenr.Views.Contact(); }
-        private object Activate_11_Home() { return new global::Gardenr.Views.Home(); }
-        private object Activate_12_Instellingen() { return new global::Gardenr.Views.Instellingen(); }
-        private object Activate_13_Profiel_Favorieten() { return new global::Gardenr.Views.Profiel_Favorieten(); }
-        private object Activate_14_Profiel_Historiek() { return new global::Gardenr.Views.Profiel_Historiek(); }
-        private object Activate_15_Profiel() { return new global::Gardenr.Views.Profiel(); }
+        private object Activate_10_CatalogusPlant() { return new global::Gardenr.Views.CatalogusPlant(); }
+        private object Activate_11_Contact() { return new global::Gardenr.Views.Contact(); }
+        private object Activate_12_Home() { return new global::Gardenr.Views.Home(); }
+        private object Activate_13_Instellingen() { return new global::Gardenr.Views.Instellingen(); }
+        private object Activate_14_Notificaties() { return new global::Gardenr.Views.Notificaties(); }
+        private object Activate_15_NotificatiesBewerken() { return new global::Gardenr.Views.NotificatiesBewerken(); }
+        private object Activate_16_PlantBewerken() { return new global::Gardenr.Views.PlantBewerken(); }
+        private object Activate_17_Profiel_Favorieten() { return new global::Gardenr.Views.Profiel_Favorieten(); }
+        private object Activate_18_Profiel_Historiek() { return new global::Gardenr.Views.Profiel_Historiek(); }
+        private object Activate_19_Profiel() { return new global::Gardenr.Views.Profiel(); }
+        private object Activate_20_Profiel_PlantInfo() { return new global::Gardenr.Views.Profiel_PlantInfo(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -290,44 +305,79 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  Gardenr.Views.Contact
+            case 10:   //  Gardenr.Views.CatalogusPlant
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_Contact;
+                userType.Activator = Activate_10_CatalogusPlant;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  Gardenr.Views.Home
+            case 11:   //  Gardenr.Views.Contact
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_Home;
+                userType.Activator = Activate_11_Contact;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  Gardenr.Views.Instellingen
+            case 12:   //  Gardenr.Views.Home
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_Instellingen;
+                userType.Activator = Activate_12_Home;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Gardenr.Views.Profiel_Favorieten
+            case 13:   //  Gardenr.Views.Instellingen
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_Profiel_Favorieten;
+                userType.Activator = Activate_13_Instellingen;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  Gardenr.Views.Profiel_Historiek
+            case 14:   //  Gardenr.Views.Notificaties
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_Profiel_Historiek;
+                userType.Activator = Activate_14_Notificaties;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Gardenr.Views.Profiel
+            case 15:   //  Gardenr.Views.NotificatiesBewerken
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_Profiel;
+                userType.Activator = Activate_15_NotificatiesBewerken;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 16:   //  Gardenr.Views.PlantBewerken
+                userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_PlantBewerken;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  Gardenr.Views.Profiel_Favorieten
+                userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_17_Profiel_Favorieten;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 18:   //  Gardenr.Views.Profiel_Historiek
+                userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_18_Profiel_Historiek;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 19:   //  Gardenr.Views.Profiel
+                userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_19_Profiel;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 20:   //  Gardenr.Views.Profiel_PlantInfo
+                userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_20_Profiel_PlantInfo;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

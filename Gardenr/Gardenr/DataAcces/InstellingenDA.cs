@@ -15,12 +15,12 @@ namespace Gardenr.DataAcces
         public Instellingen GetInstellingenById(int id)
         {
             Instellingen GebruikerInstellingen = new Instellingen();
-            string sql = "SELECT * FROM Instellingen";
+           /* string sql = "SELECT * FROM Instellingen";
             DbDataReader reader = Database.GetData(CONNECTIONSTRING, sql);
             while(reader.Read())
             {
 
-            }
+            }*/
             return GebruikerInstellingen;
         }
         public void UpdateInstellingen(Instellingen settings)

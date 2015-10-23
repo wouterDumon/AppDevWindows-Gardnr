@@ -54,11 +54,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontWeight" />
     </RootType>
-    <RootType FullName="Gardenr.UserClass.Home_Notificatie">
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
-    </RootType>
+    <RootType FullName="Gardenr.UserClass.Home_Notificatie" />
     <RootType FullName="Gardenr.UserClass.Menu" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -67,14 +63,20 @@
     <RootType FullName="Gardenr.UserClass.Profiel_Historiek" />
     <RootType FullName="Gardenr.UserClass.Profiel_Huidig" />
     <RootType FullName="Gardenr.Views.Catalogus" />
+    <RootType FullName="Gardenr.Views.CatalogusPlant" />
     <RootType FullName="Gardenr.Views.Contact" />
-    <RootType FullName="Gardenr.Views.Home" />
-    <RootType FullName="Gardenr.Views.Instellingen" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
     </RootType>
+    <RootType FullName="Gardenr.Views.Home" />
+    <RootType FullName="Gardenr.Views.Instellingen" />
+    <RootType FullName="Gardenr.Views.Notificaties" />
+    <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
+    <RootType FullName="Gardenr.Views.PlantBewerken" />
     <RootType FullName="Gardenr.Views.Profiel_Favorieten" />
     <RootType FullName="Gardenr.Views.Profiel_Historiek" />
     <RootType FullName="Gardenr.Views.Profiel" />
+    <RootType FullName="Gardenr.Views.Profiel_PlantInfo" />
   </Roots.RootTypes>
 </Roots>

@@ -7,9 +7,14 @@ UserClass\Profiel_Favorieten.xbf
 UserClass\Profiel_Historiek.xbf
 UserClass\Profiel_Huidig.xbf
 Views\Catalogus.xbf
+Views\CatalogusPlant.xbf
 Views\Contact.xbf
 Views\Home.xbf
 Views\Instellingen.xbf
+Views\Notificaties.xbf
+Views\NotificatiesBewerken.xbf
+Views\PlantBewerken.xbf
 Views\Profiel_Favorieten.xbf
 Views\Profiel_Historiek.xbf
 Views\Profiel_Huidig.xbf
+Views\Profiel_PlantInfo.xbf

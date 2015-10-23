@@ -1,4 +1,5 @@
 ﻿using Gardenr.Mesages;
+using Gardenr.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -44,6 +45,46 @@ namespace Gardenr
         private void NavigateToPage(GoToPageMessage message)
         {
             Frame rootFrame = Window.Current.Content as Frame;
+            if(message.PageNumber == 1) // catalogus pagina
+            {
+                rootFrame.Navigate(typeof(Catalogus));
+            }
+            else if (message.PageNumber == 2) // catalogus plant pagina
+            {
+                rootFrame.Navigate(typeof(CatalogusPlant));
+            }
+            else if(message.PageNumber == 3) // contact pagina
+            {
+                rootFrame.Navigate(typeof(Contact));
+            }
+            else if(message.PageNumber == 4) // instellingen pagina
+            {
+                rootFrame.Navigate(typeof(Instellingen));
+            }
+            else if (message.PageNumber == 5) //Notificaties pagina
+            {
+                rootFrame.Navigate(typeof(Notificaties));
+            }
+            else if(message.PageNumber == 6) // Notificaties bewerken pagina
+            {
+                rootFrame.Navigate(typeof(NotificatiesBewerken));
+            }
+            else if (message.PageNumber == 7) // Plant bewerken pagina
+            {
+                rootFrame.Navigate(typeof(PlantBewerken));
+            }
+            else if(message.PageNumber == 8) // Profiel historiek pagina
+            {
+                rootFrame.Navigate(typeof(Profiel_Historiek));
+            }
+            else if (message.PageNumber == 9) // profiel favorieten pagina
+            {
+                rootFrame.Navigate(typeof(Profiel_Favorieten));
+            }
+            else if(message.PageNumber == 10) // profiel plantinfo pagina
+            {
+                rootFrame.Navigate(typeof(Profiel_PlantInfo));
+            }
             /*if (message.PageNumber == 1)
             {
                 rootFrame.Navigate(typeof(Page2));

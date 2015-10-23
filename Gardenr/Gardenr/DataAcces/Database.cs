@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
+//using System.Configuration;
 using System.Data;
 using System.Data.Common;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace NMCT.DropBox.DataAccess
 {
     class Database
     {
-
+        /*
         private static DbConnection GetConnection(string ConnectionString)
         {
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[ConnectionString];
@@ -212,6 +212,6 @@ namespace NMCT.DropBox.DataAccess
                 throw;
             }
         }
-
+        */
     }
 }
