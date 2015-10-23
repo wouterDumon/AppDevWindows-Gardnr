@@ -85,6 +85,10 @@ namespace Gardenr
             {
                 rootFrame.Navigate(typeof(Profiel_PlantInfo));
             }
+            else if(message.PageNumber == 1)//home page
+            {
+                rootFrame.Navigate(typeof(Home));
+            }
             /*if (message.PageNumber == 1)
             {
                 rootFrame.Navigate(typeof(Page2));
