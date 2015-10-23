@@ -125,6 +125,9 @@
     <Compile Include="UserClass\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserClass\Profiel_Info_plant.xaml.cs">
+      <DependentUpon>Profiel_Info_plant.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\NotificatiesBewerken.cs" />
     <Compile Include="ViewModels\PlantBewerkenVM.cs" />
     <Compile Include="UserClass\Profiel_Favorieten.xaml.cs">
@@ -227,6 +230,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserClass\Profiel_Huidig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserClass\Profiel_Info_plant.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

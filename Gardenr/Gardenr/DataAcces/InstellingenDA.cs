@@ -1,5 +1,5 @@
 ﻿using Gardenr.Models;
-using NMCT.DropBox.DataAccess;
+//using NMCT.DropBox.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -16,11 +16,11 @@ namespace Gardenr.DataAcces
         {
             Instellingen GebruikerInstellingen = new Instellingen();
             string sql = "SELECT * FROM Instellingen";
-            DbDataReader reader = Database.GetData(CONNECTIONSTRING, sql);
-            while(reader.Read())
-            {
+       //     DbDataReader reader = Database.GetData(CONNECTIONSTRING, sql);
+         //   while(reader.Read())
+           //* {
 
-            }
+           // }
             return GebruikerInstellingen;
         }
         public void UpdateInstellingen(Instellingen settings)

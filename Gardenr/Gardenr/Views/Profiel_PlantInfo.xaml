@@ -4,10 +4,37 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Gardenr.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:uc="using:Gardenr.UserClass"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="277*"/>
+            <ColumnDefinition Width="41*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="117*"/>
+            <RowDefinition Height="41"/>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="41"/>
+            <RowDefinition Height="111*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Info plant" Grid.Row="0" Grid.Column="1"></TextBlock>
+        <TextBlock Text="..." Grid.Column="2" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right" Height="20" Width="12" Margin="0,13,0,12"></TextBlock>
+        <Button Content="T" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center"  ></Button>
+        <Image Grid.Row="1" Grid.ColumnSpan="3"></Image>
+   
+            <uc:Profiel_Info_plant Grid.Row="2" Grid.Column="1"></uc:Profiel_Info_plant>
 
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Notificatie" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <uc:Home_Notificatie></uc:Home_Notificatie>
+            <uc:Home_Notificatie></uc:Home_Notificatie>
+        </StackPanel>
+        
     </Grid>
 </Page>
