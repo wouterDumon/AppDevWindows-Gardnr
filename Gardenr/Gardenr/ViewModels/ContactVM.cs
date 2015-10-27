@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gardenr.ViewModels
 {
-    class ContactVMµ
+    class ContactVM
     {
     }
 }

@@ -51,7 +51,8 @@ namespace Gardenr
             }
             else if (message.PageNumber == 2) // catalogus plant pagina
             {
-                rootFrame.Navigate(typeof(CatalogusPlant));
+                rootFrame.Navigate(typeof(CatalogusPlant),message.SelectedPlant);
+  
             }
             else if(message.PageNumber == 3) // contact pagina
             {
