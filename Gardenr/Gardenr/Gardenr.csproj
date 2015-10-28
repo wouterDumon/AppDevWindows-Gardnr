@@ -117,8 +117,10 @@
     <Compile Include="Models\Plant.cs" />
     <Compile Include="Models\Tuin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\INieuwsRepository.cs" />
     <Compile Include="Repositories\INotificatiesRepository.cs" />
     <Compile Include="Repositories\IPlantRepository.cs" />
+    <Compile Include="Repositories\NieuwsRepository.cs" />
     <Compile Include="Repositories\NotificatiesRepository.cs" />
     <Compile Include="Repositories\PlantRepository.cs" />
     <Compile Include="UserClass\Home_Newsfeed.xaml.cs">

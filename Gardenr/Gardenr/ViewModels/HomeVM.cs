@@ -14,6 +14,7 @@ namespace Gardenr.ViewModels
         public HomeVM()
         {
             Notificaties= repoNot.GetNotificaties();
+            NieuwsItems = repoNieuws.GetNieuwsItems();
         }
 
         private INotificatiesRepository repoNot = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
@@ -23,5 +24,8 @@ namespace Gardenr.ViewModels
         public Notificaties SelectedNotificatie { get; set; }
 
         //misschiencommands voor naar notificatie detail te gaan
+        private INieuwsRepository repoNieuws = SimpleIoc.Default.GetInstance<INieuwsRepository>();
+        public List<NieuwsItem> NieuwsItems { get; set; }
+        public NieuwsItem SelectedNieuwsItem { get; set; }
     }
 }
