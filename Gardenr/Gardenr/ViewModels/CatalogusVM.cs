@@ -18,6 +18,7 @@ namespace Gardenr.ViewModels
         public CatalogusVM()
         {
             GoToDetail = new RelayCommand(Detail);
+            Planten = repoPlant.GetPlanten();
         }
         private IPlantRepository repoPlant = SimpleIoc.Default.GetInstance<IPlantRepository>();
 

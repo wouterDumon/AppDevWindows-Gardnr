@@ -112,11 +112,14 @@
     <Compile Include="Mesages\GoToPageMessage.cs" />
     <Compile Include="Models\Gebruiker.cs" />
     <Compile Include="Models\Instellingen.cs" />
+    <Compile Include="Models\NieuwsItem.cs" />
     <Compile Include="Models\Notificaties.cs" />
     <Compile Include="Models\Plant.cs" />
     <Compile Include="Models\Tuin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\INotificatiesRepository.cs" />
     <Compile Include="Repositories\IPlantRepository.cs" />
+    <Compile Include="Repositories\NotificatiesRepository.cs" />
     <Compile Include="Repositories\PlantRepository.cs" />
     <Compile Include="UserClass\Home_Newsfeed.xaml.cs">
       <DependentUpon>Home_Newsfeed.xaml</DependentUpon>
