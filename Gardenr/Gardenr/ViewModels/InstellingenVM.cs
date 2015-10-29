@@ -8,5 +8,9 @@ namespace Gardenr.ViewModels
 {
     class InstellingenVM
     {
+        public InstellingenVM()
+        {
+            
+        }
     }
 }
