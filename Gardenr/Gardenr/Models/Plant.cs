@@ -16,7 +16,16 @@ namespace Gardenr.Models
         public DateTime ZaaiEind { get; set;}
         public DateTime OogstBegin { get; set; }
         public DateTime Oogstbegin { get; set; }
-
+        public DateTime PlantBegin { get; set; }
+        public DateTime PlantEinde { get; set; }
+        public int ZaaiDiepte { get; set; }
+        public int Afstand { get; set; }
+        public int AfstandRij { get; set; }
+        public int WaterGeven { get; set; }
+        public int DagenOogst { get; set; }
+        public int DagenVerplant { get; set; }
+        public bool Binnen { get; set; }
+        public bool Buiten { get; set; }
         
 
     }

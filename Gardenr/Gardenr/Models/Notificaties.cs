@@ -9,10 +9,12 @@ namespace Gardenr.Models
     public class Notificaties
     {
         public int ID { get; set; }
-        public int PlantID { get; set; }       
-        public int GebruikerID { get; set; }
+        public Type TypeId { get; set; }
         public string Omschrijving { get; set; }
-        public DateTime Datum { get; set; }
+        public DateTime AlarmTijd { get; set; }
+        public Alarm Alarm { get; set; }
+        public int GebruikerID { get; set; }
+        public Plant Plant { get; set; }
 
     }
 }

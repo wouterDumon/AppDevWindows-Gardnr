@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Gardenr.Models
 {
-    class Instellingen
+    public class Taal
     {
         public int ID { get; set; }
-        public Taal Taal { get; set; }
-        public bool Cortana { get; set; }
-        public bool PushNotificaties { get; set; }
+        public string Naam { get; set; }
     }
 }
