@@ -15,5 +15,24 @@ namespace Gardenr.Repositories
 
             return notific;
         }
+        public Notificaties GetNotificatieById(int id)
+        {
+            Notificaties not = new Notificaties();
+
+            return not;
+        }
+        public void SaveNotificatie(Notificaties not)
+        {
+
+        }
+        public void DeleteNotificatie(int id)
+        {
+
+        }
+        public void AddNotification(Notificaties not)
+        {
+
+        }
     }
+
 }

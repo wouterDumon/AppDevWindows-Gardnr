@@ -15,5 +15,13 @@ namespace Gardenr.Repositories
 
             return planten;
         }
+        public Plant GetPlantById(int id)
+        {
+            Plant temp = new Plant();
+
+            return temp;
+        }
+
+       
     }
 }

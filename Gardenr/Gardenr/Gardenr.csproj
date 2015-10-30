@@ -110,19 +110,30 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mesages\GoToPageMessage.cs" />
+    <Compile Include="Models\Alarm.cs" />
     <Compile Include="Models\Gebruiker.cs" />
     <Compile Include="Models\Instellingen.cs" />
     <Compile Include="Models\NieuwsItem.cs" />
     <Compile Include="Models\Notificaties.cs" />
     <Compile Include="Models\Plant.cs" />
+    <Compile Include="Models\Taal.cs" />
     <Compile Include="Models\Tuin.cs" />
+    <Compile Include="Models\TuinObject.cs" />
+    <Compile Include="Models\TypeC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GebruikerRepository.cs" />
+    <Compile Include="Repositories\IGebruikerRepository.cs" />
+    <Compile Include="Repositories\IInstellingenRepository.cs" />
     <Compile Include="Repositories\INieuwsRepository.cs" />
     <Compile Include="Repositories\INotificatiesRepository.cs" />
+    <Compile Include="Repositories\InstellingenRepository.cs" />
     <Compile Include="Repositories\IPlantRepository.cs" />
+    <Compile Include="Repositories\ITaalRepository.cs" />
     <Compile Include="Repositories\NieuwsRepository.cs" />
     <Compile Include="Repositories\NotificatiesRepository.cs" />
     <Compile Include="Repositories\PlantRepository.cs" />
+    <Compile Include="Repositories\TaalRepository.cs" />
+    <Compile Include="Repositories\TypeRepository.cs" />
     <Compile Include="UserClass\Home_Newsfeed.xaml.cs">
       <DependentUpon>Home_Newsfeed.xaml</DependentUpon>
     </Compile>

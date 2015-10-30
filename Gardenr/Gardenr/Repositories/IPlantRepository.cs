@@ -6,5 +6,6 @@ namespace Gardenr.Repositories
     internal interface IPlantRepository
     {
         List<Plant> GetPlanten();
+       Plant GetPlantById(int id);
     }
 }

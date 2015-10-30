@@ -9,7 +9,7 @@ namespace Gardenr.Models
     public class Notificaties
     {
         public int ID { get; set; }
-        public Type TypeId { get; set; }
+        public TypeC TypeId { get; set; }
         public string Omschrijving { get; set; }
         public DateTime AlarmTijd { get; set; }
         public Alarm Alarm { get; set; }

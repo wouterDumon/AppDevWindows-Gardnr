@@ -8,5 +8,8 @@ namespace Gardenr.Models
 {
     class NieuwsItem
     {
+        public int ID { get; set; }
+        public string Titel { get; set; }
+        public string Description { get; set; }
     }
 }
