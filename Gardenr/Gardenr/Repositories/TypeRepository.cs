@@ -17,7 +17,7 @@ namespace Gardenr.Repositories
         }
         public TypeC GetTypeById(int id)
         {
-            TypeC typ = new TypeC()
+            TypeC typ = new TypeC();
 
             return typ;
         }
