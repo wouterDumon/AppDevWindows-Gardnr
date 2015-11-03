@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gardenr", "Gardenr\Gardenr.csproj", "{7A9F6443-EEFD-49CF-8076-DA6F2E550F18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WINAPI", "..\..\Team3-AndroidBackend\WINAPI\WINAPI\WINAPI.csproj", "{1D1B9B68-6D20-4FD4-B0E7-01B575C9E29D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WINAPI", "..\WINAPI\WINAPI\WINAPI.csproj", "{1D1B9B68-6D20-4FD4-B0E7-01B575C9E29D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
