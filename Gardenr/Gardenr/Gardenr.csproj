@@ -129,10 +129,12 @@
     <Compile Include="Repositories\InstellingenRepository.cs" />
     <Compile Include="Repositories\IPlantRepository.cs" />
     <Compile Include="Repositories\ITaalRepository.cs" />
+    <Compile Include="Repositories\ITuinRepository.cs" />
     <Compile Include="Repositories\NieuwsRepository.cs" />
     <Compile Include="Repositories\NotificatiesRepository.cs" />
     <Compile Include="Repositories\PlantRepository.cs" />
     <Compile Include="Repositories\TaalRepository.cs" />
+    <Compile Include="Repositories\TuinRepository.cs" />
     <Compile Include="Repositories\TypeRepository.cs" />
     <Compile Include="UserClass\Home_Newsfeed.xaml.cs">
       <DependentUpon>Home_Newsfeed.xaml</DependentUpon>

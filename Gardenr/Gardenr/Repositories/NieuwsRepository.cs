@@ -15,5 +15,10 @@ namespace Gardenr.Repositories
 
             return items;
         }
+
+        public void AddNewsItem(NieuwsItem niews)
+        {
+
+        }
     }
 }
