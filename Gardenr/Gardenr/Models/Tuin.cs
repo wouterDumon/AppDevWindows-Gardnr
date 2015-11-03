@@ -9,6 +9,6 @@ namespace Gardenr.Models
     class Tuin
     {
         public int ID { get; set; }
-        public List<Tuinobject> Planten { get; set; }
+        public List<TuinObject> Planten { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gardenr.Models
 {
-    class Instellingen
+    public class Instellingen
     {
         public int ID { get; set; }
         public Taal Taal { get; set; }
