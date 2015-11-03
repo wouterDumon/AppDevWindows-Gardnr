@@ -8,5 +8,8 @@ namespace Gardenr.ViewModels
 {
     class ContactVM
     {
+        public ContactVM()
+        {
+        }
     }
 }

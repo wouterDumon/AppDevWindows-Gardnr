@@ -21,7 +21,7 @@ namespace Gardenr.ViewModels
             AddGarden = new RelayCommand(AddGardM);
             MakeNotification = new RelayCommand(MakeNotificationM);
         }
-
+        
         protected void OnNavigatedTo(NavigationEventArgs e)
         {
             this.plant = e.Parameter as Plant;

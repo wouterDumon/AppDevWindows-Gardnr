@@ -1,5 +1,7 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Ioc;
 using Gardenr.Models;
+using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,15 +15,20 @@ namespace Gardenr.ViewModels
         public InstellingenVM()
         {
             SaveSettings = new RelayCommand(Settings);
+            UserSettings = repoInst.GetInstellingenById(1);//temp id
         }
-
+        private IInstellingenRepository repoInst = SimpleIoc.Default.GetInstance<IInstellingenRepository>(); 
 
         public Instellingen UserSettings { set; get; }
+        public Taal SelectedTaal { get; set; }
+
 
         public RelayCommand SaveSettings { get; set; }
         public void Settings()
         {
 
         }
+
+        
     }
 }
