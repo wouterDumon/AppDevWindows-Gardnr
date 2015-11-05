@@ -1,1 +1,1 @@
-C:\Users\cedric\Dropbox\windows phone\AppDevWindows-Gardnr\Gardenr\Gardenr\Gardenr.csproj;x86
+C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\Gardenr.csproj;x86
