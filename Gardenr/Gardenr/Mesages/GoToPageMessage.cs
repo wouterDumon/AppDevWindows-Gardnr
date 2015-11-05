@@ -8,7 +8,7 @@ using Gardenr.Models;
 
 namespace Gardenr.Mesages
 {
-    public class GoToPageMessage
+    class GoToPageMessage
     {
         public int PageNumber { get; set; }
 

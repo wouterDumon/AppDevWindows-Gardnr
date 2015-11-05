@@ -1,11 +1,12 @@
 ﻿using Gardenr.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Gardenr.Repositories
 {
     internal interface IPlantRepository
     {
-        List<Plant> GetPlanten();
-       Plant GetPlantById(int id);
+       Task<List<Plant>> GetPlanten();
+       Task<Plant> GetPlantById(int id);
     }
 }

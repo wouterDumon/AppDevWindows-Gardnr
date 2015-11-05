@@ -101,7 +101,6 @@
     </Compile>
     <Compile Include="BaseViewModelLocator.cs" />
     <Compile Include="DataAcces\CatalogusDA.cs" />
-    <Compile Include="DataAcces\Database.cs" />
     <Compile Include="DataAcces\GebruikersDA.cs" />
     <Compile Include="DataAcces\InstellingenDA.cs" />
     <Compile Include="DataAcces\NotificatiesDA.cs" />

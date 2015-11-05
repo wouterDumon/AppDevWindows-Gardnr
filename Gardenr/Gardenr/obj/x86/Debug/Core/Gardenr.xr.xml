@@ -1,16 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="MainPage" />
+    <RootPropertyPathName Name="Testing" />
+    <RootPropertyPathName Name="Catalogus" />
+    <RootPropertyPathName Name="CatalogusPlant" />
+    <RootPropertyPathName Name="Contact" />
+    <RootPropertyPathName Name="Home" />
+    <RootPropertyPathName Name="Instellingen" />
+    <RootPropertyPathName Name="Notificaties" />
+    <RootPropertyPathName Name="NotificatiesBewerken" />
+    <RootPropertyPathName Name="PlantBewerken" />
+    <RootPropertyPathName Name="Profiel" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Resources" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
+    <RootType FullName="Gardenr.BaseViewModelLocator" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
+      <RootProperty Name="Source" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
-      <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
@@ -22,6 +44,16 @@
       <RootMethod Name="SetColumnSpan" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Command" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="FontWeight" />
+    </RootType>
     <RootType FullName="Gardenr.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Height" />
@@ -49,13 +81,6 @@
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Gardenr.UserClass.Home_Newsfeed" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="FontWeight" />
-    </RootType>
     <RootType FullName="Gardenr.UserClass.Home_Notificatie" />
     <RootType FullName="Gardenr.UserClass.Menu" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
@@ -65,6 +90,13 @@
     <RootType FullName="Gardenr.UserClass.Profiel_Historiek" />
     <RootType FullName="Gardenr.UserClass.Profiel_Huidig" />
     <RootType FullName="Gardenr.UserClass.Profiel_Info_plant" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
     <RootType FullName="Gardenr.Views.Catalogus" />
     <RootType FullName="Gardenr.Views.CatalogusPlant" />
     <RootType FullName="Gardenr.Views.Contact" />

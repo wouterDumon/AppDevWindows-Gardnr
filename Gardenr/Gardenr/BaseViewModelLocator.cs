@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
+using Gardenr.Repositories;
 using Gardenr.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using System;
@@ -14,35 +15,100 @@ namespace Gardenr
         public BaseViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-            SimpleIoc.Default.Register<MainePageVM>();
-           /* SimpleIoc.Default.Register<Page2VM>();
-            SimpleIoc.Default.Register<ICountryRepository, CountryRepository>();
-            SimpleIoc.Default.Register<ICityRepository1, CityRepository>();
-            SimpleIoc.Default.Register<IWeerRepository, WeerRepository>();*/
+            SimpleIoc.Default.Register<MainPageVM>();
+            SimpleIoc.Default.Register<CatalogusVM>();
+            SimpleIoc.Default.Register<CatalogusPlantVM>();
+            SimpleIoc.Default.Register<ContactVM>();
+            SimpleIoc.Default.Register<HomeVM>();
+            SimpleIoc.Default.Register<InstellingenVM>();
+            SimpleIoc.Default.Register<NotificatiesBewerkenVM>();
+            SimpleIoc.Default.Register<NotificatiesVM>();
+            SimpleIoc.Default.Register<PlantBewerkenVM>();
+            SimpleIoc.Default.Register<ProfielVM>();
+
+            //  SimpleIoc.Default.Register<ICountryRepositorie, CountryRepositorie>();
+            SimpleIoc.Default.Register<IPlantRepository, PlantRepository>();
+            SimpleIoc.Default.Register<IGebruikerRepository,GebruikerRepository>();
+            SimpleIoc.Default.Register<IInstellingenRepository,InstellingenRepository>();
+            SimpleIoc.Default.Register<INieuwsRepository,NieuwsRepository>();
+            SimpleIoc.Default.Register<INotificatiesRepository,NotificatiesRepository>();
+            SimpleIoc.Default.Register<ITaalRepository,TaalRepository>();
+            SimpleIoc.Default.Register<ITuinRepository,TuinRepository>();
+           
         }
-        public MainePageVM MainPage
+
+
+        public MainPageVM MainPage
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<MainePageVM>();
-
+                return ServiceLocator.Current.GetInstance<MainPageVM>();
             }
+        }
 
-
-        }/*
-
-
-        public Page2VM Page2
+        public CatalogusVM Catalogus
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<Page2VM>();
-
+                return ServiceLocator.Current.GetInstance<CatalogusVM>();
             }
+        }
 
-
-        }*/
-
-
+        public CatalogusPlantVM CatalogusPlant
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<CatalogusPlantVM>();
+            }
+        }
+        public ContactVM Contact
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<ContactVM>();
+            }
+        }
+        public HomeVM Home
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<HomeVM>();
+            }
+        }
+        public InstellingenVM Instellingen
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<InstellingenVM>();
+            }
+        }
+        public NotificatiesBewerkenVM NotificatiesBewerken
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<NotificatiesBewerkenVM>();
+            }
+        }
+        public NotificatiesVM Notificaties
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<NotificatiesVM>();
+            }
+        }
+        public PlantBewerkenVM PlantBewerken
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<PlantBewerkenVM>();
+            }
+        }
+        public ProfielVM Profiel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<ProfielVM>();
+            }
+        }
     }
 }

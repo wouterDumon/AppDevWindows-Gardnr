@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 
-namespace Gardenr.UserClass
+namespace Gardenr.ViewModels
 {
     class PlantBewerkenVM : ViewModelBase
     {

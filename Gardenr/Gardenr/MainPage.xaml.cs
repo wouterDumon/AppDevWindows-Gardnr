@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using Gardenr.Mesages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,8 @@ namespace Gardenr
         public MainPage()
         {
             this.InitializeComponent();
+
+            
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Gardenr.Mesages;
+﻿using GalaSoft.MvvmLight.Messaging;
+using Gardenr.Mesages;
 using Gardenr.Views;
 using System;
 using System.Collections.Generic;
@@ -104,7 +105,7 @@ namespace Gardenr
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-
+            Messenger.Default.Register<GoToPageMessage>(this, NavigateToPage);
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,

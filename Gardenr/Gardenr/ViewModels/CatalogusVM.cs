@@ -18,7 +18,7 @@ namespace Gardenr.ViewModels
         public CatalogusVM()
         {
             GoToDetail = new RelayCommand(Detail);
-            Planten = repoPlant.GetPlanten();
+            GetPlanten();
         }
         private IPlantRepository repoPlant = SimpleIoc.Default.GetInstance<IPlantRepository>();
 
@@ -36,5 +36,9 @@ namespace Gardenr.ViewModels
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 
+        public async void GetPlanten()
+        {
+            Planten = await repoPlant.GetPlanten();
+        }
     }
 }
