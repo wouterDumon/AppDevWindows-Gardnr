@@ -1,16 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="WINGardnr" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\wouter\\Documents\\Visual\ Studio\ 2015\\Projects\\WINAPI\\WINAPI\\obj\\Debug\\Package\\PackageTmp$" />
-    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\wouter\\Documents\\Visual\ Studio\ 2015\\Projects\\WINAPI\\WINAPI\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\wouter\\Desktop\\AppDevWindows-Gardnr\\WINAPI\\WINAPI\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\wouter\\Desktop\\AppDevWindows-Gardnr\\WINAPI\\WINAPI\\obj\\Debug\\Package\\PackageTmp$" />
   </parameter>
   <parameter name="DC-Web.config Connection String" description="DC Connection String used in web.config by the application to access the database." value="Server=tcp:yucgfki8gh.database.windows.net,1433;Database=GardnrDatabase;User ID=CedrcWouter@yucgfki8gh;Password=Howest@1;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\wouter\\Documents\\Visual\ Studio\ 2015\\Projects\\WINAPI\\WINAPI\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DC']/@connectionString" />
-  </parameter>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." value="Server=tcp:yucgfki8gh.database.windows.net,1433;Database=GardnrDatabase;User ID=CedrcWouter@yucgfki8gh;Password=Howest@1;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\wouter\\Documents\\Visual\ Studio\ 2015\\Projects\\WINAPI\\WINAPI\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="WINAPI.Models.ApplicationDbContext-Web.config Connection String" description="WINAPI.Models.ApplicationDbContext Connection String used in web.config by the application to access the database." value="WINAPI.Models.ApplicationDbContext_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\wouter\\Documents\\Visual\ Studio\ 2015\\Projects\\WINAPI\\WINAPI\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WINAPI.Models.ApplicationDbContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\wouter\\Desktop\\AppDevWindows-Gardnr\\WINAPI\\WINAPI\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DC']/@connectionString" />
   </parameter>
 </parameters>

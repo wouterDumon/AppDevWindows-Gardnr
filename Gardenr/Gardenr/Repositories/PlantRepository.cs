@@ -76,8 +76,8 @@ namespace Gardenr.Repositories
             probeer.Binnen = 0;
             probeer.Buiten = 1;
 
-          // string url = "http://wingardnr.azurewebsites.net/Plant/Edit";
-            string url = "http://localhost:64597/Plant/Edit";
+           string url = "http://wingardnr.azurewebsites.net/Plant/Edit";
+           // string url = "http://localhost:64597/Plant/Edit";
 
 
         
