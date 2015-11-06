@@ -54,10 +54,10 @@ namespace Gardenr.Repositories
             return temp;
         }
 
-        public void AddPlant()
+        public async void AddPlant()
         {
             Plant probeer = new Plant();
-            probeer.ID = 10;
+           // probeer.ID = 10;
             probeer.Naam = "Patat";
             probeer.Description = "een knol die onder de grond groeid";
             probeer.FotoUrl = "http://www.aardappel.be/wp-content/themes/manyfacesofpotatoes/images/Avatar_VLAM_v.01_c.jpg";
@@ -76,17 +76,21 @@ namespace Gardenr.Repositories
             probeer.Binnen = false;
             probeer.Buiten = true;
 
-            var request = (HttpWebRequest)WebRequest.Create("http://wingardnr.azurewebsites.net/Plant/Edit");
-            request.AllowReadStreamBuffering = false;
-            request.Method = "POST";
-            request.ContentType = "application/json";
+           // string url = "http://wingardnr.azurewebsites.net/Plant/Edit";
+            string url = "http://localhost:64597/Plant/Edit";
 
 
-
+        
             string serializer = JsonConvert.SerializeObject(probeer);
-            
-            using (StreamWriter StreamWriter = new StreamWriter(WebRequest.GetRequestStream()))
+
+            using (HttpClient client = new HttpClient())
             {
+                HttpResponseMessage response = await client.PostAsync(url, new StringContent(serializer, Encoding.UTF8, "application/json"));
+                if(response.IsSuccessStatusCode)
+                {
+                    string jsonresponse = await response.Content.ReadAsStringAsync();
+                    int result = JsonConvert.DeserializeObject<int>(jsonresponse);
+                }
 
             }
 

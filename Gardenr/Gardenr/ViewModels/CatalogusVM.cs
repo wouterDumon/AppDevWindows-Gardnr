@@ -37,9 +37,10 @@ namespace Gardenr.ViewModels
         }
 
         public async void GetPlanten()
-        {
+        { 
+             repoPlant.AddPlant();
             Planten = await repoPlant.GetPlanten();
-            repoPlant.AddPlant();
+           
         }
     }
 }
