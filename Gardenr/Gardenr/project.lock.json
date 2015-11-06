@@ -11,6 +11,25 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
+      "Facebook.Client/1.0.4": {
+        "dependencies": {
+          "Facebook": "[6.4.0, )"
+        },
+        "compile": {
+          "lib/win81/Facebook.Client.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Facebook.Client.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -1611,6 +1630,25 @@
         },
         "runtime": {
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
+      "Facebook.Client/1.0.4": {
+        "dependencies": {
+          "Facebook": "[6.4.0, )"
+        },
+        "compile": {
+          "lib/win81/Facebook.Client.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Facebook.Client.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/1.0.0": {
@@ -3305,6 +3343,25 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
+      "Facebook.Client/1.0.4": {
+        "dependencies": {
+          "Facebook": "[6.4.0, )"
+        },
+        "compile": {
+          "lib/win81/Facebook.Client.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Facebook.Client.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -4967,6 +5024,25 @@
         },
         "runtime": {
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
+      "Facebook.Client/1.0.4": {
+        "dependencies": {
+          "Facebook": "[6.4.0, )"
+        },
+        "compile": {
+          "lib/win81/Facebook.Client.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Facebook.Client.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/1.0.0": {
@@ -6666,6 +6742,25 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
+      "Facebook.Client/1.0.4": {
+        "dependencies": {
+          "Facebook": "[6.4.0, )"
+        },
+        "compile": {
+          "lib/win81/Facebook.Client.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Facebook.Client.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -8328,6 +8423,25 @@
         },
         "runtime": {
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
+      "Facebook.Client/1.0.4": {
+        "dependencies": {
+          "Facebook": "[6.4.0, )"
+        },
+        "compile": {
+          "lib/win81/Facebook.Client.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Facebook.Client.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/1.0.0": {
@@ -10027,6 +10141,25 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
+      "Facebook/7.0.6": {
+        "compile": {
+          "lib/win8/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Facebook.dll": {}
+        }
+      },
+      "Facebook.Client/1.0.4": {
+        "dependencies": {
+          "Facebook": "[6.4.0, )"
+        },
+        "compile": {
+          "lib/win81/Facebook.Client.dll": {}
+        },
+        "runtime": {
+          "lib/win81/Facebook.Client.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -11697,6 +11830,99 @@
         "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.XML",
         "package/services/metadata/core-properties/8a82b9e5a63a439481bfa8d4ec335002.psmdcp",
         "package/services/metadata/core-properties/99be0c88b2fd41c8b07c42071005ee47.psmdcp"
+      ]
+    },
+    "Facebook/7.0.6": {
+      "sha512": "D9nlWZb88S4U+eh1pUDQ+AkSkiht6m0eFpxKFddZnQSSFTnncvDMBEnNODy4fOIOjWQIiOXRVbuY04jCPyWqkw==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "Facebook.nuspec",
+        "lib/net35-client/Facebook.dll",
+        "lib/net35-client/Facebook.xml",
+        "lib/net40-client/Facebook.dll",
+        "lib/net40-client/Facebook.xml",
+        "lib/net45/Facebook.dll",
+        "lib/net45/Facebook.xml",
+        "lib/portable-win81+wpa81/Facebook.dll",
+        "lib/portable-win81+wpa81/Facebook.xml",
+        "lib/sl5/Facebook.dll",
+        "lib/sl5/Facebook.xml",
+        "lib/win8/Facebook.dll",
+        "lib/win8/Facebook.xml",
+        "lib/wp71/Facebook.dll",
+        "lib/wp71/Facebook.xml",
+        "lib/wp8/Facebook.dll",
+        "lib/wp8/Facebook.xml",
+        "lib/wp81/Facebook.dll",
+        "lib/wp81/Facebook.xml",
+        "LICENSE.txt",
+        "package/services/metadata/core-properties/85cf59e716cf4742ab986922052c89f8.psmdcp",
+        "readme.txt",
+        "serializers/JsonNetSerializer.cs"
+      ]
+    },
+    "Facebook.Client/1.0.4": {
+      "sha512": "KsJHm9iEs3uxsRhodJStaQobwcPR5EVbo3tNl2pndrMh7iffK1oBuaFbGx4DF1LrxNqqosayH9HpF7VHmUwajA==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "Facebook.Client.nuspec",
+        "lib/win8/Facebook.Client.dll",
+        "lib/win8/Facebook.Client.pri",
+        "lib/win8/Facebook.Client.xml",
+        "lib/win8/Facebook.Client/Controls/FriendPicker/FriendPicker.xaml",
+        "lib/win8/Facebook.Client/Controls/LoginButton/LoginButton.xaml",
+        "lib/win8/Facebook.Client/Controls/PlacePicker/PlacePicker.xaml",
+        "lib/win8/Facebook.Client/Controls/ProfilePicture/ProfilePicture.xaml",
+        "lib/win8/Facebook.Client/Controls/WebDialog/Styles.xaml",
+        "lib/win8/Facebook.Client/Controls/WebDialog/WebDialogUserControl.xaml",
+        "lib/win8/Facebook.Client/FacebookDialogPage.xaml",
+        "lib/win8/Facebook.Client/Images/fb_blank_place_profile_square.png",
+        "lib/win8/Facebook.Client/Images/fb_blank_profile_portrait.png",
+        "lib/win8/Facebook.Client/Images/fb_blank_profile_square.png",
+        "lib/win8/Facebook.Client/Themes/Generic.xaml",
+        "lib/win81/Facebook.Client.dll",
+        "lib/win81/Facebook.Client.pdb",
+        "lib/win81/Facebook.Client.pri",
+        "lib/win81/Facebook.Client.XML",
+        "lib/win81/Facebook.Client/Common/StandardStyles.xbf",
+        "lib/win81/Facebook.Client/Controls/FriendPicker/FriendPicker.xbf",
+        "lib/win81/Facebook.Client/Controls/LoginButton/LoginButton.xbf",
+        "lib/win81/Facebook.Client/Controls/PlacePicker/PlacePicker.xbf",
+        "lib/win81/Facebook.Client/Controls/ProfilePicture/ProfilePicture.xbf",
+        "lib/win81/Facebook.Client/Controls/WebDialog/Styles.xbf",
+        "lib/win81/Facebook.Client/Controls/WebDialog/WebDialogUserControl.xbf",
+        "lib/win81/Facebook.Client/Facebook.Client.xr.xml",
+        "lib/win81/Facebook.Client/FacebookDialogPage.xbf",
+        "lib/win81/Facebook.Client/Images/fb_blank_place_profile_square.png",
+        "lib/win81/Facebook.Client/Images/fb_blank_profile_portrait.png",
+        "lib/win81/Facebook.Client/Images/fb_blank_profile_square.png",
+        "lib/win81/Facebook.Client/Themes/Generic.xbf",
+        "lib/wp8/Facebook.Client.dll",
+        "lib/wp8/Facebook.Client.xml",
+        "lib/wpa81/Facebook.Client.dll",
+        "lib/wpa81/Facebook.Client.pdb",
+        "lib/wpa81/Facebook.Client.pri",
+        "lib/wpa81/Facebook.Client.XML",
+        "lib/wpa81/Facebook.Client/Common/StandardStyles.xbf",
+        "lib/wpa81/Facebook.Client/Controls/FriendPicker/FriendPicker.xbf",
+        "lib/wpa81/Facebook.Client/Controls/LoginButton/LoginButton.xbf",
+        "lib/wpa81/Facebook.Client/Controls/PlacePicker/PlacePicker.xbf",
+        "lib/wpa81/Facebook.Client/Controls/ProfilePicture/ProfilePicture.xbf",
+        "lib/wpa81/Facebook.Client/Controls/WebDialog/Styles.xbf",
+        "lib/wpa81/Facebook.Client/Controls/WebDialog/WebDialogUserControl.xbf",
+        "lib/wpa81/Facebook.Client/Facebook.Client.xr.xml",
+        "lib/wpa81/Facebook.Client/FacebookDialogPage.xbf",
+        "lib/wpa81/Facebook.Client/Images/fb_blank_place_profile_square.png",
+        "lib/wpa81/Facebook.Client/Images/fb_blank_profile_portrait.png",
+        "lib/wpa81/Facebook.Client/Images/fb_blank_profile_square.png",
+        "lib/wpa81/Facebook.Client/Themes/Generic.xbf",
+        "LICENSE.txt",
+        "package/services/metadata/core-properties/c603ae878c7d48998d3e42019764c1db.psmdcp",
+        "readme.txt"
       ]
     },
     "Microsoft.ApplicationInsights/1.0.0": {
@@ -15270,6 +15496,8 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "Facebook >= 7.0.6",
+      "Facebook.Client >= 1.0.4",
       "Microsoft.ApplicationInsights >= 1.0.0",
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",

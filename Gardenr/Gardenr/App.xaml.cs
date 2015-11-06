@@ -1,5 +1,7 @@
-﻿using GalaSoft.MvvmLight.Messaging;
+﻿using Facebook;
+using GalaSoft.MvvmLight.Messaging;
 using Gardenr.Mesages;
+using Gardenr.Models;
 using Gardenr.Views;
 using System;
 using System.Collections.Generic;
@@ -25,6 +27,10 @@ namespace Gardenr
     /// </summary>
     sealed partial class App : Application
     {
+        internal static string AccessToken = String.Empty;
+        internal static string FacebookId = String.Empty;
+        public static bool isAuthenticated = false;
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -61,11 +67,11 @@ namespace Gardenr
             }
             else if(message.PageNumber == 4) // instellingen pagina
             {
-                rootFrame.Navigate(typeof(Instellingen));
+                rootFrame.Navigate(typeof(Views.Instellingen));
             }
             else if (message.PageNumber == 5) //Notificaties pagina
             {
-                rootFrame.Navigate(typeof(Notificaties));
+                rootFrame.Navigate(typeof(Views.Notificaties));
             }
             else if(message.PageNumber == 6) // Notificaties bewerken pagina
             {

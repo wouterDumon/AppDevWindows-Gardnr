@@ -17,7 +17,8 @@
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>Gardenr_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Gardenr_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>F2DE129164BB5C1CE33332D75DCC9713DF19E009</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -93,6 +94,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Gardenr_StoreKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +112,7 @@
     </Compile>
     <Compile Include="Mesages\GoToPageMessage.cs" />
     <Compile Include="Models\Alarm.cs" />
+    <Compile Include="Models\Constants.cs" />
     <Compile Include="Models\Gebruiker.cs" />
     <Compile Include="Models\Instellingen.cs" />
     <Compile Include="Models\NieuwsItem.cs" />
@@ -210,6 +213,7 @@
     <None Include="Gardenr_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
