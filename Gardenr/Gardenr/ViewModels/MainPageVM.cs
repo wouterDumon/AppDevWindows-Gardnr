@@ -76,7 +76,7 @@ namespace Gardenr.ViewModels
         public RelayCommand Testing { get; set; }
         public async void TestingM()
         {
-            /*if (!App.isAuthenticated)
+            if (!App.isAuthenticated)
             {
                 try
                 {
@@ -85,6 +85,8 @@ namespace Gardenr.ViewModels
                     dynamic me = await client.GetTaskAsync("me");
                     App.FacebookId = "" + me.id;
                     App.isAuthenticated = true;
+                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 1 };
+            Messenger.Default.Send<GoToPageMessage>(message);
                 }
                 catch (Exception)
                 {
@@ -93,9 +95,9 @@ namespace Gardenr.ViewModels
                 }
               
             }
-       */
+       /*
             GoToPageMessage message = new GoToPageMessage() { PageNumber = 1 };
-            Messenger.Default.Send<GoToPageMessage>(message);
+            Messenger.Default.Send<GoToPageMessage>(message);*/
         }
 
     }

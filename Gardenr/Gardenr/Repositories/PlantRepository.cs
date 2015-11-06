@@ -59,24 +59,24 @@ namespace Gardenr.Repositories
             Plant probeer = new Plant();
            // probeer.ID = 10;
             probeer.Naam = "Patat";
-            probeer.Description = "een knol die onder de grond groeid";
+            probeer.Omschrijving = "een knol die onder de grond groeid";
             probeer.FotoUrl = "http://www.aardappel.be/wp-content/themes/manyfacesofpotatoes/images/Avatar_VLAM_v.01_c.jpg";
-            probeer.ZaaiBegin = new DateTime(2015, 10, 11, 12, 1, 13);
-            probeer.ZaaiEind = new DateTime(2015, 12, 11, 12, 1, 13);
-            probeer.OogstBegin = new DateTime(2015, 3, 11, 12, 1, 13);
-            probeer.OogstEind = new DateTime(2015, 5, 11, 12, 1, 13);
-            probeer.PlantBegin = new DateTime(2015, 10, 11, 12, 1, 13);
-            probeer.PlantEinde = new DateTime(2015, 11, 11, 12, 1, 13);
-            probeer.ZaaiDiepte = 10;
-            probeer.Afstand = 30;
-            probeer.AfstandRij = 30;
-            probeer.WaterGeven = 3;
-            probeer.DagenOogst = 20;
-            probeer.DagenVerplant = 0;
-            probeer.Binnen = false;
-            probeer.Buiten = true;
+            probeer.ZaaiBegin = "01/01/2010";
+            probeer.ZaaiEinde = "01/01/2010";
+            probeer.OogstBegin = "01/01/2010";
+            probeer.OogstEinde = "01/01/2010";
+            probeer.PlantBegin = "01/01/2010";
+            probeer.PlantEinde = "01/01/2010";
+            probeer.ZaaiDiepte = "10";
+            probeer.AfstandTussen = "30";
+            probeer.AfstandRij = "30";
+            probeer.WaterGeven = "3";
+            probeer.DagenOogst = "20";
+            probeer.DagenVerplanten = "0";
+            probeer.Binnen = 0;
+            probeer.Buiten = 1;
 
-           // string url = "http://wingardnr.azurewebsites.net/Plant/Edit";
+          // string url = "http://wingardnr.azurewebsites.net/Plant/Edit";
             string url = "http://localhost:64597/Plant/Edit";
 
 
@@ -85,7 +85,7 @@ namespace Gardenr.Repositories
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.PostAsync(url, new StringContent(serializer, Encoding.UTF8, "application/json"));
+                HttpResponseMessage response = await client.PutAsync(url, new StringContent(serializer, Encoding.UTF8, "application/json"));
                 if(response.IsSuccessStatusCode)
                 {
                     string jsonresponse = await response.Content.ReadAsStringAsync();

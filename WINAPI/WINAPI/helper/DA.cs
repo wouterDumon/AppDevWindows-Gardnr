@@ -75,7 +75,7 @@ namespace WINAPI.helper
             try
             {
 
-                string sql = "INSERT INTO Plant(Naam, Omschrijving, Foto, ZaaiBegin, ZaaiEinde, PlantBegin, PlantEinde, OogstBegin, OogstEinde, ZaaiDiepte, AfstandTussen, AfstandRij, WaterGeven, DagenOogst, DagenVerplanten, Buiten, Binnen) VALUES(@Naam, @Omschrijving, @Foto, @ZaaiB, @ZaaiE, @PlantB, @PlantE, @OogstB, @OogstE, @ZaaiD, @Afstandtssn, @AfstandRij, @Watergeven, @DagenOogst, @DagenVerplanten, @Buiten, @Binnen)";
+                string sql = "INSERT INTO Catalogus(Naam, Omschrijving, Foto, ZaaiBegin, ZaaiEinde, PlantBegin, PlantEinde, OogstBegin, OogstEinde, ZaaiDiepte, AfstandTussen, AfstandRij, WaterGeven, DagenOogst, DagenVerplanten, Buiten, Binnen) VALUES(@Naam, @Omschrijving, @Foto, @ZaaiB, @ZaaiE, @PlantB, @PlantE, @OogstB, @OogstE, @ZaaiD, @Afstandtssn, @AfstandRij, @Watergeven, @DagenOogst, @DagenVerplanten, @Buiten, @Binnen)";
                 //@Naam, @Omschrijving, @Foto, @ZaaiB, @ZaaiE, @PlantB, @PlantE, @OogstB, @OogstE, @ZaaiD,                                                                                               @Afstandtssn, @AfstandRij, @Watergeven, @DagenOogst, @DagenVerplanten, @Buiten, @Binnen
                 DbParameter par1 = Database.AddParameter("DC", "@Naam", org.Naam);
                 DbParameter par2 = Database.AddParameter("DC", "@Omschrijving", org.Omschrijving);
@@ -108,7 +108,7 @@ namespace WINAPI.helper
             int rowsaffected = 0;
             try
             {
-                string sql = "UPDATE Plant SET Naam=@Naam, Omschrijving=@Omschrijving, Foto=@Foto, ZaaiBegin=@ZaaiB, ZaaiEinde=@ZaaiE, PlantBegin=@PlantB, PlantEinde=@PlantE, OogstBegin=@OogstB, OogstEinde=@OogstE, ZaaiDiepte=@ZaaiD, AfstandTussen=@Afstandtssn, AfstandRij=@AfstandRij, WaterGeven=@Watergeven, DagenOogst=@DagenOogst, DagenVerplanten=@DagenVerplanten, Buiten=@Buiten, Binnen=@Binnen WHERE ID=@ID";
+                string sql = "UPDATE Catalogus SET Naam=@Naam, Omschrijving=@Omschrijving, Foto=@Foto, ZaaiBegin=@ZaaiB, ZaaiEinde=@ZaaiE, PlantBegin=@PlantB, PlantEinde=@PlantE, OogstBegin=@OogstB, OogstEinde=@OogstE, ZaaiDiepte=@ZaaiD, AfstandTussen=@Afstandtssn, AfstandRij=@AfstandRij, WaterGeven=@Watergeven, DagenOogst=@DagenOogst, DagenVerplanten=@DagenVerplanten, Buiten=@Buiten, Binnen=@Binnen WHERE ID=@ID";
                 DbParameter par1 = Database.AddParameter("DC", "@Naam", org.Naam);
                 DbParameter par2 = Database.AddParameter("DC", "@Omschrijving", org.Omschrijving);
                 DbParameter par3 = Database.AddParameter("DC", "@Foto", org.FotoUrl);

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DC-Web.config Connection String" description="DC Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:yucgfki8gh.database.windows.net,1433;Database=GardnrDatabase;User ID=CedrcWouter@yucgfki8gh;Password=Howest@1;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\wouter\\Desktop\\AppDevWindows-Gardnr\\WINAPI\\WINAPI\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DC']/@connectionString" />
+  </parameter>
+</parameters>
