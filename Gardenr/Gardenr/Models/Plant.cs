@@ -12,10 +12,10 @@ namespace Gardenr.Models
         public string Naam { get; set; }
         public string Description { get; set; }
         public string FotoUrl { get; set; }
-        public string ZaaiBegin { get; set; }
+        public DateTime ZaaiBegin { get; set; }
         public DateTime ZaaiEind { get; set;}
         public DateTime OogstBegin { get; set; }
-        public DateTime Oogstbegin { get; set; }
+        public DateTime OogstEind { get; set; }
         public DateTime PlantBegin { get; set; }
         public DateTime PlantEinde { get; set; }
         public int ZaaiDiepte { get; set; }

@@ -39,6 +39,7 @@ namespace Gardenr.ViewModels
         public async void GetPlanten()
         {
             Planten = await repoPlant.GetPlanten();
+            repoPlant.AddPlant();
         }
     }
 }

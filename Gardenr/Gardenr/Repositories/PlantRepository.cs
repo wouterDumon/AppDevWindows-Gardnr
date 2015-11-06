@@ -2,11 +2,13 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Gardenr.Repositories
 {
@@ -52,6 +54,44 @@ namespace Gardenr.Repositories
             return temp;
         }
 
+        public void AddPlant()
+        {
+            Plant probeer = new Plant();
+            probeer.ID = 10;
+            probeer.Naam = "Patat";
+            probeer.Description = "een knol die onder de grond groeid";
+            probeer.FotoUrl = "http://www.aardappel.be/wp-content/themes/manyfacesofpotatoes/images/Avatar_VLAM_v.01_c.jpg";
+            probeer.ZaaiBegin = new DateTime(2015, 10, 11, 12, 1, 13);
+            probeer.ZaaiEind = new DateTime(2015, 12, 11, 12, 1, 13);
+            probeer.OogstBegin = new DateTime(2015, 3, 11, 12, 1, 13);
+            probeer.OogstEind = new DateTime(2015, 5, 11, 12, 1, 13);
+            probeer.PlantBegin = new DateTime(2015, 10, 11, 12, 1, 13);
+            probeer.PlantEinde = new DateTime(2015, 11, 11, 12, 1, 13);
+            probeer.ZaaiDiepte = 10;
+            probeer.Afstand = 30;
+            probeer.AfstandRij = 30;
+            probeer.WaterGeven = 3;
+            probeer.DagenOogst = 20;
+            probeer.DagenVerplant = 0;
+            probeer.Binnen = false;
+            probeer.Buiten = true;
+
+            var request = (HttpWebRequest)WebRequest.Create("http://wingardnr.azurewebsites.net/Plant/Edit");
+            request.AllowReadStreamBuffering = false;
+            request.Method = "POST";
+            request.ContentType = "application/json";
+
+
+
+            string serializer = JsonConvert.SerializeObject(probeer);
+            
+            using (StreamWriter StreamWriter = new StreamWriter(WebRequest.GetRequestStream()))
+            {
+
+            }
+
+           
+        }
        
     }
 }

@@ -8,5 +8,6 @@ namespace Gardenr.Repositories
     {
        Task<List<Plant>> GetPlanten();
        Task<Plant> GetPlantById(int id);
+       void AddPlant();
     }
 }

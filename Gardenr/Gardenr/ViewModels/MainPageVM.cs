@@ -76,7 +76,7 @@ namespace Gardenr.ViewModels
         public RelayCommand Testing { get; set; }
         public async void TestingM()
         {
-            if (!App.isAuthenticated)
+            /*if (!App.isAuthenticated)
             {
                 try
                 {
@@ -93,9 +93,9 @@ namespace Gardenr.ViewModels
                 }
               
             }
-       
-            //GoToPageMessage message = new GoToPageMessage() { PageNumber = 1 };
-            // Messenger.Default.Send<GoToPageMessage>(message);
+       */
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 1 };
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
 
     }
