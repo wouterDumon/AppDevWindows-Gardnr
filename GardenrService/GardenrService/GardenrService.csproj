@@ -186,10 +186,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AlarmController.cs" />
+    <Compile Include="Controllers\GebruikerController.cs" />
+    <Compile Include="Controllers\InstellingenController.cs" />
+    <Compile Include="Controllers\NieuwsItemController.cs" />
+    <Compile Include="Controllers\NotificatiesController.cs" />
     <Compile Include="Controllers\PlantController.cs" />
+    <Compile Include="Controllers\TaalController.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
+    <Compile Include="Controllers\TypeCController.cs" />
+    <Compile Include="DataObjects\Alarm.cs" />
+    <Compile Include="DataObjects\Gebruiker.cs" />
+    <Compile Include="DataObjects\Instellingen.cs" />
+    <Compile Include="DataObjects\NieuwsItem.cs" />
+    <Compile Include="DataObjects\Notificaties.cs" />
     <Compile Include="DataObjects\Plant.cs" />
+    <Compile Include="DataObjects\Taal.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
+    <Compile Include="DataObjects\TypeC.cs" />
     <Compile Include="Models\GardenrContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
     <Compile Include="Global.asax.cs">

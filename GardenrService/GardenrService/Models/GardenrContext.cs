@@ -41,6 +41,20 @@ namespace GardenrService.Models
         }
 
         public System.Data.Entity.DbSet<GardenrService.DataObjects.Plant> Plants { get; set; }
+
+        public System.Data.Entity.DbSet<GardenrService.DataObjects.Alarm> Alarms { get; set; }
+
+        public System.Data.Entity.DbSet<GardenrService.DataObjects.Gebruiker> Gebruikers { get; set; }
+
+        public System.Data.Entity.DbSet<GardenrService.DataObjects.Instellingen> Instellingens { get; set; }
+
+        public System.Data.Entity.DbSet<GardenrService.DataObjects.NieuwsItem> NieuwsItems { get; set; }
+
+        public System.Data.Entity.DbSet<GardenrService.DataObjects.Notificaties> Notificaties { get; set; }
+
+        public System.Data.Entity.DbSet<GardenrService.DataObjects.Taal> Taals { get; set; }
+
+        public System.Data.Entity.DbSet<GardenrService.DataObjects.TypeC> TypeCs { get; set; }
     }
 
 }

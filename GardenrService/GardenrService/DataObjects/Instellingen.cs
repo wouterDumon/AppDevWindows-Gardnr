@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.Mobile.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gardenr.Models
+namespace GardenrService.DataObjects
 {
-    public class Instellingen
+   public class Instellingen : EntityData
     {
-        public string ID { get; set; }
         public Taal Taal { get; set; }
         public bool Cortana { get; set; }
         public bool PushNotificaties { get; set; }

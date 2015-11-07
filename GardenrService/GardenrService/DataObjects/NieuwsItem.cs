@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.Mobile.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gardenr.Models
+namespace GardenrService.DataObjects
 {
-    public class NieuwsItem
+    public class NieuwsItem : EntityData
     {
-        public string ID { get; set; }
         public string Titel { get; set; }
         public string Description { get; set; }
     }

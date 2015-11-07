@@ -8,7 +8,7 @@ namespace Gardenr.Models
 {
     public class Taal
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string Naam { get; set; }
     }
 }
