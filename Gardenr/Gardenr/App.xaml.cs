@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Messaging;
 using Gardenr.Mesages;
 using Gardenr.Models;
 using Gardenr.Views;
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,6 +32,14 @@ namespace Gardenr
         internal static string FacebookId = String.Empty;
         public static bool isAuthenticated = false;
 
+       /* public static MobileServiceClient MobileService = new MobileServiceClient(
+          "http://localhost:58704"
+);*/
+        // Use this constructor instead after publishing to the cloud
+         public static MobileServiceClient MobileService = new MobileServiceClient(
+              "https://gardenr.azure-mobile.net/",
+              "ptPDBKzoOzchVLZwMfMjmNVpzNTihg33"
+        );
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().

@@ -8,7 +8,7 @@ namespace Gardenr.Models
 {
     public class Plant
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string Naam { get; set; }
         public string Omschrijving { get; set; }
         public string FotoUrl { get; set; }
