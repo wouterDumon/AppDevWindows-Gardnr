@@ -10,6 +10,6 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="76,309,0,0" TextWrapping="Wrap" Text="Catalogus" VerticalAlignment="Top"/>
-
+      
     </Grid>
 </Page>

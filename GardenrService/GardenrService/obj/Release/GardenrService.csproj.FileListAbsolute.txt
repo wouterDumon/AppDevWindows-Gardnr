@@ -131,3 +131,4 @@ C:\Users\wouter\Desktop\AppDevWindows-Gardnr\GardenrService\GardenrService\bin\z
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\GardenrService\GardenrService\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Release\GardenrService.dll
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Release\GardenrService.pdb
+C:\Users\wouter\Desktop\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Release\GardenrService.csprojResolveAssemblyReference.cache

@@ -8,12 +8,63 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
+using Microsoft.WindowsAzure.MobileServices.SQLiteStore;  // offline sync
+using Microsoft.WindowsAzure.MobileServices.Sync;         // offline sync
+using Microsoft.WindowsAzure.MobileServices;
+using Windows.UI.Popups;
 
 namespace Gardenr.Repositories
 {
     class PlantRepository : IPlantRepository
     {
+        private IMobileServiceSyncTable<TodoItem> todoTable =
+                App.MobileService.GetSyncTable<TodoItem>(); // offline sync
+        private async Task InitLocalStoreAsync()
+        {
+            if (!App.MobileService.SyncContext.IsInitialized)
+            {
+                var store = new MobileServiceSQLiteStore("localstore.db");
+                store.DefineTable<TodoItem>();
+                await App.MobileService.SyncContext.InitializeAsync(store);
+            }
+
+            await SyncAsync();
+        }
+
+        private async Task SyncAsync()
+        {
+            String errorString = null;
+
+            try
+            {
+                await App.MobileService.SyncContext.PushAsync();
+                // first param is query ID, used for incremental sync
+                await todoTable.PullAsync("todoItems", todoTable.CreateQuery());
+            }
+
+            catch (MobileServicePushFailedException ex)
+            {
+                errorString = "Push failed because of sync errors. " +
+                              "You may be offine.\nMessage: " +
+                              ex.Message + "\nPushResult.Status: " +
+                              ex.PushResult.Status.ToString();
+            }
+            catch (Exception ex)
+            {
+                errorString = "Pull failed: " + ex.Message +
+                  "\n\nIf you are still in an offline scenario, " +
+                  "you can try your Pull again when connected with " +
+                  "your Mobile Service.";
+            }
+
+            if (errorString != null)
+            {
+                MessageDialog d = new MessageDialog(errorString);
+                await d.ShowAsync();
+            }
+        }
+
+
         public async Task<List<Plant>> GetPlanten()
         {
             /* List<Plant> planten = new List<Plant>();
@@ -40,6 +91,7 @@ namespace Gardenr.Repositories
         }
         public async Task<Plant> GetPlantById(int id)
         {
+
             /* Plant temp = new Plant();
              using (HttpClient client = new HttpClient())
              {
@@ -118,10 +170,59 @@ namespace Gardenr.Repositories
             probeer.DagenVerplanten = "0";
             probeer.Binnen = 0;
             probeer.Buiten = 1;
-           await App.MobileService.GetTable<Plant>().InsertAsync(probeer);
-            List<Plant> A = await App.MobileService.GetTable<Plant>().ToListAsync();
+         //  await App.MobileService.GetTable<Plant>().InsertAsync(probeer);
+           // List<Plant> A = await App.MobileService.GetTable<Plant>().ToListAsync();
+
+            await InitLocalStoreAsync(); // offline sync
+            await SyncAsync(); // offline sync
+            await RefreshTodoItems();
+
 
         }
+        private MobileServiceCollection<TodoItem, TodoItem> items;
+        private async Task RefreshTodoItems()
+        {
+            MobileServiceInvalidOperationException exception = null;
+            try
+            {
+                // This code refreshes the entries in the list view by querying the TodoItems table.
+                // The query excludes completed TodoItems
+                items = await todoTable
+                    .Where(todoItem => todoItem.Complete == false)
+                    .ToCollectionAsync();
+            }
+            catch (MobileServiceInvalidOperationException e)
+            {
+                exception = e;
+            }
+
+            if (exception != null)
+            {
+                await new MessageDialog(exception.Message, "Error loading items").ShowAsync();
+            }
+            else
+            {
+            //    ListItems.ItemsSource = items;
+             //  this.ButtonSave.IsEnabled = true;
+            }
+        }
+
+        private async Task InsertTodoItem(TodoItem todoItem)
+        {
+            await todoTable.InsertAsync(todoItem);
+            items.Add(todoItem);
+
+            await SyncAsync(); // offline sync
+        }
+        private async Task UpdateCheckedTodoItem(TodoItem item)
+        {
+            await todoTable.UpdateAsync(item);
+            items.Remove(item);
+          //  ListItems.Focus(Windows.UI.Xaml.FocusState.Unfocused);
+
+            await SyncAsync(); // offline sync
+        }
+
         private async void add() {
           
 

@@ -159,6 +159,9 @@
   <data name="SyncStore_FailedToLoadError" xml:space="preserve">
     <value>Failed to read errors from the local store.</value>
   </data>
+  <data name="MobileServiceClient_NotAnAbsoluteURI" xml:space="preserve">
+    <value>{0} is not an absolute URI.</value>
+  </data>
   <data name="MobileServiceTable_ExpectedArray" xml:space="preserve">
     <value>Could not get an array from response {0}.</value>
   </data>
@@ -185,6 +188,9 @@
   </data>
   <data name="ODataExpressionParser_FunctionArgsCount" xml:space="preserve">
     <value>Function '{0}' requires {1} parameter(s).</value>
+  </data>
+  <data name="MobileServicesAuthentication_MobileServiceClientDefinesNoGateway" xml:space="preserve">
+    <value>Cannot work with a MobileServiceClient that does not specify a gateway URI.</value>
   </data>
   <data name="ODataExpressionParser_StringLiteralExpected" xml:space="preserve">
     <value>Expected string literal.</value>

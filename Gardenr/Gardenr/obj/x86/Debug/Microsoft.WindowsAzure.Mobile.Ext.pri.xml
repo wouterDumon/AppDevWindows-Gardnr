@@ -463,6 +463,11 @@
 					<Value>Der Server hat keine Antwort mit dem erwarteten Inhalt bereitgestellt.</Value>
 				</Candidate>
 			</NamedResource>
+			<NamedResource name="MobileServiceClient_NotAnAbsoluteURI" uri="ms-resource://Microsoft.WindowsAzure.MobileServices/Microsoft.WindowsAzure.MobileServices.Resources/MobileServiceClient_NotAnAbsoluteURI">
+				<Candidate qualifiers="Language-en-US" isDefault="true" type="String">
+					<Value>{0} is not an absolute URI.</Value>
+				</Candidate>
+			</NamedResource>
 			<NamedResource name="MobileServiceCollection_IncrementalLoadingFailed" uri="ms-resource://Microsoft.WindowsAzure.MobileServices/Microsoft.WindowsAzure.MobileServices.Resources/MobileServiceCollection_IncrementalLoadingFailed">
 				<Candidate qualifiers="Language-zh-TW" type="String">
 					<Value>無法遞增載入更多類型 '{0}' 的項目。查看內部例外狀況詳細資料。</Value>
@@ -845,6 +850,11 @@
 				</Candidate>
 				<Candidate qualifiers="Language-de-DE" type="String">
 					<Value>Es kann kein Anmeldevorgang gestartet werden, weil aktuell bereits eine Anmeldung ausgeführt wird.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MobileServicesAuthentication_MobileServiceClientDefinesNoGateway" uri="ms-resource://Microsoft.WindowsAzure.MobileServices/Microsoft.WindowsAzure.MobileServices.Resources/MobileServicesAuthentication_MobileServiceClientDefinesNoGateway">
+				<Candidate qualifiers="Language-en-US" isDefault="true" type="String">
+					<Value>Cannot work with a MobileServiceClient that does not specify a gateway URI.</Value>
 				</Candidate>
 			</NamedResource>
 			<NamedResource name="MobileServiceSerializer_IdCasingIncorrect" uri="ms-resource://Microsoft.WindowsAzure.MobileServices/Microsoft.WindowsAzure.MobileServices.Resources/MobileServiceSerializer_IdCasingIncorrect">
