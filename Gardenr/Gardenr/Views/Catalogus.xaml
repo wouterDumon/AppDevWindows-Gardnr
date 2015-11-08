@@ -6,10 +6,24 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    DataContext="{Binding Catalogus, Mode=TwoWay, Source={StaticResource Locator}}">
-
+    xmlns:vm="using:Gardenr.ViewModels"
+    xmlns:uc="using:Gardenr.UserClass"
+  >
+    <Page.DataContext>
+        <vm:CatalogusVM></vm:CatalogusVM>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="76,309,0,0" TextWrapping="Wrap" Text="Catalogus" VerticalAlignment="Top"/>
-      
+        <ListView  Name="ListItems" SelectedItem="{Binding SelectedPlant}"    ItemsSource="{Binding Planten, Mode=OneWay}" Margin="0,0,208,38">
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                       
+                        <TextBlock  Text="{Binding Naam}"></TextBlock>
+                    </StackPanel>
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

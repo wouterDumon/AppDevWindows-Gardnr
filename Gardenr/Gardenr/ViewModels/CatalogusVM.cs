@@ -7,22 +7,31 @@ using Gardenr.Models;
 using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Gardenr.ViewModels
 {
-    class CatalogusVM : ViewModelBase
+    class CatalogusVM : ObservableObject
     {
         public CatalogusVM()
         {
+           
             GoToDetail = new RelayCommand(Detail);
             GetPlanten();
         }
         private IPlantRepository repoPlant = SimpleIoc.Default.GetInstance<IPlantRepository>();
 
-        public List<Plant> Planten { get; set; }
+      
+        private ObservableCollection<Plant> _plant;
+
+        public ObservableCollection<Plant> Planten
+        {
+            get { return _plant; }
+            set { _plant = value; OnPropertyChanged("Planten"); }
+        }
 
         public Plant SelectedPlant { get; set; }
 
@@ -38,7 +47,7 @@ namespace Gardenr.ViewModels
 
         public async void GetPlanten()
         { 
-             repoPlant.AddPlant();
+         //    repoPlant.AddPlant();
             Planten = await repoPlant.GetPlanten();
            
         }

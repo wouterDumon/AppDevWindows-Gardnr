@@ -3,7 +3,9 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="MainPage" />
     <RootPropertyPathName Name="Testing" />
-    <RootPropertyPathName Name="Catalogus" />
+    <RootPropertyPathName Name="SelectedPlant" />
+    <RootPropertyPathName Name="Planten" />
+    <RootPropertyPathName Name="Naam" />
     <RootPropertyPathName Name="CatalogusPlant" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="Home" />
@@ -90,20 +92,24 @@
     <RootType FullName="Gardenr.UserClass.Profiel_Historiek" />
     <RootType FullName="Gardenr.UserClass.Profiel_Huidig" />
     <RootType FullName="Gardenr.UserClass.Profiel_Info_plant" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="HorizontalAlignment" />
+    <RootType FullName="Gardenr.ViewModels.CatalogusVM" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="Name" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemsSource" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Gardenr.Views.Catalogus" />
     <RootType FullName="Gardenr.Views.CatalogusPlant" />
     <RootType FullName="Gardenr.Views.Contact" />
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Children" />
-    </RootType>
     <RootType FullName="Gardenr.Views.Home" />
     <RootType FullName="Gardenr.Views.Instellingen" />
     <RootType FullName="Gardenr.Views.Notificaties" />

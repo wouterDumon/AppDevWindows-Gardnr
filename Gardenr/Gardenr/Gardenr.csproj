@@ -152,6 +152,7 @@
       <DependentUpon>Profiel_Info_plant.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\NotificatiesBewerken.cs" />
+    <Compile Include="ViewModels\ObservableObject.cs" />
     <Compile Include="ViewModels\PlantBewerkenVM.cs" />
     <Compile Include="UserClass\Profiel_Favorieten.xaml.cs">
       <DependentUpon>Profiel_Favorieten.xaml</DependentUpon>

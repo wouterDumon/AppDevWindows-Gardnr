@@ -12,19 +12,20 @@ using Microsoft.WindowsAzure.MobileServices.SQLiteStore;  // offline sync
 using Microsoft.WindowsAzure.MobileServices.Sync;         // offline sync
 using Microsoft.WindowsAzure.MobileServices;
 using Windows.UI.Popups;
+using System.Collections.ObjectModel;
 
 namespace Gardenr.Repositories
 {
     class PlantRepository : IPlantRepository
     {
-        private IMobileServiceSyncTable<TodoItem> todoTable =
-                App.MobileService.GetSyncTable<TodoItem>(); // offline sync
+        private IMobileServiceSyncTable<Plant> PlantTable =
+                App.MobileService.GetSyncTable<Plant>(); // offline sync
         private async Task InitLocalStoreAsync()
         {
             if (!App.MobileService.SyncContext.IsInitialized)
             {
                 var store = new MobileServiceSQLiteStore("localstore.db");
-                store.DefineTable<TodoItem>();
+                store.DefineTable<Plant>();
                 await App.MobileService.SyncContext.InitializeAsync(store);
             }
 
@@ -39,7 +40,7 @@ namespace Gardenr.Repositories
             {
                 await App.MobileService.SyncContext.PushAsync();
                 // first param is query ID, used for incremental sync
-                await todoTable.PullAsync("todoItems", todoTable.CreateQuery());
+                await PlantTable.PullAsync("Plants", PlantTable.CreateQuery());
             }
 
             catch (MobileServicePushFailedException ex)
@@ -65,95 +66,38 @@ namespace Gardenr.Repositories
         }
 
 
-        public async Task<List<Plant>> GetPlanten()
+        public async Task<ObservableCollection<Plant>> GetPlanten()
         {
-            /* List<Plant> planten = new List<Plant>();
-             using (HttpClient client = new HttpClient())
-             {
-                 var result =  client.GetAsync("http://wingardnr.azurewebsites.net//Plant");
-                // var result = client.GetAsync("http://datatank4.gent.be//mobiliteit/bezettingparkingsrealtime.json");
-                 string json = await result.Result.Content.ReadAsStringAsync();
-                json = json.Replace("&quot;", "'");
-                 Plant[] data = JsonConvert.DeserializeObject<Plant[]>(json);    
-                 foreach(var plantje in data)
-                 {
-                     planten.Add(plantje);
-                 }        
-             }
+            await InitLocalStoreAsync(); // offline sync
+            await RefreshPlantItems();
+            ObservableCollection<Plant> a = new ObservableCollection<Plant>();
+            foreach (Plant p in items) {
+                a.Add(p);
+            }
+
+            return  a;
 
 
 
 
 
 
-             return planten*/
-            return null;
+
         }
         public async Task<Plant> GetPlantById(int id)
         {
 
-            /* Plant temp = new Plant();
-             using (HttpClient client = new HttpClient())
-             {
 
-                 string link = "http://wingardnr.azurewebsites.net//Plant?id="+id;
-                 var result = client.GetAsync(link);
-
-                 string json = await result.Result.Content.ReadAsStringAsync();
-                 json = json.Replace("&quot;", "'");
-                 temp = JsonConvert.DeserializeObject<Plant>(json);
-
-             }
-             return temp;*/
             return null;
         }
 
         public async void AddPlant()
         {
-            /*  Plant probeer = new Plant();
-             // probeer.ID = 10;
-              probeer.Naam = "Patat";
-              probeer.Omschrijving = "een knol die onder de grond groeid";
-              probeer.FotoUrl = "http://www.aardappel.be/wp-content/themes/manyfacesofpotatoes/images/Avatar_VLAM_v.01_c.jpg";
-              probeer.ZaaiBegin = "01/01/2010";
-              probeer.ZaaiEinde = "01/01/2010";
-              probeer.OogstBegin = "01/01/2010";
-              probeer.OogstEinde = "01/01/2010";
-              probeer.PlantBegin = "01/01/2010";
-              probeer.PlantEinde = "01/01/2010";
-              probeer.ZaaiDiepte = "10";
-              probeer.AfstandTussen = "30";
-              probeer.AfstandRij = "30";
-              probeer.WaterGeven = "3";
-              probeer.DagenOogst = "20";
-              probeer.DagenVerplanten = "0";
-              probeer.Binnen = 0;
-              probeer.Buiten = 1;
-
-             string url = "http://wingardnr.azurewebsites.net/Plant/Edit";
-             // string url = "http://localhost:64597/Plant/Edit";
-
-
-
-              string serializer = JsonConvert.SerializeObject(probeer);
-
-              using (HttpClient client = new HttpClient())
-              {
-                  HttpResponseMessage response = await client.PutAsync(url, new StringContent(serializer, Encoding.UTF8, "application/json"));
-                  if(response.IsSuccessStatusCode)
-                  {
-                      string jsonresponse = await response.Content.ReadAsStringAsync();
-                      int result = JsonConvert.DeserializeObject<int>(jsonresponse);
-                  }
-
-              }*/
-
-          //  TodoItem item = new TodoItem { Text = "Awesome item", Complete = false };
-            //await App.MobileService.GetTable<TodoItem>().InsertAsync(item);
+            await InitLocalStoreAsync(); // offline sync
 
             Plant probeer = new Plant();
             // probeer.ID = 10;
-            probeer.Naam = "StringID";
+            probeer.Naam = "andere";
             probeer.Omschrijving = "een knol die onder de grond groeid";
             probeer.FotoUrl = "http://www.aardappel.be/wp-content/themes/manyfacesofpotatoes/images/Avatar_VLAM_v.01_c.jpg";
             probeer.ZaaiBegin = "01/01/2010";
@@ -170,25 +114,24 @@ namespace Gardenr.Repositories
             probeer.DagenVerplanten = "0";
             probeer.Binnen = 0;
             probeer.Buiten = 1;
-         //  await App.MobileService.GetTable<Plant>().InsertAsync(probeer);
-           // List<Plant> A = await App.MobileService.GetTable<Plant>().ToListAsync();
+            await PlantTable.InsertAsync(probeer);
 
-            await InitLocalStoreAsync(); // offline sync
             await SyncAsync(); // offline sync
-            await RefreshTodoItems();
+
+
+            await RefreshPlantItems();
 
 
         }
-        private MobileServiceCollection<TodoItem, TodoItem> items;
-        private async Task RefreshTodoItems()
+        private MobileServiceCollection<Plant, Plant> items;
+        private async Task RefreshPlantItems()
         {
             MobileServiceInvalidOperationException exception = null;
             try
             {
                 // This code refreshes the entries in the list view by querying the TodoItems table.
                 // The query excludes completed TodoItems
-                items = await todoTable
-                    .Where(todoItem => todoItem.Complete == false)
+                items = await PlantTable
                     .ToCollectionAsync();
             }
             catch (MobileServiceInvalidOperationException e)
@@ -207,21 +150,8 @@ namespace Gardenr.Repositories
             }
         }
 
-        private async Task InsertTodoItem(TodoItem todoItem)
-        {
-            await todoTable.InsertAsync(todoItem);
-            items.Add(todoItem);
-
-            await SyncAsync(); // offline sync
-        }
-        private async Task UpdateCheckedTodoItem(TodoItem item)
-        {
-            await todoTable.UpdateAsync(item);
-            items.Remove(item);
-          //  ListItems.Focus(Windows.UI.Xaml.FocusState.Unfocused);
-
-            await SyncAsync(); // offline sync
-        }
+      
+     
 
         private async void add() {
           
