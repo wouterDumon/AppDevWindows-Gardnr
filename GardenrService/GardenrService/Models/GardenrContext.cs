@@ -55,6 +55,8 @@ namespace GardenrService.Models
         public System.Data.Entity.DbSet<GardenrService.DataObjects.Taal> Taals { get; set; }
 
         public System.Data.Entity.DbSet<GardenrService.DataObjects.TypeC> TypeCs { get; set; }
+
+        public System.Data.Entity.DbSet<GardenrService.DataObjects.TuinObject> TuinObjects { get; set; }
     }
 
 }

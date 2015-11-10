@@ -11,9 +11,8 @@ namespace GardenrService.DataObjects
     {
         public TypeC TypeId { get; set; }
         public string Omschrijving { get; set; }
-        public string AlarmTijd { get; set; }
         public Alarm Alarm { get; set; }
-        public int GebruikerID { get; set; }
+        public Gebruiker GebruikerID { get; set; }
         public Plant Plant { get; set; }
     }
 }

@@ -194,6 +194,7 @@
     <Compile Include="Controllers\PlantController.cs" />
     <Compile Include="Controllers\TaalController.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
+    <Compile Include="Controllers\TuinObjectController.cs" />
     <Compile Include="Controllers\TypeCController.cs" />
     <Compile Include="DataObjects\Alarm.cs" />
     <Compile Include="DataObjects\Gebruiker.cs" />
@@ -203,6 +204,7 @@
     <Compile Include="DataObjects\Plant.cs" />
     <Compile Include="DataObjects\Taal.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
+    <Compile Include="DataObjects\TuinObject.cs" />
     <Compile Include="DataObjects\TypeC.cs" />
     <Compile Include="Models\GardenrContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
