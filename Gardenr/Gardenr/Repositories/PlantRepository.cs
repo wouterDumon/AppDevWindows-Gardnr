@@ -77,12 +77,6 @@ namespace Gardenr.Repositories
 
             return  a;
 
-
-
-
-
-
-
         }
         public async Task<Plant> GetPlantById(int id)
         {
@@ -153,9 +147,6 @@ namespace Gardenr.Repositories
       
      
 
-        private async void add() {
-          
-
-        }
+     
     }
 }
