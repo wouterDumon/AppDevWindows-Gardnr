@@ -22,7 +22,7 @@ namespace Gardenr.Repositories
             if (!App.MobileService.SyncContext.IsInitialized)
             {
                 var store = new MobileServiceSQLiteStore("localstore.db");
-                store.DefineTable<Plant>();
+                store.DefineTable<Taal>();
                 await App.MobileService.SyncContext.InitializeAsync(store);
             }
 
@@ -79,8 +79,7 @@ namespace Gardenr.Repositories
             {
                 // This code refreshes the entries in the list view by querying the TodoItems table.
                 // The query excludes completed TodoItems
-                items = await TaalTable
-                    .ToCollectionAsync();
+                items = await TaalTable.ToCollectionAsync();
             }
             catch (MobileServiceInvalidOperationException e)
             {
@@ -104,5 +103,19 @@ namespace Gardenr.Repositories
 
             return tal;
         }
+
+        //only available for admins
+        public async void AddTaal()
+        {
+            await InitLocalStoreAsync();
+
+            Taal test = new Taal();
+            test.Naam = "Frans";
+
+            await TaalTable.InsertAsync(test);
+            await SyncAsync();
+            await RefreshTaalItems();
+        }
+
     }
 }

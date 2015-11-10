@@ -9,5 +9,6 @@ namespace Gardenr.Repositories
     {
         Task<Taal> GetTaalById(int id);
         Task<ObservableCollection<Taal>> GetTalen();
+        void AddTaal();
     }
 }

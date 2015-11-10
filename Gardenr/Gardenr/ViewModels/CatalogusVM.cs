@@ -24,6 +24,10 @@ namespace Gardenr.ViewModels
         }
         private IPlantRepository repoPlant = SimpleIoc.Default.GetInstance<IPlantRepository>();
 
+
+        //taaltest 
+        private ITaalRepository repoTaal = SimpleIoc.Default.GetInstance<ITaalRepository>();
+
       
         private ObservableCollection<Plant> _plant;
 
@@ -46,10 +50,12 @@ namespace Gardenr.ViewModels
         }
 
         public async void GetPlanten()
-        { 
-         //    repoPlant.AddPlant();
+        {
+            //    repoPlant.AddPlant();
+          
             Planten = await repoPlant.GetPlanten();
-           
+            var talen = await repoTaal.GetTalen();
+            string wtf = "pauzeer ier keer";
         }
     }
 }
