@@ -124,6 +124,7 @@
     <Compile Include="Models\TuinObject.cs" />
     <Compile Include="Models\TypeC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\DataRepository.cs" />
     <Compile Include="Repositories\GebruikerRepository.cs" />
     <Compile Include="Repositories\IGebruikerRepository.cs" />
     <Compile Include="Repositories\IInstellingenRepository.cs" />
