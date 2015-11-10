@@ -19,17 +19,11 @@ namespace Gardenr.Repositories
 
         private async Task InitLocalStoreAsync()
         {
-            try
+            if (!App.MobileService.SyncContext.IsInitialized)
             {
-               
-                items = await TaalTable.ToCollectionAsync();
-            }
-            catch (Exception e)
-            {
-                App.store.DefineTable<Taal>();
                 await App.MobileService.SyncContext.InitializeAsync(App.store);
-
             }
+            
 
 
 
@@ -117,7 +111,7 @@ namespace Gardenr.Repositories
             await InitLocalStoreAsync();
 
             Taal test = new Taal();
-            test.Naam = "Frans";
+            test.Naam = "Nederlands";
 
             await TaalTable.InsertAsync(test);
             await SyncAsync();

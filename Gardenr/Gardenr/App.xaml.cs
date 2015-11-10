@@ -32,7 +32,9 @@ namespace Gardenr
         internal static string AccessToken = String.Empty;
         internal static string FacebookId = String.Empty;
         public static bool isAuthenticated = false;
-        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore.db"); 
+        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore.db");
+       
+           
 
        /* public static MobileServiceClient MobileService = new MobileServiceClient(
           "http://localhost:58704"
@@ -53,6 +55,9 @@ namespace Gardenr
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            store.DefineTable<Plant>();
+            store.DefineTable<Taal>();
         }
 
         /// <summary>

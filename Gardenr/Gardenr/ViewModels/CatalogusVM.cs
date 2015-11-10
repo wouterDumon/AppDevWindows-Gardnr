@@ -54,6 +54,7 @@ namespace Gardenr.ViewModels
             //    repoPlant.AddPlant();
           
             Planten = await repoPlant.GetPlanten();
+            repoTaal.AddTaal();
             var talen = await repoTaal.GetTalen();
             string wtf = "pauzeer ier keer";
         }

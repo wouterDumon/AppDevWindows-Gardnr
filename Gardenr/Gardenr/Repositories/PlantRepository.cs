@@ -22,17 +22,12 @@ namespace Gardenr.Repositories
                 App.MobileService.GetSyncTable<Plant>(); // offline sync
         private async Task InitLocalStoreAsync()
         {
-            try
+            if (!App.MobileService.SyncContext.IsInitialized)
             {
-                await App.MobileService.SyncContext.PushAsync();
-                await PlantTable.PullAsync("Plants", PlantTable.CreateQuery());
-            }
-            catch (Exception e)
-            {
-                App.store.DefineTable<Plant>();
-                await App.MobileService.SyncContext.InitializeAsync(App.store);
 
+                await App.MobileService.SyncContext.InitializeAsync(App.store);
             }
+            
 
 
             await SyncAsync();
