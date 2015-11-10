@@ -19,12 +19,19 @@ namespace Gardenr.Repositories
 
         private async Task InitLocalStoreAsync()
         {
-            if (!App.MobileService.SyncContext.IsInitialized)
+            try
             {
-                var store = new MobileServiceSQLiteStore("localstore.db");
-                store.DefineTable<Taal>();
-                await App.MobileService.SyncContext.InitializeAsync(store);
+               
+                items = await TaalTable.ToCollectionAsync();
             }
+            catch (Exception e)
+            {
+                App.store.DefineTable<Taal>();
+                await App.MobileService.SyncContext.InitializeAsync(App.store);
+
+            }
+
+
 
             await SyncAsync();
         }

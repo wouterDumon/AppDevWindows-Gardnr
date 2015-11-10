@@ -4,6 +4,7 @@ using Gardenr.Mesages;
 using Gardenr.Models;
 using Gardenr.Views;
 using Microsoft.WindowsAzure.MobileServices;
+using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,6 +32,7 @@ namespace Gardenr
         internal static string AccessToken = String.Empty;
         internal static string FacebookId = String.Empty;
         public static bool isAuthenticated = false;
+        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore.db"); 
 
        /* public static MobileServiceClient MobileService = new MobileServiceClient(
           "http://localhost:58704"
