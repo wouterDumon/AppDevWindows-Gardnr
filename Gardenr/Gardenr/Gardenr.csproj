@@ -134,6 +134,7 @@
     <Compile Include="Repositories\IPlantRepository.cs" />
     <Compile Include="Repositories\ITaalRepository.cs" />
     <Compile Include="Repositories\ITuinRepository.cs" />
+    <Compile Include="Repositories\ITypeRepository.cs" />
     <Compile Include="Repositories\NieuwsRepository.cs" />
     <Compile Include="Repositories\NotificatiesRepository.cs" />
     <Compile Include="Repositories\PlantRepository.cs" />
