@@ -58,6 +58,7 @@ namespace Gardenr
 
             store.DefineTable<Plant>();
             store.DefineTable<Taal>();
+            
         }
 
         /// <summary>

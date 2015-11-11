@@ -18,16 +18,16 @@ namespace Gardenr.Repositories
       public IEnumerable GetItems(Type deklasse)
       {
             var name = deklasse.Name;
-                        
+            var pat = new ObservableCollection<Taal>();    
             return pat;
       }
-     
+   /*  
     private static ObservableCollection<T> CreateObservable(IEnumerable<T> enumerable)
         {
             return new ObservableCollection<T>(enumerable);
         }
 
-
+    */
 
 
 
