@@ -5,10 +5,10 @@ namespace Gardenr.Repositories
 {
     interface INotificatiesRepository
     {
-        List<Notificaties> GetNotificaties();
-        Notificaties GetNotificatieById(int id);
-        void SaveNotificatie(Notificaties not);
+        List<Notificatie> GetNotificaties();
+        Notificatie GetNotificatieById(int id);
+        void SaveNotificatie(Notificatie not);
         void DeleteNotificatie(int id);
-        void AddNotification(Notificaties not);
+        void AddNotification(Notificatie not);
     }
 }

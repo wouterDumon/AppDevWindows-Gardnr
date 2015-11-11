@@ -15,6 +15,6 @@ namespace Gardenr.Models
         public int Aantal { get; set; }
         public string LaatstWater { get; set; }
         public string extra { get; set; }
-        public List<Notificaties> NotificationID { get; set; }
+        public List<Notificatie> NotificationID { get; set; }
     }
 }

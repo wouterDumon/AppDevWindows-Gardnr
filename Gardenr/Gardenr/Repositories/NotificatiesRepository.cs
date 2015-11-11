@@ -9,19 +9,19 @@ namespace Gardenr.Repositories
 {
     class NotificatiesRepository : INotificatiesRepository
     {
-        public List<Notificaties> GetNotificaties()
+        public List<Notificatie> GetNotificaties()
         {
-            List<Notificaties> notific = new List<Notificaties>();
+            List<Notificatie> notific = new List<Notificatie>();
 
             return notific;
         }
-        public Notificaties GetNotificatieById(int id)
+        public Notificatie GetNotificatieById(int id)
         {
-            Notificaties not = new Notificaties();
+            Notificatie not = new Notificatie();
 
             return not;
         }
-        public void SaveNotificatie(Notificaties not)
+        public void SaveNotificatie(Notificatie not)
         {
 
         }
@@ -29,7 +29,7 @@ namespace Gardenr.Repositories
         {
 
         }
-        public void AddNotification(Notificaties not)
+        public void AddNotification(Notificatie not)
         {
 
         }

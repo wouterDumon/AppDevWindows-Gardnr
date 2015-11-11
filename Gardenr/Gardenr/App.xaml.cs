@@ -58,8 +58,16 @@ namespace Gardenr
 
             store.DefineTable<Plant>();
             store.DefineTable<Taal>();
-            
-        }
+            store.DefineTable<Alarm>();
+            store.DefineTable<Gebruiker>();
+            store.DefineTable<NieuwsItem>();
+            store.DefineTable<Notificatie>();
+            store.DefineTable<Tuin>();
+            store.DefineTable<TypeC>();
+
+            //models die er neit in staan
+            //constants todoitems tuinobjects
+                }
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points

@@ -116,7 +116,7 @@
     <Compile Include="Models\Gebruiker.cs" />
     <Compile Include="Models\Instellingen.cs" />
     <Compile Include="Models\NieuwsItem.cs" />
-    <Compile Include="Models\Notificaties.cs" />
+    <Compile Include="Models\Notificatie.cs" />
     <Compile Include="Models\Plant.cs" />
     <Compile Include="Models\Taal.cs" />
     <Compile Include="Models\TodoItem.cs" />
