@@ -1,9 +1,14 @@
-﻿using Gardenr.Models;
+﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+using Gardenr.Models;
 
 namespace Gardenr.Repositories
 {
     interface IGebruikerRepository
     {
-        Gebruiker GetGebruikerGegevensByFacebook(string facebooklogin);
+        void AddGebruiker(Gebruiker data);
+        void AdjustGebruiker(Gebruiker data);
+        Task<ObservableCollection<Gebruiker>> GetGebruiker();
+        Task<Gebruiker> GetGebruiker(string login);
     }
 }

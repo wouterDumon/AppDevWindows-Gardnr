@@ -1,11 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Gardenr.Models;
 
 namespace Gardenr.Repositories
 {
     interface INieuwsRepository
     {
-        List<NieuwsItem> GetNieuwsItems();
-        void AddNewsItem(NieuwsItem nieuws);
+        void AddNewsItem(NieuwsItem nitem);
+        void AdjustNewsItem(NieuwsItem nitem);
+        void DeleteItem(NieuwsItem nitem);
+        Task<NieuwsItem> GetNewsItem(string nitem);
+        Task<ObservableCollection<NieuwsItem>> GetNewsItems();
     }
 }
