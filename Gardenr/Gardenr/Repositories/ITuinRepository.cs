@@ -1,13 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Gardenr.Models;
 
 namespace Gardenr.Repositories
 {
     interface ITuinRepository
     {
-        void AddTuinObject(TuinObject tobject);
-        void Adjust(TuinObject tobject);
-        void DeleteTuinObject(int id);
-        List<TuinObject> GetTuinObjectsById(int id);
+        void AddTO(TuinObject nitem);
+        void AdjustTO(TuinObject nitem);
+        void DeleteTO(TuinObject nitem);
+        Task<ObservableCollection<TuinObject>> GetTOs();
+        Task<TuinObject> GetTO(string nitem);
     }
 }

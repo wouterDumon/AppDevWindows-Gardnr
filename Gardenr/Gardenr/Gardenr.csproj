@@ -102,11 +102,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BaseViewModelLocator.cs" />
-    <Compile Include="DataAcces\CatalogusDA.cs" />
-    <Compile Include="DataAcces\GebruikersDA.cs" />
-    <Compile Include="DataAcces\InstellingenDA.cs" />
-    <Compile Include="DataAcces\NotificatiesDA.cs" />
-    <Compile Include="DataAcces\PlantenDA.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -317,6 +312,9 @@
     <SDKReference Include="SQLite.UAP.2015, Version=3.9.2">
       <Name>SQLite for Universal App Platform</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAcces\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -6,6 +6,7 @@ using Gardenr.Models;
 using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,14 +18,14 @@ namespace Gardenr.ViewModels
     {
         public NotificatiesVM()
         {
-            IngesteldeNotificaties = repoNotification.GetNotificaties();
+            StartupGetItems();
             AddNotificatie = new RelayCommand(AddNotificatieM);
             BewerkNotificatie = new RelayCommand(BewerkNotificatieM);
             DeleteNotificatie = new RelayCommand(DeleteNotificatieM);
         }
         private INotificatiesRepository repoNotification = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
 
-        public List<Notificatie> IngesteldeNotificaties { get; set; }
+        public ObservableCollection<Notificatie> IngesteldeNotificaties { get; set; }
 
         public Notificatie SelectedNotificatie { get; set; }
 
@@ -47,6 +48,10 @@ namespace Gardenr.ViewModels
             
         }
 
+        public async void StartupGetItems()
+        {
+            IngesteldeNotificaties = await repoNotification.GetNotificaties();
+        }
 
     }
 }

@@ -79,9 +79,21 @@ namespace Gardenr.Repositories
             return  a;
 
         }
-        public async Task<Plant> GetPlantById(int id)
+        public async Task<Plant> GetPlantById(string id)
         {
+            await InitLocalStoreAsync(); // offline sync
+            await RefreshPlantItems();
+            Plant a = new Plant();
+            foreach (Plant p in items)
+            {
+                if(p.ID == id)
+                {
+                    return p;
+                }
+              
+            }
 
+        
 
             return null;
         }

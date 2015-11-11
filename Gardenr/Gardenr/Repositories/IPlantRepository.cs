@@ -8,7 +8,8 @@ namespace Gardenr.Repositories
     internal interface IPlantRepository
     {
        Task<ObservableCollection<Plant>> GetPlanten();
-       Task<Plant> GetPlantById(int id);
+       Task<Plant> GetPlantById(string id);
+
        void AddPlant();
     }
 }

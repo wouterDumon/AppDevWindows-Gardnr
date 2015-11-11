@@ -98,11 +98,18 @@ namespace Gardenr.Repositories
             }
         }
     
-        public async Task<Taal> GetTaalById(int id)
+        public async Task<Taal> GetTaalById(string id)
         {
-            Taal tal = new Taal();
-
-            return tal;
+            await InitLocalStoreAsync();
+            await RefreshTaalItems();
+            foreach (Taal ni in items)
+            {
+                if (ni.ID == id)
+                {
+                    return ni;
+                }
+            }
+            return null;
         }
 
         //only available for admins

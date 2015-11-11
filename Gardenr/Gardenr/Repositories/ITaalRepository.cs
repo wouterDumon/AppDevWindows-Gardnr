@@ -7,7 +7,7 @@ namespace Gardenr.Repositories
 {
     interface ITaalRepository
     {
-        Task<Taal> GetTaalById(int id);
+        Task<Taal> GetTaalById(string id);
         Task<ObservableCollection<Taal>> GetTalen();
         void AddTaal();
     }

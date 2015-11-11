@@ -18,7 +18,7 @@ namespace Gardenr.ViewModels
         //menu navigatie huidig/favorieten/geschidenis zit er nog niet in
         public ProfielVM()
         {
-            TuinPlanten = repoTuin.GetTuinObjectsById(1);//id moet nog aangepast worden adhv user
+            StartupGetItems();
             GoToTuinObject = new RelayCommand(TuinObjectDetail);
             AddTuinObject = new RelayCommand(AddTuinObjectM);
         }
@@ -50,6 +50,11 @@ namespace Gardenr.ViewModels
         public void NoMoveFavM()
         {
             //aanduiden dat plant niet meer een favoriet is
+        }
+
+        public async void StartupGetItems()
+        {
+          //planten ophalen van de user
         }
     }
 
