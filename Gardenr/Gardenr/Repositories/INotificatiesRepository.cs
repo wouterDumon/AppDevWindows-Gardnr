@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Gardenr.Models;
 
 namespace Gardenr.Repositories
 {
     interface INotificatiesRepository
     {
-        List<Notificatie> GetNotificaties();
-        Notificatie GetNotificatieById(int id);
-        void SaveNotificatie(Notificatie not);
-        void DeleteNotificatie(int id);
-        void AddNotification(Notificatie not);
+        void AddNotificatie(Notificatie nitem);
+        void AdjustNotificatie(Notificatie nitem);
+        void DeleteNotificatie(Notificatie nitem);
+        Task<Notificatie> GetNotificatie(string nitem);
+        Task<ObservableCollection<Notificatie>> GetNotificaties();
     }
 }
