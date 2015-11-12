@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DUMON</Machine>
-    <WindowsUser>wouter</WindowsUser>
+    <Machine>SEEDURIEEK</Machine>
+    <WindowsUser>cedric</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>1dda983c-36a1-44e1-84a6-76f304faa7a2</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>6117D5E4E8704E01E210345268CD3C5A99E20C3B201263C11F73458B24172E30</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>52473WouterDumon.Gardenr_1.1.0.0_x86__ny6ja2a0xej7y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>52473WouterDumon.Gardenr_ny6ja2a0xej7y!App</RegisteredUserModeAppID>
@@ -19,610 +19,634 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2015-11-12T19:01:08.567</Modified>
+=======
+      <Modified>2015-11-12T19:00:13.535</Modified>
+>>>>>>> a0087c98aae0766339b80b04b0c4e32ad5a9916a
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
-      <Modified>2015-11-12T13:56:30.021</Modified>
+      <Modified>2015-10-20T13:42:10.046</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-11-12T13:56:30.068</Modified>
+      <Modified>2015-10-20T13:42:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-12T13:56:30.133</Modified>
+      <Modified>2015-10-20T13:42:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-12T13:56:30.192</Modified>
+      <Modified>2015-10-20T13:42:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-12T13:56:30.233</Modified>
+      <Modified>2015-10-20T13:42:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-12T13:56:30.307</Modified>
+      <Modified>2015-10-20T13:42:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-12T13:56:30.357</Modified>
+      <Modified>2015-10-20T13:42:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-12T13:56:30.397</Modified>
+      <Modified>2015-10-20T13:42:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ClrCompression.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
-      <Modified>2015-11-12T13:56:30.453</Modified>
+      <Modified>2015-09-30T08:24:23.158</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\entrypoint\Gardenr.exe">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\entrypoint\Gardenr.exe">
       <PackagePath>entrypoint\Gardenr.exe</PackagePath>
+<<<<<<< HEAD
       <Modified>2015-11-12T19:01:07.356</Modified>
+=======
+      <Modified>2015-11-12T19:00:05.247</Modified>
+>>>>>>> a0087c98aae0766339b80b04b0c4e32ad5a9916a
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client.dll">
       <PackagePath>Facebook.Client.dll</PackagePath>
-      <Modified>2015-11-12T13:56:30.531</Modified>
+      <Modified>2015-11-06T10:47:20.522</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Common\StandardStyles.xbf">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Common\StandardStyles.xbf">
       <PackagePath>Facebook.Client\Common\StandardStyles.xbf</PackagePath>
-      <Modified>2015-11-12T13:56:30.570</Modified>
+      <Modified>2015-11-06T10:47:20.535</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\FriendPicker\FriendPicker.xbf">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\FriendPicker\FriendPicker.xbf">
       <PackagePath>Facebook.Client\Controls\FriendPicker\FriendPicker.xbf</PackagePath>
-      <Modified>2015-11-12T13:56:30.633</Modified>
+      <Modified>2015-11-06T10:47:20.537</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\LoginButton\LoginButton.xbf">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\LoginButton\LoginButton.xbf">
       <PackagePath>Facebook.Client\Controls\LoginButton\LoginButton.xbf</PackagePath>
-      <Modified>2015-11-12T13:56:30.683</Modified>
+      <Modified>2015-11-06T10:47:20.539</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\PlacePicker\PlacePicker.xbf">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\PlacePicker\PlacePicker.xbf">
       <PackagePath>Facebook.Client\Controls\PlacePicker\PlacePicker.xbf</PackagePath>
-      <Modified>2015-11-12T13:56:30.763</Modified>
+      <Modified>2015-11-06T10:47:20.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\ProfilePicture\ProfilePicture.xbf">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\ProfilePicture\ProfilePicture.xbf">
       <PackagePath>Facebook.Client\Controls\ProfilePicture\ProfilePicture.xbf</PackagePath>
-      <Modified>2015-11-12T13:56:30.800</Modified>
+      <Modified>2015-11-06T10:47:20.542</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\WebDialog\Styles.xbf">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\WebDialog\Styles.xbf">
       <PackagePath>Facebook.Client\Controls\WebDialog\Styles.xbf</PackagePath>
-      <Modified>2015-11-12T13:56:30.851</Modified>
+      <Modified>2015-11-06T10:47:20.543</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\WebDialog\WebDialogUserControl.xbf">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Controls\WebDialog\WebDialogUserControl.xbf">
       <PackagePath>Facebook.Client\Controls\WebDialog\WebDialogUserControl.xbf</PackagePath>
-      <Modified>2015-11-12T13:56:30.897</Modified>
+      <Modified>2015-11-06T10:47:20.544</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Facebook.Client.xr.xml">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Facebook.Client.xr.xml">
       <PackagePath>Facebook.Client\Facebook.Client.xr.xml</PackagePath>
-      <Modified>2015-11-12T13:56:30.960</Modified>
+      <Modified>2015-11-06T10:47:20.530</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\FacebookDialogPage.xbf">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\FacebookDialogPage.xbf">
       <PackagePath>Facebook.Client\FacebookDialogPage.xbf</PackagePath>
-      <Modified>2015-11-12T13:56:31.007</Modified>
+      <Modified>2015-11-06T10:47:20.536</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Images\fb_blank_place_profile_square.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Images\fb_blank_place_profile_square.png">
       <PackagePath>Facebook.Client\Images\fb_blank_place_profile_square.png</PackagePath>
-      <Modified>2015-11-12T13:56:31.063</Modified>
+      <Modified>2015-11-06T10:47:20.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Images\fb_blank_profile_portrait.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Images\fb_blank_profile_portrait.png">
       <PackagePath>Facebook.Client\Images\fb_blank_profile_portrait.png</PackagePath>
-      <Modified>2015-11-12T13:56:31.118</Modified>
+      <Modified>2015-11-06T10:47:20.546</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Images\fb_blank_profile_square.png">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Images\fb_blank_profile_square.png">
       <PackagePath>Facebook.Client\Images\fb_blank_profile_square.png</PackagePath>
-      <Modified>2015-11-12T13:56:31.173</Modified>
+      <Modified>2015-11-06T10:47:20.547</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Themes\Generic.xbf">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.Client\Themes\Generic.xbf">
       <PackagePath>Facebook.Client\Themes\Generic.xbf</PackagePath>
-      <Modified>2015-11-12T13:56:31.227</Modified>
+      <Modified>2015-11-06T10:47:20.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Facebook.dll">
       <PackagePath>Facebook.dll</PackagePath>
-      <Modified>2015-11-12T13:56:31.332</Modified>
+      <Modified>2015-11-06T10:47:20.463</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\GalaSoft.MvvmLight.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
-      <Modified>2015-11-12T13:56:31.386</Modified>
+      <Modified>2015-10-02T06:47:52.590</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\GalaSoft.MvvmLight.Extras.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\GalaSoft.MvvmLight.Extras.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
-      <Modified>2015-11-12T13:56:31.449</Modified>
+      <Modified>2015-10-02T06:47:52.600</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\GalaSoft.MvvmLight.Platform.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\GalaSoft.MvvmLight.Platform.dll">
       <PackagePath>GalaSoft.MvvmLight.Platform.dll</PackagePath>
-      <Modified>2015-11-12T13:56:31.517</Modified>
+      <Modified>2015-10-02T06:47:52.638</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
       <PackagePath>Gardenr.exe</PackagePath>
+<<<<<<< HEAD
       <Modified>2015-11-12T19:01:08.564</Modified>
+=======
+      <Modified>2015-11-12T19:00:13.534</Modified>
+>>>>>>> a0087c98aae0766339b80b04b0c4e32ad5a9916a
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.xr.xml">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.xr.xml">
       <PackagePath>Gardenr.xr.xml</PackagePath>
+<<<<<<< HEAD
       <Modified>2015-11-12T18:34:46.901</Modified>
+=======
+      <Modified>2015-11-12T18:58:40.436</Modified>
+>>>>>>> a0087c98aae0766339b80b04b0c4e32ad5a9916a
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
-      <Modified>2015-11-12T13:56:31.726</Modified>
+      <Modified>2015-09-30T08:23:00.182</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.ApplicationInsights.Extensibility.Windows.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.ApplicationInsights.Extensibility.Windows.dll">
       <PackagePath>Microsoft.ApplicationInsights.Extensibility.Windows.dll</PackagePath>
-      <Modified>2015-11-12T13:56:31.788</Modified>
+      <Modified>2015-09-30T08:23:00.811</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.ApplicationInsights.PersistenceChannel.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.ApplicationInsights.PersistenceChannel.dll">
       <PackagePath>Microsoft.ApplicationInsights.PersistenceChannel.dll</PackagePath>
-      <Modified>2015-11-12T13:56:31.860</Modified>
+      <Modified>2015-09-30T08:23:00.751</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.CSharp.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
-      <Modified>2015-11-12T13:56:31.937</Modified>
+      <Modified>2015-09-30T08:23:24.589</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.Practices.ServiceLocation.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.000</Modified>
+      <Modified>2015-10-02T06:47:52.260</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.VisualBasic.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.070</Modified>
+      <Modified>2015-09-30T08:23:22.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.117</Modified>
+      <Modified>2015-09-30T08:23:05.947</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.190</Modified>
+      <Modified>2015-11-09T14:44:01.260</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.Ext.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.Ext.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.Ext.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.241</Modified>
+      <Modified>2015-11-09T14:44:01.273</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.SQLiteStore.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.299</Modified>
+      <Modified>2015-11-09T14:44:01.182</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.374</Modified>
+      <Modified>2015-09-30T08:44:47.776</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2015-11-12T13:56:32.403</Modified>
+      <Modified>2015-10-20T13:42:10.054</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\resources.pri">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
+<<<<<<< HEAD
       <Modified>2015-11-12T18:40:18.661</Modified>
+=======
+      <Modified>2015-11-12T19:00:08.925</Modified>
+>>>>>>> a0087c98aae0766339b80b04b0c4e32ad5a9916a
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.544</Modified>
+      <Modified>2015-11-09T14:31:48.457</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\SQLitePCL.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\SQLitePCL.dll">
       <PackagePath>SQLitePCL.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.722</Modified>
+      <Modified>2015-11-09T14:44:01.250</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\SQLitePCL.Ext.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\SQLitePCL.Ext.dll">
       <PackagePath>SQLitePCL.Ext.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.818</Modified>
+      <Modified>2015-11-09T14:44:01.200</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.AppContext.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
-      <Modified>2015-11-12T13:56:32.921</Modified>
+      <Modified>2015-09-30T08:23:23.986</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.Concurrent.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.Concurrent.dll">
       <PackagePath>System.Collections.Concurrent.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.038</Modified>
+      <Modified>2015-09-30T08:23:24.777</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.151</Modified>
+      <Modified>2015-09-30T08:23:24.549</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.Immutable.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.Immutable.dll">
       <PackagePath>System.Collections.Immutable.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.203</Modified>
+      <Modified>2015-09-30T08:23:24.482</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.NonGeneric.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.NonGeneric.dll">
       <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.266</Modified>
+      <Modified>2015-09-30T08:23:44.367</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.Specialized.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Collections.Specialized.dll">
       <PackagePath>System.Collections.Specialized.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.313</Modified>
+      <Modified>2015-09-30T08:23:19.917</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ComponentModel.Annotations.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ComponentModel.Annotations.dll">
       <PackagePath>System.ComponentModel.Annotations.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.375</Modified>
+      <Modified>2015-09-30T08:23:24.659</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ComponentModel.DataAnnotations.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ComponentModel.DataAnnotations.dll">
       <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.444</Modified>
+      <Modified>2015-09-30T08:23:09.425</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ComponentModel.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ComponentModel.dll">
       <PackagePath>System.ComponentModel.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.490</Modified>
+      <Modified>2015-09-30T08:23:24.419</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ComponentModel.EventBasedAsync.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ComponentModel.EventBasedAsync.dll">
       <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.566</Modified>
+      <Modified>2015-09-30T08:23:09.441</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Core.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Core.dll">
       <PackagePath>System.Core.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.620</Modified>
+      <Modified>2015-09-30T08:23:10.424</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Data.Common.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Data.Common.dll">
       <PackagePath>System.Data.Common.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.683</Modified>
+      <Modified>2015-09-30T08:23:09.445</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.Contracts.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.Contracts.dll">
       <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.730</Modified>
+      <Modified>2015-09-30T08:23:09.440</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.Debug.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.Debug.dll">
       <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.808</Modified>
+      <Modified>2015-09-30T08:23:25.168</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.StackTrace.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.StackTrace.dll">
       <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.870</Modified>
+      <Modified>2015-09-30T08:23:12.854</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.Tools.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.Tools.dll">
       <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.933</Modified>
+      <Modified>2015-09-30T08:23:25.620</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.Tracing.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Diagnostics.Tracing.dll">
       <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
-      <Modified>2015-11-12T13:56:33.980</Modified>
+      <Modified>2015-09-30T08:23:25.788</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.dll">
       <PackagePath>System.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.042</Modified>
+      <Modified>2015-09-30T08:23:10.992</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Dynamic.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Dynamic.Runtime.dll">
       <PackagePath>System.Dynamic.Runtime.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.107</Modified>
+      <Modified>2015-09-30T08:23:26.753</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Globalization.Calendars.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Globalization.Calendars.dll">
       <PackagePath>System.Globalization.Calendars.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.154</Modified>
+      <Modified>2015-09-30T08:23:25.889</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Globalization.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Globalization.dll">
       <PackagePath>System.Globalization.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.236</Modified>
+      <Modified>2015-09-30T08:23:25.880</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Globalization.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Globalization.Extensions.dll">
       <PackagePath>System.Globalization.Extensions.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.341</Modified>
+      <Modified>2015-09-30T08:23:26.681</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.Compression.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.Compression.dll">
       <PackagePath>System.IO.Compression.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.407</Modified>
+      <Modified>2015-09-30T08:23:38.885</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.Compression.ZipFile.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.Compression.ZipFile.dll">
       <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.470</Modified>
+      <Modified>2015-09-30T08:23:38.299</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.dll">
       <PackagePath>System.IO.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.524</Modified>
+      <Modified>2015-09-30T08:23:25.963</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.FileSystem.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.FileSystem.dll">
       <PackagePath>System.IO.FileSystem.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.591</Modified>
+      <Modified>2015-09-30T08:23:38.238</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.FileSystem.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.FileSystem.Primitives.dll">
       <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.658</Modified>
+      <Modified>2015-09-30T08:23:37.379</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.IsolatedStorage.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.IsolatedStorage.dll">
       <PackagePath>System.IO.IsolatedStorage.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.728</Modified>
+      <Modified>2015-09-30T08:23:12.736</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.UnmanagedMemoryStream.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.IO.UnmanagedMemoryStream.dll">
       <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.790</Modified>
+      <Modified>2015-09-30T08:23:38.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Linq.dll">
       <PackagePath>System.Linq.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.856</Modified>
+      <Modified>2015-09-30T08:23:44.336</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Linq.Expressions.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Linq.Expressions.dll">
       <PackagePath>System.Linq.Expressions.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.922</Modified>
+      <Modified>2015-09-30T08:23:44.269</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Linq.Parallel.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Linq.Parallel.dll">
       <PackagePath>System.Linq.Parallel.dll</PackagePath>
-      <Modified>2015-11-12T13:56:34.990</Modified>
+      <Modified>2015-09-30T08:23:46.002</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Linq.Queryable.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Linq.Queryable.dll">
       <PackagePath>System.Linq.Queryable.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.053</Modified>
+      <Modified>2015-09-30T08:23:48.494</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.dll">
       <PackagePath>System.Net.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.099</Modified>
+      <Modified>2015-09-30T08:23:12.056</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Http.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.162</Modified>
+      <Modified>2015-09-30T08:23:47.424</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Http.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.224</Modified>
+      <Modified>2015-11-09T14:44:01.260</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Http.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.287</Modified>
+      <Modified>2015-11-09T14:44:01.256</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.337</Modified>
+      <Modified>2015-09-30T08:23:13.350</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.NetworkInformation.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.NetworkInformation.dll">
       <PackagePath>System.Net.NetworkInformation.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.400</Modified>
+      <Modified>2015-09-30T08:23:45.984</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Primitives.dll">
       <PackagePath>System.Net.Primitives.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.481</Modified>
+      <Modified>2015-09-30T08:23:45.644</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Requests.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Requests.dll">
       <PackagePath>System.Net.Requests.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.528</Modified>
+      <Modified>2015-09-30T08:23:13.354</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Sockets.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.Sockets.dll">
       <PackagePath>System.Net.Sockets.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.590</Modified>
+      <Modified>2015-09-30T08:23:14.339</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.WebHeaderCollection.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Net.WebHeaderCollection.dll">
       <PackagePath>System.Net.WebHeaderCollection.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.653</Modified>
+      <Modified>2015-09-30T08:23:14.340</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Numerics.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Numerics.dll">
       <PackagePath>System.Numerics.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.714</Modified>
+      <Modified>2015-09-30T08:23:12.724</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Numerics.Vectors.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Numerics.Vectors.dll">
       <PackagePath>System.Numerics.Vectors.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.789</Modified>
+      <Modified>2015-09-30T08:23:47.773</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Numerics.Vectors.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Numerics.Vectors.WindowsRuntime.dll">
       <PackagePath>System.Numerics.Vectors.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.829</Modified>
+      <Modified>2015-09-30T08:23:14.047</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ObjectModel.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ObjectModel.dll">
       <PackagePath>System.ObjectModel.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.891</Modified>
+      <Modified>2015-09-30T08:23:45.647</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Private.DataContractSerialization.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Private.DataContractSerialization.dll">
       <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
-      <Modified>2015-11-12T13:56:35.974</Modified>
+      <Modified>2015-09-30T08:23:05.903</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Private.Networking.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Private.Networking.dll">
       <PackagePath>System.Private.Networking.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.027</Modified>
+      <Modified>2015-09-30T08:23:26.766</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Private.ServiceModel.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Private.ServiceModel.dll">
       <PackagePath>System.Private.ServiceModel.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.159</Modified>
+      <Modified>2015-09-30T08:23:05.917</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Private.Uri.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.221</Modified>
+      <Modified>2015-09-30T08:23:05.229</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Context.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Context.dll">
       <PackagePath>System.Reflection.Context.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.295</Modified>
+      <Modified>2015-09-30T08:23:14.339</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.DispatchProxy.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.DispatchProxy.dll">
       <PackagePath>System.Reflection.DispatchProxy.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.379</Modified>
+      <Modified>2015-09-30T08:23:52.146</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.dll">
       <PackagePath>System.Reflection.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.447</Modified>
+      <Modified>2015-09-30T08:23:48.513</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Emit.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Emit.dll">
       <PackagePath>System.Reflection.Emit.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.533</Modified>
+      <Modified>2015-09-30T08:24:23.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Emit.ILGeneration.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Emit.ILGeneration.dll">
       <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.609</Modified>
+      <Modified>2015-09-30T08:24:23.036</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Emit.Lightweight.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Emit.Lightweight.dll">
       <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.663</Modified>
+      <Modified>2015-09-30T08:24:21.774</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Extensions.dll">
       <PackagePath>System.Reflection.Extensions.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.759</Modified>
+      <Modified>2015-09-30T08:23:51.448</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Metadata.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Metadata.dll">
       <PackagePath>System.Reflection.Metadata.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.848</Modified>
+      <Modified>2015-09-30T08:23:52.168</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.Primitives.dll">
       <PackagePath>System.Reflection.Primitives.dll</PackagePath>
-      <Modified>2015-11-12T13:56:36.926</Modified>
+      <Modified>2015-09-30T08:23:52.539</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.TypeExtensions.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Reflection.TypeExtensions.dll">
       <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.021</Modified>
+      <Modified>2015-09-30T08:23:53.216</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Resources.ResourceManager.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Resources.ResourceManager.dll">
       <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.111</Modified>
+      <Modified>2015-09-30T08:23:53.216</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.168</Modified>
+      <Modified>2015-09-30T08:23:56.395</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Extensions.dll">
       <PackagePath>System.Runtime.Extensions.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.249</Modified>
+      <Modified>2015-09-30T08:23:55.081</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Handles.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Handles.dll">
       <PackagePath>System.Runtime.Handles.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.314</Modified>
+      <Modified>2015-09-30T08:23:55.154</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.InteropServices.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.InteropServices.dll">
       <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.432</Modified>
+      <Modified>2015-09-30T08:23:56.356</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.InteropServices.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.InteropServices.WindowsRuntime.dll">
       <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.499</Modified>
+      <Modified>2015-09-30T08:23:13.993</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Numerics.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Numerics.dll">
       <PackagePath>System.Runtime.Numerics.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.546</Modified>
+      <Modified>2015-09-30T08:23:56.394</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Serialization.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Serialization.dll">
       <PackagePath>System.Runtime.Serialization.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.600</Modified>
+      <Modified>2015-09-30T08:23:12.735</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Serialization.Json.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Serialization.Json.dll">
       <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.670</Modified>
+      <Modified>2015-09-30T08:23:15.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Serialization.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Serialization.Primitives.dll">
       <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.730</Modified>
+      <Modified>2015-09-30T08:23:16.267</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Serialization.Xml.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.Serialization.Xml.dll">
       <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.777</Modified>
+      <Modified>2015-09-30T08:23:19.958</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.dll">
       <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.850</Modified>
+      <Modified>2015-09-30T08:23:21.185</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.UI.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.UI.Xaml.dll">
       <PackagePath>System.Runtime.WindowsRuntime.UI.Xaml.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.913</Modified>
+      <Modified>2015-09-30T08:23:23.267</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Security.Claims.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Security.Claims.dll">
       <PackagePath>System.Security.Claims.dll</PackagePath>
-      <Modified>2015-11-12T13:56:37.991</Modified>
+      <Modified>2015-09-30T08:23:56.359</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Security.Principal.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Security.Principal.dll">
       <PackagePath>System.Security.Principal.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.079</Modified>
+      <Modified>2015-09-30T08:23:56.374</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.dll">
       <PackagePath>System.ServiceModel.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.148</Modified>
+      <Modified>2015-09-30T08:23:12.847</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Duplex.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Duplex.dll">
       <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.239</Modified>
+      <Modified>2015-09-30T08:23:21.019</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Http.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Http.dll">
       <PackagePath>System.ServiceModel.Http.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.304</Modified>
+      <Modified>2015-09-30T08:23:21.398</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.NetTcp.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.NetTcp.dll">
       <PackagePath>System.ServiceModel.NetTcp.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.349</Modified>
+      <Modified>2015-09-30T08:23:22.452</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Primitives.dll">
       <PackagePath>System.ServiceModel.Primitives.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.431</Modified>
+      <Modified>2015-09-30T08:23:21.647</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Security.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Security.dll">
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.495</Modified>
+      <Modified>2015-09-30T08:23:21.525</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Web.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.ServiceModel.Web.dll">
       <PackagePath>System.ServiceModel.Web.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.537</Modified>
+      <Modified>2015-09-30T08:23:12.856</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.615</Modified>
+      <Modified>2015-09-30T08:23:23.425</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Text.Encoding.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Text.Encoding.dll">
       <PackagePath>System.Text.Encoding.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.677</Modified>
+      <Modified>2015-09-30T08:23:56.329</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Text.Encoding.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Text.Encoding.Extensions.dll">
       <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.740</Modified>
+      <Modified>2015-09-30T08:23:56.351</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Text.RegularExpressions.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Text.RegularExpressions.dll">
       <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.811</Modified>
+      <Modified>2015-09-30T08:23:56.359</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.dll">
       <PackagePath>System.Threading.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.885</Modified>
+      <Modified>2015-09-30T08:24:00.141</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Overlapped.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Overlapped.dll">
       <PackagePath>System.Threading.Overlapped.dll</PackagePath>
-      <Modified>2015-11-12T13:56:38.951</Modified>
+      <Modified>2015-09-30T08:23:05.220</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Tasks.Dataflow.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Tasks.Dataflow.dll">
       <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.020</Modified>
+      <Modified>2015-09-30T08:24:00.142</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Tasks.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Tasks.dll">
       <PackagePath>System.Threading.Tasks.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.070</Modified>
+      <Modified>2015-09-30T08:24:00.203</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Tasks.Parallel.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Tasks.Parallel.dll">
       <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.149</Modified>
+      <Modified>2015-09-30T08:24:01.401</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Timer.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Threading.Timer.dll">
       <PackagePath>System.Threading.Timer.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.203</Modified>
+      <Modified>2015-09-30T08:24:01.081</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Windows.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Windows.dll">
       <PackagePath>System.Windows.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.249</Modified>
+      <Modified>2015-09-30T08:23:13.008</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.dll">
       <PackagePath>System.Xml.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.307</Modified>
+      <Modified>2015-09-30T08:23:13.206</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.Linq.dll">
       <PackagePath>System.Xml.Linq.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.354</Modified>
+      <Modified>2015-09-30T08:23:17.271</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.ReaderWriter.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.ReaderWriter.dll">
       <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.416</Modified>
+      <Modified>2015-09-30T08:24:10.408</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.Serialization.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.Serialization.dll">
       <PackagePath>System.Xml.Serialization.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.475</Modified>
+      <Modified>2015-09-30T08:23:17.567</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.XDocument.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.XDocument.dll">
       <PackagePath>System.Xml.XDocument.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.535</Modified>
+      <Modified>2015-09-30T08:24:01.669</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.XmlDocument.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.XmlDocument.dll">
       <PackagePath>System.Xml.XmlDocument.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.609</Modified>
+      <Modified>2015-09-30T08:23:05.570</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.XmlSerializer.dll">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
-      <Modified>2015-11-12T13:56:39.662</Modified>
+      <Modified>2015-09-30T08:23:21.895</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
+<<<<<<< HEAD
       <Modified>2015-11-12T18:34:51.956</Modified>
+=======
+      <Modified>2015-09-25T09:47:41.593</Modified>
+>>>>>>> a0087c98aae0766339b80b04b0c4e32ad5a9916a
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
