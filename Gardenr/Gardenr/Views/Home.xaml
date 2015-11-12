@@ -22,21 +22,14 @@
         <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
         <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
         <StackPanel Grid.Row="3" Orientation="Horizontal">
-            <uc:Home_Notificatie></uc:Home_Notificatie>
-            <uc:Home_Notificatie></uc:Home_Notificatie>
-            <uc:Home_Notificatie></uc:Home_Notificatie>
-            <uc:Home_Notificatie></uc:Home_Notificatie>
+        
         </StackPanel>
        
         <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
           
         </TextBlock>
         <StackPanel  Grid.Row="5" Orientation="Horizontal">
-            <uc:Home_Newsfeed></uc:Home_Newsfeed>
-            <uc:Home_Newsfeed></uc:Home_Newsfeed>
-            <uc:Home_Newsfeed></uc:Home_Newsfeed>
-            <uc:Home_Newsfeed></uc:Home_Newsfeed>
-
+           
         </StackPanel>
       
     </Grid>

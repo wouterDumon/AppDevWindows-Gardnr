@@ -7,6 +7,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <local:BaseViewModelLocator x:Key="Locator"/>
+          
         </ResourceDictionary>
     </Application.Resources>
 </Application>

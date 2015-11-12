@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Gardenr.ViewModels
 {
-    class CatalogusVM : ObservableObject
+    class CatalogusVM : ViewModelBase
     {
         public CatalogusVM()
         {
@@ -45,7 +45,8 @@ namespace Gardenr.ViewModels
         }
         public void Detail()
         {
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 2, SelectedPlant = SelectedPlant };
+        
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 2, SelectedPlant = this.SelectedPlant };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 

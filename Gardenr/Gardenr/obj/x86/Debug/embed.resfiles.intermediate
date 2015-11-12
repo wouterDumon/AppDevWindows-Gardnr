@@ -12,6 +12,7 @@ Views\CatalogusPlant.xbf
 Views\Contact.xbf
 Views\Home.xbf
 Views\Instellingen.xbf
+Views\Login.xbf
 Views\Notificaties.xbf
 Views\NotificatiesBewerken.xbf
 Views\PlantBewerken.xbf
@@ -19,3 +20,4 @@ Views\Profiel_Favorieten.xbf
 Views\Profiel_Historiek.xbf
 Views\Profiel_Huidig.xbf
 Views\Profiel_PlantInfo.xbf
+Views\Shell.xbf

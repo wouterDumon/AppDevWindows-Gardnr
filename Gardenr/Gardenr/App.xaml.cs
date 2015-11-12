@@ -33,7 +33,7 @@ namespace Gardenr
         internal static string FacebookId = String.Empty;
         public static bool isAuthenticated = false;
         public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore.db");
-       
+        internal static Frame frame;
            
 
        /* public static MobileServiceClient MobileService = new MobileServiceClient(
@@ -79,48 +79,48 @@ namespace Gardenr
             Frame rootFrame = Window.Current.Content as Frame;
             if(message.PageNumber == 1) // catalogus pagina
             {
-                rootFrame.Navigate(typeof(Catalogus));
+                frame.Navigate(typeof(Catalogus));
             }
             else if (message.PageNumber == 2) // catalogus plant pagina
             {
-                rootFrame.Navigate(typeof(CatalogusPlant),message.SelectedPlant);
+                frame.Navigate(typeof(CatalogusPlant),message.SelectedPlant);
   
             }
             else if(message.PageNumber == 3) // contact pagina
             {
-                rootFrame.Navigate(typeof(Contact));
+                frame.Navigate(typeof(Contact));
             }
             else if(message.PageNumber == 4) // instellingen pagina
             {
-                rootFrame.Navigate(typeof(Views.Instellingen));
+                frame.Navigate(typeof(Views.Instellingen));
             }
             else if (message.PageNumber == 5) //Notificaties pagina
             {
-                rootFrame.Navigate(typeof(Views.Notificaties));
+                frame.Navigate(typeof(Views.Notificaties));
             }
             else if(message.PageNumber == 6) // Notificaties bewerken pagina
             {
-                rootFrame.Navigate(typeof(NotificatiesBewerken));
+                frame.Navigate(typeof(NotificatiesBewerken));
             }
             else if (message.PageNumber == 7) // Plant bewerken pagina
             {
-                rootFrame.Navigate(typeof(PlantBewerken));
+                frame.Navigate(typeof(PlantBewerken));
             }
             else if(message.PageNumber == 8) // Profiel historiek pagina
             {
-                rootFrame.Navigate(typeof(Profiel_Historiek));
+                frame.Navigate(typeof(Profiel_Historiek));
             }
             else if (message.PageNumber == 9) // profiel favorieten pagina
             {
-                rootFrame.Navigate(typeof(Profiel_Favorieten));
+                frame.Navigate(typeof(Profiel_Favorieten));
             }
             else if(message.PageNumber == 10) // profiel plantinfo pagina
             {
-                rootFrame.Navigate(typeof(Profiel_PlantInfo));
+                frame.Navigate(typeof(Profiel_PlantInfo));
             }
-            else if(message.PageNumber == 1)//home page
+            else if(message.PageNumber == 11)//home page
             {
-                rootFrame.Navigate(typeof(Home));
+                rootFrame.Navigate(typeof(Shell));
             }
             /*if (message.PageNumber == 1)
             {
@@ -133,7 +133,7 @@ namespace Gardenr
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                this.DebugSettings.EnableFrameRateCounter = false;
             }
 #endif
             Messenger.Default.Register<GoToPageMessage>(this, NavigateToPage);
@@ -162,7 +162,7 @@ namespace Gardenr
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                rootFrame.Navigate(typeof(Login), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();

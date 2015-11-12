@@ -52,7 +52,7 @@ namespace Gardenr.ViewModels
             //aanduiden dat plant niet meer een favoriet is
         }
 
-        public async void StartupGetItems()
+        public  void StartupGetItems()
         {
           //planten ophalen van de user
         }
