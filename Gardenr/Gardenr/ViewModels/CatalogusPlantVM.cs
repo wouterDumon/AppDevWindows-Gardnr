@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
 namespace Gardenr.ViewModels
@@ -21,8 +22,8 @@ namespace Gardenr.ViewModels
             AddGarden = new RelayCommand(AddGardM);
             MakeNotification = new RelayCommand(MakeNotificationM);
         }
-        
-        protected void OnNavigatedTo(NavigationEventArgs e)
+
+        public  void OnNavigatedTo(NavigationEventArgs e)
         {
             this.plant = e.Parameter as Plant;
         }
