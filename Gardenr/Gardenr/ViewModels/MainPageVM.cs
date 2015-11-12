@@ -30,14 +30,12 @@ namespace Gardenr.ViewModels
         {
             
                   
-                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 1 };
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 1 };
             Messenger.Default.Send<GoToPageMessage>(message);
              
               
            
-       /*
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 1 };
-            Messenger.Default.Send<GoToPageMessage>(message);*/
+  
         }
 
     }

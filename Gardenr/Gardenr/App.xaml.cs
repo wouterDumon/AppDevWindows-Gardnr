@@ -65,6 +65,7 @@ namespace Gardenr
             store.DefineTable<Notificatie>();
             store.DefineTable<TuinObject>();
             store.DefineTable<TypeC>();
+            store.DefineTable<Gardenr.Models.Instellingen>();
 
             //models die er neit in staan
             //constants todoitems tuinobjects

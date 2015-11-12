@@ -305,3 +305,4 @@ C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\System.W
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.dll
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.pdb
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.csprojResolveAssemblyReference.cache
+C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.csprojResolveAssemblyReference.cache
