@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="MainPage" />
     <RootPropertyPathName Name="Testing" />
@@ -9,6 +12,14 @@
     <RootPropertyPathName Name="Omschrijving" />
     <RootPropertyPathName Name="FotoUrl" />
     <RootPropertyPathName Name="plant" />
+    <RootPropertyPathName Name="Buiten" />
+    <RootPropertyPathName Name="Binnen" />
+    <RootPropertyPathName Name="DagenVerplanten" />
+    <RootPropertyPathName Name="DagenOogst" />
+    <RootPropertyPathName Name="WaterGeven" />
+    <RootPropertyPathName Name="AfstandRij" />
+    <RootPropertyPathName Name="AfstandTussen" />
+    <RootPropertyPathName Name="ZaaiDiepte" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="Home" />
     <RootPropertyPathName Name="Instellingen" />
@@ -31,10 +42,12 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
       <RootProperty Name="Source" />
+      <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -140,6 +153,7 @@
     </RootType>
     <RootType FullName="Gardenr.Views.Catalogus" />
     <RootType FullName="Gardenr.ViewModels.CatalogusPlantVM" />
+    <RootType FullName="Gardenr.ViewModels.ConvertToStrign" />
     <RootType FullName="Gardenr.Views.CatalogusPlant" />
     <RootType FullName="Gardenr.Views.Contact" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">

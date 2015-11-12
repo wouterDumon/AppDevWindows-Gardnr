@@ -150,6 +150,7 @@
       <DependentUpon>Profiel_Info_plant.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\DelegateCommand.cs" />
+    <Compile Include="ViewModels\ConvertToStrign.cs" />
     <Compile Include="ViewModels\LoginVM.cs" />
     <Compile Include="ViewModels\MenuItem.cs" />
     <Compile Include="ViewModels\NotificatiesBewerken.cs" />
