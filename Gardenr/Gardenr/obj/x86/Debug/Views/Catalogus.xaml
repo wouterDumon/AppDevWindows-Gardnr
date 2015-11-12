@@ -22,7 +22,7 @@
      
         <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Catalogus</TextBlock>
 
-        <ListView x:ConnectionId='1' HorizontalContentAlignment="Stretch"  Name="ListItems" SelectedItem="{Binding SelectedPlant, Mode=TwoWay}"    ItemsSource="{Binding Planten, Mode=OneWay}" Grid.Row="1">
+        <ListView x:ConnectionId='1'  HorizontalContentAlignment="Stretch"  Name="ListItems" SelectedItem="{Binding SelectedPlant, Mode=TwoWay}"    ItemsSource="{Binding Planten, Mode=OneWay}" Grid.Row="1"                          >
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -41,10 +41,8 @@
                         <Image Source="{Binding FotoUrl}"  Grid.Row="0" Grid.Column="0"  Grid.RowSpan="3" ></Image>
                         <TextBlock  Margin="10 0 0 0 " TextWrapping="Wrap" HorizontalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Text="{Binding Omschrijving}"></TextBlock>
                         <TextBlock Margin="10 0 0 0 " TextWrapping="Wrap"  Grid.Row="0"  Grid.Column="1" Text="{Binding Naam}"></TextBlock>
-                        <Button  Margin="10 0 0 0 " Content="Meer info" Grid.Row="1" Grid.Column="2" Command="{Binding GoToDetail}" >
-                            <Button.DataContext>
-                                <vm:CatalogusVM></vm:CatalogusVM>
-                            </Button.DataContext>
+                        <Button  Margin="10 0 0 0 " Content="Meer info" Grid.Row="1" Grid.Column="2" >
+                          
                             
                         </Button>
 

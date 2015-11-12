@@ -31,6 +31,7 @@ namespace Gardenr
     {
         internal static string AccessToken = String.Empty;
         internal static string FacebookId = String.Empty;
+        internal static Gebruiker Gebruiker = null;
         public static bool isAuthenticated = false;
         public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore.db");
         internal static Frame frame;

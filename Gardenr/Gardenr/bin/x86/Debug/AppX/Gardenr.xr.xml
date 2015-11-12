@@ -5,10 +5,10 @@
     <RootPropertyPathName Name="Testing" />
     <RootPropertyPathName Name="SelectedPlant" />
     <RootPropertyPathName Name="Planten" />
-    <RootPropertyPathName Name="GoToDetail" />
     <RootPropertyPathName Name="Naam" />
     <RootPropertyPathName Name="Omschrijving" />
     <RootPropertyPathName Name="FotoUrl" />
+    <RootPropertyPathName Name="plant" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="Home" />
     <RootPropertyPathName Name="Instellingen" />
@@ -67,7 +67,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Height" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="FontFamily" />
@@ -125,6 +124,7 @@
       <RootProperty Name="ItemContainerStyle" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootEvent Name="Tapped" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">

@@ -164,16 +164,16 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             _typeNameTable[4] = "Gardenr.Mvvm.BindableBase";
             _typeNameTable[5] = "Gardenr.ViewModels.CatalogusVM";
             _typeNameTable[6] = "Gardenr.ViewModels.CatalogusPlantVM";
-            _typeNameTable[7] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[8] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[9] = "Gardenr.ViewModels.ContactVM";
-            _typeNameTable[10] = "Gardenr.ViewModels.HomeVM";
-            _typeNameTable[11] = "Gardenr.ViewModels.InstellingenVM";
-            _typeNameTable[12] = "Gardenr.ViewModels.NotificatiesBewerkenVM";
-            _typeNameTable[13] = "Gardenr.ViewModels.NotificatiesVM";
-            _typeNameTable[14] = "Gardenr.ViewModels.PlantBewerkenVM";
-            _typeNameTable[15] = "Gardenr.ViewModels.ProfielVM";
-            _typeNameTable[16] = "Gardenr.MainPage";
+            _typeNameTable[7] = "Gardenr.ViewModels.ContactVM";
+            _typeNameTable[8] = "Gardenr.ViewModels.HomeVM";
+            _typeNameTable[9] = "Gardenr.ViewModels.InstellingenVM";
+            _typeNameTable[10] = "Gardenr.ViewModels.NotificatiesBewerkenVM";
+            _typeNameTable[11] = "Gardenr.ViewModels.NotificatiesVM";
+            _typeNameTable[12] = "Gardenr.ViewModels.PlantBewerkenVM";
+            _typeNameTable[13] = "Gardenr.ViewModels.ProfielVM";
+            _typeNameTable[14] = "Gardenr.MainPage";
+            _typeNameTable[15] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[16] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[17] = "Gardenr.UserClass.Home_Newsfeed";
             _typeNameTable[18] = "Gardenr.UserClass.Home_Notificatie";
             _typeNameTable[19] = "Gardenr.UserClass.Menu";
@@ -218,16 +218,16 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             _typeTable[4] = typeof(global::Gardenr.Mvvm.BindableBase);
             _typeTable[5] = typeof(global::Gardenr.ViewModels.CatalogusVM);
             _typeTable[6] = typeof(global::Gardenr.ViewModels.CatalogusPlantVM);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[9] = typeof(global::Gardenr.ViewModels.ContactVM);
-            _typeTable[10] = typeof(global::Gardenr.ViewModels.HomeVM);
-            _typeTable[11] = typeof(global::Gardenr.ViewModels.InstellingenVM);
-            _typeTable[12] = typeof(global::Gardenr.ViewModels.NotificatiesBewerkenVM);
-            _typeTable[13] = typeof(global::Gardenr.ViewModels.NotificatiesVM);
-            _typeTable[14] = typeof(global::Gardenr.ViewModels.PlantBewerkenVM);
-            _typeTable[15] = typeof(global::Gardenr.ViewModels.ProfielVM);
-            _typeTable[16] = typeof(global::Gardenr.MainPage);
+            _typeTable[7] = typeof(global::Gardenr.ViewModels.ContactVM);
+            _typeTable[8] = typeof(global::Gardenr.ViewModels.HomeVM);
+            _typeTable[9] = typeof(global::Gardenr.ViewModels.InstellingenVM);
+            _typeTable[10] = typeof(global::Gardenr.ViewModels.NotificatiesBewerkenVM);
+            _typeTable[11] = typeof(global::Gardenr.ViewModels.NotificatiesVM);
+            _typeTable[12] = typeof(global::Gardenr.ViewModels.PlantBewerkenVM);
+            _typeTable[13] = typeof(global::Gardenr.ViewModels.ProfielVM);
+            _typeTable[14] = typeof(global::Gardenr.MainPage);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[16] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[17] = typeof(global::Gardenr.UserClass.Home_Newsfeed);
             _typeTable[18] = typeof(global::Gardenr.UserClass.Home_Notificatie);
             _typeTable[19] = typeof(global::Gardenr.UserClass.Menu);
@@ -302,14 +302,14 @@ namespace Gardenr.Gardenr_XamlTypeInfo
         private object Activate_3_ViewModelBase() { return new global::Gardenr.ViewModels.ViewModelBase(); }
         private object Activate_5_CatalogusVM() { return new global::Gardenr.ViewModels.CatalogusVM(); }
         private object Activate_6_CatalogusPlantVM() { return new global::Gardenr.ViewModels.CatalogusPlantVM(); }
-        private object Activate_9_ContactVM() { return new global::Gardenr.ViewModels.ContactVM(); }
-        private object Activate_10_HomeVM() { return new global::Gardenr.ViewModels.HomeVM(); }
-        private object Activate_11_InstellingenVM() { return new global::Gardenr.ViewModels.InstellingenVM(); }
-        private object Activate_12_NotificatiesBewerkenVM() { return new global::Gardenr.ViewModels.NotificatiesBewerkenVM(); }
-        private object Activate_13_NotificatiesVM() { return new global::Gardenr.ViewModels.NotificatiesVM(); }
-        private object Activate_14_PlantBewerkenVM() { return new global::Gardenr.ViewModels.PlantBewerkenVM(); }
-        private object Activate_15_ProfielVM() { return new global::Gardenr.ViewModels.ProfielVM(); }
-        private object Activate_16_MainPage() { return new global::Gardenr.MainPage(); }
+        private object Activate_7_ContactVM() { return new global::Gardenr.ViewModels.ContactVM(); }
+        private object Activate_8_HomeVM() { return new global::Gardenr.ViewModels.HomeVM(); }
+        private object Activate_9_InstellingenVM() { return new global::Gardenr.ViewModels.InstellingenVM(); }
+        private object Activate_10_NotificatiesBewerkenVM() { return new global::Gardenr.ViewModels.NotificatiesBewerkenVM(); }
+        private object Activate_11_NotificatiesVM() { return new global::Gardenr.ViewModels.NotificatiesVM(); }
+        private object Activate_12_PlantBewerkenVM() { return new global::Gardenr.ViewModels.PlantBewerkenVM(); }
+        private object Activate_13_ProfielVM() { return new global::Gardenr.ViewModels.ProfielVM(); }
+        private object Activate_14_MainPage() { return new global::Gardenr.MainPage(); }
         private object Activate_17_Home_Newsfeed() { return new global::Gardenr.UserClass.Home_Newsfeed(); }
         private object Activate_18_Home_Notificatie() { return new global::Gardenr.UserClass.Home_Notificatie(); }
         private object Activate_19_Menu() { return new global::Gardenr.UserClass.Menu(); }
@@ -427,7 +427,7 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 break;
 
             case 6:   //  Gardenr.ViewModels.CatalogusPlantVM
-                userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Gardenr.ViewModels.ViewModelBase"));
                 userType.Activator = Activate_6_CatalogusPlantVM;
                 userType.AddMemberName("plant");
                 userType.AddMemberName("GoBack");
@@ -438,68 +438,68 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 7:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 8:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 9:   //  Gardenr.ViewModels.ContactVM
+            case 7:   //  Gardenr.ViewModels.ContactVM
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  Gardenr.ViewModels.HomeVM
+            case 8:   //  Gardenr.ViewModels.HomeVM
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  Gardenr.ViewModels.InstellingenVM
+            case 9:   //  Gardenr.ViewModels.InstellingenVM
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  Gardenr.ViewModels.NotificatiesBewerkenVM
+            case 10:   //  Gardenr.ViewModels.NotificatiesBewerkenVM
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Gardenr.ViewModels.NotificatiesVM
+            case 11:   //  Gardenr.ViewModels.NotificatiesVM
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  Gardenr.ViewModels.PlantBewerkenVM
+            case 12:   //  Gardenr.ViewModels.PlantBewerkenVM
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Gardenr.ViewModels.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Gardenr.ViewModels.ProfielVM
+            case 13:   //  Gardenr.ViewModels.ProfielVM
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Gardenr.ViewModels.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Gardenr.MainPage
+            case 14:   //  Gardenr.MainPage
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_MainPage;
+                userType.Activator = Activate_14_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
+                break;
+
+            case 15:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 16:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 17:   //  Gardenr.UserClass.Home_Newsfeed

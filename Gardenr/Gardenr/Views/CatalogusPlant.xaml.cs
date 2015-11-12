@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gardenr.Models;
+using Gardenr.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,13 @@ namespace Gardenr.Views
         public CatalogusPlant()
         {
             this.InitializeComponent();
+        }
+    
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            CatalogusPlantVM a = this.DataContext as CatalogusPlantVM;
+            a.plant = e.Parameter as Plant;
         }
     }
 }

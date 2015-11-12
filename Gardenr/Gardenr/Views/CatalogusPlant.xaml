@@ -11,6 +11,6 @@
         <vm:CatalogusPlantVM></vm:CatalogusPlantVM>
     </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="hallo"></TextBlock>
+        <TextBlock Text="{Binding plant.Naam}"></TextBlock>
     </Grid>
 </Page>
