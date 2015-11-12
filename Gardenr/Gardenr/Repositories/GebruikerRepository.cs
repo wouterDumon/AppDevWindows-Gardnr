@@ -85,7 +85,7 @@ namespace Gardenr.Repositories
                 //  this.ButtonSave.IsEnabled = true;
             }
         }
-        public async Task<ObservableCollection<Gebruiker>> GetGebruiker()
+        public async Task<ObservableCollection<Gebruiker>> GetGebruikers()
         {
             await InitLocalStoreAsync();
             await RefreshItems();

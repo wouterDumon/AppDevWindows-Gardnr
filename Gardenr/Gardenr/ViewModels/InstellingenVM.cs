@@ -15,7 +15,7 @@ namespace Gardenr.ViewModels
         public InstellingenVM()
         {
             SaveSettings = new RelayCommand(Settings);
-            UserSettings = repoInst.GetInstellingenById(1);//temp id
+            //UserSettings = repoInst.GetInstellingenById(1);//temp id
         }
         private IInstellingenRepository repoInst = SimpleIoc.Default.GetInstance<IInstellingenRepository>(); 
 

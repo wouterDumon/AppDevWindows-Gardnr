@@ -1,9 +1,11 @@
 ﻿using Facebook;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Messaging;
 using Gardenr.Mesages;
 using Gardenr.Models;
+using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +22,8 @@ namespace Gardenr.ViewModels
             Testing = new RelayCommand(TestingM);
 
         }
+        private IGebruikerRepository repoGebruiker = SimpleIoc.Default.GetInstance<IGebruikerRepository>();
+        private IInstellingenRepository repoInstellingen = SimpleIoc.Default.GetInstance<IInstellingenRepository>();
         private string AppId = Constants.FacebookAppId;
         private const string ExtendedPermissions = "public_profile";
         private async Task<string> Facebook()
@@ -83,6 +87,28 @@ namespace Gardenr.ViewModels
                     dynamic me = await client.GetTaskAsync("me");
                     App.FacebookId = "" + me.id;
                     App.isAuthenticated = true;
+                    Gebruiker gebruiker = await repoGebruiker.GetGebruiker(App.FacebookId);
+
+                    
+                    if(gebruiker == null)
+                    {
+                        Gebruiker newgebruiker = new Gebruiker();
+                        newgebruiker.Active = true;
+                        newgebruiker.Facebook = App.FacebookId;
+                      
+                        newgebruiker.Naam = me.name.Split(" ".ToCharArray())[1];
+                        newgebruiker.Voornaam = me.name.Split(" ".ToCharArray())[0];
+
+
+                        //standaard isntelling
+                        Instellingen tempinst = new Instellingen();
+                        tempinst = await repoInstellingen.GetInst("1");
+                        // standaardtaal ophale uit database id = 1
+
+                        newgebruiker.Instellingen = tempinst;
+
+                        repoGebruiker.AddGebruiker(newgebruiker);
+                    }
                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
                     Messenger.Default.Send<GoToPageMessage>(message);
                 }

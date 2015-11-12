@@ -8,7 +8,7 @@ namespace Gardenr.Repositories
     {
         void AddGebruiker(Gebruiker data);
         void AdjustGebruiker(Gebruiker data);
-        Task<ObservableCollection<Gebruiker>> GetGebruiker();
+        Task<ObservableCollection<Gebruiker>> GetGebruikers();
         Task<Gebruiker> GetGebruiker(string login);
     }
 }
