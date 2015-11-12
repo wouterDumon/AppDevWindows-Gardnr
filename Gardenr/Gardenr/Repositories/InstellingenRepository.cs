@@ -101,7 +101,6 @@ namespace Gardenr.Repositories
         public async Task<Instellingen> GetInst(string nitem)
         {
             await InitLocalStoreAsync();
-            await SyncAsync();
             await RefreshItems();
             foreach (Instellingen ni in items)
             {

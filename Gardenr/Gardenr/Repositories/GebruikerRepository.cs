@@ -34,7 +34,7 @@ namespace Gardenr.Repositories
 
             try
             {
-                await App.MobileService.SyncContext.PushAsync();
+            //    await App.MobileService.SyncContext.PushAsync();
                 // first param is query ID, used for incremental sync
                 await GebruikerTable.PullAsync("Gebruikers", GebruikerTable.CreateQuery());
             }
@@ -68,6 +68,7 @@ namespace Gardenr.Repositories
             {
                 // This code refreshes the entries in the list view by querying the TodoItems table.
                 // The query excludes completed TodoItems
+                await SyncAsync();
                 items = await GebruikerTable.ToCollectionAsync();
             }
             catch (MobileServiceInvalidOperationException e)

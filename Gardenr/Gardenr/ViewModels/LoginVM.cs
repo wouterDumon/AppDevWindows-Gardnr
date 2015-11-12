@@ -23,6 +23,7 @@ namespace Gardenr.ViewModels
 
         }
         private IGebruikerRepository repoGebruiker = SimpleIoc.Default.GetInstance<IGebruikerRepository>();
+        private ITaalRepository ta = SimpleIoc.Default.GetInstance<ITaalRepository>();
         private IInstellingenRepository repoInstellingen = SimpleIoc.Default.GetInstance<IInstellingenRepository>();
         private string AppId = Constants.FacebookAppId;
         private const string ExtendedPermissions = "public_profile";
@@ -104,7 +105,9 @@ namespace Gardenr.ViewModels
                         Instellingen tempinst = new Instellingen();
                         tempinst = await repoInstellingen.GetInst("1");
                         // standaardtaal ophale uit database id = 1
-
+                        Taal a = new Taal();
+                        a = await ta.GetTaalById("1");
+                        newgebruiker.Instellingen.Taal = a;
                         newgebruiker.Instellingen = tempinst;
 
                         repoGebruiker.AddGebruiker(newgebruiker);

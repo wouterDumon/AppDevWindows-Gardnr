@@ -1800,8 +1800,6 @@ C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Views
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Views\Profiel_PlantInfo.xbf
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\ApplicationInsights.config
-C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\SQLitePCL.Ext.dll
-C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\SQLitePCL.Ext.pri
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\App.xbf
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\MainPage.xbf
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\UserClass\Home_Newsfeed.xbf
@@ -2175,7 +2173,6 @@ C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Multi
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Facebook.Client.pri.xml
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Microsoft.WindowsAzure.Mobile.Ext.pri.xml
-C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\SQLitePCL.Ext.pri.xml
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Gardenr.exe
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Gardenr.pdb
@@ -2300,7 +2297,6 @@ C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\sqlite3.dll
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\sqlite3.pdb
-C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\SQLitePCL.Ext.dll
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\ApplicationInsights.config
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Properties\Default.rd.xml
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png
