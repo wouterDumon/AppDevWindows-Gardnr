@@ -8,7 +8,13 @@ namespace Gardenr.Models
 {
     class Tuin
     {
-        public int ID { get; set; }
-        public List<TuinObject> Planten { get; set; }
+        public string ID { get; set; }        
+        public Plant Plant { get; set; }
+        public string gebruikerID { get; set; }
+        public bool favoriet { get; set; }
+        public int Aantal { get; set; }
+        public string LaatstWater { get; set; }
+        public string extra { get; set; }
+        public List<Notificatie> Notificaties { get; set; }
     }
 }

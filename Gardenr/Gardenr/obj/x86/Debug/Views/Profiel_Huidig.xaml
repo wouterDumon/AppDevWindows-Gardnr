@@ -29,7 +29,7 @@
         <Button Content="Historiek" Grid.Row="1" Grid.Column="1" Background="Transparent" HorizontalAlignment="Center"></Button>
         <Button Content="Favorieten" Grid.Row="1" Grid.Column="2" Background="Transparent" HorizontalAlignment="Center"></Button>
 
-        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding TuinPlanten, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3" Tapped="ListItems_Tapped">
+        <ListView x:ConnectionId='1'  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding TuinPlanten, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3"                          >
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -63,3 +63,4 @@
 
     </Grid>
 </Page>
+

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gardenr.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,13 @@ namespace Gardenr.Views
         public Profiel()
         {
             this.InitializeComponent();
+        }
+
+        private void ListItems_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            ProfielVM a = this.DataContext as ProfielVM;
+            a.GoToTuinObject.Execute("iets");
+
         }
     }
 }

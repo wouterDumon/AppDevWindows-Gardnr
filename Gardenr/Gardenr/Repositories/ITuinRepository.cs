@@ -9,7 +9,7 @@ namespace Gardenr.Repositories
         void AddTO(TuinObject nitem);
         void AdjustTO(TuinObject nitem);
         void DeleteTO(TuinObject nitem);
-        Task<ObservableCollection<TuinObject>> GetTOs(string gebruikerid);
-        Task<TuinObject> GetTO(string nitem);
+        Task<ObservableCollection<Tuin>> GetTOs(string gebruikerid);
+        Task<Tuin> GetTO(string nitem);
     }
 }
