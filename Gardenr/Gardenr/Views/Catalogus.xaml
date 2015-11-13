@@ -39,12 +39,9 @@
                             <ColumnDefinition Width="120"/>
                         </Grid.ColumnDefinitions>
                         <Image Source="{Binding FotoUrl}"  Grid.Row="0" Grid.Column="0"  Grid.RowSpan="3" ></Image>
-                        <TextBlock  Margin="10 0 0 0 " TextWrapping="Wrap" HorizontalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Text="{Binding Omschrijving}"></TextBlock>
-                        <TextBlock Margin="10 0 0 0 " TextWrapping="Wrap"  Grid.Row="0"  Grid.Column="1" Text="{Binding Naam}"></TextBlock>
-                        <Button  Margin="10 0 0 0 " Content="Meer info" Grid.Row="1" Grid.Column="2" >
-                          
-                            
-                        </Button>
+                        <TextBlock  Margin="10 0 0 0 " TextWrapping="Wrap" HorizontalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1" Text="{Binding Omschrijving}"></TextBlock>
+                        <TextBlock Margin="10 0 0 0 " TextWrapping="Wrap"  Grid.Row="0"  Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Naam}"></TextBlock>
+                      
 
                     </Grid>
 

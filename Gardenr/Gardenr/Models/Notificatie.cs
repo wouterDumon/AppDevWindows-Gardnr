@@ -9,11 +9,11 @@ namespace Gardenr.Models
     public class Notificatie
     {
         public string ID { get; set; }
-        public TypeC TypeId { get; set; }
+        public string TypeID { get; set; }
         public string Omschrijving { get; set; }
-        public Alarm Alarm { get; set; }
-        public Gebruiker GebruikerID { get; set; }
-        public Plant Plant { get; set; }
+        public string AlarmID { get; set; }
+        public string GebruikerID { get; set; }
+        public string PlantID { get; set; }
 
     }
 }

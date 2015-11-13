@@ -104,9 +104,9 @@ namespace Gardenr.Repositories
 
             Plant probeer = new Plant();
             // probeer.ID = 10;
-            probeer.Naam = "andere";
-            probeer.Omschrijving = "een knol die onder de grond groeid";
-            probeer.FotoUrl = "http://www.aardappel.be/wp-content/themes/manyfacesofpotatoes/images/Avatar_VLAM_v.01_c.jpg";
+            probeer.Naam = "Howest plant";
+            probeer.Omschrijving = "Een eingenaardige plant van west vlaanderen";
+            probeer.FotoUrl = "https://student.howest.be/wouter.dumon/ttt/TaskTool/images/Howest_Logo.png";
             probeer.ZaaiBegin = "01/01/2010";
             probeer.ZaaiEinde = "01/01/2010";
             probeer.OogstBegin = "01/01/2010";
@@ -121,6 +121,8 @@ namespace Gardenr.Repositories
             probeer.DagenVerplanten = "0";
             probeer.Binnen = 0;
             probeer.Buiten = 1;
+
+           
             await PlantTable.InsertAsync(probeer);
 
             await SyncAsync(); // offline sync

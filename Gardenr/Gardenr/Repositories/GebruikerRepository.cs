@@ -34,13 +34,15 @@ namespace Gardenr.Repositories
 
             try
             {
-            //    await App.MobileService.SyncContext.PushAsync();
+              
+               await App.MobileService.SyncContext.PushAsync();
                 // first param is query ID, used for incremental sync
                 await GebruikerTable.PullAsync("Gebruikers", GebruikerTable.CreateQuery());
             }
 
             catch (MobileServicePushFailedException ex)
             {
+        
                 errorString = "Push failed because of sync errors. " +
                               "You may be offine.\nMessage: " +
                               ex.Message + "\nPushResult.Status: " +

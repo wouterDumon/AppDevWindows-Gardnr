@@ -20,6 +20,7 @@
     <RootPropertyPathName Name="AfstandRij" />
     <RootPropertyPathName Name="AfstandTussen" />
     <RootPropertyPathName Name="ZaaiDiepte" />
+    <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="Home" />
     <RootPropertyPathName Name="Instellingen" />
@@ -27,6 +28,8 @@
     <RootPropertyPathName Name="NotificatiesBewerken" />
     <RootPropertyPathName Name="PlantBewerken" />
     <RootPropertyPathName Name="Profiel" />
+    <RootPropertyPathName Name="TuinPlanten" />
+    <RootPropertyPathName Name="PlantenID" />
     <RootPropertyPathName Name="CatalogusPlant" />
     <RootPropertyPathName Name="Menu" />
     <RootPropertyPathName Name="Text" />
@@ -169,6 +172,7 @@
     <RootType FullName="Gardenr.Views.PlantBewerken" />
     <RootType FullName="Gardenr.Views.Profiel_Favorieten" />
     <RootType FullName="Gardenr.Views.Profiel_Historiek" />
+    <RootType FullName="Gardenr.ViewModels.ProfielVM" />
     <RootType FullName="Gardenr.Views.Profiel" />
     <RootType FullName="Gardenr.Views.Profiel_PlantInfo" />
     <RootType FullName="Gardenr.ViewModels.SplitViewVM" />

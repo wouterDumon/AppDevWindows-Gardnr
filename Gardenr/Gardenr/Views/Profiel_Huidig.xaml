@@ -7,9 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
    xmlns:uc="using:Gardenr.UserClass"
     mc:Ignorable="d"
-    DataContext="{Binding Profiel, Mode=TwoWay, Source={StaticResource Locator}}">
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  xmlns:vm="using:Gardenr.ViewModels">
+    <Page.DataContext>
+        <vm:ProfielVM></vm:ProfielVM>
+    </Page.DataContext>
+    <Grid Background="#01FF70">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -20,18 +22,34 @@
             <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Profiel" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
+        <TextBlock Text="Profiel"  FontSize="28" Margin="48 0 0 0" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
         <TextBlock Text="..." Grid.Column="2" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
         <Button FontWeight="Bold" Content="Huidig" Grid.Row="1" Grid.Column="0" Background="Transparent" HorizontalAlignment="Center"></Button>
         <Button Content="Historiek" Grid.Row="1" Grid.Column="1" Background="Transparent" HorizontalAlignment="Center"></Button>
         <Button Content="Favorieten" Grid.Row="1" Grid.Column="2" Background="Transparent" HorizontalAlignment="Center"></Button>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="3">
-            <uc:Profiel_Huidig ></uc:Profiel_Huidig>
-            <uc:Profiel_Huidig ></uc:Profiel_Huidig>
-            <uc:Profiel_Huidig ></uc:Profiel_Huidig>
-            <uc:Profiel_Huidig ></uc:Profiel_Huidig>
 
-        </StackPanel>
-       
+        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"    ItemsSource="{Binding TuinPlanten, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+
+
+                        <TextBlock   Text="{Binding PlantenID, Mode=OneWay}"></TextBlock>
+
+
+
+                    </StackPanel>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+
+
     </Grid>
 </Page>

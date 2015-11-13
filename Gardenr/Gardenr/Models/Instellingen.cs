@@ -9,7 +9,7 @@ namespace Gardenr.Models
     public class Instellingen
     {
         public string ID { get; set; }
-        public Taal Taal { get; set; }
+        public String TaalID { get; set; }
         public bool Cortana { get; set; }
         public bool PushNotificaties { get; set; }
     }

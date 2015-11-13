@@ -9,7 +9,8 @@
     "MvvmLight": "5.2.0",
     "Newtonsoft.Json": "7.0.1",
     "WindowsAzure.MobileServices": "2.0.0-beta-2",
-    "WindowsAzure.MobileServices.SQLiteStore": "2.0.0-beta"
+    "WindowsAzure.MobileServices.SQLiteStore": "2.0.0-beta",
+    "WindowsAzure.Storage": "6.1.1-preview"
   },
   "frameworks": {
     "uap10.0": {}

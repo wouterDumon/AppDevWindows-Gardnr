@@ -12,7 +12,7 @@ namespace GardenrService.DataObjects
     {
         public string Naam { get; set; }
         public string Voornaam { get; set; }
-        public Instellingen Instellingen { get; set; }
+        public string InstellingenID { get; set; }
         public string Facebook { get; set; }
         public bool Active { get; set; }
     }

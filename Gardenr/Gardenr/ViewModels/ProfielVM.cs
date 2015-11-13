@@ -7,6 +7,7 @@ using Gardenr.Models;
 using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,18 @@ namespace Gardenr.ViewModels
         }
         public ITuinRepository repoTuin = SimpleIoc.Default.GetInstance<ITuinRepository>();
 
-        public List<TuinObject> TuinPlanten { get; set; }
+     
+
+
+        private ObservableCollection<TuinObject> _tuinplanten;
+
+        public ObservableCollection<TuinObject> TuinPlanten
+        {
+            get { return _tuinplanten; }
+            set { _tuinplanten = value; OnPropertyChanged("TuinPlanten"); }
+        }
+
+
         public TuinObject SelectedPlant { get; set; }
         public string SearchTerm { get; set; }
 
@@ -52,9 +64,10 @@ namespace Gardenr.ViewModels
             //aanduiden dat plant niet meer een favoriet is
         }
 
-        public  void StartupGetItems()
+        public async  void StartupGetItems()
         {
-          //planten ophalen van de user
+            //planten ophalen van de user
+         TuinPlanten =   await repoTuin.GetTOs(App.Gebruiker.ID);
         }
     }
 

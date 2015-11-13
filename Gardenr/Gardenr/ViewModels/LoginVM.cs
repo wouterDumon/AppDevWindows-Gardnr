@@ -89,29 +89,29 @@ namespace Gardenr.ViewModels
                     App.FacebookId = "" + me.id;
                     App.isAuthenticated = true;
                     Gebruiker gebruiker = await repoGebruiker.GetGebruiker(App.FacebookId);
-
                     
-                    if(gebruiker == null)
+                    //await App.store.DeleteAsync();
+
+                    if (gebruiker == null)
                     {
-                        Gebruiker newgebruiker = new Gebruiker();
-                        newgebruiker.Active = true;
-                        newgebruiker.Facebook = App.FacebookId;
+                        gebruiker = new Gebruiker();
+                       gebruiker.Active = true;
+                       gebruiker.Facebook = App.FacebookId;
                       
-                        newgebruiker.Naam = me.name.Split(" ".ToCharArray())[1];
-                        newgebruiker.Voornaam = me.name.Split(" ".ToCharArray())[0];
+                       gebruiker.Naam = me.name.Split(" ".ToCharArray())[1];
+                       gebruiker.Voornaam = me.name.Split(" ".ToCharArray())[0];
 
 
                         //standaard isntelling
                         Instellingen tempinst = new Instellingen();
                         tempinst = await repoInstellingen.GetInst("1");
-                        // standaardtaal ophale uit database id = 1
-                        Taal a = new Taal();
-                        a = await ta.GetTaalById("1");
-                        newgebruiker.Instellingen.Taal = a;
-                        newgebruiker.Instellingen = tempinst;
+              
+                     
+                        gebruiker.InstellingenID = "1";
 
-                        repoGebruiker.AddGebruiker(newgebruiker);
+                        repoGebruiker.AddGebruiker(gebruiker);
                     }
+                    App.Gebruiker = gebruiker;
                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
                     Messenger.Default.Send<GoToPageMessage>(message);
                 }

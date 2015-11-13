@@ -33,7 +33,7 @@ namespace Gardenr
         internal static string FacebookId = String.Empty;
         internal static Gebruiker Gebruiker = null;
         public static bool isAuthenticated = false;
-        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore.db");
+        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore4.db");
         internal static Frame frame;
            
 
@@ -118,7 +118,7 @@ namespace Gardenr
             }
             else if(message.PageNumber == 10) // profiel plantinfo pagina
             {
-                frame.Navigate(typeof(Profiel_PlantInfo));
+                frame.Navigate(typeof(Profiel));
             }
             else if(message.PageNumber == 11)//home page
             {

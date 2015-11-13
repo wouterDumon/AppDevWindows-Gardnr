@@ -86,7 +86,7 @@ namespace Gardenr.Repositories
             }
         }
 
-        public async Task<ObservableCollection<TuinObject>> GetTOs()
+       /* public async Task<ObservableCollection<TuinObject>> GetTOs()
         {
             await InitLocalStoreAsync();
             await RefreshItems();
@@ -97,7 +97,7 @@ namespace Gardenr.Repositories
                 ni.Add(nieuws);
             }
             return ni;
-        }
+        }*/
         public async Task<TuinObject> GetTO(string nitem)
         {
             await InitLocalStoreAsync();
@@ -132,6 +132,22 @@ namespace Gardenr.Repositories
             await Table.DeleteAsync(nitem);
             await SyncAsync();
             await RefreshItems();
+        }
+
+        public async Task<ObservableCollection<TuinObject>> GetTOs(string gebruikerid)
+        {
+            await InitLocalStoreAsync();
+            await RefreshItems();
+            ObservableCollection<TuinObject> ni = new ObservableCollection<TuinObject>();
+
+            foreach (TuinObject nieuws in items)
+            {
+                if (nieuws.gebruikerID == gebruikerid)
+                {
+                    ni.Add(nieuws);
+                }
+            }
+            return ni;
         }
     }
 }

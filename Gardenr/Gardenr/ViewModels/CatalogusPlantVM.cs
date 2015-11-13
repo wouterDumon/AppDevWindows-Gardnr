@@ -1,8 +1,10 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Messaging;
 using Gardenr.Mesages;
 using Gardenr.Models;
+using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,11 +25,11 @@ namespace Gardenr.ViewModels
             MakeNotification = new RelayCommand(MakeNotificationM);
         }
 
-      
+
 
         public Plant plant { get; set; }
 
-        public RelayCommand GoBack{get; set;}
+        public RelayCommand GoBack { get; set; }
         public RelayCommand AddFavorieten { get; set; }
         public RelayCommand AddGarden { get; set; }
         public RelayCommand MakeNotification { get; set; }
@@ -39,13 +41,27 @@ namespace Gardenr.ViewModels
         }
         public void AddFavorietenM()
         {
-            
-        }
-        public void AddGardM()
-        {
 
         }
-        public void MakeNotificationM()
+        public  void AddGardM()
+        {
+            TuinObject t = new TuinObject();
+            t.gebruikerID = App.Gebruiker.ID;
+            t.PlantenID = plant.ID;
+            t.LaatstWater = "" + DateTime.Now;
+            t.favoriet = false;
+            t.extra = "";
+            t.Aantal = 1;
+            t.NotificationID = "";
+            
+           repotuin.AddTO(t);
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 10};
+            Messenger.Default.Send<GoToPageMessage>(message);
+        }
+             private ITuinRepository repotuin = SimpleIoc.Default.GetInstance<ITuinRepository>();
+    
+
+    public void MakeNotificationM()
         {
 
         }
