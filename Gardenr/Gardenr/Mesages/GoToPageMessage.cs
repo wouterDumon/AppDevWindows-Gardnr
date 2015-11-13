@@ -16,6 +16,6 @@ namespace Gardenr.Mesages
 
         public Notificatie SelectedNotificatie { get; set; }
 
-        public TuinObject SelectedTuinPlant { get; set; }
+        public Tuin SelectedTuinPlant { get; set; }
     }
 }

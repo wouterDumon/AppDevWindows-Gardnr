@@ -228,6 +228,7 @@ C:\Users\wouter\Desktop\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\Microsoft.Owin.Se
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\System.Web.Http.Owin.xml
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.dll
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.pdb
+C:\Users\wouter\Desktop\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.csprojResolveAssemblyReference.cache
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\roslyn\csc.exe
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -304,5 +305,4 @@ C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\Microsof
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\System.Web.Http.Owin.xml
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.dll
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.pdb
-C:\Users\wouter\Desktop\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.csprojResolveAssemblyReference.cache
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.csprojResolveAssemblyReference.cache

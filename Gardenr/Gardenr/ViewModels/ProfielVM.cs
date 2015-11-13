@@ -28,22 +28,26 @@ namespace Gardenr.ViewModels
      
 
 
-        private ObservableCollection<TuinObject> _tuinplanten;
-
-        public ObservableCollection<TuinObject> TuinPlanten
+        private ObservableCollection<Tuin> _tuinplanten;
+        public ObservableCollection<Tuin> TuinPlanten
         {
             get { return _tuinplanten; }
             set { _tuinplanten = value; OnPropertyChanged("TuinPlanten"); }
         }
 
+        private Tuin _selectedPlant;
+        public Tuin SelectedPlant
+        { 
+            get { return _selectedPlant; }
+            set { _selectedPlant = value;  OnPropertyChanged("SelectedPland"); }
+        }
 
-        public TuinObject SelectedPlant { get; set; }
         public string SearchTerm { get; set; }
 
         public RelayCommand GoToTuinObject { get; set; }
         public void TuinObjectDetail()
         {//pag 7
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = SelectedPlant };
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 8, SelectedTuinPlant = SelectedPlant };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 
@@ -51,7 +55,7 @@ namespace Gardenr.ViewModels
         public RelayCommand AddTuinObject { get; set; }
         public void AddTuinObjectM()
         {
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 7};
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 1};
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 

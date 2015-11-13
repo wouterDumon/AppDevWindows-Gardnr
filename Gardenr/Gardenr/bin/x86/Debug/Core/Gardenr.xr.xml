@@ -33,7 +33,7 @@
     <RootPropertyPathName Name="PlantBewerken" />
     <RootPropertyPathName Name="Profiel" />
     <RootPropertyPathName Name="TuinPlanten" />
-    <RootPropertyPathName Name="PlantenID" />
+    <RootPropertyPathName Name="Plant" />
     <RootPropertyPathName Name="CatalogusPlant" />
     <RootPropertyPathName Name="Menu" />
     <RootPropertyPathName Name="Text" />

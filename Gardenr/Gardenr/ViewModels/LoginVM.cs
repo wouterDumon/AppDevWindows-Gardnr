@@ -101,10 +101,8 @@ namespace Gardenr.ViewModels
                        gebruiker.Naam = me.name.Split(" ".ToCharArray())[1];
                        gebruiker.Voornaam = me.name.Split(" ".ToCharArray())[0];
 
-
-                        //standaard isntelling
-                        Instellingen tempinst = new Instellingen();
-                        tempinst = await repoInstellingen.GetInst("1");
+                        
+                     
               
                      
                         gebruiker.InstellingenID = "1";

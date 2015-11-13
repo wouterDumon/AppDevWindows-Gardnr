@@ -8,6 +8,7 @@ using Microsoft.WindowsAzure.MobileServices.Sync;
 using Windows.UI.Popups;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Collections.ObjectModel;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace Gardenr.Repositories
 {
@@ -15,8 +16,15 @@ namespace Gardenr.Repositories
     {
         private IMobileServiceSyncTable<TuinObject> Table =
                App.MobileService.GetSyncTable<TuinObject>(); // offline sync
+
+        public IPlantRepository repoPlant = SimpleIoc.Default.GetInstance<IPlantRepository>();
+        public INotificatiesRepository repoInst = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
+
+
         private async Task InitLocalStoreAsync()
         {
+
+
             if (!App.MobileService.SyncContext.IsInitialized)
             {
 
@@ -98,7 +106,7 @@ namespace Gardenr.Repositories
             }
             return ni;
         }*/
-        public async Task<TuinObject> GetTO(string nitem)
+        public async Task<Tuin> GetTO(string nitem)
         {
             await InitLocalStoreAsync();
             await RefreshItems();
@@ -106,7 +114,25 @@ namespace Gardenr.Repositories
             {
                 if (ni.ID == nitem)
                 {
-                    return ni;
+                    Tuin newT = new Tuin();
+                    newT.ID = ni.ID;
+                    newT.gebruikerID = ni.gebruikerID;
+                    newT.favoriet = ni.favoriet;
+                    newT.Aantal = ni.Aantal;
+                    newT.LaatstWater = ni.LaatstWater;
+                    newT.extra = ni.extra;
+                    newT.Plant = await repoPlant.GetPlantById(ni.PlantenID);
+
+                    if (ni.NotificationID != null)//geen notificaties voorlopig nog testen met notificaties
+                    {
+                        var tempinstid = ni.NotificationID.Split(",".ToCharArray());
+                        for (int i = 0; i < tempinstid.Length; i++)
+                        {
+                            newT.Notificaties.Add(await repoInst.GetNotificatie(tempinstid[i]));
+                        }
+                    }
+
+                    return newT;
                 }
             }
             return null;
@@ -134,17 +160,37 @@ namespace Gardenr.Repositories
             await RefreshItems();
         }
 
-        public async Task<ObservableCollection<TuinObject>> GetTOs(string gebruikerid)
+        public async Task<ObservableCollection<Tuin>> GetTOs(string gebruikerid)
         {
             await InitLocalStoreAsync();
             await RefreshItems();
-            ObservableCollection<TuinObject> ni = new ObservableCollection<TuinObject>();
+            ObservableCollection<Tuin> ni = new ObservableCollection<Tuin>();
 
             foreach (TuinObject nieuws in items)
             {
                 if (nieuws.gebruikerID == gebruikerid)
                 {
-                    ni.Add(nieuws);
+                    Tuin newT = new Tuin();
+                    newT.ID = nieuws.ID;
+                    newT.gebruikerID = nieuws.gebruikerID;
+                    newT.favoriet = nieuws.favoriet;
+                    newT.Aantal = nieuws.Aantal;
+                    newT.LaatstWater = nieuws.LaatstWater;
+                    newT.extra = nieuws.extra;
+                    newT.Plant = await repoPlant.GetPlantById(nieuws.PlantenID);
+
+                    if(nieuws.NotificationID != null)
+                    {
+                        var tempinstid = nieuws.NotificationID.Split(",".ToCharArray());
+                        for (int i = 0; i < tempinstid.Length; i++)
+                        {
+                            newT.Notificaties.Add(await repoInst.GetNotificatie(tempinstid[i]));
+                        }
+                    }
+                   
+                    
+
+                    ni.Add(newT);
                 }
             }
             return ni;
