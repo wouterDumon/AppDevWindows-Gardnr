@@ -118,7 +118,7 @@ namespace Gardenr.Repositories
             await InitLocalStoreAsync();
 
             Taal test = new Taal();
-            test.Naam = "Nederlands";
+            test.Naam = "Engels";
 
             await TaalTable.InsertAsync(test);
             await SyncAsync();

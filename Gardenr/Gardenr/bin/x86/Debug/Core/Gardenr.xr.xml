@@ -23,7 +23,11 @@
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="Home" />
-    <RootPropertyPathName Name="Instellingen" />
+    <RootPropertyPathName Name="Taale" />
+    <RootPropertyPathName Name="Talen" />
+    <RootPropertyPathName Name="UserSettings" />
+    <RootPropertyPathName Name="PushNotificaties" />
+    <RootPropertyPathName Name="Cortana" />
     <RootPropertyPathName Name="Notificaties" />
     <RootPropertyPathName Name="NotificatiesBewerken" />
     <RootPropertyPathName Name="PlantBewerken" />
@@ -164,6 +168,23 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Gardenr.Views.Home" />
+    <RootType FullName="Gardenr.ViewModels.InstellingenVM" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="IsOn" />
+      <RootProperty Name="OnContent" />
+      <RootProperty Name="OffContent" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
+    </RootType>
     <RootType FullName="Gardenr.Views.Instellingen" />
     <RootType FullName="Gardenr.ViewModels.LoginVM" />
     <RootType FullName="Gardenr.Views.Login" />
