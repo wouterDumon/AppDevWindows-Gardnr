@@ -103,8 +103,7 @@ namespace Gardenr.ViewModels
 
                                          
               
-                     
-                        gebruiker.InstellingenID = "4180911e-044d-4e9a-8d31-6dfc35508aee";
+                      gebruiker.InstellingenID = "1";
 
                         repoGebruiker.AddGebruiker(gebruiker);
                     }
