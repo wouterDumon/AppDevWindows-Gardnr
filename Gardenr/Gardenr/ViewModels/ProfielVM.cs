@@ -71,8 +71,12 @@ namespace Gardenr.ViewModels
         public async  void StartupGetItems()
         {
             //planten ophalen van de user
-         TuinPlanten =   await repoTuin.GetTOs(App.Gebruiker.ID);
-        }
+            try
+            {
+                TuinPlanten = await repoTuin.GetTOs(App.Gebruiker.ID);
+            }
+            catch (Exception ex) { }
+            }
     }
 
 }

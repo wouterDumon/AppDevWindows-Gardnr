@@ -121,6 +121,14 @@ namespace Gardenr.Repositories
             test.Naam = "Engels";
 
             await TaalTable.InsertAsync(test);
+
+            Taal test2 = new Taal();
+            test2.Naam = "Nederlands";
+            await TaalTable.InsertAsync(test2);
+
+            Taal test3 = new Taal();
+            test3.Naam = "Frans";
+            await TaalTable.InsertAsync(test3);
             await SyncAsync();
             await RefreshTaalItems();
         }

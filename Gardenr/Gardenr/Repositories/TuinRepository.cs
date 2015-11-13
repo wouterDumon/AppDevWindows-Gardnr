@@ -123,11 +123,14 @@ namespace Gardenr.Repositories
                     newT.extra = ni.extra;
                     newT.Plant = await repoPlant.GetPlantById(ni.PlantenID);
 
-                    if (ni.NotificationID != null)//geen notificaties voorlopig nog testen met notificaties
+                    if (ni.NotificationID != null && ni.NotificationID=="")//geen notificaties voorlopig nog testen met notificaties
                     {
                         var tempinstid = ni.NotificationID.Split(",".ToCharArray());
                         for (int i = 0; i < tempinstid.Length; i++)
                         {
+                            //TODO: HIER ERROR 
+                            //KOMT ERIN ALS STRING LEEG IS 
+                            // voorlopige fix
                             newT.Notificaties.Add(await repoInst.GetNotificatie(tempinstid[i]));
                         }
                     }
@@ -179,7 +182,7 @@ namespace Gardenr.Repositories
                     newT.extra = nieuws.extra;
                     newT.Plant = await repoPlant.GetPlantById(nieuws.PlantenID);
 
-                    if(nieuws.NotificationID != null)
+                    if(nieuws.NotificationID != null && nieuws.NotificationID!="")
                     {
                         var tempinstid = nieuws.NotificationID.Split(",".ToCharArray());
                         for (int i = 0; i < tempinstid.Length; i++)

@@ -17,8 +17,14 @@ namespace Gardenr.ViewModels
         {
             SaveSettings = new RelayCommand(Settings);
             //UserSettings = repoInst.GetInstellingenById(1);//temp 
-
-            GetInstellingen();
+            //repotaal.AddTaal();
+           // Instellingen a = new Instellingen();
+           //a.ID = "1";
+            //a.PushNotificaties = true;
+           //a.Cortana = true;
+         //  a.TaalID = "2030b05b-0621-4c4e-8460-f8ef6936efab";
+       //    repoInst.AddInst(a);
+         GetInstellingen();
 
         }
 
