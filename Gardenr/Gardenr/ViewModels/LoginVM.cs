@@ -101,11 +101,10 @@ namespace Gardenr.ViewModels
                        gebruiker.Naam = me.name.Split(" ".ToCharArray())[1];
                        gebruiker.Voornaam = me.name.Split(" ".ToCharArray())[0];
 
-                        
-                     
+                                         
               
                      
-                        gebruiker.InstellingenID = "1";
+                        gebruiker.InstellingenID = "4180911e-044d-4e9a-8d31-6dfc35508aee";
 
                         repoGebruiker.AddGebruiker(gebruiker);
                     }
