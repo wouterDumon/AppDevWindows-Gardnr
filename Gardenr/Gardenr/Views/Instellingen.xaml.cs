@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gardenr.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,25 @@ namespace Gardenr.Views
         public Instellingen()
         {
             this.InitializeComponent();
+        }
+
+        private void toggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            c();
+        }
+
+        private void ToggleSwitch_Toggled_1(object sender, RoutedEventArgs e)
+        {
+            c();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            c();
+        }
+        private void c() {
+            InstellingenVM i = this.DataContext as InstellingenVM;
+            i.SaveSettings.Execute(""); 
         }
     }
 }

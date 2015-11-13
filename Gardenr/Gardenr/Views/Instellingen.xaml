@@ -28,11 +28,11 @@
                 <ColumnDefinition Width="67*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Cortana " Grid.Row="0"></TextBlock>
-            <ToggleSwitch x:Name="toggleSwitch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" IsOn="{Binding UserSettings.Cortana}" OnContent="" OffContent="" Grid.Row="0" Width="198" Margin="2,0,1,0"/>
+            <ToggleSwitch x:Name="toggleSwitch" Toggled="toggleSwitch_Toggled" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" IsOn="{Binding UserSettings.Cortana, Mode=TwoWay}" OnContent="" OffContent="" Grid.Row="0" Width="198" Margin="2,0,1,0"/>
             <TextBlock Text="Pushnotificaties " Grid.Row="1"></TextBlock>
-            <ToggleSwitch HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" IsOn="{Binding UserSettings.PushNotificaties}" OnContent="" OffContent="" Grid.Row="1" Width="198" Margin="2,0,1,0"/>
+            <ToggleSwitch HorizontalAlignment="Stretch" Toggled="ToggleSwitch_Toggled_1" VerticalAlignment="Stretch" Grid.Column="1" IsOn="{Binding UserSettings.PushNotificaties, Mode=TwoWay}" OnContent="" OffContent="" Grid.Row="1" Width="198" Margin="2,0,1,0"/>
             <TextBlock Grid.Row="2">Taal</TextBlock>
-            <ComboBox SelectedItem="{Binding Taale,Mode=OneWay}" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding Talen}" DisplayMemberPath="Naam"></ComboBox>
+            <ComboBox SelectedItem="{Binding Taale,Mode=TwoWay}" SelectionChanged="ComboBox_SelectionChanged" Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding Talen}" DisplayMemberPath="Naam"></ComboBox>
         </Grid>
 
     </Grid>

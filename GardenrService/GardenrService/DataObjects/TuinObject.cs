@@ -9,12 +9,12 @@ namespace GardenrService.DataObjects
 {
    public class TuinObject : EntityData
     {
-        public Plant Planten { get; set; }
-        public Gebruiker gebruiker { get; set; }
+        public string Planten { get; set; }
+        public string gebruiker { get; set; }
         public bool favoriet { get; set; }
         public int Aantal { get; set; }
         public string LaatstWater { get; set; }
         public string extra { get; set; }
-        public List<Notificaties> NotificationID { get; set; }
+        public string NotificationID { get; set; }
     }
 }

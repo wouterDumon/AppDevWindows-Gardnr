@@ -70,7 +70,26 @@ namespace Gardenr.ViewModels
         public RelayCommand SaveSettings { get; set; }
         public void Settings()
         {
+            if (Taale != null)
+            {
+                if (App.Gebruiker.InstellingenID == "1")
+                {
+                    //STANDAARD INSTELLING MAAK NIEUWE
+                    Instellingen Nieuw = new Instellingen();
+                    Nieuw = UserSettings;
+                    Nieuw.TaalID = Taale.ID;
+                    //repoInst.AddInst(Nieuw);
 
+                }
+                else
+                {
+                    Instellingen Nieuw = new Instellingen();
+                    Nieuw = UserSettings;
+                    Nieuw.TaalID = Taale.ID;
+                    //repoInst.AdjustInst(Nieuw);
+
+                }
+            }
         }
 
         
