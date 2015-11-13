@@ -13,8 +13,10 @@ namespace Gardenr.ViewModels
 {
     class InstellingenVM : ViewModelBase
     {
+        private int iii = 0;
         public InstellingenVM()
         {
+            iii = 0;
             SaveSettings = new RelayCommand(Settings);
             //UserSettings = repoInst.GetInstellingenById(1);//temp 
             //repotaal.AddTaal();
@@ -45,6 +47,7 @@ namespace Gardenr.ViewModels
 
 
         private IInstellingenRepository repoInst = SimpleIoc.Default.GetInstance<IInstellingenRepository>();
+        private IGebruikerRepository repogebruiker = SimpleIoc.Default.GetInstance<IGebruikerRepository>();
         private ITaalRepository repotaal = SimpleIoc.Default.GetInstance<ITaalRepository>();
         private ObservableCollection<Taal> _talen;
 
@@ -74,26 +77,35 @@ namespace Gardenr.ViewModels
 
 
         public RelayCommand SaveSettings { get; set; }
-        public void Settings()
+        public async void Settings()
         {
-            if (Taale != null)
-            {
-                if (App.Gebruiker.InstellingenID == "1")
+            iii++;
+            if (iii > 3) {
+                if (Taale != null)
                 {
-                    //STANDAARD INSTELLING MAAK NIEUWE
-                    Instellingen Nieuw = new Instellingen();
-                    Nieuw = UserSettings;
-                    Nieuw.TaalID = Taale.ID;
-                    //repoInst.AddInst(Nieuw);
+                    if (App.Gebruiker.InstellingenID == "1")
+                    {
+                        //STANDAARD INSTELLING MAAK NIEUWE
+                        Instellingen Nieuw = new Instellingen();
+                        
+                        Nieuw.Cortana = UserSettings.Cortana;
+                        Nieuw.PushNotificaties = UserSettings.PushNotificaties;
+                        Nieuw.TaalID = Taale.ID;
+                    await repoInst.AddInst(Nieuw);
+                        string nieuwid = Nieuw.ID;
+                       Gebruiker n = App.Gebruiker;
+                        n.InstellingenID = nieuwid;
+                        repogebruiker.AdjustGebruiker(n);
 
-                }
-                else
-                {
-                    Instellingen Nieuw = new Instellingen();
-                    Nieuw = UserSettings;
-                    Nieuw.TaalID = Taale.ID;
-                    //repoInst.AdjustInst(Nieuw);
+                    }
+                    else
+                    {
+                        Instellingen Nieuw = new Instellingen();
+                        Nieuw = UserSettings;
+                        Nieuw.TaalID = Taale.ID;
+                        repoInst.AdjustInst(Nieuw);
 
+                    }
                 }
             }
         }

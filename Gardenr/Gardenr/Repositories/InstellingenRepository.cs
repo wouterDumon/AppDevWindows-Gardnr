@@ -119,7 +119,7 @@ namespace Gardenr.Repositories
             await SyncAsync();
             await RefreshItems();
         }
-        public async void AddInst(Instellingen nitem)
+        public async Task AddInst(Instellingen nitem)
         {
             await InitLocalStoreAsync();
             await Table.InsertAsync(nitem);

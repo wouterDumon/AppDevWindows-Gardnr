@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     DataContext="{Binding Home, Mode=TwoWay, Source={StaticResource Locator}}">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#01FF70">
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition Height="107*"/>
@@ -18,7 +18,8 @@
             <RowDefinition Height="41"/>
             <RowDefinition Height="158*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="MENU" Grid.Row="0" x:Name="tx" ></TextBlock>
+
+        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Home</TextBlock>
         <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
         <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
         <StackPanel Grid.Row="3" Orientation="Horizontal">

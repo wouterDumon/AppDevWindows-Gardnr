@@ -6,7 +6,7 @@ namespace Gardenr.Repositories
 {
     interface IInstellingenRepository
     {
-        void AddInst(Instellingen nitem);
+        Task AddInst(Instellingen nitem);
         void AdjustInst(Instellingen nitem);
         void DeleteInst(Instellingen nitem);
         Task<Instellingen> GetInst(string nitem);

@@ -10,13 +10,16 @@ using System.Threading.Tasks;
 
 namespace Gardenr.ViewModels
 {
-    class HomeVM
+    class HomeVM : ViewModelBase
     {
         public HomeVM()
         {
             StartUpGetItems();
+            naam = App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
 
         }
+
+        private string naam { get; set; }
 
         private INotificatiesRepository repoNot = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
 
