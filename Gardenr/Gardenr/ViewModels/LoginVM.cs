@@ -108,6 +108,10 @@ namespace Gardenr.ViewModels
                         repoGebruiker.AddGebruiker(gebruiker);
                     }
                     App.Gebruiker = gebruiker;
+                    //1 malig om de catalogus te vullen met planten
+                   // Opvuller temp = new Opvuller();
+                   // temp.VulCatalogus();
+
                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
                     Messenger.Default.Send<GoToPageMessage>(message);
                 }

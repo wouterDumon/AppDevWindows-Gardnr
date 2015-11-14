@@ -17,7 +17,7 @@ namespace Gardenr
         }
         private IPlantRepository repoPlant = SimpleIoc.Default.GetInstance<IPlantRepository>();
         //http://zaaikalender.com/
-        public async void VulCatalogus()
+        public void VulCatalogus()
         {
             Plant plant1 = new Plant();
             plant1.Naam = "Tomaat";
