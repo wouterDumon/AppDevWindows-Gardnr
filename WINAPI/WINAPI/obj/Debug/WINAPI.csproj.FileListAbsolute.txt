@@ -305,4 +305,3 @@ C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\Microsof
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\bin\System.Web.Http.Owin.xml
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.dll
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.pdb
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\WINAPI\WINAPI\obj\Debug\WINAPI.csprojResolveAssemblyReference.cache

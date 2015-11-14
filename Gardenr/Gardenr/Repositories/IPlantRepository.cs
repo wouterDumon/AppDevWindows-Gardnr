@@ -10,6 +10,6 @@ namespace Gardenr.Repositories
        Task<ObservableCollection<Plant>> GetPlanten();
        Task<Plant> GetPlantById(string id);
 
-       void AddPlant();
+       void AddPlant(Plant nieuweplant);
     }
 }

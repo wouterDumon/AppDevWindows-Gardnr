@@ -98,57 +98,13 @@ namespace Gardenr.Repositories
             return null;
         }
 
-        public async void AddPlant()
+        public async void AddPlant(Plant nieuweplant)
         {
             await InitLocalStoreAsync(); // offline sync
 
-            Plant probeer = new Plant();
-            // probeer.ID = 10;
-            probeer.Naam = "Howest plant";
-            probeer.Omschrijving = "Een eingenaardige plant van west vlaanderen";
-            probeer.FotoUrl = "https://student.howest.be/wouter.dumon/ttt/TaskTool/images/Howest_Logo.png";
-            probeer.ZaaiBegin = "01/01/2010";
-            probeer.ZaaiEinde = "01/01/2010";
-            probeer.OogstBegin = "01/01/2010";
-            probeer.OogstEinde = "01/01/2010";
-            probeer.PlantBegin = "01/01/2010";
-            probeer.PlantEinde = "01/01/2010";
-            probeer.ZaaiDiepte = "10";
-            probeer.AfstandTussen = "30";
-            probeer.AfstandRij = "30";
-            probeer.WaterGeven = "3";
-            probeer.DagenOogst = "20";
-            probeer.DagenVerplanten = "0";
-            probeer.Binnen = 0;
-            probeer.Buiten = 1;
+            await PlantTable.InsertAsync(nieuweplant);
 
            
-            await PlantTable.InsertAsync(probeer);
-
-            await InitLocalStoreAsync(); // offline sync
-
-            Plant probeer2 = new Plant();
-            // probeer.ID = 10;
-            probeer2.Naam = "Mysterieuze plant";
-            probeer2.Omschrijving = "Een eingenaardige plant van west vlaanderen";
-            probeer2.FotoUrl = "https://student.howest.be/wouter.dumon/ttt/TaskTool/images/Meld_Defect.png";
-            probeer2.ZaaiBegin = "01/01/2010";
-            probeer2.ZaaiEinde = "01/01/2010";
-            probeer2.OogstBegin = "01/01/2010";
-            probeer2.OogstEinde = "01/01/2010";
-            probeer2.PlantBegin = "01/01/2010";
-            probeer2.PlantEinde = "01/01/2010";
-            probeer2.ZaaiDiepte = "10";
-            probeer2.AfstandTussen = "30";
-            probeer2.AfstandRij = "30";
-            probeer2.WaterGeven = "3";
-            probeer2.DagenOogst = "20";
-            probeer2.DagenVerplanten = "0";
-            probeer2.Binnen = 0;
-            probeer2.Buiten = 1;
-
-
-            await PlantTable.InsertAsync(probeer2);
 
             await SyncAsync(); // offline sync
 
