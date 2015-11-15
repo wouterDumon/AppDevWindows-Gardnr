@@ -33,8 +33,8 @@
     <RootPropertyPathName Name="PlantBewerken" />
     <RootPropertyPathName Name="Profiel" />
     <RootPropertyPathName Name="TuinPlanten" />
+    <RootPropertyPathName Name="LaatstWater" />
     <RootPropertyPathName Name="Plant" />
-    <RootPropertyPathName Name="CatalogusPlant" />
     <RootPropertyPathName Name="Menu" />
     <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="Glyph" />
@@ -194,8 +194,8 @@
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
     <RootType FullName="Gardenr.Views.PlantBewerken" />
     <RootType FullName="Gardenr.Views.Profiel_Favorieten" />
-    <RootType FullName="Gardenr.Views.Profiel_Historiek" />
     <RootType FullName="Gardenr.ViewModels.ProfielVM" />
+    <RootType FullName="Gardenr.Views.Profiel_Historiek" />
     <RootType FullName="Gardenr.Views.Profiel" />
     <RootType FullName="Gardenr.Views.Profiel_PlantInfo" />
     <RootType FullName="Gardenr.ViewModels.SplitViewVM" />

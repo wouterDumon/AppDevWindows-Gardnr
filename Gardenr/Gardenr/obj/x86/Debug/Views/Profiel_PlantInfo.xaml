@@ -7,8 +7,10 @@
     xmlns:uc="using:Gardenr.UserClass"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-     DataContext="{Binding CatalogusPlant, Mode=TwoWay, Source={StaticResource Locator}}">
-
+    xmlns:vm="using:Gardenr.ViewModels" >
+    <Page.DataContext>
+        <vm:ProfielVM></vm:ProfielVM>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="42*"/>

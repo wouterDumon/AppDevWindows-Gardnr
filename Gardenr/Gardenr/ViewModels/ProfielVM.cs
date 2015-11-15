@@ -42,12 +42,26 @@ namespace Gardenr.ViewModels
             set { _selectedPlant = value;  OnPropertyChanged("SelectedPland"); }
         }
 
+        private ObservableCollection<Tuin> _historiekPlant;
+        public ObservableCollection<Tuin> HistoriekPlant
+        {
+            get { return _historiekPlant; }
+            set { _historiekPlant = value; OnPropertyChanged("HistoriekPlant"); }
+        }
+
+        private ObservableCollection<Tuin> _favorietenPlant;
+        public ObservableCollection<Tuin> FavorieetenPlant
+        {
+            get { return _favorietenPlant; }
+            set { _favorietenPlant = value; OnPropertyChanged("HistoriekPlant"); }
+        }
+
         public string SearchTerm { get; set; }
 
         public RelayCommand GoToTuinObject { get; set; }
         public void TuinObjectDetail()
         {//pag 7
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 8, SelectedTuinPlant = SelectedPlant };
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = SelectedPlant };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 
@@ -68,12 +82,22 @@ namespace Gardenr.ViewModels
             //aanduiden dat plant niet meer een favoriet is
         }
 
+
+
         public async  void StartupGetItems()
         {
             //planten ophalen van de user
             try
             {
                 TuinPlanten = await repoTuin.GetTOs(App.Gebruiker.ID);
+                foreach(Tuin tplant in TuinPlanten)
+                {
+                    if(tplant.favoriet)
+                    {
+                        _favorietenPlant.Add(tplant);
+                        //checken of in historiek of nietook
+                    }
+                }
             }
             catch (Exception ex) { }
             }

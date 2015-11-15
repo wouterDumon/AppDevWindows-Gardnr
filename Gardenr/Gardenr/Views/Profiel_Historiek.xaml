@@ -7,33 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:uc="using:Gardenr.UserClass"
     mc:Ignorable="d"
-     DataContext="{Binding Profiel, Mode=TwoWay, Source={StaticResource Locator}}">
+    xmlns:vm="using:Gardenr.ViewModels">
 
+    <Page.DataContext>
+        <vm:ProfielVM></vm:ProfielVM>
+    </Page.DataContext>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <TextBlock Text="Profiel" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
-        <TextBlock Text="..." Grid.Column="2" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
-        <Button  Content="Huidig" Grid.Row="1" Grid.Column="0" Background="Transparent" HorizontalAlignment="Center"></Button>
-        <Button FontWeight="Bold" Content="Historiek" Grid.Row="1" Grid.Column="1" Background="Transparent" HorizontalAlignment="Center"></Button>
-        <Button Content="Favorieten" Grid.Row="1" Grid.Column="2" Background="Transparent" HorizontalAlignment="Center"></Button>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="3">
-            <uc:Profiel_Historiek></uc:Profiel_Historiek>
-            <uc:Profiel_Historiek></uc:Profiel_Historiek>
-            <uc:Profiel_Historiek></uc:Profiel_Historiek>
-            <uc:Profiel_Historiek></uc:Profiel_Historiek>
-            <uc:Profiel_Historiek></uc:Profiel_Historiek>
-            <uc:Profiel_Historiek></uc:Profiel_Historiek>
-            <uc:Profiel_Historiek></uc:Profiel_Historiek>
-        </StackPanel>
+        
+        
 
     </Grid>
 </Page>
