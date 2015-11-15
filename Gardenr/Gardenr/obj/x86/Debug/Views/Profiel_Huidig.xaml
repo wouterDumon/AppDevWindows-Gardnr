@@ -25,9 +25,9 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Profiel"  FontSize="28" Margin="48 0 0 0" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
         <TextBlock Text="..." Grid.Column="2" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
-        <Button FontWeight="Bold" Content="Huidig" Grid.Row="1" Grid.Column="0" Background="Transparent" HorizontalAlignment="Center"></Button>
-        <Button Content="Historiek" Grid.Row="1" Grid.Column="1" Background="Transparent" HorizontalAlignment="Center"></Button>
-        <Button Content="Favorieten" Grid.Row="1" Grid.Column="2" Background="Transparent" HorizontalAlignment="Center"></Button>
+        <Button FontWeight="Bold" Content="Huidig" Grid.Row="1" Grid.Column="0" Background="Transparent" HorizontalAlignment="Center" ></Button>
+        <Button Content="Historiek" Grid.Row="1" Grid.Column="1" Background="Transparent" HorizontalAlignment="Center" Command="{Binding GoHistoriek}"></Button>
+        <Button Content="Favorieten" Grid.Row="1" Grid.Column="2" Background="Transparent" HorizontalAlignment="Center" Command="{Binding GoFavoriet}"></Button>
 
         <ListView x:ConnectionId='1'  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding TuinPlanten, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3"                          >
 

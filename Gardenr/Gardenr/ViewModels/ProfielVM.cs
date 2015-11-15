@@ -22,6 +22,9 @@ namespace Gardenr.ViewModels
             StartupGetItems();
             GoToTuinObject = new RelayCommand(TuinObjectDetail);
             AddTuinObject = new RelayCommand(AddTuinObjectM);
+            GoHuiding = new RelayCommand(GoHuidigM);
+            GoHistoriek = new RelayCommand(GoHistoriekM);
+            GoFavoriet = new RelayCommand(GoFavorietM);
         }
         public ITuinRepository repoTuin = SimpleIoc.Default.GetInstance<ITuinRepository>();
 
@@ -50,10 +53,10 @@ namespace Gardenr.ViewModels
         }
 
         private ObservableCollection<Tuin> _favorietenPlant;
-        public ObservableCollection<Tuin> FavorieetenPlant
+        public ObservableCollection<Tuin> FavorietenPlant
         {
             get { return _favorietenPlant; }
-            set { _favorietenPlant = value; OnPropertyChanged("HistoriekPlant"); }
+            set { _favorietenPlant = value; OnPropertyChanged("FavorietenPlant"); }
         }
 
         public string SearchTerm { get; set; }
@@ -62,6 +65,25 @@ namespace Gardenr.ViewModels
         public void TuinObjectDetail()
         {//pag 7
             GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = SelectedPlant };
+            Messenger.Default.Send<GoToPageMessage>(message);
+        }
+
+        public RelayCommand GoHuiding { get; set; }
+        public void GoHuidigM()
+        {
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 10};
+            Messenger.Default.Send<GoToPageMessage>(message);
+        }
+        public RelayCommand GoHistoriek { get; set; }
+        public void GoHistoriekM()
+        {
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 8};
+            Messenger.Default.Send<GoToPageMessage>(message);
+        }
+        public RelayCommand GoFavoriet { get; set; }
+        public void GoFavorietM()
+        {
+            GoToPageMessage message = new GoToPageMessage() { PageNumber =9};
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 
@@ -94,10 +116,12 @@ namespace Gardenr.ViewModels
                 {
                     if(tplant.favoriet)
                     {
-                        _favorietenPlant.Add(tplant);
+                        FavorietenPlant.Add(tplant);
                         //checken of in historiek of nietook
                     }
+                    
                 }
+                HistoriekPlant = TuinPlanten;
             }
             catch (Exception ex) { }
             }
