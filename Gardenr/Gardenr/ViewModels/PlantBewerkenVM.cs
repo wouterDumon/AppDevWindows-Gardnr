@@ -5,6 +5,7 @@ using Gardenr.Mesages;
 using Gardenr.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,13 +27,38 @@ namespace Gardenr.ViewModels
             AddNotification = new RelayCommand(AddNotificationM);
         }
 
-        public TuinObject Plant {get;set;}
+        private Tuin _teBewerkenTuin;
+        public Tuin TeBewerkenTuin
+        {
+            get { return _teBewerkenTuin; }
+            set { _teBewerkenTuin = value; OnPropertyChanged("TeBewerkenTuin"); }
+        }
+
+        private Tuin _selectedTuin;
+        public Tuin SelectedTuin
+        {
+            get { return _selectedTuin; }
+            set { _selectedTuin = value; OnPropertyChanged("SelectedTuin"); }
+        }
+
+        private ObservableCollection<Notificatie> _notificaties;
+        public ObservableCollection<Notificatie> Notificaties
+        {
+            get { return _notificaties; }
+            set { _notificaties = value; OnPropertyChanged("Notificaties"); }
+        }
+        private Notificatie _selectedNotificatie;
+        public Notificatie SelectedNotificatie
+        {
+            get { return _selectedNotificatie; }
+            set { _selectedNotificatie = value; OnPropertyChanged("SelectedNotificatie"); }
+        }
 
         protected void OnNavigatedTo(NavigationEventArgs e)
         {
-            if(e.Parameter as TuinObject != null)
+            if(e.Parameter as Tuin != null)
             {
-                this.Plant = e.Parameter as TuinObject;
+                this.TeBewerkenTuin = e.Parameter as Tuin;
             }
         }
 
