@@ -42,14 +42,30 @@
         <TextBlock Text="{Binding TeBewerkenTuin.LaatstWater}" Grid.Row="3" Grid.Column="2" Margin="0,60,0,0"/>
         
         <TextBlock Text="Notificaties" FontSize="20" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="4" Grid.ColumnSpan="3" Margin="0,35,0,0" Tapped="ListItems_Tapped" >
+        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding TeBewerkenTuin.Notificaties, Mode=OneWay}" Grid.Row="4" Grid.ColumnSpan="3" Margin="20,35,90,0" Tapped="ListItems_Tapped" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="15"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0"/>
+                        <TextBlock Text="tijd" Grid.Row="1"/>
+                        <TextBlock Text="Titel" Grid.Row="2"/>
+                        <TextBlock Text=">" FontSize="20" TextAlignment="Center" Grid.Row="3"/>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Grid Grid.Row="4" Margin="63,40,20,0" Grid.Column="2">
+            <TextBlock Text="Add" TextAlignment="Center"/>
+            <!--image van + idp-->
+            <TextBlock Text="+" FontSize="40" TextAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
         <TextBlock Text="MemoBlock" FontSize="20" Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="5" Grid.ColumnSpan="3" Margin="10,30,10,30"/>
+        <TextBox Grid.Row="5" Grid.ColumnSpan="3" Text="{Binding TeBewerkenTuin.extra}" Margin="10,30,10,30"/>
     </Grid>
 </Page>
