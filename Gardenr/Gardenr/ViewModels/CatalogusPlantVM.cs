@@ -52,6 +52,8 @@ namespace Gardenr.ViewModels
             t.favoriet = false;
             t.extra = "";
             t.Aantal = 1;
+            t.historiek = false;
+            t.plantDatum = "" + DateTime.Now;
             t.NotificationID = "";
             
            repotuin.AddTO(t);

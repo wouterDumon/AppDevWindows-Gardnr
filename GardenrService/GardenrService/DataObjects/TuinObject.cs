@@ -9,7 +9,6 @@ namespace GardenrService.DataObjects
 {
    public class TuinObject : EntityData
     {
-
         public string PlantenID { get; set; }
         public string gebruikerID { get; set; }
         public bool favoriet { get; set; }
@@ -17,5 +16,8 @@ namespace GardenrService.DataObjects
         public string LaatstWater { get; set; }
         public string extra { get; set; }
         public string NotificationID { get; set; }
+
+        public bool historiek { get; set; }
+        public string plantDatum { get; set; }
     }
 }

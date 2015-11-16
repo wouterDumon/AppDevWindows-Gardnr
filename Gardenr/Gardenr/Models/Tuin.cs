@@ -18,7 +18,7 @@ namespace Gardenr.Models
         public string extra { get; set; }
         public ObservableCollection<Notificatie> Notificaties { get; set; }
 
-        //public bool historiek{get;set;}
-        //public string plantDatum{get;set;};
+        public bool historiek { get; set; }
+        public string plantDatum { get; set; }
     }
 }

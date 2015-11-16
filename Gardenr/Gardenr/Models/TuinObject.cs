@@ -16,5 +16,8 @@ namespace Gardenr.Models
         public string LaatstWater { get; set; }
         public string extra { get; set; }
         public string NotificationID { get; set; }
+
+        public bool historiek { get; set; }
+        public string plantDatum { get; set; }
     }
 }
