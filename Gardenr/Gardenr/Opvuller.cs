@@ -25,6 +25,8 @@ namespace Gardenr
             plant1.FotoUrl = "http://student.howest.be/cedric.lecat/Gardnr/Tomaat.jpg";
             plant1.ZaaiBegin = "01/01/2000";
             plant1.ZaaiEinde = "30/12/2000";
+            plant1.PlantBegin = "02/02/2000";
+            plant1.PlantEinde = "30/10/2000";
             plant1.OogstBegin = "01/01/2000";
             plant1.OogstEinde = "30/12/2000";
             plant1.ZaaiDiepte = "5";
@@ -43,6 +45,8 @@ namespace Gardenr
             plant2.FotoUrl = "http://student.howest.be/cedric.lecat/Gardnr/Prei.jpg";
             plant2.ZaaiBegin = "01/01";
             plant2.ZaaiEinde = "30/12";
+            plant2.PlantBegin = "02/02/2000";
+            plant2.PlantEinde = "30/10/2000";
             plant2.OogstBegin = "01/01";
             plant2.OogstEinde = "30/12";
             plant2.ZaaiDiepte = "20";
@@ -56,21 +60,23 @@ namespace Gardenr
             repoPlant.AddPlant(plant2);
 
             Plant plant3 = new Plant();
-            plant2.Naam = "BindSla";
-            plant2.Omschrijving = "Bindsla (Lactuca sativa var. longifolia, synoniem: Lactuca sativa var. romana), ook bekend als Romeinse sla, is een bladgroente die vooral in volkstuinen wordt geteeld, maar de beroepsteelt neem toe ter vervanging van ijsbergsla[bron?]. Bindsla vormt tot 40 cm lange, langwerpige kroppen. Bindsla was al 4000 jaar geleden bij de Egyptenaren bekend en werd voornamelijk in het Middellandse Zeegebied geteeld, maar wordt nu in heel Europa en in Noord-Amerika geteeld";
-            plant2.FotoUrl = "http://student.howest.be/cedric.lecat/Gardnr/Bindsla.jpg";
-            plant2.ZaaiBegin = "01/04/2000";
-            plant2.ZaaiEinde = "30/08/2000";
-            plant2.OogstBegin = "01/06/2000";
-            plant2.OogstEinde = "30/09/2000";
-            plant2.ZaaiDiepte = "5";
-            plant2.AfstandTussen = "25";
-            plant2.AfstandRij = "30";
-            plant2.WaterGeven = "5";
-            plant2.DagenOogst = "90";
-            plant2.DagenVerplanten = "12";
-            plant2.Binnen = 1;
-            plant2.Buiten = 1;
+            plant3.Naam = "BindSla";
+            plant3.Omschrijving = "Bindsla (Lactuca sativa var. longifolia, synoniem: Lactuca sativa var. romana), ook bekend als Romeinse sla, is een bladgroente die vooral in volkstuinen wordt geteeld, maar de beroepsteelt neem toe ter vervanging van ijsbergsla[bron?]. Bindsla vormt tot 40 cm lange, langwerpige kroppen. Bindsla was al 4000 jaar geleden bij de Egyptenaren bekend en werd voornamelijk in het Middellandse Zeegebied geteeld, maar wordt nu in heel Europa en in Noord-Amerika geteeld";
+            plant3.FotoUrl = "http://student.howest.be/cedric.lecat/Gardnr/Bindsla.jpg";
+            plant3.ZaaiBegin = "01/04/2000";
+            plant3.ZaaiEinde = "30/08/2000";
+            plant3.PlantBegin = "02/02/2000";
+            plant3.PlantEinde = "30/10/2000";
+            plant3.OogstBegin = "01/06/2000";
+            plant3.OogstEinde = "30/09/2000";
+            plant3.ZaaiDiepte = "5";
+            plant3.AfstandTussen = "25";
+            plant3.AfstandRij = "30";
+            plant3.WaterGeven = "5";
+            plant3.DagenOogst = "90";
+            plant3.DagenVerplanten = "12";
+            plant3.Binnen = 1;
+            plant3.Buiten = 1;
             repoPlant.AddPlant(plant3);
 
             Plant plant4 = new Plant();
@@ -79,6 +85,8 @@ namespace Gardenr
             plant4.FotoUrl = "http://student.howest.be/cedric.lecat/Gardnr/Andijvi.jpg";
             plant4.ZaaiBegin = "01/04/2000";
             plant4.ZaaiEinde = "30/08/2000";
+            plant4.PlantBegin = "02/02/2000";
+            plant4.PlantEinde = "30/10/2000";
             plant4.OogstBegin = "01/07/2000";
             plant4.OogstEinde = "30/11/2000";
             plant4.ZaaiDiepte = "5";
@@ -99,6 +107,8 @@ namespace Gardenr
             plant5.ZaaiEinde = "30/04/2000";
             plant5.OogstBegin = "01/05/2000";
             plant5.OogstEinde = "30/11/2000";
+            plant5.PlantBegin = "02/02/2000";
+            plant5.PlantEinde = "30/10/2000";
             plant5.ZaaiDiepte = "5";
             plant5.AfstandTussen = "30";
             plant5.AfstandRij = "30";
@@ -117,6 +127,8 @@ namespace Gardenr
             plant6.ZaaiEinde = "30/08/2000";
             plant6.OogstBegin = "01/04/2000";
             plant6.OogstEinde = "30/09/2000";
+            plant6.PlantBegin = "02/02/2000";
+            plant6.PlantEinde = "30/10/2000";
             plant6.ZaaiDiepte = "5";
             plant6.AfstandTussen = "15";
             plant6.AfstandRij = "30";
@@ -135,6 +147,8 @@ namespace Gardenr
             plant7.ZaaiEinde = "30/012/2000";
             plant7.OogstBegin = "01/04/2000";
             plant7.OogstEinde = "30/08/2000";
+            plant7.PlantBegin = "02/02/2000";
+            plant7.PlantEinde = "30/10/2000";
             plant7.ZaaiDiepte = "5";
             plant7.AfstandTussen = "50";
             plant7.AfstandRij = "50";
@@ -154,6 +168,8 @@ namespace Gardenr
             plant9.ZaaiEinde = "30/08/2000";
             plant9.OogstBegin = "01/04/2000";
             plant9.OogstEinde = "30/11/2000";
+            plant9.PlantBegin = "02/02/2000";
+            plant9.PlantEinde = "30/10/2000";
             plant9.ZaaiDiepte = "5";
             plant9.AfstandTussen = "5";
             plant9.AfstandRij = "15";
@@ -172,6 +188,8 @@ namespace Gardenr
             plant10.ZaaiEinde = "30/09/2000";
             plant10.OogstBegin = "01/04/2000";
             plant10.OogstEinde = "30/12/2000";
+            plant10.PlantBegin = "02/02/2000";
+            plant10.PlantEinde = "30/10/2000";
             plant10.ZaaiDiepte = "5";
             plant10.AfstandTussen = "5";
             plant10.AfstandRij = "20";
@@ -190,6 +208,8 @@ namespace Gardenr
             plant11.ZaaiEinde = "30/06/2000";
             plant11.OogstBegin = "01/04/2000";
             plant11.OogstEinde = "30/12/2000";
+            plant11.PlantBegin = "02/02/2000";
+            plant11.PlantEinde = "30/10/2000";
             plant11.ZaaiDiepte = "5";
             plant11.AfstandTussen = "15";
             plant11.AfstandRij = "30";
@@ -208,6 +228,8 @@ namespace Gardenr
             plant12.ZaaiEinde = "30/06/2000";
             plant12.OogstBegin = "01/07/2000";
             plant12.OogstEinde = "30/09/2000";
+            plant12.PlantBegin = "02/02/2000";
+            plant12.PlantEinde = "30/10/2000";
             plant12.ZaaiDiepte = "5";
             plant12.AfstandTussen = "40";
             plant12.AfstandRij = "50";
@@ -226,6 +248,8 @@ namespace Gardenr
             plant13.ZaaiEinde = "30/04/2000";
             plant13.OogstBegin = "01/09/2000";
             plant13.OogstEinde = "30/12/2000";
+            plant13.PlantBegin = "02/02/2000";
+            plant13.PlantEinde = "30/10/2000";
             plant13.ZaaiDiepte = "5";
             plant13.AfstandTussen = "60";
             plant13.AfstandRij = "60";
@@ -244,6 +268,8 @@ namespace Gardenr
             plant14.ZaaiEinde = "30/04/2000";
             plant14.OogstBegin = "01/09/2000";
             plant14.OogstEinde = "30/12/2000";
+            plant14.PlantBegin = "02/02/2000";
+            plant14.PlantEinde = "30/10/2000";
             plant14.ZaaiDiepte = "5";
             plant14.AfstandTussen = "35";
             plant14.AfstandRij = "50";
@@ -262,6 +288,8 @@ namespace Gardenr
             plant15.ZaaiEinde = "30/09/2000";
             plant15.OogstBegin = "01/04/2000";
             plant15.OogstEinde = "30/10/2000";
+            plant15.PlantBegin = "02/02/2000";
+            plant15.PlantEinde = "30/10/2000";
             plant15.ZaaiDiepte = "5";
             plant15.AfstandTussen = "5";
             plant15.AfstandRij = "10";
