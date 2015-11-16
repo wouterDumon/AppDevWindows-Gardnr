@@ -13,6 +13,7 @@ namespace Gardenr.Models
         public string Omschrijving { get; set; }
         public string AlarmID { get; set; }
         public string GebruikerID { get; set; }
+        public string datum { get; set; }
         public string PlantID { get; set; }
 
     }

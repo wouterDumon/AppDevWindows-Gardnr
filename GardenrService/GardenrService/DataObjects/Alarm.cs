@@ -11,6 +11,7 @@ namespace GardenrService.DataObjects
     {
 
         public bool Activate { get; set; }
+        public int herhalen { get; set; }
         public int OpVoorand { get; set; }
         public int Snooze { get; set; }
     }
