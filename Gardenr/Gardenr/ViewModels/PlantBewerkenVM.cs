@@ -25,6 +25,7 @@ namespace Gardenr.ViewModels
 
             //optie
             AddNotification = new RelayCommand(AddNotificationM);
+            GoNotification = new RelayCommand(GoNotificationM);
         }
 
         private Tuin _teBewerkenTuin;
@@ -54,13 +55,7 @@ namespace Gardenr.ViewModels
             set { _selectedNotificatie = value; OnPropertyChanged("SelectedNotificatie"); }
         }
 
-        protected void OnNavigatedTo(NavigationEventArgs e)
-        {
-            if(e.Parameter as Tuin != null)
-            {
-                this.TeBewerkenTuin = e.Parameter as Tuin;
-            }
-        }
+       
 
         public RelayCommand SavePlant { get; set; }
         public void SavePlantM()
@@ -99,6 +94,15 @@ namespace Gardenr.ViewModels
             //naar notificatiepagina gaan 
             //en plant meegeven al sparameter
         }
-         
+         public RelayCommand GoNotification { get; set; }
+        public void GoNotificationM()
+        {
+
+        }
+
+        public async void Startup()
+        {
+
+        }
     }
 }

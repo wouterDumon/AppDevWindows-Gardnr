@@ -32,17 +32,17 @@
             <TextBlock Text="..." FontWeight="Bold" Grid.Column="2"></TextBlock>
 
         
-        <Image x:Name="image" Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Top" Width="370"/>
+        <Image x:Name="image" Source="{ Binding TeBewerkenTuin.Plant.FotoUrl}" Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Top" Width="370"/>
         
         <TextBlock Text="Zaaidag: " Grid.Row="3" Margin="20,0,0,0"/>
-        <TextBlock Text="Zaaidag: " Grid.Row="3" Grid.Column="2"/>
+        <TextBlock Text="{Binding TeBewerkenTuin.Plant.ZaaiBegin}" Grid.Row="3" Grid.Column="2"/>
         <TextBlock Text="Dagen tot oogst: " Grid.Row="3" Margin="20,30,0,0"/>
-        <TextBlock Text="Zaaidag: " Grid.Row="3" Grid.Column="2" Margin="0,30,0,0"/>
+        <TextBlock Text=": " Grid.Row="3" Grid.Column="2" Margin="0,30,0,0"/>
         <TextBlock Text="Laatst water gegeven: " Grid.Row="3" Margin="20,60,0,0" />
-        <TextBlock Text="Zaaidag: " Grid.Row="3" Grid.Column="2" Margin="0,60,0,0"/>
+        <TextBlock Text="{Binding TeBewerkenTuin.LaatstWater}" Grid.Row="3" Grid.Column="2" Margin="0,60,0,0"/>
         
         <TextBlock Text="Notificaties" FontSize="20" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="4" Grid.ColumnSpan="3" Tapped="ListItems_Tapped" Margin="0,35,0,0" >
+        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="4" Grid.ColumnSpan="3" Margin="0,35,0,0" Tapped="ListItems_Tapped" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     

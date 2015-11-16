@@ -30,10 +30,12 @@
     <RootPropertyPathName Name="Cortana" />
     <RootPropertyPathName Name="Notificaties" />
     <RootPropertyPathName Name="NotificatiesBewerken" />
-    <RootPropertyPathName Name="PlantBewerken" />
-    <RootPropertyPathName Name="FavorietenPlant" />
+    <RootPropertyPathName Name="SelectedNotificatie" />
+    <RootPropertyPathName Name="TeBewerkenTuin" />
     <RootPropertyPathName Name="LaatstWater" />
     <RootPropertyPathName Name="Plant" />
+    <RootPropertyPathName Name="ZaaiBegin" />
+    <RootPropertyPathName Name="FavorietenPlant" />
     <RootPropertyPathName Name="GoHistoriek" />
     <RootPropertyPathName Name="GoHuiding" />
     <RootPropertyPathName Name="HistoriekPlant" />
@@ -113,6 +115,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Source" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -196,6 +199,10 @@
     <RootType FullName="Gardenr.Views.Login" />
     <RootType FullName="Gardenr.Views.Notificaties" />
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
+    <RootType FullName="Gardenr.ViewModels.PlantBewerkenVM" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Margin" />
+    </RootType>
     <RootType FullName="Gardenr.Views.PlantBewerken" />
     <RootType FullName="Gardenr.ViewModels.ProfielVM" />
     <RootType FullName="Gardenr.Views.Profiel_Favorieten" />

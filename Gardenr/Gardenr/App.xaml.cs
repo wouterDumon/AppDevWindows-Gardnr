@@ -106,7 +106,7 @@ namespace Gardenr
             }
             else if (message.PageNumber == 7) // Plant bewerken pagina
             {
-                frame.Navigate(typeof(PlantBewerken));
+                frame.Navigate(typeof(PlantBewerken),message.SelectedTuinPlant);
             }
             else if(message.PageNumber == 8) // Profiel historiek pagina
             {

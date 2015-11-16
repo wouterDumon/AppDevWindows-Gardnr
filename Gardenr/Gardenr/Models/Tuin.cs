@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace Gardenr.Models
         public int Aantal { get; set; }
         public string LaatstWater { get; set; }
         public string extra { get; set; }
-        public List<Notificatie> Notificaties { get; set; }
+        public ObservableCollection<Notificatie> Notificaties { get; set; }
 
         //public bool historiek{get;set;}
         //public string plantDatum{get;set;};

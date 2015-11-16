@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Gardenr.Models;
+using Gardenr.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +27,21 @@ namespace Gardenr.Views
         public PlantBewerken()
         {
             this.InitializeComponent();
+        }
+
+        private void ListItems_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
+            
+            a.GoNotification.Execute("iets");
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
+            a.TeBewerkenTuin = e.Parameter as Tuin;
+             //   this.TeBewerkenTuin = e.Parameter as Tuin;
+             //   this.Notificaties = _teBewerkenTuin.Notificaties;
+            
         }
     }
 }

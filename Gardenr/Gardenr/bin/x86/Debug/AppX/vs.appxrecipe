@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-15T14:15:05.060</Modified>
+      <Modified>2015-11-16T16:49:52.846</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -82,7 +82,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\entrypoint\Gardenr.exe">
       <PackagePath>entrypoint\Gardenr.exe</PackagePath>
-      <Modified>2015-11-15T14:15:01.108</Modified>
+      <Modified>2015-11-16T16:49:47.459</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\es\Microsoft.Data.Edm.resources.dll">
       <PackagePath>es\Microsoft.Data.Edm.resources.dll</PackagePath>
@@ -182,11 +182,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
       <PackagePath>Gardenr.exe</PackagePath>
-      <Modified>2015-11-15T14:15:05.059</Modified>
+      <Modified>2015-11-16T16:49:52.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.xr.xml">
       <PackagePath>Gardenr.xr.xml</PackagePath>
-      <Modified>2015-11-15T14:03:37.303</Modified>
+      <Modified>2015-11-16T16:20:31.775</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\it\Microsoft.Data.Edm.resources.dll">
       <PackagePath>it\Microsoft.Data.Edm.resources.dll</PackagePath>
@@ -286,7 +286,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-15T14:14:00.658</Modified>
+      <Modified>2015-11-16T16:35:47.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ru\Microsoft.Data.Edm.resources.dll">
       <PackagePath>ru\Microsoft.Data.Edm.resources.dll</PackagePath>
