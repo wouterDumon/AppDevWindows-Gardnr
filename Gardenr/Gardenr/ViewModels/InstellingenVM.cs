@@ -19,13 +19,13 @@ namespace Gardenr.ViewModels
             iii = 0;
             SaveSettings = new RelayCommand(Settings);
             //UserSettings = repoInst.GetInstellingenById(1);//temp 
-            //repotaal.AddTaal();
-           // Instellingen a = new Instellingen();
-           //a.ID = "1";
-            //a.PushNotificaties = true;
-           //a.Cortana = true;
-         //  a.TaalID = "2030b05b-0621-4c4e-8460-f8ef6936efab";
-       //    repoInst.AddInst(a);
+           //repotaal.AddTaal();
+            //Instellingen a = new Instellingen();
+          // a.ID = "1";
+           // a.PushNotificaties = true;
+          //a.Cortana = true;
+          // a.TaalID = "332e6b7e-a6da-4ed7-a819-b18793ad91b8";
+           //repoInst.AddInst(a);
          GetInstellingen();
 
         }

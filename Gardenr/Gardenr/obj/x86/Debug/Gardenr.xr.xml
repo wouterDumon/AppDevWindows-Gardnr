@@ -9,7 +9,6 @@
     <RootPropertyPathName Name="SelectedPlant" />
     <RootPropertyPathName Name="Planten" />
     <RootPropertyPathName Name="Naam" />
-    <RootPropertyPathName Name="Omschrijving" />
     <RootPropertyPathName Name="FotoUrl" />
     <RootPropertyPathName Name="plant" />
     <RootPropertyPathName Name="Buiten" />
@@ -30,8 +29,9 @@
     <RootPropertyPathName Name="Cortana" />
     <RootPropertyPathName Name="Notificaties" />
     <RootPropertyPathName Name="NotificatiesBewerken" />
-    <RootPropertyPathName Name="SelectedNotificatie" />
     <RootPropertyPathName Name="TeBewerkenTuin" />
+    <RootPropertyPathName Name="extra" />
+    <RootPropertyPathName Name="SelectedNotificatie" />
     <RootPropertyPathName Name="LaatstWater" />
     <RootPropertyPathName Name="Plant" />
     <RootPropertyPathName Name="ZaaiBegin" />
@@ -68,6 +68,7 @@
       <RootProperty Name="Children" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
@@ -125,11 +126,11 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Gardenr.UserClass.Home_Newsfeed" />
     <RootType FullName="Gardenr.UserClass.Home_Notificatie" />
@@ -156,6 +157,11 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="Fill" />
+      <RootProperty Name="Opacity" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -201,6 +207,7 @@
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
     <RootType FullName="Gardenr.ViewModels.PlantBewerkenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Gardenr.Views.PlantBewerken" />

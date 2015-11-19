@@ -8,44 +8,40 @@
     mc:Ignorable="d"
     xmlns:vm="using:Gardenr.ViewModels"
     xmlns:uc="using:Gardenr.UserClass"
-  >
+ >
     <Page.DataContext>
         <vm:CatalogusVM></vm:CatalogusVM>
     </Page.DataContext>
-
     <Grid Background="#01FF70">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-     
+
         <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Catalogus</TextBlock>
+
 
         <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems" SelectedItem="{Binding SelectedPlant, Mode=TwoWay}"    ItemsSource="{Binding Planten, Mode=OneWay}" Grid.Row="1" Tapped="ListItems_Tapped">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Background="Transparent" Padding="10 10 10 10">
-                        
+               
+                    <Grid  Background="Transparent" >
+
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="1*"/>
+                              <RowDefinition Height="40"/>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="120"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="{Binding FotoUrl}"  Grid.Row="0" Grid.Column="0"  Grid.RowSpan="3" ></Image>
-                        <TextBlock  Margin="10 0 0 0 " TextWrapping="Wrap" HorizontalAlignment="Stretch" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1" Text="{Binding Omschrijving}"></TextBlock>
-                        <TextBlock Margin="10 0 0 0 " TextWrapping="Wrap"  Grid.Row="0"  Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Naam}"></TextBlock>
-                      
+
+                        <Image Source="{Binding FotoUrl}"  Grid.Row="0" Margin="0 0 0 -40"></Image>
+                        <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7"  ></Rectangle>
+                        <TextBlock TextAlignment="Center" FontSize="22"  TextWrapping="Wrap"  Grid.Row="1" Foreground="White"   Text="{Binding Naam}"></TextBlock>
+
 
                     </Grid>
 
-                </DataTemplate>
+            </DataTemplate>
             </ListView.ItemTemplate>
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
