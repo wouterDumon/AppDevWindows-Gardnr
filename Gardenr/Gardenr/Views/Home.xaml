@@ -12,7 +12,23 @@
         <vm:HomeVM></vm:HomeVM>
     </Page.DataContext>
 
-    <Grid Background="#01FF70">
+    <Page.Resources>
+        <Style x:Key="headerS" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#47DE2D"/>
+        </Style>
+        <Style x:Key="bodyS" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#ADE493"/>
+        </Style>
+        <Style x:Key="notificationS" TargetType="Grid">
+            <Setter Property="Background" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="TextS" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#ADE493"/>
+        </Style>
+        
+    </Page.Resources>
+    
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition Height="107*"/>
@@ -22,51 +38,56 @@
             <RowDefinition Height="158*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Home</TextBlock>
-        <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
-        <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}"></Rectangle>
+        <TextBlock Grid.Row="0" FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center" Style="{StaticResource TextS}">Home</TextBlock>
+                  
         
-      
-        <GridView VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Margin="10,0,0,0">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Background="Transparent" Width="110">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="30"/>
-                            <RowDefinition Height="110"/>
-                            <RowDefinition Height="40"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding datum}" Grid.Row="1" TextAlignment="Center"/>
-                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10"/>
-                        <TextBlock Text=">" Grid.Row="3" FontSize="20" TextAlignment="Center"/>
-                    </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-                
-            
-        </GridView>
-        
-        <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
-          
-        </TextBlock>
-        <GridView VerticalAlignment="Stretch" Name="NiewsItems"  SelectedItem="{Binding SelectedNieuwsItem, Mode=TwoWay}" ItemsSource="{Binding NieuwsItems, Mode=OneWay}" Grid.Row="5"  Margin="10,0,0,0" Tapped="NiewsItems_Tapped">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Background="Transparent" Width="110">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="30"/>
-                            <RowDefinition Height="*"/>
-                         
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding Titel}" Grid.Row="1" TextAlignment="Center"/>
-                        <TextBlock Text="{Binding Description}" Grid.Row="2" FontSize="10"/>
-                       
-                    </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
 
+
+       <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}"/>
+        
+       <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
+       <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
+        <GridView  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Margin="10,0,0,0">
+           <GridView.ItemTemplate>
+               <DataTemplate>
+                    <Grid Style="{StaticResource notificationS}" Width="110">
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="40"/>
+                           <RowDefinition Height="30"/>
+                           <RowDefinition Height="110"/>
+                           <RowDefinition Height="40"/>
+                       </Grid.RowDefinitions>
+                       <TextBlock Text="{Binding datum}" Grid.Row="1" TextAlignment="Center"/>
+                       <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10"/>
+                       <TextBlock Text=">" Grid.Row="3" FontSize="20" TextAlignment="Center"/>
+                   </Grid>
+               </DataTemplate>
+           </GridView.ItemTemplate>
+           
+       
+       </GridView>
+       
+       <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
+       
+       </TextBlock>
+       <GridView VerticalAlignment="Stretch" Name="NiewsItems"  SelectedItem="{Binding SelectedNieuwsItem, Mode=TwoWay}" ItemsSource="{Binding NieuwsItems, Mode=OneWay}" Grid.Row="5"  Margin="10,0,0,0" Tapped="NiewsItems_Tapped">
+           <GridView.ItemTemplate>
+               <DataTemplate>
+                   <Grid Background="Transparent" Width="110">
+                       <Grid.RowDefinitions>
+                           <RowDefinition Height="40"/>
+                           <RowDefinition Height="30"/>
+                           <RowDefinition Height="*"/>
+                    
+                       </Grid.RowDefinitions>
+                       <TextBlock Text="{Binding Titel}" Grid.Row="1" TextAlignment="Center"/>
+                       <TextBlock Text="{Binding Description}" Grid.Row="2" FontSize="10"/>
+                  
+                   </Grid>
+               </DataTemplate>
+           </GridView.ItemTemplate>
+       </GridView>
+      
     </Grid>
 </Page>
