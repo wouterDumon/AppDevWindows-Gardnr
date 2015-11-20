@@ -6,6 +6,7 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="MainPage" />
     <RootPropertyPathName Name="Testing" />
+    <RootPropertyPathName Name="Zoek" />
     <RootPropertyPathName Name="SelectedPlant" />
     <RootPropertyPathName Name="Planten" />
     <RootPropertyPathName Name="Naam" />
@@ -156,6 +157,13 @@
       <RootEvent Name="Tapped" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
@@ -208,10 +216,6 @@
     <RootType FullName="Gardenr.Views.Notificaties" />
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
     <RootType FullName="Gardenr.ViewModels.PlantBewerkenVM" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
-    </RootType>
     <RootType FullName="Gardenr.Views.PlantBewerken" />
     <RootType FullName="Gardenr.ViewModels.ProfielVM" />
     <RootType FullName="Gardenr.Views.Profiel_Favorieten" />

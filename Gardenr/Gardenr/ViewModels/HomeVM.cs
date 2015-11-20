@@ -34,7 +34,7 @@ namespace Gardenr.ViewModels
 
         public async void StartUpGetItems()
         {
-     //       Notificaties = await repoNot.GetNotificaties();
+           Notificaties = await repoNot.GetNotificaties();
        //     NieuwsItems = await repoNieuws.GetNewsItems();
         }
     }

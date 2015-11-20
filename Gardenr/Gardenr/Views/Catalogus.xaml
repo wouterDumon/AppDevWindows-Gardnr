@@ -49,6 +49,7 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
+        <TextBox x:Name="textBox" Grid.Row="0" HorizontalAlignment="Right" Margin="5" TextWrapping="Wrap" Text="{Binding Zoek, Mode=TwoWay}" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
