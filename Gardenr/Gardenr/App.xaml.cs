@@ -62,7 +62,7 @@ namespace Gardenr
             store.DefineTable<Alarm>();
             store.DefineTable<Gebruiker>();
             store.DefineTable<NieuwsItem>();
-            store.DefineTable<Notificatie>();
+            store.DefineTable<Models.Notificaties>();
             store.DefineTable<TuinObject>();
             store.DefineTable<TypeC>();
             store.DefineTable<Gardenr.Models.Instellingen>();

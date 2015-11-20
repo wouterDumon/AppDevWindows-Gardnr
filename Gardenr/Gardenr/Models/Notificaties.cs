@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gardenr.Models
 {
-    public class Notificatie
+    public class Notificaties
     {
         public string ID { get; set; }
         public string TypeID { get; set; }

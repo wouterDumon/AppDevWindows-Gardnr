@@ -42,14 +42,14 @@ namespace Gardenr.ViewModels
             set { _selectedTuin = value; OnPropertyChanged("SelectedTuin"); }
         }
 
-        private ObservableCollection<Notificatie> _notificaties;
-        public ObservableCollection<Notificatie> Notificaties
+        private ObservableCollection<Notificaties> _notificaties;
+        public ObservableCollection<Notificaties> Notificaties
         {
             get { return _notificaties; }
             set { _notificaties = value; OnPropertyChanged("Notificaties"); }
         }
-        private Notificatie _selectedNotificatie;
-        public Notificatie SelectedNotificatie
+        private Notificaties _selectedNotificatie;
+        public Notificaties SelectedNotificatie
         {
             get { return _selectedNotificatie; }
             set { _selectedNotificatie = value; OnPropertyChanged("SelectedNotificatie"); }

@@ -25,9 +25,9 @@ namespace Gardenr.ViewModels
         }
         private INotificatiesRepository repoNotification = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
 
-        public ObservableCollection<Notificatie> IngesteldeNotificaties { get; set; }
+        public ObservableCollection<Notificaties> IngesteldeNotificaties { get; set; }
 
-        public Notificatie SelectedNotificatie { get; set; }
+        public Notificaties SelectedNotificatie { get; set; }
 
         public RelayCommand AddNotificatie { get; set; }
         public RelayCommand BewerkNotificatie { get; set; }

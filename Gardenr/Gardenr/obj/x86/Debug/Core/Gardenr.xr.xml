@@ -8,7 +8,7 @@
     <RootPropertyPathName Name="Testing" />
     <RootPropertyPathName Name="Zoek" />
     <RootPropertyPathName Name="SelectedPlant" />
-    <RootPropertyPathName Name="Planten" />
+    <RootPropertyPathName Name="ToonPlanten" />
     <RootPropertyPathName Name="Naam" />
     <RootPropertyPathName Name="FotoUrl" />
     <RootPropertyPathName Name="plant" />
@@ -61,6 +61,7 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
       <RootProperty Name="Source" />
+      <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
@@ -157,6 +158,10 @@
       <RootEvent Name="Tapped" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
@@ -176,6 +181,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
       <RootProperty Name="HorizontalContentAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.FrameworkElement">
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Setter">
       <RootProperty Name="Property" />

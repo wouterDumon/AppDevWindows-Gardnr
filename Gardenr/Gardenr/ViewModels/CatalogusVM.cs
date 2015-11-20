@@ -35,29 +35,30 @@ namespace Gardenr.ViewModels
             }
 
         private void filter() {
+           // ToonPlanten.Clear();
+            var filter = from Plant in Planten let item= Plant.Naam.ToLower()
+                         where item.Contains(Zoek.ToLower()) select Plant;
+            ToonPlanten.Clear();
+            foreach (Plant p in  filter) {
+                ToonPlanten.Add(p);
 
-            /*List<Plant> t = Planten;
-            for (int i = listView1.Items.Count - 1; i >= 0; i--)
-            {
-                var item = listView1.Items[i];
-                if (item.Text.ToLower().Contains(txt_Search.Text.ToLower()))
-                {
-                    item.BackColor = SystemColors.Highlight;
-                    item.ForeColor = SystemColors.HighlightText;
-                }
-                else
-                {
-                    listView1.Items.Remove(item);
-                }*/
             }
+            
+        }
 
+        private ObservableCollection<Plant> _toonplant;
 
+        public ObservableCollection<Plant> ToonPlanten
+        {
+            get { return _toonplant; }
+            set { _toonplant = value; OnPropertyChanged("ToonPlanten"); }
+        }
         private ObservableCollection<Plant> _plant;
 
         public ObservableCollection<Plant> Planten
         {
             get { return _plant; }
-            set { _plant = value; OnPropertyChanged("Planten"); }
+            set { _plant = value;  }
         }
 
         public Plant SelectedPlant { get; set; }
@@ -78,7 +79,11 @@ namespace Gardenr.ViewModels
             //  repoPlant.AddPlant();
           
             Planten = await repoPlant.GetPlanten();
-           
+            ToonPlanten = new ObservableCollection<Plant>();
+            foreach (Plant p in Planten) {
+                ToonPlanten.Add(p);
+            }
+       
          
         }
     }
