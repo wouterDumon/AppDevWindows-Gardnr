@@ -7,14 +7,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    DataContext="{Binding Home, Mode=TwoWay, Source={StaticResource Locator}}">
+    xmlns:vm="using:Gardenr.ViewModels">
+    <Page.DataContext>
+        <vm:HomeVM></vm:HomeVM>
+    </Page.DataContext>
 
     <Grid Background="#01FF70">
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition Height="107*"/>
             <RowDefinition Height="41"/>
-            <RowDefinition Height="237*"/>
+            <RowDefinition Height="240*"/>
             <RowDefinition Height="41"/>
             <RowDefinition Height="158*"/>
         </Grid.RowDefinitions>
@@ -22,10 +25,23 @@
         <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Home</TextBlock>
         <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
         <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
-        <StackPanel Grid.Row="3" Orientation="Horizontal">
         
-        </StackPanel>
-       
+        <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="2"/>
+        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" >
+            <Grid Background="Transparent" Width="70">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="{Binding SelectedNotificatie.datum}" Grid.Row="1"/>
+                <TextBlock Text="{Binding SelectedNotificatie.Omschrijving}" Grid.Row="2"/>
+                <TextBlock Text=">" Grid.Row="3" FontSize="20"/>
+            </Grid>
+            
+        </ListView>
+        
         <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
           
         </TextBlock>

@@ -16,7 +16,7 @@ namespace Gardenr.Models
         public int Aantal { get; set; }
         public string LaatstWater { get; set; }
         public string extra { get; set; }
-        public ObservableCollection<Notificatie> Notificaties { get; set; }
+        public ObservableCollection<Notificaties> Notificaties { get; set; }
 
         public bool historiek { get; set; }
         public string plantDatum { get; set; }

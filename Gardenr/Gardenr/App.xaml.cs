@@ -33,7 +33,7 @@ namespace Gardenr
         internal static string FacebookId = String.Empty;
         internal static Gebruiker Gebruiker = null;
         public static bool isAuthenticated = false;
-        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore11.db");
+        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore12.db");
         internal static Frame frame;
            
 
@@ -62,7 +62,7 @@ namespace Gardenr
             store.DefineTable<Alarm>();
             store.DefineTable<Gebruiker>();
             store.DefineTable<NieuwsItem>();
-            store.DefineTable<Notificatie>();
+            store.DefineTable<Models.Notificaties>();
             store.DefineTable<TuinObject>();
             store.DefineTable<TypeC>();
             store.DefineTable<Gardenr.Models.Instellingen>();

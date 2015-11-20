@@ -13,8 +13,8 @@ namespace Gardenr.Repositories
 {
     class NotificatiesRepository : INotificatiesRepository
     {
-        private IMobileServiceSyncTable<Notificatie> Table =
-                App.MobileService.GetSyncTable<Notificatie>(); // offline sync
+        private IMobileServiceSyncTable<Notificaties> Table =
+                App.MobileService.GetSyncTable<Notificaties>(); // offline sync
         private async Task InitLocalStoreAsync()
         {
             if (!App.MobileService.SyncContext.IsInitialized)
@@ -60,7 +60,7 @@ namespace Gardenr.Repositories
                 await d.ShowAsync();
             }
         }
-        private MobileServiceCollection<Notificatie, Notificatie> items;
+        private MobileServiceCollection<Notificaties, Notificaties> items;
         private async Task RefreshItems()
         {
             MobileServiceInvalidOperationException exception = null;
@@ -86,23 +86,23 @@ namespace Gardenr.Repositories
             }
         }
 
-        public async Task<ObservableCollection<Notificatie>> GetNotificaties()
+        public async Task<ObservableCollection<Notificaties>> GetNotificaties()
         {
             await InitLocalStoreAsync();
             await RefreshItems();
-            ObservableCollection<Notificatie> ni = new ObservableCollection<Notificatie>();
+            ObservableCollection<Notificaties> ni = new ObservableCollection<Notificaties>();
 
-            foreach (Notificatie nieuws in items)
+            foreach (Notificaties nieuws in items)
             {
                 ni.Add(nieuws);
             }
             return ni;
         }
-        public async Task<Notificatie> GetNotificatie(string nitem)
+        public async Task<Notificaties> GetNotificatie(string nitem)
         {
             await InitLocalStoreAsync();
             await RefreshItems();
-            foreach (Notificatie ni in items)
+            foreach (Notificaties ni in items)
             {
                 if (ni.ID == nitem)
                 {
@@ -112,21 +112,21 @@ namespace Gardenr.Repositories
             return null;
         }
 
-        public async void AdjustNotificatie(Notificatie nitem)
+        public async void AdjustNotificatie(Notificaties nitem)
         {
             await InitLocalStoreAsync();
             await Table.UpdateAsync(nitem);
             await SyncAsync();
             await RefreshItems();
         }
-        public async void AddNotificatie(Notificatie nitem)
+        public async void AddNotificatie(Notificaties nitem)
         {
             await InitLocalStoreAsync();
             await Table.InsertAsync(nitem);
             await SyncAsync();
             await RefreshItems();
         }
-        public async void DeleteNotificatie(Notificatie nitem)
+        public async void DeleteNotificatie(Notificaties nitem)
         {
             await InitLocalStoreAsync();
             await Table.DeleteAsync(nitem);

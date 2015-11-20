@@ -23,11 +23,11 @@ namespace Gardenr.ViewModels
             BewerkNotificatie = new RelayCommand(BewerkNotificatieM);
             DeleteNotificatie = new RelayCommand(DeleteNotificatieM);
         }
-        private INotificatiesRepository repoNotification = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
+       
 
-        public ObservableCollection<Notificatie> IngesteldeNotificaties { get; set; }
+        public ObservableCollection<Notificaties> IngesteldeNotificaties { get; set; }
 
-        public Notificatie SelectedNotificatie { get; set; }
+        public Notificaties SelectedNotificatie { get; set; }
 
         public RelayCommand AddNotificatie { get; set; }
         public RelayCommand BewerkNotificatie { get; set; }
@@ -45,12 +45,12 @@ namespace Gardenr.ViewModels
         }
         public void DeleteNotificatieM()
         {
-            
+          
         }
 
         public async void StartupGetItems()
         {
-            IngesteldeNotificaties = await repoNotification.GetNotificaties();
+            //IngesteldeNotificaties = await repoNotification.GetNotificaties();
         }
 
     }

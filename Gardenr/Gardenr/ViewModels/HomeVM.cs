@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight.Ioc;
+﻿using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Ioc;
 using Gardenr.Models;
 using Gardenr.Repositories;
 using System;
@@ -21,11 +22,27 @@ namespace Gardenr.ViewModels
 
         private string naam { get; set; }
 
-        private INotificatiesRepository repoNot = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
+       
+        private INotificatiesRepository repoNotification = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
 
-        public ObservableCollection<Notificatie> Notificaties { get; set; }
+        private ObservableCollection<Notificaties> _notificaties;
+        public ObservableCollection<Notificaties> Notificaties
+        {
+            get
+            {
+                return _notificaties;
+            }
+            set
+            {
+                _notificaties = value; OnPropertyChanged("Notificaties");
+            }
+        }
 
-        public Notificatie SelectedNotificatie { get; set; }
+        private Notificaties _selectedNotificatie;
+        public Notificaties SelectedNotificatie {
+            get { return _selectedNotificatie; }
+            set { _selectedNotificatie = value; OnPropertyChanged("SelectedNotificatie"); }
+        }
 
         //misschiencommands voor naar notificatie detail te gaan
         private INieuwsRepository repoNieuws = SimpleIoc.Default.GetInstance<INieuwsRepository>();
@@ -34,8 +51,21 @@ namespace Gardenr.ViewModels
 
         public async void StartUpGetItems()
         {
-     //       Notificaties = await repoNot.GetNotificaties();
+            Notificaties = await repoNotification.GetNotificaties();
        //     NieuwsItems = await repoNieuws.GetNewsItems();
+        }
+
+
+
+        public RelayCommand VieuwNotification { get; set; }
+        public void VieuwNotificationM()
+        {
+
+        }
+        public RelayCommand VieuwNieuwsItem { get; set; }
+        public void VieuwNieuwsItemM()
+        {
+
         }
     }
 }
