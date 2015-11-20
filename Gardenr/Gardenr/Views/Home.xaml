@@ -27,19 +27,19 @@
         <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
         
       
-        <GridView VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" >
+        <GridView VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Margin="10,0,0,0">
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Background="Transparent" Width="100">
+                    <Grid Background="Transparent" Width="110">
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
                             <RowDefinition Height="30"/>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="110"/>
                             <RowDefinition Height="40"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding datum}" Grid.Row="1"/>
-                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="2"/>
-                        <TextBlock Text=">" Grid.Row="3" FontSize="20"/>
+                        <TextBlock Text="{Binding datum}" Grid.Row="1" TextAlignment="Center"/>
+                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10"/>
+                        <TextBlock Text=">" Grid.Row="3" FontSize="20" TextAlignment="Center"/>
                     </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>
@@ -50,9 +50,23 @@
         <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
           
         </TextBlock>
-        <StackPanel  Grid.Row="5" Orientation="Horizontal">
-           
-        </StackPanel>
-      
+        <GridView VerticalAlignment="Stretch" Name="NiewsItems"  SelectedItem="{Binding SelectedNieuwsItem, Mode=TwoWay}" ItemsSource="{Binding NieuwsItems, Mode=OneWay}" Grid.Row="5"  Margin="10,0,0,0" Tapped="NiewsItems_Tapped">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Transparent" Width="110">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                         
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Titel}" Grid.Row="1" TextAlignment="Center"/>
+                        <TextBlock Text="{Binding Description}" Grid.Row="2" FontSize="10"/>
+                       
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
     </Grid>
 </Page>
