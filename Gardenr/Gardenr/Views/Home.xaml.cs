@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Gardenr.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,6 +28,10 @@ namespace Gardenr.Views
             this.InitializeComponent();
         }
 
-      
+        private void ListItems_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            HomeVM a = this.DataContext as HomeVM;
+            a.VieuwNotification.Execute("iets");
+        }
     }
 }

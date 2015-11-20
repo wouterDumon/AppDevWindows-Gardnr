@@ -26,21 +26,26 @@
         <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
         <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
         
-        <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="2"/>
-        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" >
-            <Grid Background="Transparent" Width="70">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="40"/>
-                </Grid.RowDefinitions>
-                <TextBlock Text="{Binding SelectedNotificatie.datum}" Grid.Row="1"/>
-                <TextBlock Text="{Binding SelectedNotificatie.Omschrijving}" Grid.Row="2"/>
-                <TextBlock Text=">" Grid.Row="3" FontSize="20"/>
-            </Grid>
+      
+        <GridView VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" >
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Transparent" Width="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="40"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding datum}" Grid.Row="1"/>
+                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="2"/>
+                        <TextBlock Text=">" Grid.Row="3" FontSize="20"/>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+                
             
-        </ListView>
+        </GridView>
         
         <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
           

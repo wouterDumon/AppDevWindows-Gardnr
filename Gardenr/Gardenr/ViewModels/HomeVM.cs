@@ -1,5 +1,7 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Messaging;
+using Gardenr.Mesages;
 using Gardenr.Models;
 using Gardenr.Repositories;
 using System;
@@ -17,7 +19,8 @@ namespace Gardenr.ViewModels
         {
             StartUpGetItems();
             naam = App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
-
+            VieuwNotification = new RelayCommand(VieuwNieuwsItemM);
+            VieuwNieuwsItem = new RelayCommand(VieuwNieuwsItemM);
         }
 
         private string naam { get; set; }
@@ -39,7 +42,8 @@ namespace Gardenr.ViewModels
         }
 
         private Notificaties _selectedNotificatie;
-        public Notificaties SelectedNotificatie {
+        public Notificaties SelectedNotificatie
+        {
             get { return _selectedNotificatie; }
             set { _selectedNotificatie = value; OnPropertyChanged("SelectedNotificatie"); }
         }
@@ -60,7 +64,8 @@ namespace Gardenr.ViewModels
         public RelayCommand VieuwNotification { get; set; }
         public void VieuwNotificationM()
         {
-
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = SelectedNotificatie };
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
         public RelayCommand VieuwNieuwsItem { get; set; }
         public void VieuwNieuwsItemM()
