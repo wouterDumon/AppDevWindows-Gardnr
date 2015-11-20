@@ -50,9 +50,23 @@
         <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
           
         </TextBlock>
-        <StackPanel  Grid.Row="5" Orientation="Horizontal">
-           
-        </StackPanel>
-      
+        <GridView VerticalAlignment="Stretch" Name="NiewsItems"  SelectedItem="{Binding SelectedNieuwsItem, Mode=TwoWay}" ItemsSource="{Binding NieuwsItems, Mode=OneWay}" Grid.Row="5"  Margin="10,0,0,0" Tapped="NiewsItems_Tapped">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Transparent" Width="110">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                         
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Titel}" Grid.Row="1" TextAlignment="Center"/>
+                        <TextBlock Text="{Binding Description}" Grid.Row="2" FontSize="10"/>
+                       
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
     </Grid>
 </Page>

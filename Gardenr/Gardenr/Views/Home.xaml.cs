@@ -33,5 +33,11 @@ namespace Gardenr.Views
             HomeVM a = this.DataContext as HomeVM;
             a.VieuwNotification.Execute("iets");
         }
+
+        private void NiewsItems_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            HomeVM a = this.DataContext as HomeVM;
+            a.VieuwNieuwsItem.Execute("iets");
+        }
     }
 }

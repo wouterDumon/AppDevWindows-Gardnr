@@ -19,7 +19,7 @@ namespace Gardenr.ViewModels
         {
             StartUpGetItems();
             naam = App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
-            VieuwNotification = new RelayCommand(VieuwNieuwsItemM);
+            VieuwNotification = new RelayCommand(VieuwNotificationM);
             VieuwNieuwsItem = new RelayCommand(VieuwNieuwsItemM);
         }
 
@@ -50,13 +50,26 @@ namespace Gardenr.ViewModels
 
         //misschiencommands voor naar notificatie detail te gaan
         private INieuwsRepository repoNieuws = SimpleIoc.Default.GetInstance<INieuwsRepository>();
-        public ObservableCollection<NieuwsItem> NieuwsItems { get; set; }
-        public NieuwsItem SelectedNieuwsItem { get; set; }
+
+        private ObservableCollection<NieuwsItem> _nieuwsItems;
+        public ObservableCollection<NieuwsItem> NieuwsItems
+        {
+            get { return _nieuwsItems; }
+            set { _nieuwsItems = value; OnPropertyChanged("NieuwsItems"); }
+        }
+        private NieuwsItem _selectedNieuwsItem;
+        public NieuwsItem SelectedNieuwsItem
+        {
+            get { return _selectedNieuwsItem; }
+            set { _selectedNieuwsItem = value; OnPropertyChanged("SelectedNieuwsItem"); }
+        }
 
         public async void StartUpGetItems()
         {
+            //nog doen zodanig dat de notificaties enkel van de ingelogd gebruiker ingegeven worden
+
             Notificaties = await repoNotification.GetNotificaties();
-       //     NieuwsItems = await repoNieuws.GetNewsItems();
+            NieuwsItems = await repoNieuws.GetNewsItems();
         }
 
 

@@ -22,6 +22,10 @@
     <RootPropertyPathName Name="ZaaiDiepte" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
+    <RootPropertyPathName Name="SelectedNieuwsItem" />
+    <RootPropertyPathName Name="NieuwsItems" />
+    <RootPropertyPathName Name="Description" />
+    <RootPropertyPathName Name="Titel" />
     <RootPropertyPathName Name="SelectedNotificatie" />
     <RootPropertyPathName Name="Notificaties" />
     <RootPropertyPathName Name="Omschrijving" />
@@ -205,10 +209,6 @@
       <RootProperty Name="ItemTemplate" />
       <RootEvent Name="Tapped" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Children" />
-    </RootType>
     <RootType FullName="Gardenr.Views.Home" />
     <RootType FullName="Gardenr.ViewModels.InstellingenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
@@ -240,6 +240,10 @@
     <RootType FullName="Gardenr.Views.Profiel_Favorieten" />
     <RootType FullName="Gardenr.Views.Profiel_Historiek" />
     <RootType FullName="Gardenr.Views.Profiel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Children" />
+    </RootType>
     <RootType FullName="Gardenr.Views.Profiel_PlantInfo" />
     <RootType FullName="Gardenr.ViewModels.SplitViewVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.SplitView">
