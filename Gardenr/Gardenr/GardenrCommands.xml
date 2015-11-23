@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="CortanaDeepLinking_en-us">
+    <AppName> Gardenr </AppName>
+    <Example> Show Catalog</Example>
+
+    <Command Name="showCatalog">
+      <Example> show me the catalog </Example>
+      <ListenFor RequireAppName="BeforePhrase"> show catalog</ListenFor>
+      <Feedback> Showing catalogus</Feedback>
+      <Navigate/>
+    </Command>
+<!--
+    <PhraseList Label="day">
+      <Item> Today </Item>
+      <Item> Tommorow </Item>
+    </PhraseList>-->
+
+  </CommandSet>
+
+  <!-- Other CommandSets for other languages -->
+
+</VoiceCommands>

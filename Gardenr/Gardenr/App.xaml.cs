@@ -14,6 +14,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.SpeechRecognition;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -70,6 +71,13 @@ namespace Gardenr
             //models die er neit in staan
             //constants todoitems tuinobjects
                 }
+
+
+        private async void InstallVoiceCommands()
+        {
+            var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///GardenrCommands.xml"));
+            await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(storageFile);
+        }
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
@@ -168,6 +176,44 @@ namespace Gardenr
             }
             // Ensure the current window is active
             Window.Current.Activate();
+            InstallVoiceCommands();
+        }
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            if (args.Kind == ActivationKind.VoiceCommand)
+            {
+
+
+                var commandArgs = args as VoiceCommandActivatedEventArgs;
+                SpeechRecognitionResult result = commandArgs.Result;
+                Type navigateToPageType;
+                string voiceCommand = result.RulePath[0];
+                string spokenText = result.Text;
+                string navigationParameterString = string.Empty;
+
+                switch (voiceCommand)
+                {
+                    case "showCatalog":
+                        
+                        navigationParameterString = string.Format("{0}|{1}|{2}", voiceCommand, "", spokenText);
+                        
+                        navigateToPageType = typeof(Catalogus);
+                        break;
+                    default:
+                        navigateToPageType = typeof(MainPage);
+                        break;
+                }
+                if (frame == null)
+                {
+                    frame = new Frame();
+                    Window.Current.Content = frame;
+                }
+
+                frame.Navigate(navigateToPageType, navigationParameterString);
+                Window.Current.Activate();
+
+            }
+
         }
 
         /// <summary>

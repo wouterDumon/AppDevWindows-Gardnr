@@ -9,6 +9,12 @@
     DataContext="{Binding Notificaties, Mode=TwoWay, Source={StaticResource Locator}}">
 
     <Grid Background="#01FF70">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Notificatie detail</TextBlock>
 
     </Grid>
 </Page>
