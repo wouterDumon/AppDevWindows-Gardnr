@@ -14,23 +14,30 @@
 
     <Page.Resources>
         <Style x:Key="headerS" TargetType="Rectangle">
-            <Setter Property="Fill" Value="#47DE2D"/>
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#329465" Offset="0"/>
+                        <GradientStop Color="#339461" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
         </Style>
         <Style x:Key="bodyS" TargetType="Rectangle">
-            <Setter Property="Fill" Value="#ADE493"/>
+            <Setter Property="Fill" Value="#FFFFFF"/>
         </Style>
         <Style x:Key="notificationS" TargetType="Grid">
-            <Setter Property="Background" Value="#FFFFFF"/>
+            <Setter Property="Background" Value="#abd3a8"/>
         </Style>
         <Style x:Key="TextS" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="#ADE493"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
         </Style>
-        
+
     </Page.Resources>
-    
+
     <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="107*"/>
             <RowDefinition Height="41"/>
             <RowDefinition Height="240*"/>
@@ -39,55 +46,55 @@
         </Grid.RowDefinitions>
 
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}"></Rectangle>
-        <TextBlock Grid.Row="0" FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center" Style="{StaticResource TextS}">Home</TextBlock>
-                  
-        
+        <TextBlock Grid.Row="0" Text="" FontSize="28" Margin="57,4,0,4" VerticalAlignment="Center" Style="{StaticResource TextS}" >Home</TextBlock>
 
 
-       <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}"/>
-        
-       <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
-       <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
+
+
+        <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}"/>
+
+        <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
+        <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
         <GridView  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Margin="10,0,0,0">
-           <GridView.ItemTemplate>
-               <DataTemplate>
+            <GridView.ItemTemplate>
+                <DataTemplate>
                     <Grid Style="{StaticResource notificationS}" Width="110">
-                       <Grid.RowDefinitions>
-                           <RowDefinition Height="40"/>
-                           <RowDefinition Height="30"/>
-                           <RowDefinition Height="110"/>
-                           <RowDefinition Height="40"/>
-                       </Grid.RowDefinitions>
-                       <TextBlock Text="{Binding datum}" Grid.Row="1" TextAlignment="Center"/>
-                       <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10"/>
-                       <TextBlock Text=">" Grid.Row="3" FontSize="20" TextAlignment="Center"/>
-                   </Grid>
-               </DataTemplate>
-           </GridView.ItemTemplate>
-           
-       
-       </GridView>
-       
-       <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
-       
-       </TextBlock>
-       <GridView VerticalAlignment="Stretch" Name="NiewsItems"  SelectedItem="{Binding SelectedNieuwsItem, Mode=TwoWay}" ItemsSource="{Binding NieuwsItems, Mode=OneWay}" Grid.Row="5"  Margin="10,0,0,0" Tapped="NiewsItems_Tapped">
-           <GridView.ItemTemplate>
-               <DataTemplate>
-                   <Grid Background="Transparent" Width="110">
-                       <Grid.RowDefinitions>
-                           <RowDefinition Height="40"/>
-                           <RowDefinition Height="30"/>
-                           <RowDefinition Height="*"/>
-                    
-                       </Grid.RowDefinitions>
-                       <TextBlock Text="{Binding Titel}" Grid.Row="1" TextAlignment="Center"/>
-                       <TextBlock Text="{Binding Description}" Grid.Row="2" FontSize="10"/>
-                  
-                   </Grid>
-               </DataTemplate>
-           </GridView.ItemTemplate>
-       </GridView>
-      
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="110"/>
+                            <RowDefinition Height="40"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding datum}" Grid.Row="1" TextAlignment="Center"/>
+                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10"/>
+                        <TextBlock Text=">" Grid.Row="3" FontSize="20" TextAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+
+
+        </GridView>
+
+        <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
+
+        </TextBlock>
+        <GridView VerticalAlignment="Stretch" Name="NiewsItems"  SelectedItem="{Binding SelectedNieuwsItem, Mode=TwoWay}" ItemsSource="{Binding NieuwsItems, Mode=OneWay}" Grid.Row="5"  Margin="10,0,0,0" Tapped="NiewsItems_Tapped">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Transparent" Width="110">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Titel}" Grid.Row="1" TextAlignment="Center"/>
+                        <TextBlock Text="{Binding Description}" Grid.Row="2" FontSize="10"/>
+
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
     </Grid>
 </Page>
