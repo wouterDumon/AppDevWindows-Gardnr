@@ -106,7 +106,7 @@ namespace Gardenr
             }
             else if (message.PageNumber == 5) //Notificaties pagina
             {
-                frame.Navigate(typeof(Views.Notificaties));
+                frame.Navigate(typeof(Views.Notificaties), message.SelectedNotificatie);
             }
             else if(message.PageNumber == 6) // Notificaties bewerken pagina
             {

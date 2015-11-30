@@ -35,6 +35,8 @@
     <RootPropertyPathName Name="UserSettings" />
     <RootPropertyPathName Name="PushNotificaties" />
     <RootPropertyPathName Name="Cortana" />
+    <RootPropertyPathName Name="IngesteldeNotificaties" />
+    <RootPropertyPathName Name="AlarmID" />
     <RootPropertyPathName Name="NotificatiesBewerken" />
     <RootPropertyPathName Name="TeBewerkenTuin" />
     <RootPropertyPathName Name="extra" />
@@ -237,6 +239,16 @@
       <RootProperty Name="HorizontalContentAlignment" />
     </RootType>
     <RootType FullName="Gardenr.Views.Login" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsSticky" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="SecondaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Label" />
+    </RootType>
     <RootType FullName="Gardenr.Views.Notificaties" />
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
     <RootType FullName="Gardenr.ViewModels.PlantBewerkenVM" />

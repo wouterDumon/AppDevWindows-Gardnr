@@ -7,14 +7,63 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     DataContext="{Binding Notificaties, Mode=TwoWay, Source={StaticResource Locator}}">
-
+    <Page.Resources>
+        <Style x:Key="headerS" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#329465" Offset="0"/>
+                        <GradientStop Color="#339461" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="bodyS" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="notificationS" TargetType="Grid">
+            <Setter Property="Background" Value="#abd3a8"/>
+        </Style>
+        <Style x:Key="TextS" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="Text2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#659d46"/>
+        </Style>
+    </Page.Resources>
     <Grid Background="#01FF70">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
 
-        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Notificatie detail</TextBlock>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="2"></Rectangle>
+   
+        <TextBlock Grid.Row="0" FontSize="28" Margin="57,1,0,1" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="2" >Notificatie detail</TextBlock>
+        <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Bewerken"/>
+                <AppBarButton Label="Verwijderen"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
+
+
+        <Rectangle Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
+        <TextBlock Margin="10,0,0,0" Grid.Column="0" Text="Datum" FontSize="23" Grid.Row="1" Style="{StaticResource Text2}" ></TextBlock>
+        <TextBlock Margin="10,0,0,0" Grid.Column="1" Text="{Binding IngesteldeNotificaties.datum}" FontSize="23" Grid.Row="1" Style="{StaticResource Text2}" ></TextBlock>
+
+        <TextBlock Margin="10,0,0,0" Grid.Column="0" Text="Herhalen" FontSize="23" Grid.Row="2" Style="{StaticResource Text2}" ></TextBlock>
+        <TextBlock Margin="10,0,0,0" Grid.Column="1" Text="{Binding IngesteldeNotificaties.AlarmID}" FontSize="23" Grid.Row="2" Style="{StaticResource Text2}" ></TextBlock>
+
+        <TextBlock Margin="10,0,0,0" Grid.Column="0" Text="Mededeling" FontSize="23" Grid.Row="3" Style="{StaticResource Text2}" ></TextBlock>
+        <TextBlock Margin="10,0,0,0" Grid.Column="1" Text="{Binding IngesteldeNotificaties.Omschrijving}" FontSize="23" Grid.Row="3" Style="{StaticResource Text2}" ></TextBlock>
 
     </Grid>
 </Page>

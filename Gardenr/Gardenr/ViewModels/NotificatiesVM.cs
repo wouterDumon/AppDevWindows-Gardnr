@@ -14,7 +14,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Gardenr.ViewModels
 {
-    class NotificatiesVM
+    class NotificatiesVM : ViewModelBase
     {
         public NotificatiesVM()
         {
@@ -23,9 +23,18 @@ namespace Gardenr.ViewModels
             BewerkNotificatie = new RelayCommand(BewerkNotificatieM);
             DeleteNotificatie = new RelayCommand(DeleteNotificatieM);
         }
-       
+      
 
-        public ObservableCollection<Notificaties> IngesteldeNotificaties { get; set; }
+
+        private Notificaties _ingestelde;
+
+        public Notificaties IngesteldeNotificaties
+        {
+            get { return _ingestelde; }
+            set { _ingestelde = value; OnPropertyChanged("IngesteldeNotificaties"); }
+        }
+
+        
 
         public Notificaties SelectedNotificatie { get; set; }
 
