@@ -11,13 +11,39 @@
     <Page.DataContext>
         <vm:LoginVM></vm:LoginVM>
     </Page.DataContext>
-    <Grid Background="#01FF70" >
+
+    <Page.Resources>
+        <Style x:Key="header" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#359663" Offset="0"/>
+                        <GradientStop Color="#778b08" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Text" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+
+        <Style x:Key="BtnText" TargetType="Button">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+    </Page.Resources>
+
+
+    <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="583*"/>
         </Grid.RowDefinitions>
-        <Button Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Background="#01FF70" Command="{Binding Testing}" x:Name="btnlogin" Content="Aan de slag" Width="auto" Height="auto"/>
-        <TextBlock Grid.Row="0" x:Name="txta" HorizontalAlignment="Center" FontSize="35"  TextWrapping="Wrap" Text="Welkom bij Gardenr!" VerticalAlignment="Top"/>
-
+        <Rectangle Style="{StaticResource header}" Grid.Row="0" Grid.RowSpan="2"></Rectangle>
+        
+        <TextBlock x:Name="txta" Style="{StaticResource Text}" HorizontalAlignment="Center" FontSize="35"  TextWrapping="Wrap" Text="Welkom bij Gardenr!" VerticalAlignment="Top" Grid.Row="1" Margin="21,170,21,0"/>
+        <Image x:Name="image" Source="../Assets/LOGO.PNG" HorizontalAlignment="Center" Height="250"  Grid.Row="1" VerticalAlignment="Center" Width="250"/>
+        <TextBlock Text="Inloggen" Style="{StaticResource Text}" HorizontalAlignment="Center" FontSize="35"  Grid.Row="1" Margin="112,475,111,128"></TextBlock>
+        <Button Grid.Column="0" Style="{StaticResource BtnText}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"  Command="{Binding Testing}" x:Name="btnlogin" Width="auto" Height="auto"/>
     </Grid>
 </Page>

@@ -32,7 +32,9 @@
         <Style x:Key="TextS" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#FFFFFF"/>
         </Style>
-
+        <Style x:Key="Text2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#659d46"/>
+        </Style>
     </Page.Resources>
 
     <Grid >
@@ -52,13 +54,11 @@
 
 
         <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}"/>
-
-        <TextBlock Text="plugin hier" Grid.Row="1" FontSize="64"  ></TextBlock>
-        <TextBlock Text="Notificatie's" FontSize="25" Grid.Row="2"></TextBlock>
-        <GridView  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Margin="10,0,0,0">
+        <TextBlock Margin="10,0,0,0" Text="Notificatie's" FontSize="25" Grid.Row="2" Style="{StaticResource Text2}"></TextBlock>
+        <GridView  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Margin="20,0,20,0">
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Style="{StaticResource notificationS}" Width="110">
+                    <Grid Width="110">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="30"/>
@@ -75,7 +75,7 @@
 
         </GridView>
 
-        <TextBlock Text="Newsfeed" FontSize="25" Grid.Row="4">
+        <TextBlock Margin="10,0,0,0" Text="Newsfeed" FontSize="25" Grid.Row="4" Style="{StaticResource Text2}">
 
         </TextBlock>
         <GridView VerticalAlignment="Stretch" Name="NiewsItems"  SelectedItem="{Binding SelectedNieuwsItem, Mode=TwoWay}" ItemsSource="{Binding NieuwsItems, Mode=OneWay}" Grid.Row="5"  Margin="10,0,0,0" Tapped="NiewsItems_Tapped">
