@@ -37,7 +37,11 @@
     <RootPropertyPathName Name="Cortana" />
     <RootPropertyPathName Name="IngesteldeNotificaties" />
     <RootPropertyPathName Name="AlarmID" />
+    <RootPropertyPathName Name="DeleteNotificatie" />
+    <RootPropertyPathName Name="BewerkNotificatie" />
     <RootPropertyPathName Name="NotificatiesBewerken" />
+    <RootPropertyPathName Name="BewNotificatie" />
+    <RootPropertyPathName Name="SaveSettings" />
     <RootPropertyPathName Name="TeBewerkenTuin" />
     <RootPropertyPathName Name="extra" />
     <RootPropertyPathName Name="LaatstWater" />
@@ -105,9 +109,10 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Style" />
       <RootProperty Name="Height" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="FontFamily" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="BorderThickness" />
       <RootEvent Name="Click" />
     </RootType>
@@ -175,6 +180,7 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -247,9 +253,17 @@
       <RootProperty Name="SecondaryCommands" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Command" />
       <RootProperty Name="Label" />
     </RootType>
     <RootType FullName="Gardenr.Views.Notificaties" />
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Date" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="AllowDrop" />
+    </RootType>
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
     <RootType FullName="Gardenr.ViewModels.PlantBewerkenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gardenr.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,11 @@ namespace Gardenr.Views
         public NotificatiesBewerken()
         {
             this.InitializeComponent();
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            NotificatiesBewerkenVM a = this.DataContext as NotificatiesBewerkenVM;
+            a.BewNotificatie = e.Parameter as Gardenr.Models.Notificaties;
         }
     }
 }
