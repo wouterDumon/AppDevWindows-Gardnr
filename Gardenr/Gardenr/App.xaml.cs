@@ -106,11 +106,11 @@ namespace Gardenr
             }
             else if (message.PageNumber == 5) //Notificaties pagina
             {
-                frame.Navigate(typeof(Views.Notificaties));
+                frame.Navigate(typeof(Views.Notificaties), message.SelectedNotificatie);
             }
             else if(message.PageNumber == 6) // Notificaties bewerken pagina
             {
-                frame.Navigate(typeof(NotificatiesBewerken));
+                frame.Navigate(typeof(NotificatiesBewerken), message.SelectedNotificatie);
             }
             else if (message.PageNumber == 7) // Plant bewerken pagina
             {
@@ -131,6 +131,10 @@ namespace Gardenr
             else if(message.PageNumber == 11)//home page
             {
                 rootFrame.Navigate(typeof(Shell));
+            }
+            else if (message.PageNumber == 12)//home page
+            {
+                frame.Navigate(typeof(Home));
             }
             /*if (message.PageNumber == 1)
             {

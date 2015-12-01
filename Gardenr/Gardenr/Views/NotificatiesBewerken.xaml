@@ -7,8 +7,60 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     DataContext="{Binding NotificatiesBewerken, Mode=TwoWay, Source={StaticResource Locator}}">
+    <Page.Resources>
+        <Style x:Key="headerS" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#329465" Offset="0"/>
+                        <GradientStop Color="#339461" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="bodyS" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="notificationS" TargetType="Grid">
+            <Setter Property="Background" Value="#abd3a8"/>
+        </Style>
+        <Style x:Key="TextS" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="Text2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#659d46"/>
+        </Style>
+    </Page.Resources>
+    <Grid Background="#01FF70">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="2"></Rectangle>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Grid.Row="0" FontSize="28" Margin="57,1,0,1" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="2" >Notificatie detail</TextBlock>
+
+
+
+        <Rectangle Grid.Row="1" Grid.RowSpan="4" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
+
+        <Button Content="Opslaan" Background="Transparent" Command="{Binding SaveSettings}" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" FontSize="26" Foreground="DarkGreen"></Button>
+
+        <TextBlock Margin="10,0,0,0" Grid.Column="0" Text="Datum" FontSize="23" Grid.Row="1" Style="{StaticResource Text2}" ></TextBlock>
+        <DatePicker Date="{Binding BewNotificatie.datum, Mode=TwoWay}" Margin="0" Grid.Column="1"  FontSize="23" Grid.Row="1" VerticalAlignment="Stretch" AllowDrop="True" />
+
+        <TextBlock Margin="10,0,0,0" Grid.Column="0" Text="Herhalen" FontSize="23" Grid.Row="2" Style="{StaticResource Text2}" ></TextBlock>
+        <TextBlock Margin="10,0,0,0" Grid.Column="1" Text="{Binding BewNotificatie.AlarmID, Mode=TwoWay}" FontSize="23" Grid.Row="2" Style="{StaticResource Text2}" ></TextBlock>
+
+        <TextBlock Margin="10,0,0,0" Grid.Column="0" Text="Mededeling" FontSize="23" Grid.Row="3" Style="{StaticResource Text2}" ></TextBlock>
+        <TextBox Margin="10,0,0,0" Grid.Column="1" Text="{Binding BewNotificatie.Omschrijving, Mode=TwoWay}" FontSize="23" Grid.Row="3"  ></TextBox>
 
     </Grid>
 </Page>

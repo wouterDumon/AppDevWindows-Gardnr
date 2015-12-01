@@ -1,5 +1,9 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Messaging;
+using Gardenr.Mesages;
 using Gardenr.Models;
+using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +13,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Gardenr.ViewModels
 {
-    class NotificatiesBewerkenVM
+    class NotificatiesBewerkenVM : ViewModelBase
     {
         public NotificatiesBewerkenVM()
         {
@@ -18,18 +22,30 @@ namespace Gardenr.ViewModels
             GoBack = new RelayCommand(GoBackM);
             DatePicker = new RelayCommand(DatePickerM);
             PickImage = new RelayCommand(PickImageM);
-        }
-        protected void OnNavigatedTo(NavigationEventArgs e)
-        {
-            this.PlantToNotify = e.Parameter as TuinObject;
+
+
+
+
+
         }
 
-        public TuinObject PlantToNotify { get; set; }
+        private Notificaties _BewNotificatie;
+
+        public Notificaties BewNotificatie
+        {
+            get { return _BewNotificatie; }
+            set { _BewNotificatie = value; OnPropertyChanged("BewNotificatie"); }
+        }
+
 
         public RelayCommand SaveSettings { get; set; }
+        private INotificatiesRepository reponotif = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
+
         public void SaveSettingsM()
         {
-
+            reponotif.AdjustNotificatie(BewNotificatie);
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = BewNotificatie };
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
         public RelayCommand DeleteNotificatie { get; set; }
         public void DeleteNotificatieM()
