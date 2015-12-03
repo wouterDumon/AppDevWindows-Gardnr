@@ -24,9 +24,9 @@ namespace Gardenr.ViewModels
         }
         private IPlantRepository repoPlant = SimpleIoc.Default.GetInstance<IPlantRepository>();
 
-        private int _width;
+        private String _width;
 
-        public int width
+        public String width
         {
             get { return _width; }
             set { _width = value; OnPropertyChanged("width"); }

@@ -45,7 +45,7 @@
         </Grid.RowDefinitions>
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="2"></Rectangle>
         <Rectangle Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
-        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Catalogus</TextBlock>
+        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" Style="{StaticResource TextS}" VerticalAlignment="Center">Catalogus</TextBlock>
 
 
         <GridView   VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Hidden" Name="ListItems" SelectedItem="{Binding SelectedPlant, Mode=TwoWay}"    ItemsSource="{Binding ToonPlanten, Mode=OneWay}" Grid.Row="1" Tapped="ListItems_Tapped">
@@ -53,7 +53,7 @@
             <GridView.ItemTemplate>
                 <DataTemplate>
 
-                    <Grid  Background="Transparent" Width="{Binding mijnwidth , Mode=OneWay}">
+                    <Grid  Background="Transparent" Width="240">
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*"/>
