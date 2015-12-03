@@ -9,6 +9,7 @@ using Windows.UI.Popups;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Ioc;
+using Newtonsoft.Json.Linq;
 
 namespace Gardenr.Repositories
 {
@@ -151,7 +152,7 @@ namespace Gardenr.Repositories
             temp.Aantal = tuin.Aantal;
             temp.LaatstWater = tuin.LaatstWater;
             temp.extra = tuin.extra;
-
+            
             //notificaties list naar id string
             string idstring = "";
             
@@ -165,11 +166,22 @@ namespace Gardenr.Repositories
                 }
                 temp.NotificationID = idstring;
             }
+            else
+            {
+                temp.NotificationID = "";
+
+            }
             
 
             
             temp.historiek = tuin.historiek;
-            temp.plantDatum = tuin.plantDatum;
+            if (tuin.plantDatum == null) {
+                temp.plantDatum = "";
+            }
+            else
+            {
+                temp.plantDatum = tuin.plantDatum;
+            }
 
             return temp;
         }
@@ -179,10 +191,16 @@ namespace Gardenr.Repositories
 
             TuinObject temp = await convertNaarObject(nitem);
 
-            await InitLocalStoreAsync();
-            await Table.UpdateAsync(temp);
-            await SyncAsync();
-            await RefreshItems();
+          //  await InitLocalStoreAsync();
+            //await Table.UpdateAsync(JObject.Parse(temp.ToString()));
+            DeleteTO(nitem);
+            AddTO(temp);
+
+           // await Table.DeleteAsync(temp);
+         //   await Table.InsertAsync(temp);
+            //await Table.UpdateAsync(temp);
+          //  await SyncAsync();
+         //   await RefreshItems();
         }
         public async void AddTO(TuinObject nitem)
         {
