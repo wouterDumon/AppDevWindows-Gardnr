@@ -8,13 +8,36 @@
     mc:Ignorable="d"
   
     xmlns:vm="using:Gardenr.ViewModels">
+    <Page.Resources>
+        <Style x:Key="headerS" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#329465" Offset="0"/>
+                        <GradientStop Color="#339461" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="bodyS" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="notificationS" TargetType="Grid">
+            <Setter Property="Background" Value="#abd3a8"/>
+        </Style>
+        <Style x:Key="TextS" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="Text2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#659d46"/>
+        </Style>
+        <vm:ConvertToStrign x:Key="StringConverter"></vm:ConvertToStrign>
+    </Page.Resources>
 
     <Page.DataContext>
         <vm:CatalogusPlantVM></vm:CatalogusPlantVM>
     </Page.DataContext>
-    <Page.Resources>
-        <vm:ConvertToStrign x:Key="StringConverter"></vm:ConvertToStrign>
-    </Page.Resources>
+
     <Grid Background="#01FF70">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -34,8 +57,18 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="70"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.ColumnSpan="2" Grid.Row="0"  FontSize="28" Margin="48,1,0,1" VerticalAlignment="Center" Text="{Binding plant.Naam}"></TextBlock>
-        <Button Grid.Column="3" Command="{Binding AddGarden}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="ADD"></Button>
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="3"></Rectangle>
+        <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="3"/>
+        <TextBlock Style="{StaticResource TextS}" Grid.ColumnSpan="2" Grid.Row="0"  FontSize="28" Margin="48,1,0,1" VerticalAlignment="Center" Text="{Binding plant.Naam}"></TextBlock>
+        <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Command="{Binding AddGarden}" Label="Toevoegen aan tuin"/>
+        
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+        
+        
+     
         <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding plant.FotoUrl}"  Grid.Row="1" Grid.ColumnSpan="3" Stretch="UniformToFill" ></Image>
         <Button Background="Blue" Grid.Row="2"  Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="ZaaiKalender" Margin="20" ></Button>
 

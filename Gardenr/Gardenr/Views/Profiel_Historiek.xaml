@@ -12,7 +12,30 @@
     <Page.DataContext>
         <vm:ProfielVM></vm:ProfielVM>
     </Page.DataContext>
-
+    <Page.Resources>
+        <Style x:Key="headerS" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#329465" Offset="0"/>
+                        <GradientStop Color="#339461" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="bodyS" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="notificationS" TargetType="Grid">
+            <Setter Property="Background" Value="#abd3a8"/>
+        </Style>
+        <Style x:Key="TextS" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="Text2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#659d46"/>
+        </Style>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -24,8 +47,11 @@
             <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Profiel" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
-        <TextBlock Text="..." Grid.Column="2" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right" ></TextBlock>
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="3"></Rectangle>
+        <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="3"/>
+        <TextBlock Style="{StaticResource TextS}"  Text="Profiel"  FontSize="28" Margin="48 0 0 0" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
+
+      
         <Button  Content="Huidig" Grid.Row="1" Grid.Column="0" Background="Transparent" HorizontalAlignment="Center" Command="{Binding GoHuiding}"></Button>
         <Button  FontWeight="Bold" Content="Historiek" Grid.Row="1" Grid.Column="1" Background="Transparent" HorizontalAlignment="Center"></Button>
         <Button Content="Favorieten" Grid.Row="1" Grid.Column="2" Background="Transparent" HorizontalAlignment="Center" Command="{Binding GoFavoriet}"></Button>

@@ -9,7 +9,6 @@
     <RootPropertyPathName Name="Zoek" />
     <RootPropertyPathName Name="SelectedPlant" />
     <RootPropertyPathName Name="ToonPlanten" />
-    <RootPropertyPathName Name="mijnwidth" />
     <RootPropertyPathName Name="Naam" />
     <RootPropertyPathName Name="FotoUrl" />
     <RootPropertyPathName Name="plant" />
@@ -146,9 +145,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Style" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Style" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
@@ -218,8 +217,19 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Gardenr.Views.Catalogus" />
-    <RootType FullName="Gardenr.ViewModels.CatalogusPlantVM" />
     <RootType FullName="Gardenr.ViewModels.ConvertToStrign" />
+    <RootType FullName="Gardenr.ViewModels.CatalogusPlantVM" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsSticky" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="SecondaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Command" />
+      <RootProperty Name="Label" />
+    </RootType>
     <RootType FullName="Gardenr.Views.CatalogusPlant" />
     <RootType FullName="Gardenr.Views.Contact" />
     <RootType FullName="Gardenr.ViewModels.HomeVM" />
@@ -251,17 +261,6 @@
       <RootProperty Name="HorizontalContentAlignment" />
     </RootType>
     <RootType FullName="Gardenr.Views.Login" />
-    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
-      <RootProperty Name="Background" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="IsSticky" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="SecondaryCommands" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
-      <RootProperty Name="Command" />
-      <RootProperty Name="Label" />
-    </RootType>
     <RootType FullName="Gardenr.Views.Notificaties" />
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Date" />
