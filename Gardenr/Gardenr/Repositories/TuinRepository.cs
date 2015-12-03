@@ -222,7 +222,7 @@ namespace Gardenr.Repositories
 
                     if(nieuws.NotificationID != null && nieuws.NotificationID!="")
                     {
-                        var tempinstid = nieuws.NotificationID.Split(",".ToCharArray());
+                        var tempinstid = nieuws.NotificationID.Split(";".ToCharArray());
                         for (int i = 0; i < tempinstid.Length; i++)
                         {
                             newT.Notificaties.Add(await repoInst.GetNotificatie(tempinstid[i]));

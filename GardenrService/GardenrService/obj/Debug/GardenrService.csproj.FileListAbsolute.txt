@@ -265,4 +265,3 @@ C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\GardenrService\GardenrServ
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\GardenrService\GardenrService\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Debug\GardenrService.dll
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Debug\GardenrService.pdb
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Debug\GardenrService.csprojResolveAssemblyReference.cache

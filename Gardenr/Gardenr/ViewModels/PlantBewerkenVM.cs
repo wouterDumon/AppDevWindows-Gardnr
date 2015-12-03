@@ -65,6 +65,9 @@ namespace Gardenr.ViewModels
         public void SavePlantM()
         {
             repoTuin.AdjustTO(TeBewerkenTuin);
+
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 10 };//voorlopig nog opsplitsing tussen huidig/fav/geschiedenigs pag 8-9-10
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
         public RelayCommand DeletePlant { get; set; }
         public void DeletePlantM()
@@ -77,6 +80,9 @@ namespace Gardenr.ViewModels
             TeBewerkenTuin.favoriet = true;
             repoTuin.AdjustTO(TeBewerkenTuin);
             //eerst plant opslaan
+
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 10 };//voorlopig nog opsplitsing tussen huidig/fav/geschiedenigs pag 8-9-10
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
         public RelayCommand SetPicture { get; set; }
         public void SetPictureM()
@@ -99,11 +105,14 @@ namespace Gardenr.ViewModels
             //eers tmoet plant opgeslaan worden
             //naar notificatiepagina gaan 
             //en plant meegeven al sparameter
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6 };
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
          public RelayCommand GoNotification { get; set; }
         public void GoNotificationM()
         {
-
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = SelectedNotificatie };
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
 
         public async void Startup()

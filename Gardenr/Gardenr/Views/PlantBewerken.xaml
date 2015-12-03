@@ -68,7 +68,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Grid.Row="4" Margin="63,40,20,0" Grid.Column="2">
+        <Grid Grid.Row="4" Margin="63,40,20,0" Grid.Column="2" Tapped="Grid_Tapped" >
             <TextBlock Text="Add" TextAlignment="Center"/>
             <!--image van + idp-->
             <TextBlock Text="+" FontSize="40" TextAlignment="Center" VerticalAlignment="Center"/>
