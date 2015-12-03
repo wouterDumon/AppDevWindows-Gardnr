@@ -7,6 +7,30 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     xmlns:vm="using:Gardenr.ViewModels">
+    <Page.Resources>
+        <Style x:Key="headerS" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#329465" Offset="0"/>
+                        <GradientStop Color="#339461" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="bodyS" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="notificationS" TargetType="Grid">
+            <Setter Property="Background" Value="#abd3a8"/>
+        </Style>
+        <Style x:Key="TextS" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="Text2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#659d46"/>
+        </Style>
+    </Page.Resources>
     <Page.DataContext>
         <vm:PlantBewerkenVM></vm:PlantBewerkenVM>
     </Page.DataContext>
@@ -26,10 +50,13 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="3"></Rectangle>
+        <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="3"/>
+        <TextBlock Style="{StaticResource TextS}"  Text="Plant bewerken"  FontSize="28" Margin="48 0 0 0" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
 
-        <Button Content="B" Margin="50,0,0,0" Grid.Column="0" Command="{Binding GoBack}"></Button>
-            <TextBlock Text="testing" HorizontalAlignment="Center" Grid.Column="1"></TextBlock>
-            <TextBlock Text="..." FontWeight="Bold" Grid.Column="2"></TextBlock>
+        <Button Content="B" Margin="25,0,0,0" Grid.Column="0" Command="{Binding GoBack}"></Button>
+           
+     
 
 
         <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">

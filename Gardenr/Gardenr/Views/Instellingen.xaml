@@ -7,6 +7,31 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
    xmlns:vm="using:Gardenr.ViewModels">
+    <Page.Resources>
+        <Style x:Key="headerS" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#329465" Offset="0"/>
+                        <GradientStop Color="#339461" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="bodyS" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="notificationS" TargetType="Grid">
+            <Setter Property="Background" Value="#abd3a8"/>
+        </Style>
+        <Style x:Key="TextS" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="Text2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#659d46"/>
+        </Style>
+    </Page.Resources>
+
     <Page.DataContext>
         <vm:InstellingenVM></vm:InstellingenVM>
     </Page.DataContext>
@@ -15,7 +40,9 @@
             <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Instellingen</TextBlock>
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="2"></Rectangle>
+        <Rectangle Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" Style="{StaticResource TextS}" VerticalAlignment="Center">Instellingen</TextBlock>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
@@ -27,6 +54,7 @@
                 <ColumnDefinition Width="53*"/>
                 <ColumnDefinition Width="67*"/>
             </Grid.ColumnDefinitions>
+            
             <TextBlock Text="Cortana " Grid.Row="0"></TextBlock>
             <ToggleSwitch x:Name="toggleSwitch" Toggled="toggleSwitch_Toggled" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" IsOn="{Binding UserSettings.Cortana, Mode=TwoWay}" OnContent="" OffContent="" Grid.Row="0" Width="198" Margin="2,0,1,0"/>
             <TextBlock Text="Pushnotificaties " Grid.Row="1"></TextBlock>
