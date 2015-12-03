@@ -9,18 +9,42 @@
     xmlns:vm="using:Gardenr.ViewModels"
     xmlns:uc="using:Gardenr.UserClass"
  >
-
+    <Page.Resources>
+        <Style x:Key="headerS" TargetType="Rectangle">
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#329465" Offset="0"/>
+                        <GradientStop Color="#339461" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="bodyS" TargetType="Rectangle">
+            <Setter Property="Fill" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="notificationS" TargetType="Grid">
+            <Setter Property="Background" Value="#abd3a8"/>
+        </Style>
+        <Style x:Key="TextS" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+        <Style x:Key="Text2" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#659d46"/>
+        </Style>
+    </Page.Resources>
 
     <Page.DataContext>
         <vm:CatalogusVM></vm:CatalogusVM>
     </Page.DataContext>
-    <Grid Background="#01FF70">
+    <Grid x:Name="mijngrid"  Background="#01FF70">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="2"></Rectangle>
+        <Rectangle Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
         <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" VerticalAlignment="Center">Catalogus</TextBlock>
 
 
@@ -29,7 +53,7 @@
             <GridView.ItemTemplate>
                 <DataTemplate>
 
-                    <Grid  Background="Transparent" Width="125">
+                    <Grid  Background="Transparent" Width="{Binding mijnwidth , Mode=OneWay}">
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*"/>
@@ -52,7 +76,7 @@
                 </Style>
             </ListView.ItemContainerStyle>-->
         </GridView>
-        <TextBox x:Name="textBox"  Grid.Row="0" PlaceholderText="Zoek" HorizontalAlignment="Right" Margin="5" TextWrapping="Wrap" Text="{Binding Zoek, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <TextBox Background="Transparent" x:Name="textBox"  Grid.Row="0" PlaceholderText="Zoek" HorizontalAlignment="Right" Margin="5" TextWrapping="Wrap" Text="{Binding Zoek, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

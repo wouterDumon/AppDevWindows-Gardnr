@@ -54,7 +54,6 @@
         </CommandBar>
 
 
-
         <Rectangle Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
         <TextBlock Margin="10,0,0,0" Grid.Column="0" Text="Datum" FontSize="23" Grid.Row="1" Style="{StaticResource Text2}" ></TextBlock>
         <TextBlock Margin="10,0,0,0" Grid.Column="1" Text="{Binding IngesteldeNotificaties.datum}" FontSize="23" Grid.Row="1" Style="{StaticResource Text2}" ></TextBlock>

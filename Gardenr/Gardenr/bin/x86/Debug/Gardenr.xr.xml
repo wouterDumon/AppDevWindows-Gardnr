@@ -9,6 +9,7 @@
     <RootPropertyPathName Name="Zoek" />
     <RootPropertyPathName Name="SelectedPlant" />
     <RootPropertyPathName Name="ToonPlanten" />
+    <RootPropertyPathName Name="mijnwidth" />
     <RootPropertyPathName Name="Naam" />
     <RootPropertyPathName Name="FotoUrl" />
     <RootPropertyPathName Name="plant" />
@@ -139,10 +140,10 @@
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="Style" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontWeight" />
@@ -159,45 +160,13 @@
     <RootType FullName="Gardenr.UserClass.Profiel_Historiek" />
     <RootType FullName="Gardenr.UserClass.Profiel_Huidig" />
     <RootType FullName="Gardenr.UserClass.Profiel_Info_plant" />
-    <RootType FullName="Gardenr.ViewModels.CatalogusVM" />
-    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
-      <RootProperty Name="Name" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="SelectedItem" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Margin" />
-      <RootEvent Name="Tapped" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootMethod Name="GetVerticalScrollBarVisibility" />
-      <RootMethod Name="SetVerticalScrollBarVisibility" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="FontSize" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Style" />
       <RootProperty Name="Stretch" />
       <RootProperty Name="Fill" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Style" />
     </RootType>
-    <RootType FullName="Gardenr.Views.Catalogus" />
-    <RootType FullName="Gardenr.ViewModels.CatalogusPlantVM" />
-    <RootType FullName="Gardenr.ViewModels.ConvertToStrign" />
-    <RootType FullName="Gardenr.Views.CatalogusPlant" />
-    <RootType FullName="Gardenr.Views.Contact" />
-    <RootType FullName="Gardenr.ViewModels.HomeVM" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Shape">
       <RootProperty Name="Fill" />
     </RootType>
@@ -217,6 +186,39 @@
       <RootProperty Name="Color" />
       <RootProperty Name="Offset" />
     </RootType>
+    <RootType FullName="Gardenr.ViewModels.CatalogusVM" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="Name" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Tapped" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Background" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Gardenr.Views.Catalogus" />
+    <RootType FullName="Gardenr.ViewModels.CatalogusPlantVM" />
+    <RootType FullName="Gardenr.ViewModels.ConvertToStrign" />
+    <RootType FullName="Gardenr.Views.CatalogusPlant" />
+    <RootType FullName="Gardenr.Views.Contact" />
+    <RootType FullName="Gardenr.ViewModels.HomeVM" />
     <RootType FullName="Gardenr.Views.Home" />
     <RootType FullName="Gardenr.ViewModels.InstellingenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
