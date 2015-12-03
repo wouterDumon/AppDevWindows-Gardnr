@@ -32,7 +32,6 @@ namespace Gardenr.Views
         private void ListItems_Tapped(object sender, TappedRoutedEventArgs e)
         {
             PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
-            
             a.GoNotification.Execute("iets");
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -42,6 +41,12 @@ namespace Gardenr.Views
              //   this.TeBewerkenTuin = e.Parameter as Tuin;
              //   this.Notificaties = _teBewerkenTuin.Notificaties;
             
+        }
+
+        private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
+            a.AddNotification.Execute("iets");
         }
     }
 }

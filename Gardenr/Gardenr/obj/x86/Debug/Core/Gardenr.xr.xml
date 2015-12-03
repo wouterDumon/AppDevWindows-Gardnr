@@ -48,6 +48,9 @@
     <RootPropertyPathName Name="LaatstWater" />
     <RootPropertyPathName Name="Plant" />
     <RootPropertyPathName Name="ZaaiBegin" />
+    <RootPropertyPathName Name="DeletePlant" />
+    <RootPropertyPathName Name="AddFavorites" />
+    <RootPropertyPathName Name="SavePlant" />
     <RootPropertyPathName Name="FavorietenPlant" />
     <RootPropertyPathName Name="GoHistoriek" />
     <RootPropertyPathName Name="GoHuiding" />
@@ -89,6 +92,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ManipulationMode" />
       <RootProperty Name="IsHitTestVisible" />
+      <RootEvent Name="Tapped" />
       <RootEvent Name="ManipulationCompleted" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />

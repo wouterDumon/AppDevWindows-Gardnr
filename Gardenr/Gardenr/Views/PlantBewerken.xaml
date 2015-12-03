@@ -31,7 +31,15 @@
             <TextBlock Text="testing" HorizontalAlignment="Center" Grid.Column="1"></TextBlock>
             <TextBlock Text="..." FontWeight="Bold" Grid.Column="2"></TextBlock>
 
-        
+
+        <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Command="{Binding SavePlant}" Label="Opslaan"/>
+                <AppBarButton Command="{Binding AddFavorites}" Label="Favoriet"/>
+                <AppBarButton Command="{Binding DeletePlant}" Label="Verwijderen"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
         <Image x:Name="image" Source="{ Binding TeBewerkenTuin.Plant.FotoUrl}" Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Top" Width="370"/>
         
         <TextBlock Text="Zaaidag: " Grid.Row="3" Margin="20,0,0,0"/>
@@ -60,12 +68,12 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Grid.Row="4" Margin="63,40,20,0" Grid.Column="2">
+        <Grid Grid.Row="4" Margin="63,40,20,0" Grid.Column="2" Tapped="Grid_Tapped" >
             <TextBlock Text="Add" TextAlignment="Center"/>
             <!--image van + idp-->
             <TextBlock Text="+" FontSize="40" TextAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
         <TextBlock Text="MemoBlock" FontSize="20" Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="5" Grid.ColumnSpan="3" Text="{Binding TeBewerkenTuin.extra}" Margin="10,30,10,30"/>
+        <TextBox Grid.Row="5" Grid.ColumnSpan="3" Text="{Binding TeBewerkenTuin.extra, Mode=TwoWay}" Margin="10,30,10,30"/>
     </Grid>
 </Page>
