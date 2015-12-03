@@ -24,10 +24,18 @@ namespace Gardenr.ViewModels
             PickImage = new RelayCommand(PickImageM);
 
 
-
-
+            if (BewNotificatie == null)
+            {
+                nieuwNotificatie = true;
+            }
+            else
+            {
+                nieuwNotificatie = false;
+            }
 
         }
+
+        private bool nieuwNotificatie{get;set;}
 
         private Notificaties _BewNotificatie;
         public Notificaties BewNotificatie
@@ -36,15 +44,33 @@ namespace Gardenr.ViewModels
             set { _BewNotificatie = value; OnPropertyChanged("BewNotificatie"); }
         }
 
+        private Tuin _gegevenTuinObject;
+        public Tuin GegevenTuinObject
+        {
+            get { return _gegevenTuinObject; }
+            set { _gegevenTuinObject = value; }
+        }
 
         public RelayCommand SaveSettings { get; set; }
         private INotificatiesRepository reponotif = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
 
         public void SaveSettingsM()
         {
-            reponotif.AdjustNotificatie(BewNotificatie);
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6, SelectedNotificatie = BewNotificatie };
-            Messenger.Default.Send<GoToPageMessage>(message);
+            if (nieuwNotificatie)
+            {
+                BewNotificatie.PlantID = GegevenTuinObject.ID;
+                reponotif.AddNotificatie(BewNotificatie);
+                GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = GegevenTuinObject };
+                Messenger.Default.Send<GoToPageMessage>(message);
+            }
+            else
+            {
+                reponotif.AdjustNotificatie(BewNotificatie);
+                GoToPageMessage message = new GoToPageMessage() { PageNumber = 6, SelectedNotificatie = BewNotificatie };
+                Messenger.Default.Send<GoToPageMessage>(message);
+            }
+
+           
         }
         public RelayCommand DeleteNotificatie { get; set; }
         public void DeleteNotificatieM()

@@ -24,7 +24,7 @@ namespace Gardenr.ViewModels
             DeletePlant = new RelayCommand(DeletePlantM);
             AddFavorites = new RelayCommand(AddFavoritesM);
             SetPicture = new RelayCommand(SetPictureM);
-
+            GoBack = new RelayCommand(GoBackM);
             //optie
             AddNotification = new RelayCommand(AddNotificationM);
             GoNotification = new RelayCommand(GoNotificationM);
@@ -105,13 +105,13 @@ namespace Gardenr.ViewModels
             //eers tmoet plant opgeslaan worden
             //naar notificatiepagina gaan 
             //en plant meegeven al sparameter
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6 };
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6 ,SelectedTuinPlant = TeBewerkenTuin };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
          public RelayCommand GoNotification { get; set; }
         public void GoNotificationM()
         {
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = SelectedNotificatie };
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = SelectedNotificatie  };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 

@@ -31,6 +31,8 @@ namespace Gardenr.Views
         {
             NotificatiesBewerkenVM a = this.DataContext as NotificatiesBewerkenVM;
             a.BewNotificatie = e.Parameter as Gardenr.Models.Notificaties;
+            a.GegevenTuinObject = e.Parameter as Gardenr.Models.Tuin;
+            
         }
     }
 }

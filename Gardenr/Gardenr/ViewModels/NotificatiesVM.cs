@@ -34,7 +34,6 @@ namespace Gardenr.ViewModels
             set { _ingestelde = value; OnPropertyChanged("IngesteldeNotificaties"); }
         }
 
-        
 
         public Notificaties SelectedNotificatie { get; set; }
 

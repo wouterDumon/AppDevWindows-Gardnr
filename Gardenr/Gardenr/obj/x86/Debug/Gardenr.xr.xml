@@ -51,6 +51,7 @@
     <RootPropertyPathName Name="DeletePlant" />
     <RootPropertyPathName Name="AddFavorites" />
     <RootPropertyPathName Name="SavePlant" />
+    <RootPropertyPathName Name="GoBack" />
     <RootPropertyPathName Name="FavorietenPlant" />
     <RootPropertyPathName Name="GoHistoriek" />
     <RootPropertyPathName Name="GoHuiding" />

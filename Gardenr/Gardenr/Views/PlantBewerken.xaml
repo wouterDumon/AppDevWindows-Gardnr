@@ -26,8 +26,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
-        
-            <Button Content="B" Margin="10,0,0,0" Grid.Column="0"></Button>
+
+        <Button Content="B" Margin="50,0,0,0" Grid.Column="0" Command="{Binding GoBack}"></Button>
             <TextBlock Text="testing" HorizontalAlignment="Center" Grid.Column="1"></TextBlock>
             <TextBlock Text="..." FontWeight="Bold" Grid.Column="2"></TextBlock>
 

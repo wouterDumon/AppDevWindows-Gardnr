@@ -32,6 +32,7 @@ namespace Gardenr.Views
         {
             NotificatiesVM a = this.DataContext as NotificatiesVM;
             a.IngesteldeNotificaties = e.Parameter as Gardenr.Models.Notificaties;
+            
         }
     }
 }
