@@ -21,6 +21,7 @@ namespace Gardenr.ViewModels
             naam = App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
             VieuwNotification = new RelayCommand(VieuwNotificationM);
             VieuwNieuwsItem = new RelayCommand(VieuwNieuwsItemM);
+            AddNotificatie = new RelayCommand(AddNotificatieM);
         }
 
         private string naam { get; set; }
@@ -84,6 +85,14 @@ namespace Gardenr.ViewModels
         public void VieuwNieuwsItemM()
         {
 
+        }
+
+
+        public RelayCommand AddNotificatie { get; set; }
+        public void AddNotificatieM()
+        {
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6 };
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
     }
 }

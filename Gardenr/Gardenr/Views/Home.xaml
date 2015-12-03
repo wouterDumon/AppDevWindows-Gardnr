@@ -55,7 +55,7 @@
 
         <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}"/>
         <TextBlock Margin="10,0,0,0" Text="Notificatie's" FontSize="25" Grid.Row="2" Style="{StaticResource Text2}"></TextBlock>
-        <TextBlock Grid.Row="2" HorizontalAlignment="Right" Text="+" Style="{StaticResource Text2}" FontSize="40" Margin="0,-10,0,0"></TextBlock>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Right" Text="+" Style="{StaticResource Text2}" FontSize="40" Margin="0,-10,0,0" Tapped="TextBlock_Tapped"></TextBlock>
         <GridView  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Margin="20,0,20,0">
             <GridView.ItemTemplate>
                 <DataTemplate>
