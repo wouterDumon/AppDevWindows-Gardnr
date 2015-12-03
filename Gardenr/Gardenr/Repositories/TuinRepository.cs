@@ -154,12 +154,20 @@ namespace Gardenr.Repositories
 
             //notificaties list naar id string
             string idstring = "";
-            foreach (Notificaties not in tuin.Notificaties)
-            {
-                idstring += not.ID + ";";
-            }
+            
 
-            temp.NotificationID = idstring;
+
+            if(tuin.Notificaties!= null)
+            {
+                foreach (Notificaties not in tuin.Notificaties)
+                {
+                    idstring += not.ID + ";";
+                }
+                temp.NotificationID = idstring;
+            }
+            
+
+            
             temp.historiek = tuin.historiek;
             temp.plantDatum = tuin.plantDatum;
 

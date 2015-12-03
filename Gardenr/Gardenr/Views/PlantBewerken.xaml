@@ -74,6 +74,6 @@
             <TextBlock Text="+" FontSize="40" TextAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
         <TextBlock Text="MemoBlock" FontSize="20" Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="5" Grid.ColumnSpan="3" Text="{Binding TeBewerkenTuin.extra}" Margin="10,30,10,30"/>
+        <TextBox Grid.Row="5" Grid.ColumnSpan="3" Text="{Binding TeBewerkenTuin.extra, Mode=TwoWay}" Margin="10,30,10,30"/>
     </Grid>
 </Page>
