@@ -112,16 +112,21 @@ namespace Gardenr.ViewModels
             try
             {
                 TuinPlanten = await repoTuin.GetTOs(App.Gebruiker.ID);
+                FavorietenPlant = new ObservableCollection<Tuin>();
+                HistoriekPlant = new ObservableCollection<Tuin>();
                 foreach(Tuin tplant in TuinPlanten)
                 {
-                    if(tplant.favoriet)
+                    if(tplant.favoriet==true)
                     {
                         FavorietenPlant.Add(tplant);
                         //checken of in historiek of nietook
                     }
+                    if (tplant.historiek == true) {
+                        HistoriekPlant.Add(tplant);
+                    }
                     
                 }
-                HistoriekPlant = TuinPlanten;
+                //HistoriekPlant = TuinPlanten;
             }
             catch (Exception ex) { }
             }
