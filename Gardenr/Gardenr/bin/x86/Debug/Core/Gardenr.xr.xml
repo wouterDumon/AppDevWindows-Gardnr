@@ -47,6 +47,9 @@
     <RootPropertyPathName Name="LaatstWater" />
     <RootPropertyPathName Name="Plant" />
     <RootPropertyPathName Name="ZaaiBegin" />
+    <RootPropertyPathName Name="DeletePlant" />
+    <RootPropertyPathName Name="AddFavorites" />
+    <RootPropertyPathName Name="SavePlant" />
     <RootPropertyPathName Name="FavorietenPlant" />
     <RootPropertyPathName Name="GoHistoriek" />
     <RootPropertyPathName Name="GoHuiding" />

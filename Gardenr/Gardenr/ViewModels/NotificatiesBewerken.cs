@@ -30,7 +30,6 @@ namespace Gardenr.ViewModels
         }
 
         private Notificaties _BewNotificatie;
-
         public Notificaties BewNotificatie
         {
             get { return _BewNotificatie; }

@@ -141,10 +141,38 @@ namespace Gardenr.Repositories
             return null;
         }
 
-        public async void AdjustTO(TuinObject nitem)
+        public async Task<TuinObject> convertNaarObject (Tuin tuin)
         {
+            TuinObject temp = new TuinObject();
+            temp.ID = tuin.ID;
+            temp.PlantenID = tuin.Plant.ID;
+            temp.gebruikerID = tuin.gebruikerID;
+            temp.favoriet = tuin.favoriet;
+            temp.Aantal = tuin.Aantal;
+            temp.LaatstWater = tuin.LaatstWater;
+            temp.extra = tuin.extra;
+
+            //notificaties list naar id string
+            string idstring = "";
+            foreach (Notificaties not in tuin.Notificaties)
+            {
+                idstring += not.ID + ";";
+            }
+
+            temp.NotificationID = idstring;
+            temp.historiek = tuin.historiek;
+            temp.plantDatum = tuin.plantDatum;
+
+            return temp;
+        }
+
+        public async void AdjustTO(Tuin nitem)
+        {
+
+            TuinObject temp = await convertNaarObject(nitem);
+
             await InitLocalStoreAsync();
-            await Table.UpdateAsync(nitem);
+            await Table.UpdateAsync(temp);
             await SyncAsync();
             await RefreshItems();
         }
@@ -155,10 +183,12 @@ namespace Gardenr.Repositories
             await SyncAsync();
             await RefreshItems();
         }
-        public async void DeleteTO(TuinObject nitem)
+        public async void DeleteTO(Tuin nitem)
         {
+            TuinObject temp = await convertNaarObject(nitem);
+
             await InitLocalStoreAsync();
-            await Table.DeleteAsync(nitem);
+            await Table.DeleteAsync(temp);
             await SyncAsync();
             await RefreshItems();
         }

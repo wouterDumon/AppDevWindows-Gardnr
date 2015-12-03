@@ -1,8 +1,10 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Messaging;
 using Gardenr.Mesages;
 using Gardenr.Models;
+using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -27,6 +29,8 @@ namespace Gardenr.ViewModels
             AddNotification = new RelayCommand(AddNotificationM);
             GoNotification = new RelayCommand(GoNotificationM);
         }
+
+        public ITuinRepository repoTuin = SimpleIoc.Default.GetInstance<ITuinRepository>();
 
         private Tuin _teBewerkenTuin;
         public Tuin TeBewerkenTuin
@@ -60,16 +64,18 @@ namespace Gardenr.ViewModels
         public RelayCommand SavePlant { get; set; }
         public void SavePlantM()
         {
-
+            repoTuin.AdjustTO(TeBewerkenTuin);
         }
         public RelayCommand DeletePlant { get; set; }
         public void DeletePlantM()
         {
-
+            repoTuin.DeleteTO(TeBewerkenTuin);
         }
         public RelayCommand AddFavorites { get; set; }
         public void AddFavoritesM()
         {
+            TeBewerkenTuin.favoriet = true;
+            repoTuin.AdjustTO(TeBewerkenTuin);
             //eerst plant opslaan
         }
         public RelayCommand SetPicture { get; set; }
