@@ -44,7 +44,7 @@ namespace Gardenr.ViewModels
         public void SaveSettingsM()
         {
             reponotif.AdjustNotificatie(BewNotificatie);
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = BewNotificatie };
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6, SelectedNotificatie = BewNotificatie };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
         public RelayCommand DeleteNotificatie { get; set; }
