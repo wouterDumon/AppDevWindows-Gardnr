@@ -1,26 +1,18 @@
-﻿using Facebook;
-using GalaSoft.MvvmLight.Messaging;
+﻿using GalaSoft.MvvmLight.Messaging;
 using Gardenr.Mesages;
 using Gardenr.Models;
 using Gardenr.Views;
+using Microsoft.WindowsAzure.Messaging;
 using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Media.SpeechRecognition;
+using Windows.Networking.PushNotifications;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace Gardenr
@@ -67,11 +59,37 @@ namespace Gardenr
             store.DefineTable<TuinObject>();
             store.DefineTable<TypeC>();
             store.DefineTable<Gardenr.Models.Instellingen>();
+            SetupNotificationsHub();
+
 
             //models die er neit in staan
             //constants todoitems tuinobjects
                 }
+        private PushNotificationChannel channel = null;
+        private async void SetupNotificationsHub()
+        {
+            channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            var hub = new NotificationHub("GardenrNotif", "Endpoint=sb://gardenrnotif.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=36jPr/0KWaZYF1wDh1W9ocO/d+wS02BAaJ82TIF5faA=");
+            channel.PushNotificationReceived += Channel_PushNotificationReceived;
+            var result = await hub.RegisterNativeAsync(channel.Uri);
+            if (result.RegistrationId != null)
+            {
+                var dialog = new MessageDialog("Registratie ok");
+                dialog.Commands.Add(new UICommand("Ok"));
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                var dialog = new MessageDialog("Failed");
+                dialog.Commands.Add(new UICommand("Ok"));
+                await dialog.ShowAsync();
+            }
+        }
 
+        private void Channel_PushNotificationReceived(PushNotificationChannel sender, PushNotificationReceivedEventArgs args)
+        {
+            throw new NotImplementedException();
+        }
 
         private async void InstallVoiceCommands()
         {

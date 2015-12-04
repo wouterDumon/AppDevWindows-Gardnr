@@ -45,5 +45,7 @@ namespace Gardenr.Views
             HomeVM a = this.DataContext as HomeVM;
             a.AddNotificatie.Execute("iets");
         }
+
+       
     }
 }

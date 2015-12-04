@@ -35,6 +35,7 @@ namespace Gardenr.Views
             double adjf = bla.Width;
             CatalogusVM a = this.DataContext as CatalogusVM;
             double sd = adjf / 2;
+            
             a.width = (""+sd);
         }
 

@@ -1771,6 +1771,14 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WindowsAzure.Messaging.Managed/0.1.7.9": {
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        }
+      },
       "WindowsAzure.MobileServices/2.0.0-beta-2": {
         "dependencies": {
           "Microsoft.Bcl": "[1.1.9, )",
@@ -3677,6 +3685,14 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WindowsAzure.Messaging.Managed/0.1.7.9": {
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        }
+      },
       "WindowsAzure.MobileServices/2.0.0-beta-2": {
         "dependencies": {
           "Microsoft.Bcl": "[1.1.9, )",
@@ -5553,6 +5569,14 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "WindowsAzure.Messaging.Managed/0.1.7.9": {
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
         }
       },
       "WindowsAzure.MobileServices/2.0.0-beta-2": {
@@ -7466,6 +7490,14 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WindowsAzure.Messaging.Managed/0.1.7.9": {
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        }
+      },
       "WindowsAzure.MobileServices/2.0.0-beta-2": {
         "dependencies": {
           "Microsoft.Bcl": "[1.1.9, )",
@@ -9342,6 +9374,14 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "WindowsAzure.Messaging.Managed/0.1.7.9": {
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
         }
       },
       "WindowsAzure.MobileServices/2.0.0-beta-2": {
@@ -11255,6 +11295,14 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WindowsAzure.Messaging.Managed/0.1.7.9": {
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        }
+      },
       "WindowsAzure.MobileServices/2.0.0-beta-2": {
         "dependencies": {
           "Microsoft.Bcl": "[1.1.9, )",
@@ -13131,6 +13179,14 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "WindowsAzure.Messaging.Managed/0.1.7.9": {
+        "compile": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
+        },
+        "runtime": {
+          "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
         }
       },
       "WindowsAzure.MobileServices/2.0.0-beta-2": {
@@ -17285,6 +17341,21 @@
         "System.Xml.XmlSerializer.nuspec"
       ]
     },
+    "WindowsAzure.Messaging.Managed/0.1.7.9": {
+      "sha512": "9g7MVL7Odl5qwG9TSsaab/MKFXdeLitrvbbRAO7xWk4CGeD1j17GPeUsuufO8VY5+GAcCQjJcrM6fU+y/eLCBg==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll",
+        "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.pri",
+        "lib/windowsphone8/Microsoft.WindowsAzure.Messaging.dll",
+        "lib/wpa81/Microsoft.WindowsAzure.Messaging.Managed.dll",
+        "lib/wpa81/Microsoft.WindowsAzure.Messaging.Managed.pri",
+        "package/services/metadata/core-properties/569168c4f5e84989be94f8996f8e2485.psmdcp",
+        "WindowsAzure.Messaging.Managed.nuspec"
+      ]
+    },
     "WindowsAzure.MobileServices/2.0.0-beta-2": {
       "sha512": "xIvNE3h86fkDhuxgMyfrsdKCLOEIjEeNgJaFWU5WQBNu+83VNPi1PtZggiQRrLFMaldUAPFiCV5OE6xUh5DqvA==",
       "type": "Package",
@@ -17377,6 +17448,7 @@
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
       "MvvmLight >= 5.2.0",
       "Newtonsoft.Json >= 7.0.1",
+      "WindowsAzure.Messaging.Managed >= 0.1.7.9",
       "WindowsAzure.MobileServices >= 2.0.0-beta-2",
       "WindowsAzure.MobileServices.SQLiteStore >= 2.0.0-beta",
       "WindowsAzure.Storage >= 6.1.1-preview"
