@@ -123,6 +123,7 @@ namespace Gardenr.Repositories
                     newT.LaatstWater = ni.LaatstWater;
                     newT.extra = ni.extra;
                     newT.Plant = await repoPlant.GetPlantById(ni.PlantenID);
+                    newT.plantDatum = ni.plantDatum;
 
                     if (ni.NotificationID != null && ni.NotificationID=="")//geen notificaties voorlopig nog testen met notificaties
                     {
@@ -237,8 +238,8 @@ namespace Gardenr.Repositories
                     newT.LaatstWater = nieuws.LaatstWater;
                     newT.extra = nieuws.extra;
                     newT.Plant = await repoPlant.GetPlantById(nieuws.PlantenID);
-
-                    if(nieuws.NotificationID != null && nieuws.NotificationID!="")
+                    newT.plantDatum = nieuws.plantDatum;
+                    if (nieuws.NotificationID != null && nieuws.NotificationID!="")
                     {
                         var tempinstid = nieuws.NotificationID.Split(";".ToCharArray());
                         for (int i = 0; i < tempinstid.Length; i++)

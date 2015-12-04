@@ -45,6 +45,7 @@
     <RootPropertyPathName Name="TeBewerkenTuin" />
     <RootPropertyPathName Name="extra" />
     <RootPropertyPathName Name="LaatstWater" />
+    <RootPropertyPathName Name="OogstDatum" />
     <RootPropertyPathName Name="Plant" />
     <RootPropertyPathName Name="ZaaiBegin" />
     <RootPropertyPathName Name="DeletePlant" />
