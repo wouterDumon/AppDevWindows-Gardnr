@@ -71,8 +71,8 @@
         
         <TextBlock Text="Zaaidag: " Grid.Row="3" Margin="20,0,0,0"/>
         <TextBlock Text="{Binding TeBewerkenTuin.Plant.ZaaiBegin}" Grid.Row="3" Grid.Column="2"/>
-        <TextBlock Text="Dagen tot oogst: " Grid.Row="3" Margin="20,30,0,0"/>
-        <TextBlock Text=": " Grid.Row="3" Grid.Column="2" Margin="0,30,0,0"/>
+        <TextBlock Text="OogstDatum: " Grid.Row="3" Margin="20,30,0,0"/>
+        <TextBlock Text="{Binding OogstDatum}" Grid.Row="3" Grid.Column="2" Margin="0,30,0,0"/>
         <TextBlock Text="Laatst water gegeven: " Grid.Row="3" Margin="20,60,0,0" />
         <TextBlock Text="{Binding TeBewerkenTuin.LaatstWater}" Grid.Row="3" Grid.Column="2" Margin="0,60,0,0"/>
         

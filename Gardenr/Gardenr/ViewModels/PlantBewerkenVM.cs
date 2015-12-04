@@ -28,7 +28,17 @@ namespace Gardenr.ViewModels
             //optie
             AddNotification = new RelayCommand(AddNotificationM);
             GoNotification = new RelayCommand(GoNotificationM);
+
+          
         }
+
+        private DateTime _oogstDatum;
+        public DateTime OogstDatum
+        {
+            get { return _oogstDatum; }
+            set { _oogstDatum = value; OnPropertyChanged("OogstDatum"); }
+        }
+
 
         public ITuinRepository repoTuin = SimpleIoc.Default.GetInstance<ITuinRepository>();
 
@@ -36,7 +46,12 @@ namespace Gardenr.ViewModels
         public Tuin TeBewerkenTuin
         {
             get { return _teBewerkenTuin; }
-            set { _teBewerkenTuin = value; OnPropertyChanged("TeBewerkenTuin"); }
+            set
+            {
+                _teBewerkenTuin = value; OnPropertyChanged("TeBewerkenTuin");
+                OogstDatum = DateTime.Parse(TeBewerkenTuin.plantDatum).AddDays(double.Parse(TeBewerkenTuin.Plant.DagenOogst));
+       
+            }
         }
 
         private Tuin _selectedTuin;
@@ -45,6 +60,8 @@ namespace Gardenr.ViewModels
             get { return _selectedTuin; }
             set { _selectedTuin = value; OnPropertyChanged("SelectedTuin"); }
         }
+
+
 
         private ObservableCollection<Notificaties> _notificaties;
         public ObservableCollection<Notificaties> Notificaties
