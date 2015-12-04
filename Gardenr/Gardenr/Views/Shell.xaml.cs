@@ -1,4 +1,5 @@
 ﻿using Gardenr.ViewModels;
+using Microsoft.WindowsAzure.Messaging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Networking.PushNotifications;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,6 +33,7 @@ namespace Gardenr.Views
            // var type = (DataContext as SplitViewVM).Menu.First().NavigationDestination;
             SplitViewFrame.Navigate(typeof(Home));
             App.frame = SplitViewFrame;
+            SetupNotificationsHub();
         }
         private void Menu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -53,6 +57,31 @@ namespace Gardenr.Views
             {
                 MySplitView.IsPaneOpen = true;
             }
+        }
+        private PushNotificationChannel channel = null;
+        private async void SetupNotificationsHub()
+        {
+            channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            var hub = new NotificationHub("gardnotif", "Endpoint=sb://gardenr.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=0cxmkySgALisaXPBhX+2qfF+KP4lNduhmJ5IhIDFMRQ=");
+            channel.PushNotificationReceived += Channel_PushNotificationReceived;
+            var result = await hub.RegisterNativeAsync(channel.Uri);
+            if (result.RegistrationId != null)
+            {
+                var dialog = new MessageDialog("Registratie ok");
+                dialog.Commands.Add(new UICommand("Ok"));
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                var dialog = new MessageDialog("Failed");
+                dialog.Commands.Add(new UICommand("Ok"));
+                await dialog.ShowAsync();
+            }
+        }
+
+        private void Channel_PushNotificationReceived(PushNotificationChannel sender, PushNotificationReceivedEventArgs args)
+        {
+            throw new NotImplementedException();
         }
 
         private void SplitViewPane_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)

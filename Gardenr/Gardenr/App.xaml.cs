@@ -10,6 +10,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Media.SpeechRecognition;
 using Windows.Networking.PushNotifications;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -59,32 +60,9 @@ namespace Gardenr
             store.DefineTable<TuinObject>();
             store.DefineTable<TypeC>();
             store.DefineTable<Gardenr.Models.Instellingen>();
-            SetupNotificationsHub();
-
-
             //models die er neit in staan
             //constants todoitems tuinobjects
                 }
-        private PushNotificationChannel channel = null;
-        private async void SetupNotificationsHub()
-        {
-            channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
-            var hub = new NotificationHub("GardenrNotif", "Endpoint=sb://gardenrnotif.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=36jPr/0KWaZYF1wDh1W9ocO/d+wS02BAaJ82TIF5faA=");
-            channel.PushNotificationReceived += Channel_PushNotificationReceived;
-            var result = await hub.RegisterNativeAsync(channel.Uri);
-            if (result.RegistrationId != null)
-            {
-                var dialog = new MessageDialog("Registratie ok");
-                dialog.Commands.Add(new UICommand("Ok"));
-                await dialog.ShowAsync();
-            }
-            else
-            {
-                var dialog = new MessageDialog("Failed");
-                dialog.Commands.Add(new UICommand("Ok"));
-                await dialog.ShowAsync();
-            }
-        }
 
         private void Channel_PushNotificationReceived(PushNotificationChannel sender, PushNotificationReceivedEventArgs args)
         {
