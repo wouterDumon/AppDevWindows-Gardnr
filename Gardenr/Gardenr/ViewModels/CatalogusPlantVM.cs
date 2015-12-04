@@ -56,7 +56,7 @@ namespace Gardenr.ViewModels
             t.plantDatum = "" + DateTime.Now;
             t.NotificationID = "";
             
-           repotuin.AddTO(t);
+            repotuin.AddTO(t);
             GoToPageMessage message = new GoToPageMessage() { PageNumber = 10};
             Messenger.Default.Send<GoToPageMessage>(message);
         }
