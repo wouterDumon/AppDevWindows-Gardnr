@@ -34,7 +34,7 @@ namespace Gardenr
             SimpleIoc.Default.Register<INotificatiesRepository,NotificatiesRepository>();
             SimpleIoc.Default.Register<ITaalRepository,TaalRepository>();
             SimpleIoc.Default.Register<ITuinRepository,TuinRepository>();
-           
+            SimpleIoc.Default.Register<ITypeRepository, TypeRepository>();
         }
 
 

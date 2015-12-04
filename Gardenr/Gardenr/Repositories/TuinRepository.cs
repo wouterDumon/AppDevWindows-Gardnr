@@ -120,10 +120,10 @@ namespace Gardenr.Repositories
                     newT.gebruikerID = ni.gebruikerID;
                     newT.favoriet = ni.favoriet;
                     newT.Aantal = ni.Aantal;
-                    newT.LaatstWater = ni.LaatstWater;
+                    newT.LaatstWater = ni.LaatstWater.Split(' ')[0];
                     newT.extra = ni.extra;
                     newT.Plant = await repoPlant.GetPlantById(ni.PlantenID);
-                    newT.plantDatum = ni.plantDatum;
+                    newT.plantDatum = ni.plantDatum.Split(' ')[0];
 
                     if (ni.NotificationID != null && ni.NotificationID=="")//geen notificaties voorlopig nog testen met notificaties
                     {
@@ -235,10 +235,10 @@ namespace Gardenr.Repositories
                     newT.gebruikerID = nieuws.gebruikerID;
                     newT.favoriet = nieuws.favoriet;
                     newT.Aantal = nieuws.Aantal;
-                    newT.LaatstWater = nieuws.LaatstWater;
+                    newT.LaatstWater = nieuws.LaatstWater.Split(' ')[0];
                     newT.extra = nieuws.extra;
                     newT.Plant = await repoPlant.GetPlantById(nieuws.PlantenID);
-                    newT.plantDatum = nieuws.plantDatum;
+                    newT.plantDatum = nieuws.plantDatum.Split(' ')[0];
                     if (nieuws.NotificationID != null && nieuws.NotificationID!="")
                     {
                         var tempinstid = nieuws.NotificationID.Split(";".ToCharArray());

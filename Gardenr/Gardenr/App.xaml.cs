@@ -59,7 +59,7 @@ namespace Gardenr
             store.DefineTable<TuinObject>();
             store.DefineTable<TypeC>();
             store.DefineTable<Gardenr.Models.Instellingen>();
-            SetupNotificationsHub();
+            //SetupNotificationsHub();
 
 
             //models die er neit in staan

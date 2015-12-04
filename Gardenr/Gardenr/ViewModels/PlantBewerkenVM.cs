@@ -31,9 +31,9 @@ namespace Gardenr.ViewModels
 
           
         }
-
-        private DateTime _oogstDatum;
-        public DateTime OogstDatum
+        
+        private string _oogstDatum;
+        public string OogstDatum
         {
             get { return _oogstDatum; }
             set { _oogstDatum = value; OnPropertyChanged("OogstDatum"); }
@@ -49,8 +49,9 @@ namespace Gardenr.ViewModels
             set
             {
                 _teBewerkenTuin = value; OnPropertyChanged("TeBewerkenTuin");
-                OogstDatum = DateTime.Parse(TeBewerkenTuin.plantDatum).AddDays(double.Parse(TeBewerkenTuin.Plant.DagenOogst));
-       
+                DateTime temp = DateTime.Parse(TeBewerkenTuin.plantDatum).AddDays(double.Parse(TeBewerkenTuin.Plant.DagenOogst)).Date;
+                //OogstDatum = temp.Day + "/"+temp.Month + "/" + temp.Year;
+                OogstDatum = temp.ToString().Split(' ')[0];
             }
         }
 

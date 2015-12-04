@@ -6,6 +6,7 @@ using Gardenr.Models;
 using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,9 @@ namespace Gardenr.ViewModels
             PickImage = new RelayCommand(PickImageM);
 
 
+            Startup();
+
+            /* bijwerken om op te vangen of een notificatie meegegeven word
             if (BewNotificatie == null)
             {
                 nieuwNotificatie = true;
@@ -32,10 +36,17 @@ namespace Gardenr.ViewModels
             {
                 nieuwNotificatie = false;
             }
-
+            */
         }
 
         private bool nieuwNotificatie{get;set;}
+
+        private ObservableCollection<TypeC> _notificatieTypes;
+        public ObservableCollection<TypeC> NotificatieTypes
+        {
+            get { return _notificatieTypes; }
+            set { _notificatieTypes = value; OnPropertyChanged("NotificatieTypes"); }
+        }
 
         private Notificaties _BewNotificatie;
         public Notificaties BewNotificatie
@@ -51,9 +62,11 @@ namespace Gardenr.ViewModels
             set { _gegevenTuinObject = value; }
         }
 
-        public RelayCommand SaveSettings { get; set; }
+       
         private INotificatiesRepository reponotif = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
+        private ITypeRepository repoType = SimpleIoc.Default.GetInstance<ITypeRepository>();
 
+        public RelayCommand SaveSettings { get; set; }
         public void SaveSettingsM()
         {
             if (nieuwNotificatie)
@@ -100,5 +113,9 @@ namespace Gardenr.ViewModels
 
         }
 
+        public async void  Startup()
+        {
+            NotificatieTypes = await repoType.GetTypes();
+        }
     }
 }
