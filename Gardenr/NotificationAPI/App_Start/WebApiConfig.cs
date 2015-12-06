@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using NotificationAPI.Models;
 
 namespace NotificationAPI
 {
@@ -25,6 +26,7 @@ namespace NotificationAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.MessageHandlers.Add(new AuthenticationTestHandler());
         }
     }
 }

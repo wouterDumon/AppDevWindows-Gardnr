@@ -1,13 +1,10 @@
 ﻿using Microsoft.Azure.NotificationHubs;
 using Microsoft.Azure.NotificationHubs.Messaging;
 using NotificationAPI.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http;
 
 namespace NotificationAPI.Controllers
@@ -60,7 +57,7 @@ namespace NotificationAPI.Controllers
 
         // PUT api/register/5
         // This creates or updates a registration (with provided channelURI) at the specified id
-        public async Task<HttpResponseMessage> Put(string id, DeviceRegistration deviceUpdate)
+        public async Task<HttpResponseMessage> Put(string username, string id, DeviceRegistration deviceUpdate)
         {
             RegistrationDescription registration = null;
             switch (deviceUpdate.Platform)
@@ -82,7 +79,7 @@ namespace NotificationAPI.Controllers
             }
 
             registration.RegistrationId = id;
-            var username = HttpContext.Current.User.Identity.Name;
+            //var username = HttpContext.Current.User.Identity.Name;
 
             // add check if user is allowed to add these tags
             registration.Tags = new HashSet<string>(deviceUpdate.Tags);
