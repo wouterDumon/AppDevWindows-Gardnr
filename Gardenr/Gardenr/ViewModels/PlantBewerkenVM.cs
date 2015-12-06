@@ -49,8 +49,10 @@ namespace Gardenr.ViewModels
             set
             {
                 _teBewerkenTuin = value; OnPropertyChanged("TeBewerkenTuin");
-                OogstDatum = DateTime.Parse(TeBewerkenTuin.plantDatum).AddDays(double.Parse(TeBewerkenTuin.Plant.DagenOogst));
-       
+                if (value != null)
+                {
+                    OogstDatum = DateTime.Parse(TeBewerkenTuin.plantDatum).AddDays(double.Parse(TeBewerkenTuin.Plant.DagenOogst));
+                }
             }
         }
 
