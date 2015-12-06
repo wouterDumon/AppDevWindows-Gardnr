@@ -9,6 +9,7 @@ using GardenrService.Models;
 
 namespace GardenrService.Controllers
 {
+
     public class NotificatiesController : TableController<Notificaties>
     {
         protected override void Initialize(HttpControllerContext controllerContext)

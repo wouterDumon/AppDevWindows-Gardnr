@@ -33,7 +33,7 @@ namespace Gardenr.Views
            // var type = (DataContext as SplitViewVM).Menu.First().NavigationDestination;
             SplitViewFrame.Navigate(typeof(Home));
             App.frame = SplitViewFrame;
-            SetupNotificationsHub();
+         //   SetupNotificationsHub();
         }
         private void Menu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

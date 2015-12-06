@@ -36,8 +36,8 @@ namespace Gardenr
 );*/
         // Use this constructor instead after publishing to the cloud
          public static MobileServiceClient MobileService = new MobileServiceClient(
-              "https://gardenr.azure-mobile.net/",
-              "ptPDBKzoOzchVLZwMfMjmNVpzNTihg33"
+           "https://gardenr2.azure-mobile.net/",
+     "DMHwnJmHwPivFxaTWjDNXjzAxykHpq92"
         );
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -180,6 +180,16 @@ namespace Gardenr
         }
         protected override void OnActivated(IActivatedEventArgs args)
         {
+            // Windows Phone 8.1 requires you to handle the respose from the WebAuthenticationBroker.
+
+    if (args.Kind == ActivationKind.WebAuthenticationBrokerContinuation)
+    {
+        // Completes the sign-in process started by LoginAsync.
+        // Change 'MobileService' to the name of your MobileServiceClient instance. 
+        
+      //  App.MobileService.LoginComplete(args as WebAuthenticationBrokerContinuationEventArgs);
+    }
+
             if (args.Kind == ActivationKind.VoiceCommand)
             {
 

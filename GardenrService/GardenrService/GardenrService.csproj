@@ -228,6 +228,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\mobile-Gardenr.pubxml" />
+    <None Include="Properties\PublishProfiles\mobile-Gardenr2.pubxml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

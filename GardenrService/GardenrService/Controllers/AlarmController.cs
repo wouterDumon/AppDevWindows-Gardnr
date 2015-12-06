@@ -7,8 +7,11 @@ using Microsoft.WindowsAzure.Mobile.Service;
 using GardenrService.DataObjects;
 using GardenrService.Models;
 
+
+
 namespace GardenrService.Controllers
 {
+ 
     public class AlarmController : TableController<Alarm>
     {
         protected override void Initialize(HttpControllerContext controllerContext)
