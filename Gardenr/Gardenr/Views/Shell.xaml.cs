@@ -3,13 +3,7 @@ using Gardenr.ViewModels;
 using Microsoft.WindowsAzure.Messaging;
 using System;
 using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
 using Windows.Networking.PushNotifications;
-using Windows.Networking.PushNotifications;
-using Windows.Storage;
-using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -112,7 +106,7 @@ namespace Gardenr.Views
             {
                 // The device handle used will be different depending on the device and PNS. 
                 // Windows devices use the channel uri as the PNS handle.
-                await new RegisterClient(App.BACKEND_ENDPOINT).RegisterAsync(channel.Uri, new string[] { ""+App.FacebookId });
+                await new RegisterClient(App.BACKEND_ENDPOINT).RegisterAsync(channel.Uri, new string[] { ""+App.Gebruiker.ID });
 
 //                var dialog = new MessageDialog("Registered as: ");
   //              dialog.Commands.Add(new UICommand("OK"));

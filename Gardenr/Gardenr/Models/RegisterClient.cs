@@ -64,7 +64,7 @@ namespace Gardenr.Models
                 var settings = ApplicationData.Current.LocalSettings.Values;
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", (string)settings["AuthenticationToken"]);
 
-                var putUri = POST_URL + "?username=" + App.FacebookId +"&id=" + regId;
+                var putUri = POST_URL + "?username=" + App.Gebruiker.ID +"&id=" + regId;
 
                 string json = JsonConvert.SerializeObject(deviceRegistration);
                 var response = await httpClient.PutAsync(putUri, new StringContent(json, Encoding.UTF8, "application/json"));
