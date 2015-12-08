@@ -20,17 +20,26 @@ namespace NotificationAPI.Controllers
         private MobileServiceCollection<Notificaties, Notificaties> items;
         private MobileServiceCollection<Plant, Plant> itemsplant;
         private IMobileServiceTable<Notificaties> todoTable;
+        private MobileServiceCollection<Gebruiker, Gebruiker> itemsgebruiker;
+        private IMobileServiceTable<Gebruiker> todogebruiker;
+        private MobileServiceCollection<Instellingen, Instellingen> itemsInstellingen;
+        private IMobileServiceTable<Instellingen> todoInstellingen;
         private IMobileServiceTable<Plant> todoplant;
         // GET: Notification
         public async Task Index()
         {
             todoTable = MobileService.GetTable<Notificaties>();
             todoplant = MobileService.GetTable<Plant>();
+            todogebruiker = MobileService.GetTable<Gebruiker>();
+            todoInstellingen = MobileService.GetTable<Instellingen>();
             // var hub = new NotificationHub("notific", "Endpoint=sb://gardenrnotif.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=8bPfKiz9h4jY/e0JtAUqN/tCybd+dOtj3X/tA6zndxM=");
             //HttpStatusCode ret = HttpStatusCode.InternalServerError;
 
 
             items = await todoTable.ToCollectionAsync();
+
+            itemsgebruiker = await todogebruiker.ToCollectionAsync();
+            itemsInstellingen = await todoInstellingen.ToCollectionAsync();
             DateTime t = DateTime.Now;
             string vandaag = t.Day + "/" + t.Month + "/" + t.Year;
             foreach (Notificaties n in items) {
@@ -38,7 +47,23 @@ namespace NotificationAPI.Controllers
                     string id = n.GebruikerID;
                     string message = n.Omschrijving;
                     string plantnaam = await getplantnaam(n.PlantID);
-                    await dosomething(id, message, plantnaam);
+                    foreach (Gebruiker gb in itemsgebruiker) {
+                        if (gb.ID == n.GebruikerID) {
+                            foreach (Instellingen ins in itemsInstellingen) {
+                                if (ins.ID == gb.InstellingenID) {
+                                    if (ins.PushNotificaties == true)
+                                    {
+                                        await dosomething(id, message, plantnaam);
+                                    }
+                                }
+
+                              
+                            }
+                        }
+                    }
+
+
+                 
 
                 }
             }           
