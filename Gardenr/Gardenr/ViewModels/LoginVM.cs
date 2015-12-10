@@ -6,12 +6,14 @@ using GalaSoft.MvvmLight.Messaging;
 using Gardenr.Mesages;
 using Gardenr.Models;
 using Gardenr.Repositories;
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.Authentication.Web;
+using Windows.UI.Popups;
 
 namespace Gardenr.ViewModels
 {
@@ -74,15 +76,47 @@ namespace Gardenr.ViewModels
             }
             return null;
         }
+        // Define a member variable for storing the signed-in user. 
+        private MobileServiceUser user;
 
+        // Define a method that performs the authentication process
+        // using a Facebook sign-in. 
+        private async System.Threading.Tasks.Task<bool> AuthenticateAsync()
+        {
+            string message;
+            bool success = false;
+            try
+            {
+                // Change 'MobileService' to the name of your MobileServiceClient instance.
+                // Sign-in using Facebook authentication.
+                user = await App.MobileService
+                    .LoginAsync(MobileServiceAuthenticationProvider.Facebook);
+                message =
+                    string.Format("You are now signed in - {0}", user.UserId);
+                App.AccessToken = user.UserId;
+
+                success = true;
+            }
+            catch (InvalidOperationException)
+            {
+                message = "You must log in. Login Required";
+            }
+
+            var dialog = new MessageDialog(message);
+            dialog.Commands.Add(new UICommand("OK"));
+            await dialog.ShowAsync();
+            return success;
+        }
 
         public RelayCommand Testing { get; set; }
         public async void TestingM()
         {
+            //if(await AuthenticateAsync())
             if (!App.isAuthenticated)
             {
                 try
                 {
+                  //  bool b = await AuthenticateAsync();
                     App.AccessToken = await Facebook();
                     var client = new FacebookClient(App.AccessToken);
                     dynamic me = await client.GetTaskAsync("me");

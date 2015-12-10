@@ -74,11 +74,18 @@ namespace Gardenr.ViewModels
                 if(GegevenTuinObject != null)
                 {
                     BewNotificatie.PlantID = GegevenTuinObject.ID;
+
                     reponotif.AddNotificatie(BewNotificatie);
                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = GegevenTuinObject };
                     Messenger.Default.Send<GoToPageMessage>(message);
                 }
-
+                BewNotificatie = new Notificaties();
+                BewNotificatie.PlantID = "0f01ffff-5a47-40ee-98b5-59d956239a82";
+                BewNotificatie.TypeID = "1";
+                BewNotificatie.GebruikerID = App.Gebruiker.ID;
+                BewNotificatie.AlarmID = "";
+                BewNotificatie.datum = "" + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                BewNotificatie.Omschrijving = "NOTIFICATIE TEST";
                 reponotif.AddNotificatie(BewNotificatie);
                 GoToPageMessage message1 = new GoToPageMessage() { PageNumber = 12 };
                 Messenger.Default.Send<GoToPageMessage>(message1);

@@ -1,28 +1,24 @@
-﻿using Gardenr.ViewModels;
+﻿using Gardenr.Models;
+using Gardenr.ViewModels;
+using Microsoft.WindowsAzure.Messaging;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.Networking.PushNotifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Gardenr.Views
 {
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class Shell : Page
     {
+       
         //INDIEN LUKT OMZETTEN NAAR MVVM
         public Shell()
         {
@@ -30,6 +26,7 @@ namespace Gardenr.Views
            // var type = (DataContext as SplitViewVM).Menu.First().NavigationDestination;
             SplitViewFrame.Navigate(typeof(Home));
             App.frame = SplitViewFrame;
+           SetupNotificationsHub();
         }
         private void Menu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -54,6 +51,33 @@ namespace Gardenr.Views
                 MySplitView.IsPaneOpen = true;
             }
         }
+        private PushNotificationChannel channel = null;
+        private async void SetupNotificationsHub()
+        {
+            channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            var hub = new NotificationHub("notific", "Endpoint=sb://gardenrnotif.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=8bPfKiz9h4jY/e0JtAUqN/tCybd+dOtj3X/tA6zndxM=");
+            channel.PushNotificationReceived += Channel_PushNotificationReceived;
+            var result = await hub.RegisterNativeAsync(channel.Uri);
+            if (result.RegistrationId != null)
+            {
+               // var dialog = new MessageDialog("Registratie ok");
+              //  dialog.Commands.Add(new UICommand("Ok"));
+             //   await dialog.ShowAsync();
+                //  await sendPush("wns", App.FacebookId, "troll");
+                LoginAndRegisterClick();
+            }
+            else
+            {
+              //  var dialog = new MessageDialog("Failed");
+               // dialog.Commands.Add(new UICommand("Ok"));
+                //await dialog.ShowAsync();
+            }
+        }
+
+        private void Channel_PushNotificationReceived(PushNotificationChannel sender, PushNotificationReceivedEventArgs args)
+        {
+            throw new NotImplementedException();
+        }
 
         private void SplitViewPane_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)
         {
@@ -67,5 +91,33 @@ namespace Gardenr.Views
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
+       
+
+
+        private async void LoginAndRegisterClick()
+        {
+            //SetAuthenticationTokenInLocalStorage();
+
+            var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+
+            // The "username:<user name>" tag gets automatically added by the message handler in the backend.
+            // The tag passed here can be whatever other tags you may want to use.
+            try
+            {
+                // The device handle used will be different depending on the device and PNS. 
+                // Windows devices use the channel uri as the PNS handle.
+                await new RegisterClient(App.BACKEND_ENDPOINT).RegisterAsync(channel.Uri, new string[] { ""+App.Gebruiker.ID });
+
+//                var dialog = new MessageDialog("Registered as: ");
+  //              dialog.Commands.Add(new UICommand("OK"));
+    //            await dialog.ShowAsync();
+           
+            }
+            catch (Exception ex)
+            {
+            //    MessageDialog alert = new MessageDialog(ex.Message, "Failed to register with RegisterClient");
+              //  alert.ShowAsync();
+            }
+        }      
     }
 }

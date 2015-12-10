@@ -61,7 +61,7 @@
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -177,9 +177,9 @@
           }
         }
       },
-      "Microsoft.Net.Http/2.2.28": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -1885,7 +1885,7 @@
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -2001,9 +2001,9 @@
           }
         }
       },
-      "Microsoft.Net.Http/2.2.28": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -3799,7 +3799,7 @@
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -3915,9 +3915,9 @@
           }
         }
       },
-      "Microsoft.Net.Http/2.2.28": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -5685,7 +5685,7 @@
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -5801,9 +5801,9 @@
           }
         }
       },
-      "Microsoft.Net.Http/2.2.28": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -7604,7 +7604,7 @@
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -7720,9 +7720,9 @@
           }
         }
       },
-      "Microsoft.Net.Http/2.2.28": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -9490,7 +9490,7 @@
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -9606,9 +9606,9 @@
           }
         }
       },
-      "Microsoft.Net.Http/2.2.28": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -11409,7 +11409,7 @@
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -11525,9 +11525,9 @@
           }
         }
       },
-      "Microsoft.Net.Http/2.2.28": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -13396,25 +13396,12 @@
         "package/services/metadata/core-properties/4f6f732debe548beaa1183418e8d65cc.psmdcp"
       ]
     },
-    "Microsoft.Bcl/1.1.9": {
-      "sha512": "USQ55innJy8K+tAXvVa1O8dUTp2s7pmJ5cJj6Tl02HtGc2xBDj0P2QH5620HbGXIWKWYhydoeQF8Rm/JRDBGhw==",
+    "Microsoft.Bcl/1.1.10": {
+      "sha512": "+tTqoh/M1pyL8El3qLy30EcwnAtyvFoDZJtdG9Cbg/WdFbh4N8kyrq198XHuEL7lnJbeD0DRO8jcX5IIOh05cQ==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
         "_rels/.rels",
-        "content/monoandroid/_._",
-        "content/monotouch/_._",
-        "content/net45/_._",
-        "content/portable-net45+win8+wp8+wpa81/_._",
-        "content/portable-net45+win8+wpa81/_._",
-        "content/portable-net451+win81/_._",
-        "content/portable-net451+win81+wpa81/_._",
-        "content/portable-win81+wp81+wpa81/_._",
-        "content/sl4/_._",
-        "content/sl5/_._",
-        "content/win8/_._",
-        "content/wp8/_._",
-        "content/wpa81/_._",
         "lib/monoandroid/_._",
         "lib/monotouch/_._",
         "lib/net40/ensureRedirect.xml",
@@ -13494,9 +13481,10 @@
         "lib/win8/_._",
         "lib/wp8/_._",
         "lib/wpa81/_._",
+        "lib/Xamarin.iOS10/_._",
         "License-Stable.rtf",
         "Microsoft.Bcl.nuspec",
-        "package/services/metadata/core-properties/a2c2e4aac469425ea858153a6ad602c0.psmdcp"
+        "package/services/metadata/core-properties/b43ef6ce7de9447f9f8b39e2e41a185e.psmdcp"
       ]
     },
     "Microsoft.Bcl.Build/1.0.14": {
@@ -13668,8 +13656,8 @@
         "package/services/metadata/core-properties/ac595affdb824569a1c66ce4c0740ac2.psmdcp"
       ]
     },
-    "Microsoft.Net.Http/2.2.28": {
-      "sha512": "hPL9k+rPIpAj84RZSq3WtJkOD9uMStBovAIAz/0OQ+9hQIwQ2XqQlAhMqI4kw0XDxweJySIqNTMlkhRRuthcPQ==",
+    "Microsoft.Net.Http/2.2.29": {
+      "sha512": "fc4CPEewJ30Xgal+fSq1lYIBt582A7eKlAL7O4HXiYAiTp2VTnA4osSvk7T2n8aS4xTCPVJusQk3yKLT0XSpkg==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -13727,9 +13715,13 @@
         "lib/wpa81/System.Net.Http.Extensions.XML",
         "lib/wpa81/System.Net.Http.Primitives.dll",
         "lib/wpa81/System.Net.Http.Primitives.xml",
+        "lib/Xamarin.iOS10/System.Net.Http.Extensions.dll",
+        "lib/Xamarin.iOS10/System.Net.Http.Extensions.XML",
+        "lib/Xamarin.iOS10/System.Net.Http.Primitives.dll",
+        "lib/Xamarin.iOS10/System.Net.Http.Primitives.xml",
         "License-Stable.rtf",
         "Microsoft.Net.Http.nuspec",
-        "package/services/metadata/core-properties/c97ab158801448e9aeb07e2b039b0e1e.psmdcp"
+        "package/services/metadata/core-properties/9ad4325e7ab9496288f2be824bbc6161.psmdcp"
       ]
     },
     "Microsoft.NETCore/5.0.0": {
@@ -17445,6 +17437,7 @@
       "Microsoft.ApplicationInsights >= 1.0.0",
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
+      "Microsoft.Net.Http >= 2.2.29",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
       "MvvmLight >= 5.2.0",
       "Newtonsoft.Json >= 7.0.1",

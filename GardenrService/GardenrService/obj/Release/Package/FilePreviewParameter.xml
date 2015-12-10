@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="mobile$Gardenr" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="mobile$Gardenr2" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\wouter\\Desktop\\AppDevWindows-Gardnr\\GardenrService\\GardenrService\\obj\\Release\\Package\\PackageTmp$" />
     <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\wouter\\Desktop\\AppDevWindows-Gardnr\\GardenrService\\GardenrService\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
