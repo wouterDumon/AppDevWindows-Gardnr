@@ -26,15 +26,15 @@ namespace Gardenr
         internal static string FacebookId = String.Empty;
         internal static Gebruiker Gebruiker = null;
         public static bool isAuthenticated = false;
-        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore14.db");
+        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore18.db");
         internal static Frame frame;
-           
+        internal static string BACKEND_ENDPOINT = "http://notifgardenr.azurewebsites.net/";
 
-       /* public static MobileServiceClient MobileService = new MobileServiceClient(
-          "http://localhost:58704"
-);*/
+        /* public static MobileServiceClient MobileService = new MobileServiceClient(
+           "http://localhost:58704"
+ );*/
         // Use this constructor instead after publishing to the cloud
-         public static MobileServiceClient MobileService = new MobileServiceClient(
+        public static MobileServiceClient MobileService = new MobileServiceClient(
               "https://gardenr.azure-mobile.net/",
               "ptPDBKzoOzchVLZwMfMjmNVpzNTihg33"
         );
