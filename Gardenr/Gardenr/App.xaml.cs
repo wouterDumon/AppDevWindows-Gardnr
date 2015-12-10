@@ -10,6 +10,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Media.SpeechRecognition;
 using Windows.Networking.PushNotifications;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -25,18 +26,19 @@ namespace Gardenr
         internal static string AccessToken = String.Empty;
         internal static string FacebookId = String.Empty;
         internal static Gebruiker Gebruiker = null;
-        public static bool isAuthenticated = false;
-        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore18.db");
-        internal static Frame frame;
         internal static string BACKEND_ENDPOINT = "http://notifgardenr.azurewebsites.net/";
+        public static bool isAuthenticated = false;
+        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore16.db");
+        internal static Frame frame;
+           
 
-        /* public static MobileServiceClient MobileService = new MobileServiceClient(
-           "http://localhost:58704"
- );*/
+       /* public static MobileServiceClient MobileService = new MobileServiceClient(
+          "http://localhost:58704"
+);*/
         // Use this constructor instead after publishing to the cloud
-        public static MobileServiceClient MobileService = new MobileServiceClient(
-              "https://gardenr.azure-mobile.net/",
-              "ptPDBKzoOzchVLZwMfMjmNVpzNTihg33"
+         public static MobileServiceClient MobileService = new MobileServiceClient(
+           "https://gardenr2.azure-mobile.net/",
+     "DMHwnJmHwPivFxaTWjDNXjzAxykHpq92"
         );
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -59,32 +61,9 @@ namespace Gardenr
             store.DefineTable<TuinObject>();
             store.DefineTable<TypeC>();
             store.DefineTable<Gardenr.Models.Instellingen>();
-            //SetupNotificationsHub();
-
-
             //models die er neit in staan
             //constants todoitems tuinobjects
                 }
-        private PushNotificationChannel channel = null;
-        private async void SetupNotificationsHub()
-        {
-            channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
-            var hub = new NotificationHub("GardenrNotif", "Endpoint=sb://gardenrnotif.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=36jPr/0KWaZYF1wDh1W9ocO/d+wS02BAaJ82TIF5faA=");
-            channel.PushNotificationReceived += Channel_PushNotificationReceived;
-            var result = await hub.RegisterNativeAsync(channel.Uri);
-            if (result.RegistrationId != null)
-            {
-                var dialog = new MessageDialog("Registratie ok");
-                dialog.Commands.Add(new UICommand("Ok"));
-                await dialog.ShowAsync();
-            }
-            else
-            {
-                var dialog = new MessageDialog("Failed");
-                dialog.Commands.Add(new UICommand("Ok"));
-                await dialog.ShowAsync();
-            }
-        }
 
         private void Channel_PushNotificationReceived(PushNotificationChannel sender, PushNotificationReceivedEventArgs args)
         {
@@ -202,6 +181,16 @@ namespace Gardenr
         }
         protected override void OnActivated(IActivatedEventArgs args)
         {
+            // Windows Phone 8.1 requires you to handle the respose from the WebAuthenticationBroker.
+
+    if (args.Kind == ActivationKind.WebAuthenticationBrokerContinuation)
+    {
+        // Completes the sign-in process started by LoginAsync.
+        // Change 'MobileService' to the name of your MobileServiceClient instance. 
+        
+      //  App.MobileService.LoginComplete(args as WebAuthenticationBrokerContinuationEventArgs);
+    }
+
             if (args.Kind == ActivationKind.VoiceCommand)
             {
 

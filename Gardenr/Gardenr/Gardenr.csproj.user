@@ -3,8 +3,4 @@
   <PropertyGroup>
     <AppxShowAllApps>False</AppxShowAllApps>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DeviceId>8BDF218D-FDBB-4A97-90F9-3AA33B559A92</DeviceId>
-    <UseEmulator>false</UseEmulator>
-  </PropertyGroup>
 </Project>

@@ -39,9 +39,8 @@
     <RootPropertyPathName Name="AlarmID" />
     <RootPropertyPathName Name="DeleteNotificatie" />
     <RootPropertyPathName Name="BewerkNotificatie" />
+    <RootPropertyPathName Name="NotificatiesBewerken" />
     <RootPropertyPathName Name="BewNotificatie" />
-    <RootPropertyPathName Name="TypeID" />
-    <RootPropertyPathName Name="NotificatieTypes" />
     <RootPropertyPathName Name="SaveSettings" />
     <RootPropertyPathName Name="TeBewerkenTuin" />
     <RootPropertyPathName Name="extra" />
@@ -152,9 +151,9 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootProperty Name="FontWeight" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Gardenr.UserClass.Home_Newsfeed" />
@@ -255,7 +254,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="DisplayMemberPath" />
-      <RootProperty Name="Height" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Gardenr.Views.Instellingen" />
@@ -267,14 +265,12 @@
     </RootType>
     <RootType FullName="Gardenr.Views.Login" />
     <RootType FullName="Gardenr.Views.Notificaties" />
-    <RootType FullName="Gardenr.ViewModels.NotificatiesBewerkenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Date" />
-      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="AllowDrop" />
-      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
     <RootType FullName="Gardenr.ViewModels.PlantBewerkenVM" />

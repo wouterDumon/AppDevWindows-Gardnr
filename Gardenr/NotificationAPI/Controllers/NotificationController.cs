@@ -43,14 +43,14 @@ namespace NotificationAPI.Controllers
             DateTime t = DateTime.Now;
             string vandaag = t.Day + "/" + t.Month + "/" + t.Year;
             foreach (Notificaties n in items) {
-                if (n.datum == vandaag) {
+                if (n.datum.Equals(vandaag)) {
                     string id = n.GebruikerID;
                     string message = n.Omschrijving;
                     string plantnaam = await getplantnaam(n.PlantID);
                     foreach (Gebruiker gb in itemsgebruiker) {
-                        if (gb.ID == n.GebruikerID) {
+                        if (gb.ID.Equals(n.GebruikerID)) {
                             foreach (Instellingen ins in itemsInstellingen) {
-                                if (ins.ID == gb.InstellingenID) {
+                                if (ins.ID.Equals(gb.InstellingenID)) {
                                     if (ins.PushNotificaties == true)
                                     {
                                         await dosomething(id, message, plantnaam);
@@ -95,10 +95,11 @@ namespace NotificationAPI.Controllers
             try
             {
                 //windows
-                var toast = @"<toast><visual><binding template=""ToastText01""><text id=""1"">" + send +"</text></binding></visual></toast>";
+                var toast = @"<toast><visual><binding template=""ToastText01""><text id=""1"">" + send + "</text></binding></visual></toast>";
                 outcome = await Notifications.Instance.Hub.SendWindowsNativeNotificationAsync(toast, userTag);
-
-                // Android
+            } catch (Exception ex) { }
+            try { 
+            // Android
                 var notif = "{ \"data\" : {\"message\":\"" + send + "\"}}";
                 outcome = await Notifications.Instance.Hub.SendGcmNativeNotificationAsync(notif, userTag);
                 //  var toast = @"<toast><visual><binding template=""ToastText01""><text id=""1"">" + "trol" + "</text></binding></visual></toast>";
