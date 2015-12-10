@@ -24,6 +24,7 @@ namespace Gardenr.ViewModels
             DatePicker = new RelayCommand(DatePickerM);
             PickImage = new RelayCommand(PickImageM);
 
+            Startup();
 
             if (BewNotificatie == null)
             {
