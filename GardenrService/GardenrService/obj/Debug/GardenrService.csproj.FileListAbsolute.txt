@@ -265,4 +265,3 @@ C:\Users\wouter\Desktop\AppDevWindows-Gardnr\GardenrService\GardenrService\bin\z
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Debug\GardenrService.csprojResolveAssemblyReference.cache
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Debug\GardenrService.dll
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Debug\GardenrService.pdb
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\GardenrService\GardenrService\obj\Debug\GardenrService.csprojResolveAssemblyReference.cache
