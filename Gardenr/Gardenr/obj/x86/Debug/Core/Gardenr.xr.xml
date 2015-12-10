@@ -37,9 +37,11 @@
     <RootPropertyPathName Name="Cortana" />
     <RootPropertyPathName Name="IngesteldeNotificaties" />
     <RootPropertyPathName Name="AlarmID" />
+    <RootPropertyPathName Name="NotificatieType" />
     <RootPropertyPathName Name="DeleteNotificatie" />
     <RootPropertyPathName Name="BewerkNotificatie" />
     <RootPropertyPathName Name="BewNotificatie" />
+    <RootPropertyPathName Name="Interval" />
     <RootPropertyPathName Name="TypeID" />
     <RootPropertyPathName Name="NotificatieTypes" />
     <RootPropertyPathName Name="SaveSettings" />
@@ -152,6 +154,7 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="FontWeight" />
@@ -266,6 +269,7 @@
       <RootProperty Name="HorizontalContentAlignment" />
     </RootType>
     <RootType FullName="Gardenr.Views.Login" />
+    <RootType FullName="Gardenr.ViewModels.NotificatiesVM" />
     <RootType FullName="Gardenr.Views.Notificaties" />
     <RootType FullName="Gardenr.ViewModels.NotificatiesBewerkenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
@@ -275,6 +279,12 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="AllowDrop" />
       <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Slider">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Value" />
+      <RootProperty Name="Minimum" />
+      <RootProperty Name="Maximum" />
     </RootType>
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
     <RootType FullName="Gardenr.ViewModels.PlantBewerkenVM" />

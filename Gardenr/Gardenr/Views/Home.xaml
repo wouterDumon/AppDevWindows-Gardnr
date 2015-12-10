@@ -67,7 +67,7 @@
                             <RowDefinition Height="40"/>
                         </Grid.RowDefinitions>
                         <TextBlock Text="{Binding datum}" Grid.Row="1" TextAlignment="Center"/>
-                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10"/>
+                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Center"/>
                         <TextBlock Text=">" Grid.Row="3" FontSize="20" TextAlignment="Center"/>
                     </Grid>
                 </DataTemplate>

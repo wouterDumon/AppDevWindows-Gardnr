@@ -18,12 +18,20 @@ namespace Gardenr.ViewModels
     {
         public NotificatiesVM()
         {
-            StartupGetItems();
+            
             AddNotificatie = new RelayCommand(AddNotificatieM);
             BewerkNotificatie = new RelayCommand(BewerkNotificatieM);
             DeleteNotificatie = new RelayCommand(DeleteNotificatieM);
+           
         }
-      
+
+
+        private TypeC _notificatieType;
+        public TypeC NotificatieType
+        {
+            get { return _notificatieType; }
+            set { _notificatieType = value; OnPropertyChanged("NotificatieType"); }
+        }
 
 
         private Notificaties _ingestelde;
@@ -31,7 +39,7 @@ namespace Gardenr.ViewModels
         public Notificaties IngesteldeNotificaties
         {
             get { return _ingestelde; }
-            set { _ingestelde = value; OnPropertyChanged("IngesteldeNotificaties"); }
+            set { _ingestelde = value; GetTypes(); OnPropertyChanged("IngesteldeNotificaties"); }
         }
 
 
@@ -41,6 +49,8 @@ namespace Gardenr.ViewModels
         public RelayCommand BewerkNotificatie { get; set; }
         public RelayCommand DeleteNotificatie { get; set; }
         
+
+
         public void AddNotificatieM()
         {
             GoToPageMessage message = new GoToPageMessage() { PageNumber = 6};
@@ -52,6 +62,7 @@ namespace Gardenr.ViewModels
             Messenger.Default.Send<GoToPageMessage>(message);
         }
         private INotificatiesRepository reponotif = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
+        private ITypeRepository repoType = SimpleIoc.Default.GetInstance<ITypeRepository>();
 
 
         public void DeleteNotificatieM()
@@ -62,9 +73,11 @@ namespace Gardenr.ViewModels
 
         }
 
-        public async void StartupGetItems()
+        public async void GetTypes()
         {
             //IngesteldeNotificaties = await repoNotification.GetNotificaties();
+            NotificatieType = await repoType.GetType(IngesteldeNotificaties.TypeID);
+
         }
 
     }

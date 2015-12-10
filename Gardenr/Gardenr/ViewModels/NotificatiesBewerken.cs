@@ -46,6 +46,13 @@ namespace Gardenr.ViewModels
             set { _notificatieTypes = value; OnPropertyChanged("NotificatieTypes"); }
         }
 
+        private int _interval;
+        public int Interval
+        {
+            get { return _interval; }
+            set { _interval = value;OnPropertyChanged("Interval"); }
+        }
+
         private Notificaties _BewNotificatie;
         public Notificaties BewNotificatie
         {
@@ -120,6 +127,7 @@ namespace Gardenr.ViewModels
         public async void Startup()
         {
             NotificatieTypes = await repoType.GetTypes();
+            Interval = 20;
         }
 
     }
