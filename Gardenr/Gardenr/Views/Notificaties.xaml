@@ -67,7 +67,7 @@
         <TextBlock  Grid.Column="2" Text="{Binding IngesteldeNotificaties.datum}" FontSize="20" Grid.Row="1" VerticalAlignment="Center"  Style="{StaticResource Text2}" ></TextBlock>
 
         <TextBlock  Grid.Column="1" Text="Notificatie type"  FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="2" Text="{Binding NotificatieType.Naam}" FontFamily="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Column="2" Text="{Binding NotificatieType.Naam}" FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
         
         <TextBlock  Grid.Column="1" Text="Herhalen" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
         <TextBlock  Grid.Column="2" Text="{Binding IngesteldeNotificaties.AlarmID}" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
