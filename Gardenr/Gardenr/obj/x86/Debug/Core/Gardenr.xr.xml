@@ -50,6 +50,7 @@
     <RootPropertyPathName Name="herhalen" />
     <RootPropertyPathName Name="TypeID" />
     <RootPropertyPathName Name="NotificatieTypes" />
+    <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="SaveSettings" />
     <RootPropertyPathName Name="TeBewerkenTuin" />
     <RootPropertyPathName Name="extra" />

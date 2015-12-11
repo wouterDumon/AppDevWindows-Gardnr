@@ -26,18 +26,18 @@ namespace Gardenr.ViewModels
 
             Startup();
 
-            if (BewNotificatie == null)
-            {
-                nieuwNotificatie = true;
-            }
-            else
-            {
-                nieuwNotificatie = false;
-            }
-
-        }
+           
+    }
 
         private bool nieuwNotificatie{get;set;}
+
+        private DateTimeOffset _date;
+        public DateTimeOffset Date
+        {
+            get { return _date; }
+            set { _date = value; OnPropertyChanged("Date"); }
+        }
+       
 
         private Alarm _notAlarm;
         public Alarm NotAlarm
@@ -89,13 +89,15 @@ namespace Gardenr.ViewModels
                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = GegevenTuinObject };
                     Messenger.Default.Send<GoToPageMessage>(message);
                 }
+
+                /*
                 BewNotificatie = new Notificaties();
                 BewNotificatie.PlantID = "0f01ffff-5a47-40ee-98b5-59d956239a82";
                 BewNotificatie.TypeID = "1";
                 BewNotificatie.GebruikerID = App.Gebruiker.ID;
                 BewNotificatie.AlarmID = "";
                 BewNotificatie.datum = "" + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
-                BewNotificatie.Omschrijving = "NOTIFICATIE TEST";
+                BewNotificatie.Omschrijving = "NOTIFICATIE TEST";*/
                 reponotif.AddNotificatie(BewNotificatie);
                 GoToPageMessage message1 = new GoToPageMessage() { PageNumber = 12 };
                 Messenger.Default.Send<GoToPageMessage>(message1);
@@ -103,6 +105,7 @@ namespace Gardenr.ViewModels
             else
             {
                 reponotif.AdjustNotificatie(BewNotificatie);
+                repoAlarm.AdjustNewsItem(NotAlarm);
                 GoToPageMessage message = new GoToPageMessage() { PageNumber = 6, SelectedNotificatie = BewNotificatie };
                 Messenger.Default.Send<GoToPageMessage>(message);
             }
@@ -138,7 +141,29 @@ namespace Gardenr.ViewModels
         }
         public async void OnMessageGet()
         {
-            NotAlarm = await repoAlarm.GetAlarmBID(BewNotificatie.AlarmID);
+            if(BewNotificatie== null)
+            {
+                nieuwNotificatie = true;
+                BewNotificatie = new Notificaties();
+                BewNotificatie.GebruikerID = App.Gebruiker.ID;
+                BewNotificatie.Omschrijving = "kkkkkk";
+                BewNotificatie.AlarmID = "1";
+                BewNotificatie.datum = "01/01/2015";
+                BewNotificatie.TypeID = "1";
+                NotAlarm = await repoAlarm.GetAlarmBID(BewNotificatie.AlarmID);
+                nieuwNotificatie = true;
+            }
+            else
+            {
+                NotAlarm = await repoAlarm.GetAlarmBID(BewNotificatie.AlarmID);
+
+                string[] temp= BewNotificatie.datum.Split('/');
+            
+                DateTime date = new DateTime(int.Parse(temp[2]), int.Parse(temp[1]), int.Parse(temp[0]));
+                Date = new DateTimeOffset(date);
+                nieuwNotificatie = false;
+            }
+           
         }
 
     }
