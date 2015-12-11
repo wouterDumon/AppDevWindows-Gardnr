@@ -34,5 +34,10 @@ namespace Gardenr.Views
             a.GegevenTuinObject = e.Parameter as Gardenr.Models.Tuin;
             
         }
+
+        private void slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+
+        }
     }
 }

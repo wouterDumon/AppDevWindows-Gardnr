@@ -39,6 +39,16 @@ namespace Gardenr.ViewModels
 
         private bool nieuwNotificatie{get;set;}
 
+        private Alarm _notAlarm;
+        public Alarm NotAlarm
+        {
+            get { return _notAlarm; }
+            set {
+                _notAlarm = value;
+                OnPropertyChanged("NotAlarm");
+            }
+        }
+
         private ObservableCollection<TypeC> _notificatieTypes;
         public ObservableCollection<TypeC> NotificatieTypes
         {
@@ -46,18 +56,13 @@ namespace Gardenr.ViewModels
             set { _notificatieTypes = value; OnPropertyChanged("NotificatieTypes"); }
         }
 
-        private int _interval;
-        public int Interval
-        {
-            get { return _interval; }
-            set { _interval = value;OnPropertyChanged("Interval"); }
-        }
+     
 
         private Notificaties _BewNotificatie;
         public Notificaties BewNotificatie
         {
             get { return _BewNotificatie; }
-            set { _BewNotificatie = value; OnPropertyChanged("BewNotificatie"); }
+            set { _BewNotificatie = value; OnMessageGet(); OnPropertyChanged("BewNotificatie"); }
         }
 
         private Tuin _gegevenTuinObject;
@@ -70,6 +75,7 @@ namespace Gardenr.ViewModels
         public RelayCommand SaveSettings { get; set; }
         private INotificatiesRepository reponotif = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
         private ITypeRepository repoType = SimpleIoc.Default.GetInstance<ITypeRepository>();
+        private IAlarmRepository repoAlarm = SimpleIoc.Default.GetInstance<IAlarmRepository>();
 
         public void SaveSettingsM()
         {
@@ -127,7 +133,12 @@ namespace Gardenr.ViewModels
         public async void Startup()
         {
             NotificatieTypes = await repoType.GetTypes();
-            Interval = 20;
+           
+
+        }
+        public async void OnMessageGet()
+        {
+            NotAlarm = await repoAlarm.GetAlarmBID(BewNotificatie.AlarmID);
         }
 
     }

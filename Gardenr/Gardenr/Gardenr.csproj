@@ -124,8 +124,10 @@
     <Compile Include="Mvvm\BindableBase.cs" />
     <Compile Include="Opvuller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AlarmRepository.cs" />
     <Compile Include="Repositories\DataRepository.cs" />
     <Compile Include="Repositories\GebruikerRepository.cs" />
+    <Compile Include="Repositories\IAlarmRepository.cs" />
     <Compile Include="Repositories\IGebruikerRepository.cs" />
     <Compile Include="Repositories\IInstellingenRepository.cs" />
     <Compile Include="Repositories\INieuwsRepository.cs" />
