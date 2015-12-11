@@ -30,6 +30,10 @@
     <RootPropertyPathName Name="Notificaties" />
     <RootPropertyPathName Name="Omschrijving" />
     <RootPropertyPathName Name="datum" />
+    <RootPropertyPathName Name="Weerlocatie" />
+    <RootPropertyPathName Name="Weerstatus" />
+    <RootPropertyPathName Name="Weertext" />
+    <RootPropertyPathName Name="Fotourl" />
     <RootPropertyPathName Name="Taale" />
     <RootPropertyPathName Name="Talen" />
     <RootPropertyPathName Name="UserSettings" />
@@ -62,6 +66,7 @@
     <RootPropertyPathName Name="Menu" />
     <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="Glyph" />
+    <RootPropertyPathName Name="ActualWidth" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -80,6 +85,8 @@
       <RootProperty Name="Source" />
       <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="Converter" />
+      <RootProperty Name="ElementName" />
+      <RootProperty Name="Path" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -152,9 +159,12 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontStyle" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootProperty Name="FontWeight" />
+      <RootProperty Name="MaxWidth" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Gardenr.UserClass.Home_Newsfeed" />
@@ -204,6 +214,10 @@
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="VerticalScrollMode" />
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="MaxHeight" />
+      <RootProperty Name="Content" />
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
@@ -237,6 +251,13 @@
     <RootType FullName="Gardenr.Views.CatalogusPlant" />
     <RootType FullName="Gardenr.Views.Contact" />
     <RootType FullName="Gardenr.ViewModels.HomeVM" />
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Hyperlink">
+      <RootProperty Name="NavigateUri" />
+      <RootProperty Name="Inlines" />
+    </RootType>
     <RootType FullName="Gardenr.Views.Home" />
     <RootType FullName="Gardenr.ViewModels.InstellingenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
@@ -323,6 +344,32 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame">
       <RootProperty Name="ContentTransitions" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetAlignTopWithPanel" />
+      <RootMethod Name="SetAlignTopWithPanel" />
+      <RootMethod Name="GetAbove" />
+      <RootMethod Name="SetAbove" />
+      <RootMethod Name="GetAlignRightWithPanel" />
+      <RootMethod Name="SetAlignRightWithPanel" />
+      <RootMethod Name="GetAlignLeftWithPanel" />
+      <RootMethod Name="SetAlignLeftWithPanel" />
+      <RootMethod Name="GetAlignBottomWithPanel" />
+      <RootMethod Name="SetAlignBottomWithPanel" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="IsActive" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition">

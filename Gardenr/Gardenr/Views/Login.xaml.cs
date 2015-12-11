@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +27,28 @@ namespace Gardenr.Views
         public Login()
         {
             this.InitializeComponent();
+            setuptitle();
+        }
+        public void setuptitle() {
+            var view = ApplicationView.GetForCurrentView();
+
+            view.TitleBar.BackgroundColor = Colors.DarkGreen;
+            view.TitleBar.ForegroundColor = Colors.White;
+
+            view.TitleBar.ButtonBackgroundColor = Colors.DarkGreen;
+            view.TitleBar.ButtonForegroundColor = Colors.White;
+
+            view.TitleBar.ButtonHoverBackgroundColor = Colors.Green;
+            view.TitleBar.ButtonHoverForegroundColor = Colors.White;
+
+            view.TitleBar.ButtonPressedBackgroundColor = Color.FromArgb(255, 0, 120, 0);
+            view.TitleBar.ButtonPressedForegroundColor = Colors.White;
+
+            view.TitleBar.ButtonInactiveBackgroundColor = Colors.DarkGray;
+            view.TitleBar.ButtonInactiveForegroundColor = Colors.Gray;
+
+            view.TitleBar.InactiveBackgroundColor = Colors.DarkGreen;
+            view.TitleBar.InactiveForegroundColor = Colors.Gray;
         }
     }
 }

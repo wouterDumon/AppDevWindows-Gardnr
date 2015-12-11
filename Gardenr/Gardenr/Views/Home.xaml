@@ -40,20 +40,35 @@
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="107*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="41"/>
-            <RowDefinition Height="240*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="41"/>
-            <RowDefinition Height="158*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}"></Rectangle>
         <TextBlock Grid.Row="0" Text="" FontSize="28" Margin="57,4,0,4" VerticalAlignment="Center" Style="{StaticResource TextS}" >Home</TextBlock>
-
-
-
-
         <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+           
+
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,5,5" FontSize="13">weer door openweathermap.org</TextBlock>
+            <Image Grid.Row="0" Source="{Binding Fotourl, Mode=OneWay}" Margin="0,5" Width="150" VerticalAlignment="Stretch" Stretch="Fill" ></Image>
+            <TextBlock Grid.Row="1" Text="{Binding Weertext, Mode=OneWay}"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
+            <TextBlock Grid.Row="2" Text="{Binding Weerstatus, Mode=OneWay}"  TextAlignment="Center" ></TextBlock>
+            <TextBlock Grid.Row="3" Text="{Binding Weerlocatie, Mode=OneWay}"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
+        </Grid>
+
+
+
         <TextBlock Margin="10,0,0,0" Text="Notificatie's" FontSize="25" Grid.Row="2" Style="{StaticResource Text2}"></TextBlock>
         <TextBlock Grid.Row="2" HorizontalAlignment="Right" Text="+" Style="{StaticResource Text2}" FontSize="40" Margin="0,-10,0,0" Tapped="TextBlock_Tapped"></TextBlock>
         <GridView  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Margin="20,0,20,0">
@@ -75,7 +90,7 @@
 
 
         </GridView>
-        
+
         <TextBlock Margin="10,0,0,0" Text="Newsfeed" FontSize="25" Grid.Row="4" Style="{StaticResource Text2}">
 
         </TextBlock>
@@ -96,6 +111,12 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" x:Name="LocationDisabledMessage"  Margin="10,10,10,10" FontStyle="Italic" Visibility="Collapsed">
+                <Run Text="Weer kan niet worden opgehaald zonder locatie toestemming. Gelieve te gaan naar " />
+                <Hyperlink NavigateUri="ms-settings:privacy-location">
+                    <Run Text="Settings" />
+                </Hyperlink>
+                <Run Text=" Om de permissies te wijzigen."/>
+        </TextBlock>
     </Grid>
 </Page>

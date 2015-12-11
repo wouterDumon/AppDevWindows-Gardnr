@@ -76,6 +76,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -217,6 +218,7 @@
     <Compile Include="Views\Profiel_PlantInfo.xaml.cs">
       <DependentUpon>Profiel_PlantInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ScenarioOutput_Hor.cs" />
     <Compile Include="Views\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
@@ -337,6 +339,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
     <SDKReference Include="SQLite.UAP.2015, Version=3.9.2">
       <Name>SQLite for Universal App Platform</Name>
     </SDKReference>

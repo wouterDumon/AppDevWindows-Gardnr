@@ -30,7 +30,7 @@
           "lib/win81/Facebook.Client.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -38,9 +38,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -49,10 +49,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -1771,6 +1771,14 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WeatherNet.uwp/2.1.2": {
+        "compile": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        }
+      },
       "WindowsAzure.Messaging.Managed/0.1.7.9": {
         "compile": {
           "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
@@ -1854,7 +1862,7 @@
           "lib/win81/Facebook.Client.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -1862,9 +1870,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -1873,10 +1881,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -3685,6 +3693,14 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WeatherNet.uwp/2.1.2": {
+        "compile": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        }
+      },
       "WindowsAzure.Messaging.Managed/0.1.7.9": {
         "compile": {
           "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
@@ -3768,7 +3784,7 @@
           "lib/win81/Facebook.Client.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -3776,9 +3792,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -3787,10 +3803,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -5571,6 +5587,14 @@
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WeatherNet.uwp/2.1.2": {
+        "compile": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        }
+      },
       "WindowsAzure.Messaging.Managed/0.1.7.9": {
         "compile": {
           "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
@@ -5654,7 +5678,7 @@
           "lib/win81/Facebook.Client.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -5662,9 +5686,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -5673,10 +5697,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -7490,6 +7514,14 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WeatherNet.uwp/2.1.2": {
+        "compile": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        }
+      },
       "WindowsAzure.Messaging.Managed/0.1.7.9": {
         "compile": {
           "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
@@ -7573,7 +7605,7 @@
           "lib/win81/Facebook.Client.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -7581,9 +7613,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -7592,10 +7624,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -9376,6 +9408,14 @@
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WeatherNet.uwp/2.1.2": {
+        "compile": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        }
+      },
       "WindowsAzure.Messaging.Managed/0.1.7.9": {
         "compile": {
           "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
@@ -9459,7 +9499,7 @@
           "lib/win81/Facebook.Client.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -9467,9 +9507,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -9478,10 +9518,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -11295,6 +11335,14 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WeatherNet.uwp/2.1.2": {
+        "compile": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        }
+      },
       "WindowsAzure.Messaging.Managed/0.1.7.9": {
         "compile": {
           "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
@@ -11378,7 +11426,7 @@
           "lib/win81/Facebook.Client.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights/1.0.0": {
+      "Microsoft.ApplicationInsights/1.2.3": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         },
@@ -11386,9 +11434,9 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
+      "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.2.3, )"
         },
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
@@ -11397,10 +11445,10 @@
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
+      "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "[1.0.0, )",
-          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.0.0, )"
+          "Microsoft.ApplicationInsights": "[1.1.0, )",
+          "Microsoft.ApplicationInsights.PersistenceChannel": "[1.1.0, )"
         },
         "compile": {
           "lib/win81/Microsoft.ApplicationInsights.Extensibility.Windows.dll": {}
@@ -13181,6 +13229,14 @@
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WeatherNet.uwp/2.1.2": {
+        "compile": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/WeatherNetUWP.dll": {}
+        }
+      },
       "WindowsAzure.Messaging.Managed/0.1.7.9": {
         "compile": {
           "lib/netcore45/Microsoft.WindowsAzure.Messaging.Managed.dll": {}
@@ -13346,8 +13402,8 @@
         "readme.txt"
       ]
     },
-    "Microsoft.ApplicationInsights/1.0.0": {
-      "sha512": "HZ47/thX57SOuIivSvIbsR6L9CCb/Yt3IyB2i4KHmmNlf3DO+lqFwWIKDdbDNWKX+qh0Rg20/JSMPK0dwUsYYw==",
+    "Microsoft.ApplicationInsights/1.2.3": {
+      "sha512": "a34atobxpucCTTX9VCD7aIu6Ydzry+Va7TxK2tTQcfaMvefGW4kUKtg9GHKIn19IaXe+A4oZt/GBqsOt5vQrBA==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -13361,27 +13417,29 @@
         "lib/wp8/Microsoft.ApplicationInsights.dll",
         "lib/wp8/Microsoft.ApplicationInsights.XML",
         "Microsoft.ApplicationInsights.nuspec",
-        "package/services/metadata/core-properties/b9e7bc7ab2454491af07046165ff01d0.psmdcp"
+        "package/services/metadata/core-properties/3b36eef276524f5d883c618d5fd8c500.psmdcp"
       ]
     },
-    "Microsoft.ApplicationInsights.PersistenceChannel/1.0.0": {
-      "sha512": "0qQXC+CtbyF2RPuld5pF74fxsnP6ml0LUnzQ6GL9AXXY64LPsLDsPUAymoUffo7LZvPDppZboTYX59TfVxKA7A==",
+    "Microsoft.ApplicationInsights.PersistenceChannel/1.2.3": {
+      "sha512": "5MGcvPQVaGlGyAVh9adg4sSkIVSYDKn+H3+YnZa9hi1gH/g6UsRt4HLc8vp/IxjlbmXbJyAB7dYJV/NHmAGAgA==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
         "_rels/.rels",
         "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.dll",
         "lib/net40/Microsoft.ApplicationInsights.PersistenceChannel.XML",
-        "lib/portable-win8+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.XML",
+        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.dll",
+        "lib/net45/Microsoft.ApplicationInsights.PersistenceChannel.XML",
         "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.dll",
+        "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.PersistenceChannel.XML",
         "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.dll",
         "lib/wp8/Microsoft.ApplicationInsights.PersistenceChannel.XML",
         "Microsoft.ApplicationInsights.PersistenceChannel.nuspec",
-        "package/services/metadata/core-properties/dc9ebba80e7343fdbd0a39a3cdeb672c.psmdcp"
+        "package/services/metadata/core-properties/f973733421c14c3594986b3f2c22213a.psmdcp"
       ]
     },
-    "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
-      "sha512": "fNCAjIwvbTV+G0dT14bgM5tptsqeSaKQaCrlq7QknOq1Xdm8ZmgsDYddMgXkvykyKLjWyU6fKuOpj6fsQJy+wQ==",
+    "Microsoft.ApplicationInsights.WindowsApps/1.1.0": {
+      "sha512": "H6nhyM+ZVOhLmF8cqQj70fc5HZOS6dxh18nNwEM7+HD8NzArdSLK0gwGJkEOUYPtjner/0/3aOxgGZbFi9OVdA==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -13393,7 +13451,7 @@
         "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.dll",
         "lib/wpa81/Microsoft.ApplicationInsights.Extensibility.Windows.XML",
         "Microsoft.ApplicationInsights.WindowsApps.nuspec",
-        "package/services/metadata/core-properties/4f6f732debe548beaa1183418e8d65cc.psmdcp"
+        "package/services/metadata/core-properties/441e5d0bc7164e089277ae041b2043cc.psmdcp"
       ]
     },
     "Microsoft.Bcl/1.1.10": {
@@ -17333,6 +17391,17 @@
         "System.Xml.XmlSerializer.nuspec"
       ]
     },
+    "WeatherNet.uwp/2.1.2": {
+      "sha512": "7rLO3SMq0RQ80jIu/m/Iyg5cZGRsAXieDZax4Ud3NP7VJSOgdEHF3Fdk6xyK4JxbpWAV9djlvJ/lecnddjhRuA==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "lib/netcore50/WeatherNetUWP.dll",
+        "package/services/metadata/core-properties/3cb1f2040a404ef2a6cd719caa2137dd.psmdcp",
+        "WeatherNet.uwp.nuspec"
+      ]
+    },
     "WindowsAzure.Messaging.Managed/0.1.7.9": {
       "sha512": "9g7MVL7Odl5qwG9TSsaab/MKFXdeLitrvbbRAO7xWk4CGeD1j17GPeUsuufO8VY5+GAcCQjJcrM6fU+y/eLCBg==",
       "type": "Package",
@@ -17434,13 +17503,14 @@
     "": [
       "Facebook >= 7.0.6",
       "Facebook.Client >= 1.0.4",
-      "Microsoft.ApplicationInsights >= 1.0.0",
-      "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
-      "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
+      "Microsoft.ApplicationInsights >= 1.2.3",
+      "Microsoft.ApplicationInsights.PersistenceChannel >= 1.2.3",
+      "Microsoft.ApplicationInsights.WindowsApps >= 1.1.0",
       "Microsoft.Net.Http >= 2.2.29",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
       "MvvmLight >= 5.2.0",
       "Newtonsoft.Json >= 7.0.1",
+      "WeatherNet.uwp >= 2.1.2",
       "WindowsAzure.Messaging.Managed >= 0.1.7.9",
       "WindowsAzure.MobileServices >= 2.0.0-beta-2",
       "WindowsAzure.MobileServices.SQLiteStore >= 2.0.0-beta",
