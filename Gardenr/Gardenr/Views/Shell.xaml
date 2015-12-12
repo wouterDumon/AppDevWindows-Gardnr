@@ -16,7 +16,7 @@
         <SplitView x:Name="MySplitView"
                    IsPaneOpen="False"
                    CompactPaneLength="18"
-                   OpenPaneLength="150"
+                   OpenPaneLength="{Binding ElementName=df, Path=Width}"
                    PaneBackground="DarkGreen"
                    DisplayMode="Overlay">
             <SplitView.Pane>
@@ -28,7 +28,9 @@
                       Background="#329465">
                     <ListView ItemsSource="{Binding Menu}"
                               SelectionChanged="Menu_SelectionChanged"
+                              x:Name="sd1"
                               Margin="0 48 0 0"
+                                 
                               VerticalAlignment="Top">
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -46,8 +48,31 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-
+                    <StackPanel VerticalAlignment="Bottom">
+                    <ListView ItemsSource="{Binding Custom}"
+                              SelectionChanged="ListView_SelectionChanged"
+                                       x:Name="df"               >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="11*"/>
+                                        <RowDefinition Height="9*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0"  Grid.RowSpan="2" Source="{Binding Fotourl}"></Image>
+                                    <TextBlock Grid.Column="1" Margin="5,0,0,0" Foreground="White" Grid.Row="0" Text="{Binding Naam}"></TextBlock>
+                                    <TextBlock Grid.Column="1" Margin="5,0,0,0" Grid.Row="1" Foreground="White" FontSize="10" Text="Logout"></TextBlock>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                    
+                    </StackPanel>
+
                 </Grid>
             </SplitView.Pane>
             
@@ -71,8 +96,7 @@
                     <Grid ManipulationMode="TranslateX"
                           ManipulationCompleted="SplitViewOpener_ManipulationCompleted"
                           Width="150"
-                          IsHitTestVisible="False"
-                         
+                          IsHitTestVisible="False"                         
                           Background="Transparent"
                           HorizontalAlignment="Left"
                           VerticalAlignment="Stretch">

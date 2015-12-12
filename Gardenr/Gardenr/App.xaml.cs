@@ -25,6 +25,7 @@ namespace Gardenr
     {
         internal static string AccessToken = String.Empty;
         internal static string FacebookId = String.Empty;
+        internal static string Fotourl = String.Empty;
         internal static Gebruiker Gebruiker = null;
         internal static string BACKEND_ENDPOINT = "http://notifgardenr.azurewebsites.net/";
         public static bool isAuthenticated = false;

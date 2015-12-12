@@ -109,6 +109,7 @@
     <Compile Include="Mesages\GoToPageMessage.cs" />
     <Compile Include="Models\Alarm.cs" />
     <Compile Include="Models\Constants.cs" />
+    <Compile Include="Models\DrawerInstellingen.cs" />
     <Compile Include="Models\Gebruiker.cs" />
     <Compile Include="Models\Instellingen.cs" />
     <Compile Include="Models\Instellingen2.cs" />

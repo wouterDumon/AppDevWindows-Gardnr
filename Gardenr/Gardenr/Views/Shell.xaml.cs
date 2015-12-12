@@ -57,8 +57,10 @@ namespace Gardenr.Views
             view.TitleBar.InactiveBackgroundColor = Colors.DarkGreen;
             view.TitleBar.InactiveForegroundColor = Colors.Gray;
         }
+      
         private void Menu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+           
             if (e.AddedItems.Count > 0)
             {
                 var menuItem = e.AddedItems.First() as MenuItem;
@@ -70,6 +72,7 @@ namespace Gardenr.Views
                         StatusBorder.Visibility = Visibility.Collapsed;
                         StatusPanel.Visibility = Visibility.Collapsed;
                     }
+                    MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
                     SplitViewFrame.Navigate(menuItem.NavigationDestination);
                 }
                 else
@@ -89,23 +92,30 @@ namespace Gardenr.Views
         private PushNotificationChannel channel = null;
         private async void SetupNotificationsHub()
         {
-            channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
-            var hub = new NotificationHub("notific", "Endpoint=sb://gardenrnotif.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=8bPfKiz9h4jY/e0JtAUqN/tCybd+dOtj3X/tA6zndxM=");
-            channel.PushNotificationReceived += Channel_PushNotificationReceived;
-            var result = await hub.RegisterNativeAsync(channel.Uri);
-            if (result.RegistrationId != null)
+            try
             {
-               // var dialog = new MessageDialog("Registratie ok");
-              //  dialog.Commands.Add(new UICommand("Ok"));
-             //   await dialog.ShowAsync();
-                //  await sendPush("wns", App.FacebookId, "troll");
-                LoginAndRegisterClick();
+                channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+                var hub = new NotificationHub("notific", "Endpoint=sb://gardenrnotif.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=8bPfKiz9h4jY/e0JtAUqN/tCybd+dOtj3X/tA6zndxM=");
+                channel.PushNotificationReceived += Channel_PushNotificationReceived;
+                var result = await hub.RegisterNativeAsync(channel.Uri);
+                if (result.RegistrationId != null)
+                {
+                    // var dialog = new MessageDialog("Registratie ok");
+                    //  dialog.Commands.Add(new UICommand("Ok"));
+                    //   await dialog.ShowAsync();
+                    //  await sendPush("wns", App.FacebookId, "troll");
+                    LoginAndRegisterClick();
+                }
+                else
+                {
+                    //  var dialog = new MessageDialog("Failed");
+                    // dialog.Commands.Add(new UICommand("Ok"));
+                    //await dialog.ShowAsync();
+                }
             }
-            else
-            {
-              //  var dialog = new MessageDialog("Failed");
-               // dialog.Commands.Add(new UICommand("Ok"));
-                //await dialog.ShowAsync();
+            catch (Exception e) {
+
+                Exception j = e;
             }
         }
 
@@ -161,6 +171,8 @@ namespace Gardenr.Views
                 LoadingBaaar.IsActive = false;
             }
         }
+
+       
         private async void LoginAndRegisterClick()
         {
             //SetAuthenticationTokenInLocalStorage();
@@ -185,6 +197,11 @@ namespace Gardenr.Views
             //    MessageDialog alert = new MessageDialog(ex.Message, "Failed to register with RegisterClient");
               //  alert.ShowAsync();
             }
-        }      
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

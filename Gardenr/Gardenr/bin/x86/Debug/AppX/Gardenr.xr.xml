@@ -65,6 +65,8 @@
     <RootPropertyPathName Name="HistoriekPlant" />
     <RootPropertyPathName Name="GoFavoriet" />
     <RootPropertyPathName Name="TuinPlanten" />
+    <RootPropertyPathName Name="Width" />
+    <RootPropertyPathName Name="Custom" />
     <RootPropertyPathName Name="Menu" />
     <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="Glyph" />
@@ -164,7 +166,6 @@
       <RootProperty Name="FontStyle" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="FontFamily" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="MaxWidth" />
@@ -330,6 +331,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Gardenr.Views.Profiel_PlantInfo" />
     <RootType FullName="Gardenr.ViewModels.SplitViewVM" />

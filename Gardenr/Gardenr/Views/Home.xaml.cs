@@ -38,6 +38,7 @@ namespace Gardenr.Views
 
         async private void df() {
             var accessStatus = await Geolocator.RequestAccessAsync();
+            
             switch (accessStatus)
             {
                 case GeolocationAccessStatus.Allowed:
@@ -50,7 +51,7 @@ namespace Gardenr.Views
 
                     // If DesiredAccuracy or DesiredAccuracyInMeters are not set (or value is 0), DesiredAccuracy.Default is used.
                     Geolocator geolocator = new Geolocator { DesiredAccuracyInMeters = _desireAccuracyInMetersValue };
-
+                    
                     // Carry out the operation
                     Geoposition pos = await geolocator.GetGeopositionAsync().AsTask(token);
 
