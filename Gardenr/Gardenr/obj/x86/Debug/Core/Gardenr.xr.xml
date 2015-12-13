@@ -45,9 +45,12 @@
     <RootPropertyPathName Name="DeleteNotificatie" />
     <RootPropertyPathName Name="BewerkNotificatie" />
     <RootPropertyPathName Name="BewNotificatie" />
-    <RootPropertyPathName Name="Interval" />
+    <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="NotAlarm" />
+    <RootPropertyPathName Name="herhalen" />
     <RootPropertyPathName Name="TypeID" />
     <RootPropertyPathName Name="NotificatieTypes" />
+    <RootPropertyPathName Name="Date" />
     <RootPropertyPathName Name="SaveSettings" />
     <RootPropertyPathName Name="TeBewerkenTuin" />
     <RootPropertyPathName Name="extra" />
@@ -303,10 +306,11 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Value" />
       <RootProperty Name="Minimum" />
       <RootProperty Name="Maximum" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
     <RootType FullName="Gardenr.ViewModels.PlantBewerkenVM" />

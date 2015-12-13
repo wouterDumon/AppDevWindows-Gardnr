@@ -26,18 +26,28 @@ namespace Gardenr.ViewModels
 
             Startup();
 
-            if (BewNotificatie == null)
-            {
-                nieuwNotificatie = true;
-            }
-            else
-            {
-                nieuwNotificatie = false;
-            }
-
-        }
+           
+    }
 
         private bool nieuwNotificatie{get;set;}
+
+        private DateTimeOffset _date;
+        public DateTimeOffset Date
+        {
+            get { return _date; }
+            set { _date = value; OnPropertyChanged("Date"); }
+        }
+       
+
+        private Alarm _notAlarm;
+        public Alarm NotAlarm
+        {
+            get { return _notAlarm; }
+            set {
+                _notAlarm = value;
+                OnPropertyChanged("NotAlarm");
+            }
+        }
 
         private ObservableCollection<TypeC> _notificatieTypes;
         public ObservableCollection<TypeC> NotificatieTypes
@@ -46,18 +56,13 @@ namespace Gardenr.ViewModels
             set { _notificatieTypes = value; OnPropertyChanged("NotificatieTypes"); }
         }
 
-        private int _interval;
-        public int Interval
-        {
-            get { return _interval; }
-            set { _interval = value;OnPropertyChanged("Interval"); }
-        }
+     
 
         private Notificaties _BewNotificatie;
         public Notificaties BewNotificatie
         {
             get { return _BewNotificatie; }
-            set { _BewNotificatie = value; OnPropertyChanged("BewNotificatie"); }
+            set { _BewNotificatie = value; OnMessageGet(); OnPropertyChanged("BewNotificatie"); }
         }
 
         private Tuin _gegevenTuinObject;
@@ -70,6 +75,7 @@ namespace Gardenr.ViewModels
         public RelayCommand SaveSettings { get; set; }
         private INotificatiesRepository reponotif = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
         private ITypeRepository repoType = SimpleIoc.Default.GetInstance<ITypeRepository>();
+        private IAlarmRepository repoAlarm = SimpleIoc.Default.GetInstance<IAlarmRepository>();
 
         public void SaveSettingsM()
         {
@@ -83,13 +89,15 @@ namespace Gardenr.ViewModels
                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = GegevenTuinObject };
                     Messenger.Default.Send<GoToPageMessage>(message);
                 }
+
+                /*
                 BewNotificatie = new Notificaties();
                 BewNotificatie.PlantID = "0f01ffff-5a47-40ee-98b5-59d956239a82";
                 BewNotificatie.TypeID = "1";
                 BewNotificatie.GebruikerID = App.Gebruiker.ID;
                 BewNotificatie.AlarmID = "";
                 BewNotificatie.datum = "" + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
-                BewNotificatie.Omschrijving = "NOTIFICATIE TEST";
+                BewNotificatie.Omschrijving = "NOTIFICATIE TEST";*/
                 reponotif.AddNotificatie(BewNotificatie);
                 GoToPageMessage message1 = new GoToPageMessage() { PageNumber = 12 };
                 Messenger.Default.Send<GoToPageMessage>(message1);
@@ -97,6 +105,7 @@ namespace Gardenr.ViewModels
             else
             {
                 reponotif.AdjustNotificatie(BewNotificatie);
+                repoAlarm.AdjustNewsItem(NotAlarm);
                 GoToPageMessage message = new GoToPageMessage() { PageNumber = 6, SelectedNotificatie = BewNotificatie };
                 Messenger.Default.Send<GoToPageMessage>(message);
             }
@@ -127,7 +136,34 @@ namespace Gardenr.ViewModels
         public async void Startup()
         {
             NotificatieTypes = await repoType.GetTypes();
-            Interval = 20;
+           
+
+        }
+        public async void OnMessageGet()
+        {
+            if(BewNotificatie== null)
+            {
+                nieuwNotificatie = true;
+                BewNotificatie = new Notificaties();
+                BewNotificatie.GebruikerID = App.Gebruiker.ID;
+                BewNotificatie.Omschrijving = "kkkkkk";
+                BewNotificatie.AlarmID = "1";
+                BewNotificatie.datum = "01/01/2015";
+                BewNotificatie.TypeID = "1";
+                NotAlarm = await repoAlarm.GetAlarmBID(BewNotificatie.AlarmID);
+                nieuwNotificatie = true;
+            }
+            else
+            {
+                NotAlarm = await repoAlarm.GetAlarmBID(BewNotificatie.AlarmID);
+
+                string[] temp= BewNotificatie.datum.Split('/');
+            
+                DateTime date = new DateTime(int.Parse(temp[2]), int.Parse(temp[1]), int.Parse(temp[0]));
+                Date = new DateTimeOffset(date);
+                nieuwNotificatie = false;
+            }
+           
         }
 
     }
