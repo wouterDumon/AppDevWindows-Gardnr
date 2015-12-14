@@ -75,9 +75,14 @@ namespace Gardenr.ViewModels
 
         public async void GetTypes()
         {
-            //IngesteldeNotificaties = await repoNotification.GetNotificaties();
-            NotificatieType = await repoType.GetType(IngesteldeNotificaties.TypeID);
+            try
+            {
+                //IngesteldeNotificaties = await repoNotification.GetNotificaties();
+                NotificatieType = await repoType.GetType(IngesteldeNotificaties.TypeID);
+            }
+            catch (Exception e) {
 
+            }
         }
 
     }

@@ -12,13 +12,6 @@
     <RootPropertyPathName Name="Naam" />
     <RootPropertyPathName Name="FotoUrl" />
     <RootPropertyPathName Name="plant" />
-    <RootPropertyPathName Name="Buiten" />
-    <RootPropertyPathName Name="Binnen" />
-    <RootPropertyPathName Name="DagenVerplanten" />
-    <RootPropertyPathName Name="DagenOogst" />
-    <RootPropertyPathName Name="WaterGeven" />
-    <RootPropertyPathName Name="AfstandRij" />
-    <RootPropertyPathName Name="AfstandTussen" />
     <RootPropertyPathName Name="ZaaiDiepte" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
@@ -28,6 +21,7 @@
     <RootPropertyPathName Name="Titel" />
     <RootPropertyPathName Name="SelectedNotificatie" />
     <RootPropertyPathName Name="Notificaties" />
+    <RootPropertyPathName Name="ActualHeight" />
     <RootPropertyPathName Name="Omschrijving" />
     <RootPropertyPathName Name="datum" />
     <RootPropertyPathName Name="Weerlocatie" />
@@ -91,9 +85,10 @@
       <RootProperty Name="Mode" />
       <RootProperty Name="Source" />
       <RootProperty Name="UpdateSourceTrigger" />
-      <RootProperty Name="Converter" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="Path" />
+      <RootProperty Name="Converter" />
+      <RootProperty Name="ConverterParameter" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -102,6 +97,7 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Padding" />
       <RootProperty Name="VerticalAlignment" />
@@ -227,6 +223,10 @@
       <RootProperty Name="Content" />
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
+      <RootMethod Name="GetHorizontalScrollBarVisibility" />
+      <RootMethod Name="SetHorizontalScrollBarVisibility" />
+      <RootMethod Name="GetHorizontalScrollMode" />
+      <RootMethod Name="SetHorizontalScrollMode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Background" />
@@ -258,12 +258,31 @@
     <RootType FullName="Gardenr.Views.CatalogusPlant" />
     <RootType FullName="Gardenr.Views.Contact" />
     <RootType FullName="Gardenr.ViewModels.HomeVM" />
+    <RootType FullName="Gardenr.Views.StringFormatConverter" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ItemsPanel" />
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="Tapped" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Hyperlink">
       <RootProperty Name="NavigateUri" />
       <RootProperty Name="Inlines" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.VirtualizingStackPanel">
+      <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Gardenr.Views.Home" />
     <RootType FullName="Gardenr.ViewModels.InstellingenVM" />

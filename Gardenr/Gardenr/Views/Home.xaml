@@ -35,6 +35,7 @@
         <Style x:Key="Text2" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#659d46"/>
         </Style>
+        <local:StringFormatConverter x:Key="StringFormatConverter" />
     </Page.Resources>
 
     <Grid >
@@ -42,7 +43,7 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="41"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="41"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
@@ -71,25 +72,30 @@
 
         <TextBlock Margin="10,0,0,0" Text="Notificatie's" FontSize="25" Grid.Row="2" Style="{StaticResource Text2}"></TextBlock>
         <TextBlock Grid.Row="2" HorizontalAlignment="Right" Text="+" Style="{StaticResource Text2}" FontSize="40" Margin="0,-10,0,0" Tapped="TextBlock_Tapped"></TextBlock>
-        <GridView  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Margin="20,0,20,0">
-            <GridView.ItemTemplate>
+        <ListBox ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollMode="Enabled"  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Padding="0,0,0,0"  Margin="20,0,20,0">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="110">
+                    <Grid Width="150" Height="{Binding ElementName=ListItems, Path=ActualHeight}" Margin="0,0,0,0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
+                
                             <RowDefinition Height="30"/>
-                            <RowDefinition Height="110"/>
-                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="45"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding datum}" Grid.Row="1" TextAlignment="Center"/>
-                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Center"/>
-                        <TextBlock Text=">" Grid.Row="3" FontSize="20" TextAlignment="Center"/>
+                        <TextBlock Text="{Binding datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}" Grid.Row="0" TextAlignment="Center"/>
+                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="1" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+                        <TextBlock Text=">" Grid.Row="2" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" />
                     </Grid>
                 </DataTemplate>
-            </GridView.ItemTemplate>
+            </ListBox.ItemTemplate>
+            
 
-
-        </GridView>
+        </ListBox>
 
         <TextBlock Margin="10,0,0,0" Text="Newsfeed" FontSize="25" Grid.Row="4" Style="{StaticResource Text2}">
 

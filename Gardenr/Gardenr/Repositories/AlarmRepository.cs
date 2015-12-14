@@ -131,11 +131,15 @@ namespace Gardenr.Repositories
         }
         public async void DeleteItem(Alarm nitem)
         {
-            await InitLocalStoreAsync();
-            await Table.DeleteAsync(nitem);
-            await SyncAsync();
-            await RefreshItems();
-        }
+            try
+            {
+                await InitLocalStoreAsync();
+                await Table.DeleteAsync(nitem);
+                await SyncAsync();
+                await RefreshItems();
+            }
+            catch (Exception e) { }
+            }
 
     }
 }

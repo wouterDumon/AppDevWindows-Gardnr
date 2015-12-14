@@ -21,12 +21,14 @@ namespace Gardenr.Views
     /// </summary>
     public sealed partial class Shell : Page
     {
+        public static Button mijnhamburger;
         public static Shell Current;
 
         //INDIEN LUKT OMZETTEN NAAR MVVM
         public Shell()
         {
             this.InitializeComponent();
+            mijnhamburger = HamburgerButton;
             Current = this;
             setuptitle();
             
@@ -34,6 +36,7 @@ namespace Gardenr.Views
             SplitViewFrame.Navigate(typeof(Home));
             App.frame = SplitViewFrame;
            SetupNotificationsHub();
+
         }
         public void setuptitle()
         {
