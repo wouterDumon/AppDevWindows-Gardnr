@@ -15,10 +15,8 @@
     <RootPropertyPathName Name="ZaaiDiepte" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
-    <RootPropertyPathName Name="SelectedNieuwsItem" />
-    <RootPropertyPathName Name="NieuwsItems" />
-    <RootPropertyPathName Name="Description" />
-    <RootPropertyPathName Name="Titel" />
+    <RootPropertyPathName Name="DagFoto" />
+    <RootPropertyPathName Name="NaamFoto" />
     <RootPropertyPathName Name="SelectedNotificatie" />
     <RootPropertyPathName Name="Notificaties" />
     <RootPropertyPathName Name="ActualHeight" />
@@ -210,7 +208,6 @@
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Margin" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">

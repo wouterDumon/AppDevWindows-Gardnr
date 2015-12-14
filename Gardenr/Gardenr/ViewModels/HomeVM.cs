@@ -22,9 +22,11 @@ namespace Gardenr.ViewModels
         public HomeVM()
         {
             //WeatherNet.Clients.CurrentWeather mijnweer= new WeatherNet.Clients.CurrentWeather();
-          
-         //  mijnweer.GetByCityNameAsync("Rekkem", "Belgium");
-            StartUpGetItems();
+
+            //  mijnweer.GetByCityNameAsync("Rekkem", "Belgium");
+            NaamFoto = "radijzen";
+            DagFoto = "http://student.howest.be/lucas.balcaen/androidappfotos/radijzen.png";
+               StartUpGetItems();
             naam = App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
             VieuwNotification = new RelayCommand(VieuwNotificationM);
             VieuwNieuwsItem = new RelayCommand(VieuwNieuwsItemM);
@@ -57,6 +59,22 @@ namespace Gardenr.ViewModels
             get { return _fotourl; }
             set { _fotourl = value; OnPropertyChanged("Fotourl"); }
         }
+
+        private String _dagfoto;
+
+        public String DagFoto
+        {
+            get { return _dagfoto; }
+            set { _dagfoto = value; OnPropertyChanged("DagFoto"); }
+        }
+        private String _naamFoto;
+
+        public String NaamFoto
+        {
+            get { return _naamFoto; }
+            set { _naamFoto = value; OnPropertyChanged("NaamFoto"); }
+        }
+
 
         public async void FILLUPWEER(string lat, string lon) {
             double la = Double.Parse(lat);
