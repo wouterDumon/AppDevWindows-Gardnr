@@ -12,6 +12,7 @@
         <vm:NotificatiesVM></vm:NotificatiesVM>
     </Page.DataContext>
     <Page.Resources>
+        <local:StringFormatConverter x:Key="StringFormatConverter" />
         <Style x:Key="headerS" TargetType="Rectangle">
             <Setter Property="Fill">
                 <Setter.Value>
@@ -64,7 +65,7 @@
 
         <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}" Grid.ColumnSpan="4"/>
         <TextBlock  Grid.Column="1" Text="Datum" FontSize="20" Grid.Row="1" Style="{StaticResource Text2}" VerticalAlignment="Center" ></TextBlock>
-        <TextBlock  Grid.Column="2" Text="{Binding IngesteldeNotificaties.datum}" FontSize="20" Grid.Row="1" VerticalAlignment="Center"  Style="{StaticResource Text2}" ></TextBlock>
+        <TextBlock  Grid.Column="2" Text="{Binding IngesteldeNotificaties.datum , Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  FontSize="20" Grid.Row="1" VerticalAlignment="Center"  Style="{StaticResource Text2}" ></TextBlock>
 
         <TextBlock  Grid.Column="1" Text="Notificatie type"  FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"/>
         <TextBlock Grid.Column="2" Text="{Binding NotificatieType.Naam}" FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>

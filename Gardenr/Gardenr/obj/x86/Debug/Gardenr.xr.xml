@@ -22,10 +22,8 @@
     <RootPropertyPathName Name="ZaaiDiepte" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
-    <RootPropertyPathName Name="SelectedNieuwsItem" />
-    <RootPropertyPathName Name="NieuwsItems" />
-    <RootPropertyPathName Name="Description" />
-    <RootPropertyPathName Name="Titel" />
+    <RootPropertyPathName Name="DagFoto" />
+    <RootPropertyPathName Name="NaamFoto" />
     <RootPropertyPathName Name="SelectedNotificatie" />
     <RootPropertyPathName Name="Notificaties" />
     <RootPropertyPathName Name="ActualHeight" />
@@ -35,11 +33,8 @@
     <RootPropertyPathName Name="Weerstatus" />
     <RootPropertyPathName Name="Weertext" />
     <RootPropertyPathName Name="Fotourl" />
-    <RootPropertyPathName Name="Taale" />
-    <RootPropertyPathName Name="Talen" />
     <RootPropertyPathName Name="UserSettings" />
     <RootPropertyPathName Name="PushNotificaties" />
-    <RootPropertyPathName Name="Cortana" />
     <RootPropertyPathName Name="IngesteldeNotificaties" />
     <RootPropertyPathName Name="AlarmID" />
     <RootPropertyPathName Name="NotificatieType" />
@@ -222,7 +217,6 @@
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Margin" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
@@ -305,15 +299,6 @@
       <RootProperty Name="Margin" />
       <RootEvent Name="Toggled" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="SelectedItem" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="DisplayMemberPath" />
-      <RootProperty Name="Height" />
-      <RootEvent Name="SelectionChanged" />
-    </RootType>
     <RootType FullName="Gardenr.Views.Instellingen" />
     <RootType FullName="Gardenr.ViewModels.LoginVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -331,6 +316,17 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="AllowDrop" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="VerticalContentAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">
@@ -341,6 +337,7 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Gardenr.Views.NotificatiesBewerken" />
+    <RootType FullName="Gardenr.Views.Stringformat2" />
     <RootType FullName="Gardenr.ViewModels.PlantBewerkenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />

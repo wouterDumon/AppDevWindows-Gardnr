@@ -41,11 +41,11 @@
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="190"/>
             <RowDefinition Height="41"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="41"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}"></Rectangle>
@@ -53,11 +53,11 @@
         <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}"/>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
-           
+
 
             </Grid.RowDefinitions>
 
@@ -80,43 +80,29 @@
             </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="150" Height="{Binding ElementName=ListItems, Path=ActualHeight}" Margin="0,0,0,0">
+                    <Grid Width="150" Height="{Binding ElementName=ListItems, Path=ActualHeight}" Margin="-10,0,0,0">
                         <Grid.RowDefinitions>
-                
+                            <RowDefinition Height="10"/>
                             <RowDefinition Height="30"/>
                             <RowDefinition Height="1*"/>
-                            <RowDefinition Height="45"/>
+                            <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}" Grid.Row="0" TextAlignment="Center"/>
-                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="1" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Center"/>
-                        <TextBlock Text=">" Grid.Row="2" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" />
+                        <Rectangle  Style="{StaticResource headerS}"></Rectangle>
+                        <TextBlock Text="{Binding datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}" Grid.Row="1" TextAlignment="Center"/>
+                        <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Stretch" TextAlignment="Center" VerticalAlignment="Stretch" Margin="0,0,0,0"  Grid.RowSpan="2" />
+                        <TextBlock Text=">" Grid.Row="3" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-            
+
 
         </ListBox>
 
-        <TextBlock Margin="10,0,0,0" Text="Newsfeed" FontSize="25" Grid.Row="4" Style="{StaticResource Text2}">
+        <TextBlock Margin="10,0,0,0" Text="{Binding NaamFoto}" FontSize="25" Grid.Row="4" Style="{StaticResource Text2}">
 
         </TextBlock>
-        <GridView VerticalAlignment="Stretch" Name="NiewsItems"  SelectedItem="{Binding SelectedNieuwsItem, Mode=TwoWay}" ItemsSource="{Binding NieuwsItems, Mode=OneWay}" Grid.Row="5"  Margin="10,0,0,0" Tapped="NiewsItems_Tapped">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Background="Transparent" Width="110">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="30"/>
-                            <RowDefinition Height="*"/>
-
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding Titel}" Grid.Row="1" TextAlignment="Center"/>
-                        <TextBlock Text="{Binding Description}" Grid.Row="2" FontSize="10"/>
-
-                    </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+        <Image     HorizontalAlignment="Center" VerticalAlignment="Center"  Source="{Binding DagFoto}" Stretch="UniformToFill"  Grid.Row="5" ></Image>
+       
         <TextBlock Grid.Row="1" TextWrapping="Wrap" x:Name="LocationDisabledMessage"  Margin="10,10,10,10" FontStyle="Italic" Visibility="Collapsed">
                 <Run Text="Weer kan niet worden opgehaald zonder locatie toestemming. Gelieve te gaan naar " />
                 <Hyperlink NavigateUri="ms-settings:privacy-location">
