@@ -20,8 +20,11 @@ namespace Gardenr.Views
 
             String datum = (String)value;
             var x = datum.Split('/');
+            string jaar = x[2].Substring(0, 4);
+            string maand = x[1];
             
-            DateTime ne = new DateTime(int.Parse(x[2]), int.Parse(x[1]), int.Parse(x[0]));
+            string dag = x[0];
+            DateTime ne = new DateTime(int.Parse(jaar), int.Parse(maand), int.Parse(dag));
             string monthName = ne
     .ToString("MMMM", CultureInfo.InvariantCulture);
             return "" + ne.Day + " " + monthName;

@@ -1495,3 +1495,4 @@ C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Facebook.Client\Images\fb_blank_profile_square.png
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Facebook.Client\Themes\Generic.xbf
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\resources.pri
+C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Gardenr.csprojResolveAssemblyReference.cache

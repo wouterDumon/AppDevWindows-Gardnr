@@ -156,7 +156,7 @@ namespace Gardenr.Gardenr_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[77];
+            _typeNameTable = new string[78];
             _typeNameTable[0] = "Gardenr.BaseViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Gardenr.ViewModels.MainPageVM";
@@ -221,21 +221,22 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             _typeNameTable[61] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.TypeC>";
             _typeNameTable[62] = "Gardenr.Models.Tuin";
             _typeNameTable[63] = "Gardenr.Views.NotificatiesBewerken";
-            _typeNameTable[64] = "System.DateTime";
-            _typeNameTable[65] = "Gardenr.Views.PlantBewerken";
-            _typeNameTable[66] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>";
-            _typeNameTable[67] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>";
-            _typeNameTable[68] = "Gardenr.Views.Profiel_Favorieten";
-            _typeNameTable[69] = "Gardenr.Views.Profiel_Historiek";
-            _typeNameTable[70] = "Gardenr.Views.Profiel";
-            _typeNameTable[71] = "Gardenr.Views.Profiel_PlantInfo";
-            _typeNameTable[72] = "Gardenr.ViewModels.SplitViewVM";
-            _typeNameTable[73] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.DrawerInstellingen>";
-            _typeNameTable[74] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.DrawerInstellingen>";
-            _typeNameTable[75] = "Gardenr.Models.DrawerInstellingen";
-            _typeNameTable[76] = "Gardenr.Views.Shell";
+            _typeNameTable[64] = "Gardenr.Views.Stringformat2";
+            _typeNameTable[65] = "System.DateTime";
+            _typeNameTable[66] = "Gardenr.Views.PlantBewerken";
+            _typeNameTable[67] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>";
+            _typeNameTable[68] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>";
+            _typeNameTable[69] = "Gardenr.Views.Profiel_Favorieten";
+            _typeNameTable[70] = "Gardenr.Views.Profiel_Historiek";
+            _typeNameTable[71] = "Gardenr.Views.Profiel";
+            _typeNameTable[72] = "Gardenr.Views.Profiel_PlantInfo";
+            _typeNameTable[73] = "Gardenr.ViewModels.SplitViewVM";
+            _typeNameTable[74] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.DrawerInstellingen>";
+            _typeNameTable[75] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.DrawerInstellingen>";
+            _typeNameTable[76] = "Gardenr.Models.DrawerInstellingen";
+            _typeNameTable[77] = "Gardenr.Views.Shell";
 
-            _typeTable = new global::System.Type[77];
+            _typeTable = new global::System.Type[78];
             _typeTable[0] = typeof(global::Gardenr.BaseViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Gardenr.ViewModels.MainPageVM);
@@ -300,19 +301,20 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             _typeTable[61] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.TypeC>);
             _typeTable[62] = typeof(global::Gardenr.Models.Tuin);
             _typeTable[63] = typeof(global::Gardenr.Views.NotificatiesBewerken);
-            _typeTable[64] = typeof(global::System.DateTime);
-            _typeTable[65] = typeof(global::Gardenr.Views.PlantBewerken);
-            _typeTable[66] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>);
-            _typeTable[67] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Tuin>);
-            _typeTable[68] = typeof(global::Gardenr.Views.Profiel_Favorieten);
-            _typeTable[69] = typeof(global::Gardenr.Views.Profiel_Historiek);
-            _typeTable[70] = typeof(global::Gardenr.Views.Profiel);
-            _typeTable[71] = typeof(global::Gardenr.Views.Profiel_PlantInfo);
-            _typeTable[72] = typeof(global::Gardenr.ViewModels.SplitViewVM);
-            _typeTable[73] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.DrawerInstellingen>);
-            _typeTable[74] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.DrawerInstellingen>);
-            _typeTable[75] = typeof(global::Gardenr.Models.DrawerInstellingen);
-            _typeTable[76] = typeof(global::Gardenr.Views.Shell);
+            _typeTable[64] = typeof(global::Gardenr.Views.Stringformat2);
+            _typeTable[65] = typeof(global::System.DateTime);
+            _typeTable[66] = typeof(global::Gardenr.Views.PlantBewerken);
+            _typeTable[67] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>);
+            _typeTable[68] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Tuin>);
+            _typeTable[69] = typeof(global::Gardenr.Views.Profiel_Favorieten);
+            _typeTable[70] = typeof(global::Gardenr.Views.Profiel_Historiek);
+            _typeTable[71] = typeof(global::Gardenr.Views.Profiel);
+            _typeTable[72] = typeof(global::Gardenr.Views.Profiel_PlantInfo);
+            _typeTable[73] = typeof(global::Gardenr.ViewModels.SplitViewVM);
+            _typeTable[74] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.DrawerInstellingen>);
+            _typeTable[75] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.DrawerInstellingen>);
+            _typeTable[76] = typeof(global::Gardenr.Models.DrawerInstellingen);
+            _typeTable[77] = typeof(global::Gardenr.Views.Shell);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -399,18 +401,19 @@ namespace Gardenr.Gardenr_XamlTypeInfo
         private object Activate_61_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.TypeC>(); }
         private object Activate_62_Tuin() { return new global::Gardenr.Models.Tuin(); }
         private object Activate_63_NotificatiesBewerken() { return new global::Gardenr.Views.NotificatiesBewerken(); }
-        private object Activate_65_PlantBewerken() { return new global::Gardenr.Views.PlantBewerken(); }
-        private object Activate_66_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>(); }
-        private object Activate_67_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Tuin>(); }
-        private object Activate_68_Profiel_Favorieten() { return new global::Gardenr.Views.Profiel_Favorieten(); }
-        private object Activate_69_Profiel_Historiek() { return new global::Gardenr.Views.Profiel_Historiek(); }
-        private object Activate_70_Profiel() { return new global::Gardenr.Views.Profiel(); }
-        private object Activate_71_Profiel_PlantInfo() { return new global::Gardenr.Views.Profiel_PlantInfo(); }
-        private object Activate_72_SplitViewVM() { return new global::Gardenr.ViewModels.SplitViewVM(); }
-        private object Activate_73_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.DrawerInstellingen>(); }
-        private object Activate_74_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.DrawerInstellingen>(); }
-        private object Activate_75_DrawerInstellingen() { return new global::Gardenr.Models.DrawerInstellingen(); }
-        private object Activate_76_Shell() { return new global::Gardenr.Views.Shell(); }
+        private object Activate_64_Stringformat2() { return new global::Gardenr.Views.Stringformat2(); }
+        private object Activate_66_PlantBewerken() { return new global::Gardenr.Views.PlantBewerken(); }
+        private object Activate_67_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>(); }
+        private object Activate_68_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Tuin>(); }
+        private object Activate_69_Profiel_Favorieten() { return new global::Gardenr.Views.Profiel_Favorieten(); }
+        private object Activate_70_Profiel_Historiek() { return new global::Gardenr.Views.Profiel_Historiek(); }
+        private object Activate_71_Profiel() { return new global::Gardenr.Views.Profiel(); }
+        private object Activate_72_Profiel_PlantInfo() { return new global::Gardenr.Views.Profiel_PlantInfo(); }
+        private object Activate_73_SplitViewVM() { return new global::Gardenr.ViewModels.SplitViewVM(); }
+        private object Activate_74_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.DrawerInstellingen>(); }
+        private object Activate_75_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.DrawerInstellingen>(); }
+        private object Activate_76_DrawerInstellingen() { return new global::Gardenr.Models.DrawerInstellingen(); }
+        private object Activate_77_Shell() { return new global::Gardenr.Views.Shell(); }
         private void VectorAdd_25_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.Plant>)instance;
@@ -483,25 +486,25 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             var newItem = (global::Gardenr.Models.TypeC)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_66_ObservableCollection(object instance, object item)
+        private void VectorAdd_67_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.Tuin>)instance;
             var newItem = (global::Gardenr.Models.Tuin)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_67_Collection(object instance, object item)
+        private void VectorAdd_68_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.Tuin>)instance;
             var newItem = (global::Gardenr.Models.Tuin)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_73_ObservableCollection(object instance, object item)
+        private void VectorAdd_74_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.DrawerInstellingen>)instance;
             var newItem = (global::Gardenr.Models.DrawerInstellingen)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_74_Collection(object instance, object item)
+        private void VectorAdd_75_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.DrawerInstellingen>)instance;
             var newItem = (global::Gardenr.Models.DrawerInstellingen)item;
@@ -1073,95 +1076,102 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 64:   //  System.DateTime
+            case 64:   //  Gardenr.Views.Stringformat2
+                userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_64_Stringformat2;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 65:   //  System.DateTime
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 65:   //  Gardenr.Views.PlantBewerken
+            case 66:   //  Gardenr.Views.PlantBewerken
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_65_PlantBewerken;
+                userType.Activator = Activate_66_PlantBewerken;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 66:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>
+            case 67:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>"));
-                userType.CollectionAdd = VectorAdd_66_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_67_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 67:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>
+            case 68:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_67_Collection;
-                userType.CollectionAdd = VectorAdd_67_Collection;
+                userType.Activator = Activate_68_Collection;
+                userType.CollectionAdd = VectorAdd_68_Collection;
                 xamlType = userType;
                 break;
 
-            case 68:   //  Gardenr.Views.Profiel_Favorieten
+            case 69:   //  Gardenr.Views.Profiel_Favorieten
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_68_Profiel_Favorieten;
+                userType.Activator = Activate_69_Profiel_Favorieten;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 69:   //  Gardenr.Views.Profiel_Historiek
+            case 70:   //  Gardenr.Views.Profiel_Historiek
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_69_Profiel_Historiek;
+                userType.Activator = Activate_70_Profiel_Historiek;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 70:   //  Gardenr.Views.Profiel
+            case 71:   //  Gardenr.Views.Profiel
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_70_Profiel;
+                userType.Activator = Activate_71_Profiel;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 71:   //  Gardenr.Views.Profiel_PlantInfo
+            case 72:   //  Gardenr.Views.Profiel_PlantInfo
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_71_Profiel_PlantInfo;
+                userType.Activator = Activate_72_Profiel_PlantInfo;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 72:   //  Gardenr.ViewModels.SplitViewVM
+            case 73:   //  Gardenr.ViewModels.SplitViewVM
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Gardenr.ViewModels.ViewModelBase"));
-                userType.Activator = Activate_72_SplitViewVM;
+                userType.Activator = Activate_73_SplitViewVM;
                 userType.AddMemberName("Custom");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 73:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.DrawerInstellingen>
+            case 74:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.DrawerInstellingen>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Gardenr.Models.DrawerInstellingen>"));
-                userType.CollectionAdd = VectorAdd_73_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_74_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 74:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.DrawerInstellingen>
+            case 75:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.DrawerInstellingen>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_74_Collection;
-                userType.CollectionAdd = VectorAdd_74_Collection;
+                userType.Activator = Activate_75_Collection;
+                userType.CollectionAdd = VectorAdd_75_Collection;
                 xamlType = userType;
                 break;
 
-            case 75:   //  Gardenr.Models.DrawerInstellingen
+            case 76:   //  Gardenr.Models.DrawerInstellingen
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_75_DrawerInstellingen;
+                userType.Activator = Activate_76_DrawerInstellingen;
                 userType.AddMemberName("Naam");
                 userType.AddMemberName("Fotourl");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 76:   //  Gardenr.Views.Shell
+            case 77:   //  Gardenr.Views.Shell
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_76_Shell;
+                userType.Activator = Activate_77_Shell;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
