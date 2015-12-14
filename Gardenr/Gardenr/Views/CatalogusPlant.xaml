@@ -8,6 +8,9 @@
     mc:Ignorable="d"
   
     xmlns:vm="using:Gardenr.ViewModels">
+     <Page.DataContext>
+        <vm:CatalogusPlantVM></vm:CatalogusPlantVM>
+    </Page.DataContext>
     <Page.Resources>
         <Style x:Key="headerS" TargetType="Rectangle">
             <Setter Property="Fill">
@@ -25,6 +28,10 @@
         <Style x:Key="notificationS" TargetType="Grid">
             <Setter Property="Background" Value="#abd3a8"/>
         </Style>
+        <Style x:Key="ItemBack" TargetType="Grid">
+            <Setter Property="Background" Value="#abd3a8"/>
+            <Setter Property="CornerRadius" Value="0"/>
+        </Style>
         <Style x:Key="TextS" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#FFFFFF"/>
         </Style>
@@ -34,20 +41,18 @@
         <vm:ConvertToStrign x:Key="StringConverter"></vm:ConvertToStrign>
     </Page.Resources>
 
-    <Page.DataContext>
-        <vm:CatalogusPlantVM></vm:CatalogusPlantVM>
-    </Page.DataContext>
+   
 
     <Grid Background="#01FF70">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="200"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="150"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="15"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15"/>            
@@ -59,7 +64,7 @@
         </Grid.ColumnDefinitions>
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="6"></Rectangle>
         <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="6"/>
-        <TextBlock Style="{StaticResource TextS}" Grid.ColumnSpan="2" Grid.Row="0"  FontSize="28" Margin="48,1,0,1" VerticalAlignment="Center" Text="{Binding plant.Naam}"></TextBlock>
+        <TextBlock Style="{StaticResource TextS}" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" FontSize="28" VerticalAlignment="Center" Text="{Binding plant.Naam}"></TextBlock>
         <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right">
             <CommandBar.SecondaryCommands>
                 <AppBarButton Command="{Binding AddGarden}" Label="Toevoegen aan tuin"/>
@@ -69,28 +74,45 @@
         
         
      
-        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding plant.FotoUrl}"  Grid.Row="1" Grid.ColumnSpan="3" Stretch="UniformToFill" ></Image>
-        <Button Background="Blue" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="ZaaiKalender" ></Button>
+        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding plant.FotoUrl}"  Grid.Row="1" Grid.ColumnSpan="6" Stretch="UniformToFill" ></Image>
+        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="ZaaiKalender" ></Button>
 
-        <Rectangle Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Fill="Gray" Opacity="0.5"></Rectangle>
-        <Rectangle Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" Fill="Gray" Opacity="0.5"></Rectangle>
+
+
+        <Grid Grid.Column="1" Grid.Row="5" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Image Source="/Assets/CatalogusIcons/ZaaiDiepte.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding plant.ZaaiDiepte}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="5" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Image Source="/Assets/CatalogusIcons/PlantAfstand.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding plant.AfstandTussen}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="5" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Image Source="/Assets/CatalogusIcons/RijAfstand.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding plant.AfstandRij}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+        </Grid>
+        <Grid Grid.Column="4" Grid.Row="5" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Image Source="/Assets/CatalogusIcons/watering11.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding plant.WaterGeven}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="6" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Image Source="/Assets/CatalogusIcons/DagenOogst.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding plant.DagenOogst}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="6" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Image Source="/Assets/CatalogusIcons/DagenVerplanten.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding plant.DagenVerplanten}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="6" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Image Source="/Assets/CatalogusIcons/MagBinnen.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding plant.Binnen, Converter={StaticResource StringConverter}}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+        </Grid>
+        <Grid Grid.Column="4" Grid.Row="6" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Image Source="/Assets/CatalogusIcons/MagBuiten.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding plant.Buiten, Converter={StaticResource StringConverter}}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+        </Grid>
         
-        
-        <TextBlock VerticalAlignment="Center" Margin="5" TextAlignment="Center" Text="Zaaidiepte: " Grid.Column="1" Grid.Row="4"   ></TextBlock>
-        <Image Source="/Assets/CatalogusIcons/watering11.png"  Grid.Column="1" Grid.Row="3"  />
-        
-        <TextBlock VerticalAlignment="Center" Text="{Binding plant.ZaaiDiepte}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="5" TextAlignment="Center" ></TextBlock>     
-      <!--  <TextBlock VerticalAlignment="Center" Text="Afstand tussen: " Grid.Column="1" Grid.Row="5" Margin="5" TextAlignment="Center"  ></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="{Binding plant.AfstandTussen}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Margin="5" TextAlignment="Center"></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="Afstand rij: " Grid.Column="1" Grid.Row="6" Margin="5" TextAlignment="Center"   ></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="{Binding plant.AfstandRij}" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" TextAlignment="Center"  ></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="Water geven: " Grid.Column="1" Grid.Row="7" Margin="5" TextAlignment="Center"  ></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="{Binding plant.WaterGeven}" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" Margin="5" TextAlignment="Center"  ></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="Dagen tot oogst: " Grid.Column="1" Grid.Row="8" Margin="5" TextAlignment="Center"  ></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="{Binding plant.DagenOogst}" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" Margin="5" TextAlignment="Center" ></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="Dagen tot verplanten: " Grid.Column="1" Grid.Row="9" Margin="5" TextAlignment="Center"  ></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="{Binding plant.DagenVerplanten}" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Margin="5" TextAlignment="Center" ></TextBlock>
-        <TextBlock VerticalAlignment="Center" Text="Mag binnen: " Grid.Column="1" Grid.Row="10" Margin="5" TextAlignment="Center"   ></TextBlock>
+        <!-- <TextBlock VerticalAlignment="Center" Text="Mag binnen: " Grid.Column="1" Grid.Row="10" Margin="5" TextAlignment="Center"   ></TextBlock>
         <TextBlock VerticalAlignment="Center" Text="{Binding plant.Binnen, Converter={StaticResource StringConverter}}" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="2" Margin="5" TextAlignment="Center" ></TextBlock>
         <TextBlock VerticalAlignment="Center" Text="Mag buiten: " Grid.Column="1" Grid.Row="11" Margin="5" TextAlignment="Center" ></TextBlock>
         <TextBlock VerticalAlignment="Center" Text="{Binding plant.Buiten, Converter={StaticResource StringConverter}}" Grid.Column="1" Grid.Row="11" Grid.ColumnSpan="2" Margin="5" TextAlignment="Center" ></TextBlock>-->

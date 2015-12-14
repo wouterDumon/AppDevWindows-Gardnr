@@ -12,6 +12,13 @@
     <RootPropertyPathName Name="Naam" />
     <RootPropertyPathName Name="FotoUrl" />
     <RootPropertyPathName Name="plant" />
+    <RootPropertyPathName Name="Buiten" />
+    <RootPropertyPathName Name="Binnen" />
+    <RootPropertyPathName Name="DagenVerplanten" />
+    <RootPropertyPathName Name="DagenOogst" />
+    <RootPropertyPathName Name="WaterGeven" />
+    <RootPropertyPathName Name="AfstandRij" />
+    <RootPropertyPathName Name="AfstandTussen" />
     <RootPropertyPathName Name="ZaaiDiepte" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
@@ -85,9 +92,9 @@
       <RootProperty Name="Mode" />
       <RootProperty Name="Source" />
       <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Converter" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="Path" />
-      <RootProperty Name="Converter" />
       <RootProperty Name="ConverterParameter" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
@@ -97,8 +104,10 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
+      <RootProperty Name="CornerRadius" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Padding" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
@@ -242,8 +251,8 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Gardenr.Views.Catalogus" />
-    <RootType FullName="Gardenr.ViewModels.ConvertToStrign" />
     <RootType FullName="Gardenr.ViewModels.CatalogusPlantVM" />
+    <RootType FullName="Gardenr.ViewModels.ConvertToStrign" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />

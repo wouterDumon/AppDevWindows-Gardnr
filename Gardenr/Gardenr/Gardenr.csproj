@@ -241,6 +241,7 @@
     <Content Include="Assets\CatalogusIcons\MagBuiten.png" />
     <Content Include="Assets\CatalogusIcons\PlantAfstand.png" />
     <Content Include="Assets\CatalogusIcons\RijAfstand.png" />
+    <Content Include="Assets\CatalogusIcons\watering11.png" />
     <Content Include="Assets\CatalogusIcons\ZaaiDiepte.png" />
     <Content Include="Assets\LOGO.png" />
     <Content Include="GardenrCommands.xml">

@@ -728,14 +728,6 @@ C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\De
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\WeatherNetUWP.dll
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Gardenr.xr.xml
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\resources.pri
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\DagenOogst.svg
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\DagenVerplanten.svg
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\MagBinnen.svg
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\MagBuiten.svg
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\PlantAfstand.svg
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\RijAfstand.svg
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\watering11.svg
-C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\ZaaiDiepte.svg
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\DagenOogst.png
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\DagenVerplanten.png
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\MagBinnen.png
@@ -1495,3 +1487,5 @@ C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Facebook.Client\Images\fb_blank_profile_square.png
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Facebook.Client\Themes\Generic.xbf
 C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\resources.pri
+C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\watering11.png
+C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Assets\CatalogusIcons\watering11.png
