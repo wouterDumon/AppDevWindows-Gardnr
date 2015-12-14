@@ -145,6 +145,19 @@ namespace Gardenr.Views
             a.AddNotificatie.Execute("iets");
         }
 
-       
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {//ListItems
+            if (ListItems.SelectedIndex < ListItems.Items.Count - 1)
+                ListItems.SelectedIndex++;
+            ListItems.ScrollIntoView(ListItems.SelectedItem);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (ListItems.SelectedIndex > 0)
+                ListItems.SelectedIndex--;
+            ListItems.ScrollIntoView(ListItems.SelectedItem);
+
+        }
     }
 }
