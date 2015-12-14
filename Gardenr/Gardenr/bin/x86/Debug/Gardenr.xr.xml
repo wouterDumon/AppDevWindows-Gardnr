@@ -11,7 +11,7 @@
     <RootPropertyPathName Name="ToonPlanten" />
     <RootPropertyPathName Name="Naam" />
     <RootPropertyPathName Name="FotoUrl" />
-    <RootPropertyPathName Name="plant" />
+    <RootPropertyPathName Name="Plant" />
     <RootPropertyPathName Name="Buiten" />
     <RootPropertyPathName Name="Binnen" />
     <RootPropertyPathName Name="DagenVerplanten" />
@@ -20,6 +20,13 @@
     <RootPropertyPathName Name="AfstandRij" />
     <RootPropertyPathName Name="AfstandTussen" />
     <RootPropertyPathName Name="ZaaiDiepte" />
+    <RootPropertyPathName Name="OogstBegin" />
+    <RootPropertyPathName Name="OogstLengte" />
+    <RootPropertyPathName Name="PlantBegin" />
+    <RootPropertyPathName Name="PlantLengte" />
+    <RootPropertyPathName Name="ZaaiBegin" />
+    <RootPropertyPathName Name="ZaaiLengte" />
+    <RootPropertyPathName Name="plant" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="DagFoto" />
@@ -52,8 +59,6 @@
     <RootPropertyPathName Name="extra" />
     <RootPropertyPathName Name="LaatstWater" />
     <RootPropertyPathName Name="OogstDatum" />
-    <RootPropertyPathName Name="Plant" />
-    <RootPropertyPathName Name="ZaaiBegin" />
     <RootPropertyPathName Name="DeletePlant" />
     <RootPropertyPathName Name="AddFavorites" />
     <RootPropertyPathName Name="SavePlant" />

@@ -238,6 +238,7 @@
     <None Include="Package.StoreAssociation.xml" />
     <Content Include="Assets\CatalogusIcons\DagenOogst.png" />
     <Content Include="Assets\CatalogusIcons\DagenVerplanten.png" />
+    <Content Include="Assets\CatalogusIcons\Kalender.png" />
     <Content Include="Assets\CatalogusIcons\MagBinnen.png" />
     <Content Include="Assets\CatalogusIcons\MagBuiten.png" />
     <Content Include="Assets\CatalogusIcons\PlantAfstand.png" />

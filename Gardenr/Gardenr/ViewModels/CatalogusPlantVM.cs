@@ -7,6 +7,7 @@ using Gardenr.Models;
 using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,13 +27,49 @@ namespace Gardenr.ViewModels
         }
 
 
+        private Plant _plant;
+        public Plant Plant {
+            get { return _plant; }
+            set{
+                _plant = value;
+                PlantBegin = DateToMonth(value.PlantBegin);
+                PlantLengte = DateToMonth(value.PlantEinde) - PlantBegin;
+                PlantBegin++;
+                ZaaiBegin = DateToMonth(value.ZaaiBegin);
+                ZaaiLengte = DateToMonth(value.ZaaiEinde) - ZaaiBegin;
+                ZaaiBegin++;
+                OogstBegin = DateToMonth(value.OogstBegin);
+                OogstLengte = DateToMonth(value.OogstEinde) - OogstBegin;
+                OogstBegin++;
+            }
+        }
 
-        public Plant plant { get; set; }
+        public int DateToMonth(String datum)
+        {
+            //omdat ik te lui was om het telkes te typen wouter
+            try
+            {
+                return DateTime.ParseExact(datum,"dd/MM/yyyy",CultureInfo.InvariantCulture).Month;
+            }
+            catch(Exception e)
+            {
+                return 0;
+            }
+           
+        }
 
         public RelayCommand GoBack { get; set; }
         public RelayCommand AddFavorieten { get; set; }
         public RelayCommand AddGarden { get; set; }
         public RelayCommand MakeNotification { get; set; }
+
+
+        public int ZaaiBegin { get; set; }
+        public int ZaaiLengte { get; set; }
+        public int PlantBegin { get; set; }
+        public int PlantLengte { get; set; }
+        public int OogstBegin { get; set; }
+        public int OogstLengte { get; set; }
 
         public void GoBackM()
         {
@@ -47,7 +84,7 @@ namespace Gardenr.ViewModels
         {
             TuinObject t = new TuinObject();
             t.gebruikerID = App.Gebruiker.ID;
-            t.PlantenID = plant.ID;
+            t.PlantenID = Plant.ID;
             t.LaatstWater = "" + DateTime.Now;
             t.favoriet = false;
             t.extra = "";

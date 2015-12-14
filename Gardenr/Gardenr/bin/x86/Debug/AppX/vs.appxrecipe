@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-14T19:50:18.922</Modified>
+      <Modified>2015-12-14T22:34:33.101</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -32,15 +32,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\DagenOogst.png">
       <PackagePath>Assets\CatalogusIcons\DagenOogst.png</PackagePath>
-      <Modified>2015-12-13T15:43:26.000</Modified>
+      <Modified>2015-12-14T20:20:28.369</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\DagenVerplanten.png">
       <PackagePath>Assets\CatalogusIcons\DagenVerplanten.png</PackagePath>
-      <Modified>2015-12-13T15:43:16.000</Modified>
+      <Modified>2015-12-14T20:20:28.370</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\Kalender.png">
+      <PackagePath>Assets\CatalogusIcons\Kalender.png</PackagePath>
+      <Modified>2015-12-14T21:35:17.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\MagBinnen.png">
       <PackagePath>Assets\CatalogusIcons\MagBinnen.png</PackagePath>
-      <Modified>2015-12-13T15:42:53.000</Modified>
+      <Modified>2015-12-14T20:20:28.372</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\MagBuiten.png">
       <PackagePath>Assets\CatalogusIcons\MagBuiten.png</PackagePath>
@@ -48,7 +52,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\PlantAfstand.png">
       <PackagePath>Assets\CatalogusIcons\PlantAfstand.png</PackagePath>
-      <Modified>2015-12-13T15:42:21.000</Modified>
+      <Modified>2015-12-14T20:20:28.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\RijAfstand.png">
       <PackagePath>Assets\CatalogusIcons\RijAfstand.png</PackagePath>
@@ -56,7 +60,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\watering11.png">
       <PackagePath>Assets\CatalogusIcons\watering11.png</PackagePath>
-      <Modified>2015-12-10T21:48:06.000</Modified>
+      <Modified>2015-12-14T20:20:28.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\ZaaiDiepte.png">
       <PackagePath>Assets\CatalogusIcons\ZaaiDiepte.png</PackagePath>
@@ -118,7 +122,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\entrypoint\Gardenr.exe">
       <PackagePath>entrypoint\Gardenr.exe</PackagePath>
-      <Modified>2015-12-14T19:50:16.385</Modified>
+      <Modified>2015-12-14T22:34:30.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\es\Microsoft.Data.Edm.resources.dll">
       <PackagePath>es\Microsoft.Data.Edm.resources.dll</PackagePath>
@@ -218,11 +222,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
       <PackagePath>Gardenr.exe</PackagePath>
-      <Modified>2015-12-14T19:50:18.921</Modified>
+      <Modified>2015-12-14T22:34:33.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.xr.xml">
       <PackagePath>Gardenr.xr.xml</PackagePath>
-      <Modified>2015-12-14T19:48:17.818</Modified>
+      <Modified>2015-12-14T22:34:29.478</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\GardenrCommands.xml">
       <PackagePath>GardenrCommands.xml</PackagePath>
@@ -330,7 +334,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-14T19:50:17.137</Modified>
+      <Modified>2015-12-14T22:34:31.145</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ru\Microsoft.Data.Edm.resources.dll">
       <PackagePath>ru\Microsoft.Data.Edm.resources.dll</PackagePath>

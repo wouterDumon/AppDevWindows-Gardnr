@@ -27,6 +27,9 @@
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\DagenVerplanten.png">
       <PackagePath>Assets\CatalogusIcons\DagenVerplanten.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\Kalender.png">
+      <PackagePath>Assets\CatalogusIcons\Kalender.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\MagBinnen.png">
       <PackagePath>Assets\CatalogusIcons\MagBinnen.png</PackagePath>
     </AppxPackagedFile>

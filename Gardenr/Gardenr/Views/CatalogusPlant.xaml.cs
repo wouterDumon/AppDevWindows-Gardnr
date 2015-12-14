@@ -33,7 +33,7 @@ namespace Gardenr.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             CatalogusPlantVM a = this.DataContext as CatalogusPlantVM;
-            a.plant = e.Parameter as Plant;
+            a.Plant = e.Parameter as Plant;
         }
     }
 }

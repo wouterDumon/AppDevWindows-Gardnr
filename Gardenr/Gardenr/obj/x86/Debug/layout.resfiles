@@ -4,6 +4,7 @@ SQLitePCL.Ext.pri
 ApplicationInsights.config
 Assets\CatalogusIcons\DagenOogst.png
 Assets\CatalogusIcons\DagenVerplanten.png
+Assets\CatalogusIcons\Kalender.png
 Assets\CatalogusIcons\MagBinnen.png
 Assets\CatalogusIcons\MagBuiten.png
 Assets\CatalogusIcons\PlantAfstand.png
