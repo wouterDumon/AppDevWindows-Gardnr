@@ -77,7 +77,7 @@ namespace Gardenr.ViewModels
         private ITypeRepository repoType = SimpleIoc.Default.GetInstance<ITypeRepository>();
         private IAlarmRepository repoAlarm = SimpleIoc.Default.GetInstance<IAlarmRepository>();
 
-        public void SaveSettingsM()
+        public async void SaveSettingsM()
         {
             if (nieuwNotificatie)
             {
@@ -97,9 +97,19 @@ namespace Gardenr.ViewModels
             }
             else
             {
+             
+               
+                if(NotAlarm.ID == null)
+                {
+                    await repoAlarm.AddNewsItem(NotAlarm);
+                    BewNotificatie.AlarmID = NotAlarm.ID;
+                }
+                else
+                {
+                    repoAlarm.AdjustNewsItem(NotAlarm);
+                }
                 reponotif.AdjustNotificatie(BewNotificatie);
-                repoAlarm.AdjustNewsItem(NotAlarm);
-                GoToPageMessage message = new GoToPageMessage() { PageNumber = 6, SelectedNotificatie = BewNotificatie };
+                GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = BewNotificatie };
                 Messenger.Default.Send<GoToPageMessage>(message);
             }
 
@@ -149,6 +159,11 @@ namespace Gardenr.ViewModels
             else
             {
                 NotAlarm = await repoAlarm.GetAlarmBID(BewNotificatie.AlarmID);
+                if(NotAlarm == null)
+                {
+                    NotAlarm = new Alarm();
+                    
+                }
 
                 string[] temp= BewNotificatie.datum.Split('/');
             

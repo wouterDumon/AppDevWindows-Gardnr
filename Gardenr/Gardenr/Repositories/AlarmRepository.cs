@@ -119,10 +119,10 @@ namespace Gardenr.Repositories
            
             //await Table.UpdateAsync(nitem);
             DeleteItem(nitem);
-            AddNewsItem(nitem);
+            await AddNewsItem(nitem);
            
         }
-        public async void AddNewsItem(Alarm nitem)
+        public async Task AddNewsItem(Alarm nitem)
         {
             await InitLocalStoreAsync();
             await Table.InsertAsync(nitem);
