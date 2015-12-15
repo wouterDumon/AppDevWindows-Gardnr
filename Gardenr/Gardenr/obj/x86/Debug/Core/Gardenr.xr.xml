@@ -27,6 +27,7 @@
     <RootPropertyPathName Name="ZaaiBegin" />
     <RootPropertyPathName Name="ZaaiLengte" />
     <RootPropertyPathName Name="AddGarden" />
+    <RootPropertyPathName Name="plant" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="DagFoto" />
     <RootPropertyPathName Name="NaamFoto" />
@@ -194,6 +195,8 @@
       <RootProperty Name="Fill" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Shape">
       <RootProperty Name="Fill" />
