@@ -56,7 +56,12 @@ namespace Gardenr.ViewModels
             set { _notificatieTypes = value; OnPropertyChanged("NotificatieTypes"); }
         }
 
-     
+        private TypeC _selectedType;
+        public TypeC SelectedType
+        {
+            get { return _selectedType; }
+            set { _selectedType = value; OnPropertyChanged("SelectedType"); }
+        }
 
         private Notificaties _BewNotificatie;
         public Notificaties BewNotificatie
@@ -108,6 +113,7 @@ namespace Gardenr.ViewModels
                 {
                     repoAlarm.AdjustNewsItem(NotAlarm);
                 }
+                BewNotificatie.TypeID = SelectedType.ID;
                 reponotif.AdjustNotificatie(BewNotificatie);
                 GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = BewNotificatie };
                 Messenger.Default.Send<GoToPageMessage>(message);
@@ -170,9 +176,21 @@ namespace Gardenr.ViewModels
                 DateTime date = new DateTime(int.Parse(temp[2]), int.Parse(temp[1]), int.Parse(temp[0]));
                 Date = new DateTimeOffset(date);
                 nieuwNotificatie = false;
+
+                //fin type needed for dropdown list
+
+                foreach (var item in NotificatieTypes)
+                {
+                    if (item.ID == BewNotificatie.TypeID)
+                    {
+                        SelectedType = item;
+                    }
+                }
             }
            
-        }
+        } 
+           
+        
 
     }
 }

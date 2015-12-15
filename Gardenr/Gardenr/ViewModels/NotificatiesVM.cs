@@ -25,6 +25,17 @@ namespace Gardenr.ViewModels
            
         }
 
+        private Alarm _notAlarm;
+        public Alarm NotAlarm
+        {
+            get { return _notAlarm; }
+            set
+            {
+                _notAlarm = value;
+                OnPropertyChanged("NotAlarm");
+            }
+        }
+        private IAlarmRepository repoAlarm = SimpleIoc.Default.GetInstance<IAlarmRepository>();
 
         private TypeC _notificatieType;
         public TypeC NotificatieType
@@ -79,6 +90,7 @@ namespace Gardenr.ViewModels
             {
                 //IngesteldeNotificaties = await repoNotification.GetNotificaties();
                 NotificatieType = await repoType.GetType(IngesteldeNotificaties.TypeID);
+                NotAlarm = await repoAlarm.GetAlarmBID(IngesteldeNotificaties.AlarmID);
             }
             catch (Exception e) {
 
