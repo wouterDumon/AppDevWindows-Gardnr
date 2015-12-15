@@ -41,6 +41,7 @@ namespace Gardenr.ViewModels
                 OogstBegin = DateToMonth(value.OogstBegin);
                 OogstLengte = DateToMonth(value.OogstEinde) - OogstBegin;
                 OogstBegin++;
+                OnPropertyChanged("Plant");
             }
         }
 
