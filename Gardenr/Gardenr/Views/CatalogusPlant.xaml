@@ -75,7 +75,7 @@
 
 
         <!-- zaaikalender-->
-        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Width="330" Height="130">
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Width="330" >
             <Grid.RowDefinitions>
                
                  <RowDefinition Height="39"/>
