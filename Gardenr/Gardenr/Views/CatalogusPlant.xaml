@@ -64,47 +64,49 @@
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="6"></Rectangle>
         <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="6"/>
         <TextBlock Style="{StaticResource TextS}" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" FontSize="28" VerticalAlignment="Center" Text="{Binding plant.Naam}"></TextBlock>
-        <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right">
+        <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right">
             <CommandBar.SecondaryCommands>
                 <AppBarButton Command="{Binding AddGarden}" Label="Toevoegen aan tuin"/>
 
             </CommandBar.SecondaryCommands>
         </CommandBar>
-
+        <!---->
         <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding plant.FotoUrl}"  Grid.Row="1" Grid.ColumnSpan="6" Stretch="UniformToFill" ></Image>
 
 
         <!-- zaaikalender-->
-        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4">
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Width="330" Height="130">
             <Grid.RowDefinitions>
-                 <RowDefinition Height="38"/>
-                <RowDefinition Height="27"/>
-                <RowDefinition Height="27"/>
-                <RowDefinition Height="27"/>
+               
+                 <RowDefinition Height="39"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="88"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="19"/>
+                <ColumnDefinition Width="19"/>
+                <ColumnDefinition Width="19"/>
+                <ColumnDefinition Width="19"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Rectangle Fill="Red" Grid.Row="1" Grid.Column="{Binding ZaaiBegin}" Grid.ColumnSpan="{Binding ZaaiLengte}"></Rectangle>
             <Rectangle Fill="Yellow" Grid.Row="2" Grid.Column="{Binding PlantBegin}" Grid.ColumnSpan="{Binding PlantLengte }"></Rectangle>
             <Rectangle Fill="Green" Grid.Row="3" Grid.Column="{Binding OogstBegin}" Grid.ColumnSpan="{Binding OogstLengte}"></Rectangle>
-            <Image Source="/Assets/CatalogusIcons/Kalender.png" Grid.RowSpan="55" Grid.ColumnSpan="55"></Image>
+            <Image Source="/Assets/CatalogusIcons/Kalender.png" Grid.RowSpan="55" Grid.ColumnSpan="55" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,5,0"></Image>
         </Grid>
 
-        <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="ZaaiKalender" ></Button>
+        <!-- <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="ZaaiKalender" ></Button>-->
 
 
         <!--de catalogus plant informatie -->
