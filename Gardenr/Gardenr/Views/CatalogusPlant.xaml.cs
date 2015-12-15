@@ -35,5 +35,19 @@ namespace Gardenr.Views
             CatalogusPlantVM a = this.DataContext as CatalogusPlantVM;
             a.Plant = e.Parameter as Plant;
         }
+
+
+        private void TextBlock_Tapped_1(object sender, TappedRoutedEventArgs e)
+        {
+            CatalogusPlantVM a = this.DataContext as CatalogusPlantVM;
+            a.GoBack.Execute("iets");
+            
+        }
+
+        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            CatalogusPlantVM a = this.DataContext as CatalogusPlantVM;
+            a.GoBack.Execute("iets");
+        }
     }
 }

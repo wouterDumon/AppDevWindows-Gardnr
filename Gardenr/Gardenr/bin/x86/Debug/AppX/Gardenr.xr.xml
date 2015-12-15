@@ -26,7 +26,6 @@
     <RootPropertyPathName Name="PlantLengte" />
     <RootPropertyPathName Name="ZaaiBegin" />
     <RootPropertyPathName Name="ZaaiLengte" />
-    <RootPropertyPathName Name="plant" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="DagFoto" />
