@@ -26,6 +26,7 @@
                       ManipulationMode="TranslateX"
                       ManipulationCompleted="SplitViewPane_ManipulationCompleted"
                       Background="#329465">
+                    <StackPanel>
                     <ListView ItemsSource="{Binding Menu}"
                               SelectionChanged="Menu_SelectionChanged"
                               x:Name="sd1"
@@ -48,7 +49,8 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    <StackPanel VerticalAlignment="Bottom">
+                        <Rectangle Fill="DarkGray" Height="3" Margin="10" ></Rectangle>
+                        <StackPanel >
                     <ListView ItemsSource="{Binding Custom}"
                               SelectionChanged="ListView_SelectionChanged"
                                        x:Name="df"               >
@@ -72,7 +74,7 @@
                     </ListView>
                    
                     </StackPanel>
-
+                    </StackPanel>
                 </Grid>
             </SplitView.Pane>
             

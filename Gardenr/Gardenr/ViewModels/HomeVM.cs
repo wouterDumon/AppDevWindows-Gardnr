@@ -90,8 +90,8 @@ namespace Gardenr.ViewModels
 
         private INotificatiesRepository repoNotification = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
 
-        private ObservableCollection<Notificaties> _notificaties;
-        public ObservableCollection<Notificaties> Notificaties
+        private ObservableCollection<SpecNotificaties> _notificaties;
+        public ObservableCollection<SpecNotificaties> Notificaties
         {
             get
             {
@@ -103,8 +103,8 @@ namespace Gardenr.ViewModels
             }
         }
 
-        private Notificaties _selectedNotificatie;
-        public Notificaties SelectedNotificatie
+        private SpecNotificaties _selectedNotificatie;
+        public SpecNotificaties SelectedNotificatie
         {
             get { return _selectedNotificatie; }
             set { _selectedNotificatie = value; OnPropertyChanged("SelectedNotificatie"); }
@@ -120,6 +120,8 @@ namespace Gardenr.ViewModels
             set { _nieuwsItems = value; OnPropertyChanged("NieuwsItems"); }
         }
         private NieuwsItem _selectedNieuwsItem;
+        private ObservableCollection<SpecNotificaties> allenotif;
+
         public NieuwsItem SelectedNieuwsItem
         {
             get { return _selectedNieuwsItem; }
@@ -133,8 +135,17 @@ namespace Gardenr.ViewModels
 
 
             ClientSettings.SetApiKey("0dfd8f010d58f1038ed8c4392529f3e5");
+            Notificaties = new ObservableCollection<Models.SpecNotificaties>();
+            allenotif = await repoNotification.GetpecNotificaties();
+            foreach(SpecNotificaties not in allenotif)
+            {
+                if (not.n.GebruikerID == App.Gebruiker.ID) {
+                    Notificaties.Add(not);
+                    
+                }
 
-            Notificaties = await repoNotification.GetNotificaties();
+            }
+
             NieuwsItems = await repoNieuws.GetNewsItems();
    
           //  string a =ClientSettings.ApiKey;
@@ -149,7 +160,10 @@ namespace Gardenr.ViewModels
         public RelayCommand VieuwNotification { get; set; }
         public void VieuwNotificationM()
         {
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = SelectedNotificatie };
+            if (SelectedNotificatie == null) return;
+            Notificaties ddf = new Notificaties();
+            ddf = SelectedNotificatie.n;
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = ddf };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
         public RelayCommand VieuwNieuwsItem { get; set; }

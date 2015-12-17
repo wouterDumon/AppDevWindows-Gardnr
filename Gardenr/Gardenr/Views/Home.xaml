@@ -45,8 +45,8 @@
             <RowDefinition Height="170"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="20*"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
 
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}"></Rectangle>
@@ -71,11 +71,73 @@
 
 
 
-        <TextBlock Margin="10,0,0,0" Text="Notificatie's" FontSize="25" Grid.Row="2" Style="{StaticResource Text2}"></TextBlock>
+        <TextBlock Margin="15,0,0,0" Text="Notificatie's" FontSize="25" Grid.Row="2" Style="{StaticResource Text2}"></TextBlock>
         <TextBlock Grid.Row="2" HorizontalAlignment="Right" Text="+" Style="{StaticResource Text2}" FontSize="40" Margin="0,-10,0,0" Tapped="TextBlock_Tapped"></TextBlock>
+        <GridView  Margin="15,0,15,0"  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" >
+
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid  Background="Transparent" Width="150">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Source="{Binding  plantje.FotoUrl}"   Grid.Row="0" Margin="0 0 0 -65"></Image>
+                        <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7" Grid.RowSpan="2" Margin="0 0 0 0" ></Rectangle>
+
+                        <TextBlock    Style="{ThemeResource BodyTextBlockStyle}"  TextAlignment="Center"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding n.datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"></TextBlock>
+
+                        <TextBlock TextAlignment="Center" FontSize="12"  TextWrapping="Wrap"  Grid.Row="2" Margin="0 0 0 0" Foreground="White"   Text="{Binding n.Omschrijving}"></TextBlock>
+
+
+                    </Grid><!--
+
+                    <StackPanel Orientation="Vertical">
+                        <Ellipse x:Name="Ellipse" 
+                             Width ="140"
+                             Height="140"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
         
-        <ListBox ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollMode="Enabled"  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Padding="0,0,0,-10"  Margin="20,0,20,0">
-              <ListBox.ItemsPanel>
+                             Margin="4,4,4,4">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{Binding  plantje.FotoUrl}"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+
+                        <TextBlock x:Name="Plantnaam" 
+                               Margin="4,4,0,4"
+                               Text="{Binding n.datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}" 
+                             
+                               Style="{ThemeResource BodyTextBlockStyle}" 
+                               HorizontalAlignment="Center"/>
+
+
+                        <TextBlock x:Name="Position" 
+                               Text="{Binding n.Omschrijving}" 
+                               Margin="4,4,0,4"
+           
+                               Style="{ThemeResource BodyTextBlockStyle}"
+                               FontSize="12"
+                               Foreground="Gray"
+                               HorizontalAlignment="Center"/>
+                    </StackPanel>
+-->
+
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <!-- <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            -->
+        </GridView>
+      <!--  <ListBox ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollMode="Enabled"  VerticalAlignment="Stretch" Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" Padding="0,0,0,-10"  Margin="20,0,20,0">
+            <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
@@ -92,7 +154,7 @@
                         <Rectangle  Style="{StaticResource headerS}"></Rectangle>
                         <Rectangle Grid.Row="1" Grid.RowSpan="8"  Fill="LightGreen"></Rectangle>
                         <TextBlock Text="{Binding datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}" Grid.Row="1" TextAlignment="Center"/>
-                   
+
                         <TextBlock Text="{Binding Omschrijving}" Grid.Row="2" FontSize="10" TextWrapping="Wrap" HorizontalAlignment="Stretch" TextAlignment="Center" VerticalAlignment="Stretch" Margin="0,0,0,0"  Grid.RowSpan="2" />
                         <Rectangle Grid.Row="3" Grid.RowSpan="8"  Fill="LightGreen"></Rectangle>
                         <TextBlock Text=">" Grid.Row="3" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" />
@@ -107,12 +169,12 @@
         </Button>
         <Button Grid.Row="3" VerticalAlignment="Stretch" Width="20" Background="Transparent" HorizontalAlignment="Right" Foreground="Black"  Click="Button_Click_1" >
             <Image Width="20" Height="20" Margin="-10,0,-10,0"  Source="/Assets/Drawer/rechts.png" Stretch="UniformToFill" ></Image>
-        </Button>
-        <TextBlock Margin="10,0,0,0" Text="{Binding NaamFoto}" FontSize="25" Grid.Row="4" Style="{StaticResource Text2}">
+        </Button>-->
+     <!--   <TextBlock Margin="10,0,0,0" Text="{Binding NaamFoto}" FontSize="25" Grid.Row="4" Style="{StaticResource Text2}">
 
         </TextBlock>
         <Image     HorizontalAlignment="Center" VerticalAlignment="Center"  Source="{Binding DagFoto}" Stretch="UniformToFill"  Grid.Row="5" ></Image>
-       
+       -->
         <TextBlock Grid.Row="1" TextWrapping="Wrap" x:Name="LocationDisabledMessage"  Margin="10,10,10,10" FontStyle="Italic" Visibility="Collapsed">
                 <Run Text="Weer kan niet worden opgehaald zonder locatie toestemming. Gelieve te gaan naar " />
                 <Hyperlink NavigateUri="ms-settings:privacy-location">

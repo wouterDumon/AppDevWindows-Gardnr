@@ -26,6 +26,7 @@ namespace Gardenr.Views
         public Profiel()
         {
             this.InitializeComponent();
+ 
         }
 
         private void ListItems_Tapped(object sender, TappedRoutedEventArgs e)

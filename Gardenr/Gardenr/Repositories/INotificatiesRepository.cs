@@ -11,5 +11,6 @@ namespace Gardenr.Repositories
         void DeleteNotificatie(Notificaties nitem);
         Task<Notificaties> GetNotificatie(string nitem);
         Task<ObservableCollection<Notificaties>> GetNotificaties();
+        Task<ObservableCollection<SpecNotificaties>> GetpecNotificaties();
     }
 }

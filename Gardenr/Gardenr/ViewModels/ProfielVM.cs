@@ -21,11 +21,20 @@ namespace Gardenr.ViewModels
         {
             StartupGetItems();
             GoToTuinObject = new RelayCommand(TuinObjectDetail);
+            GoToPlant = new RelayCommand(PlantDetail);
             AddTuinObject = new RelayCommand(AddTuinObjectM);
             GoHuiding = new RelayCommand(GoHuidigM);
             GoHistoriek = new RelayCommand(GoHistoriekM);
             GoFavoriet = new RelayCommand(GoFavorietM);
+            goadd = new RelayCommand(goaddM);
         }
+
+        public void goaddM()
+        {
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 1 };
+            Messenger.Default.Send<GoToPageMessage>(message);
+        }
+
         public ITuinRepository repoTuin = SimpleIoc.Default.GetInstance<ITuinRepository>();
 
      
@@ -53,6 +62,8 @@ namespace Gardenr.ViewModels
         }
 
         private ObservableCollection<Tuin> _favorietenPlant;
+        public RelayCommand goadd { get; set; }
+
         public ObservableCollection<Tuin> FavorietenPlant
         {
             get { return _favorietenPlant; }
@@ -64,13 +75,24 @@ namespace Gardenr.ViewModels
         public RelayCommand GoToTuinObject { get; set; }
         public void TuinObjectDetail()
         {//pag 7
+            if (SelectedPlant == null) return;
             GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = SelectedPlant };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 
+        public RelayCommand GoToPlant { get; set; }
+        public void PlantDetail()
+        {//pag 2
+            if (SelectedPlant == null) return;
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 2, SelectedPlant = SelectedPlant.Plant };
+            Messenger.Default.Send<GoToPageMessage>(message);
+        }
+
+
         public RelayCommand GoHuiding { get; set; }
         public void GoHuidigM()
         {
+
             GoToPageMessage message = new GoToPageMessage() { PageNumber = 10};
             Messenger.Default.Send<GoToPageMessage>(message);
         }
@@ -118,7 +140,11 @@ namespace Gardenr.ViewModels
                 {
                     if(tplant.favoriet==true)
                     {
-                        FavorietenPlant.Add(tplant);
+                        if (FavorietenPlant.Contains(tplant)) { }
+                        else
+                        {
+                            FavorietenPlant.Add(tplant);
+                        }
                         //checken of in historiek of nietook
                     }
                     if (tplant.historiek == true) {

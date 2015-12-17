@@ -31,7 +31,7 @@ namespace Gardenr.Views
         private void ListItems_Tapped(object sender, TappedRoutedEventArgs e)
         {
             ProfielVM a = this.DataContext as ProfielVM;
-            a.GoToTuinObject.Execute("iets");
+            a.GoToPlant.Execute("iets");
         }
     }
 }

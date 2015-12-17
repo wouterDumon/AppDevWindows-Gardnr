@@ -15,6 +15,8 @@ namespace Gardenr.Repositories
     {
         private IMobileServiceSyncTable<Notificaties> Table =
                 App.MobileService.GetSyncTable<Notificaties>(); // offline sync
+        private IMobileServiceSyncTable<Plant> Table2 =
+              App.MobileService.GetSyncTable<Plant>(); // offline sync
         private async Task InitLocalStoreAsync()
         {
             if (!App.MobileService.SyncContext.IsInitialized)
@@ -86,6 +88,81 @@ namespace Gardenr.Repositories
             }
         }
 
+
+        private async Task InitLocalStoreAsync2()
+        {
+            if (!App.MobileService.SyncContext.IsInitialized)
+            {
+
+                await App.MobileService.SyncContext.InitializeAsync(App.store);
+            }
+
+
+
+            await SyncAsyn2c();
+        }
+
+        private async Task SyncAsyn2c()
+        {
+            String errorString = null;
+
+            try
+            {
+                await App.MobileService.SyncContext.PushAsync();
+                // first param is query ID, used for incremental sync
+                await Table.PullAsync("Notificaties", Table.CreateQuery());
+                await Table2.PullAsync("Plants", Table2.CreateQuery());
+            }
+
+            catch (MobileServicePushFailedException ex)
+            {
+                errorString = "Push failed because of sync errors. " +
+                              "You may be offine.\nMessage: " +
+                              ex.Message + "\nPushResult.Status: " +
+                              ex.PushResult.Status.ToString();
+            }
+            catch (Exception ex)
+            {
+                errorString = "Pull failed: " + ex.Message +
+                  "\n\nIf you are still in an offline scenario, " +
+                  "you can try your Pull again when connected with " +
+                  "your Mobile Service.";
+            }
+
+            if (errorString != null)
+            {
+                MessageDialog d = new MessageDialog(errorString);
+                await d.ShowAsync();
+            }
+        }
+
+        private MobileServiceCollection<Plant, Plant> items2;
+        private async Task RefreshItemsspec()
+        {
+            MobileServiceInvalidOperationException exception = null;
+            try
+            {
+                // This code refreshes the entries in the list view by querying the TodoItems table.
+                // The query excludes completed TodoItems
+                items = await Table.ToCollectionAsync();
+                items2 = await Table2.ToCollectionAsync();
+            }
+            catch (MobileServiceInvalidOperationException e)
+            {
+                exception = e;
+            }
+
+            if (exception != null)
+            {
+                await new MessageDialog(exception.Message, "Error loading items").ShowAsync();
+            }
+            else
+            {
+                //    ListItems.ItemsSource = items;
+                //  this.ButtonSave.IsEnabled = true;
+            }
+        }
+
         public async Task<ObservableCollection<Notificaties>> GetNotificaties()
         {
             await InitLocalStoreAsync();
@@ -132,6 +209,28 @@ namespace Gardenr.Repositories
             await Table.DeleteAsync(nitem);
             await SyncAsync();
             await RefreshItems();
+        }
+
+        public async Task<ObservableCollection<SpecNotificaties>> GetpecNotificaties()
+        {
+            await InitLocalStoreAsync2();
+            await RefreshItemsspec();
+            ObservableCollection<SpecNotificaties> ni = new ObservableCollection<SpecNotificaties>();
+
+            foreach (Notificaties nieuws in items)
+            {
+                SpecNotificaties df = new SpecNotificaties();
+                df.n = nieuws;
+                foreach (Plant pl in items2) {
+                    if (pl.ID == nieuws.PlantID) {
+
+                        df.plantje = pl;
+                    }
+                }
+
+                ni.Add(df);
+            }
+            return ni;
         }
     }
 }
