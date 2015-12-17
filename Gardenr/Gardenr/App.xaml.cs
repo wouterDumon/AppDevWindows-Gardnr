@@ -29,7 +29,7 @@ namespace Gardenr
         internal static Gebruiker Gebruiker = null;
         internal static string BACKEND_ENDPOINT = "http://notifgardenr.azurewebsites.net/";
         public static bool isAuthenticated = false;
-        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore17.db");
+        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore18.db");
         internal static Frame frame;
            
 
@@ -73,8 +73,16 @@ namespace Gardenr
 
         private async void InstallVoiceCommands()
         {
-            var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///GardenrCommands.xml"));
-            await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(storageFile);
+            try
+            {
+                var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///GardenrCommands.xml"));
+                await Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(storageFile);
+            }
+            catch(Exception e)
+            {
+              
+            }
+           
         }
 
         /// <summary>

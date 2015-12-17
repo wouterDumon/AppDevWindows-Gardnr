@@ -32,7 +32,7 @@ namespace Gardenr.Views
             NotificatiesBewerkenVM a = this.DataContext as NotificatiesBewerkenVM;
             a.BewNotificatie = e.Parameter as Gardenr.Models.Notificaties;
             a.GegevenTuinObject = e.Parameter as Gardenr.Models.Tuin;
-            
+            a.OnMessageGet();
         }
 
         private void slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
