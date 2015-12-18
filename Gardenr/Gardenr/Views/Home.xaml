@@ -98,7 +98,8 @@
                         <TextBlock TextAlignment="Center" FontSize="12"  TextWrapping="Wrap"  Grid.Row="2" Margin="0 0 0 0" Foreground="White"   Text="{Binding n.Omschrijving}"></TextBlock>
 
 
-                    </Grid><!--
+                    </Grid>
+                    <!--
 
                     <StackPanel Orientation="Vertical">
                         <Ellipse x:Name="Ellipse" 

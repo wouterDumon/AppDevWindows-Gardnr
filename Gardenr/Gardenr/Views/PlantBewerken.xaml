@@ -86,26 +86,30 @@
   Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  Grid.Row="3" Grid.Column="2" Margin="0,60,0,0"/>
 
         <TextBlock Style="{StaticResource Text2}" Text="Notificaties" FontSize="20" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding TeBewerkenTuin.Notificaties, Mode=OneWay}" Grid.Row="5" Grid.ColumnSpan="2"  Grid.Column="1" Tapped="ListItems_Tapped" >
-            <ListView.ItemTemplate>
+     
+        <GridView  Grid.Column="1" HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding TeBewerkenTuin.Notificaties, Mode=OneWay}" Grid.Row="5" Grid.ColumnSpan="2" Tapped="ListItems_Tapped" >
+            <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Grid >
+                    <Grid  Background="Transparent" Height="150" Width="150">
+
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="15"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="30"/>
                         </Grid.RowDefinitions>
-                        <Image Grid.Row="0"/>
-                        <TextBlock Text="tijd" Grid.Row="1"/>
-                        <TextBlock Text="Titel" Grid.Row="2"/>
-                        <TextBlock Text=">" FontSize="20" TextAlignment="Center" Grid.Row="3"/>
+
+                       <!-- <Image Source="{Binding  plantje.FotoUrl}"   Grid.Row="0" Margin="0 0 0 -65"></Image>-->
+                        <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7" Grid.RowSpan="2" Margin="0 0 0 0" ></Rectangle>
+
+                        <TextBlock    Style="{ThemeResource BodyTextBlockStyle}"  TextAlignment="Center"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"></TextBlock>
+
+                        <TextBlock TextAlignment="Center" FontSize="12"  TextWrapping="Wrap"  Grid.Row="2" Margin="0 0 0 0" Foreground="White"   Text="{Binding Omschrijving}"></TextBlock>
+
+
                     </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-       
+            </GridView.ItemTemplate>
+        </GridView>
 
         <TextBlock Style="{StaticResource Text2}" Text="MemoBlock" FontSize="20" Grid.Row="6"  Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
         <TextBox Grid.Row="7" Grid.ColumnSpan="2" Text="{Binding TeBewerkenTuin.extra, Mode=TwoWay}"  Grid.Column="1"/>
