@@ -37,6 +37,7 @@ namespace Gardenr.Views
                 Current = this;
                 mijnhamburger = HamburgerButton;
                 SetupNotificationsHub();
+                setuptitle();
             };
            
         }
