@@ -7,6 +7,7 @@ UserClass\Profiel_Favorieten.xbf
 UserClass\Profiel_Historiek.xbf
 UserClass\Profiel_Huidig.xbf
 UserClass\Profiel_Info_plant.xbf
+Views\AppShell.xbf
 Views\Catalogus.xbf
 Views\CatalogusPlant.xbf
 Views\Contact.xbf

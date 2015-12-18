@@ -43,6 +43,7 @@ namespace Gardenr
      "DMHwnJmHwPivFxaTWjDNXjzAxykHpq92"
         );
         private static LaunchActivatedEventArgs globale;
+        private static AppShell shell;
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -98,52 +99,52 @@ namespace Gardenr
             Frame rootFrame = Window.Current.Content as Frame;
             if(message.PageNumber == 1) // catalogus pagina
             {
-                frame.Navigate(typeof(Catalogus));
+                shell.AppFrame.Navigate(typeof(Catalogus));
             }
             else if (message.PageNumber == 2) // catalogus plant pagina
             {
-                frame.Navigate(typeof(CatalogusPlant),message.SelectedPlant);
+                shell.AppFrame.Navigate(typeof(CatalogusPlant),message.SelectedPlant);
   
             }
             else if(message.PageNumber == 3) // contact pagina
             {
-                frame.Navigate(typeof(Contact));
+                shell.AppFrame.Navigate(typeof(Contact));
             }
             else if(message.PageNumber == 4) // instellingen pagina
             {
-                frame.Navigate(typeof(Views.Instellingen));
+                shell.AppFrame.Navigate(typeof(Views.Instellingen));
             }
             else if (message.PageNumber == 5) //Notificaties pagina
             {
-                frame.Navigate(typeof(Views.Notificaties), message.Notificatie);
+                shell.AppFrame.Navigate(typeof(Views.Notificaties), message.Notificatie);
             }
             else if(message.PageNumber == 6) // Notificaties bewerken pagina
             {
-                frame.Navigate(typeof(NotificatiesBewerken), message.Notificatie);
+                shell.AppFrame.Navigate(typeof(NotificatiesBewerken), message.Notificatie);
             }
             else if (message.PageNumber == 7) // Plant bewerken pagina
             {
-                frame.Navigate(typeof(PlantBewerken),message.SelectedTuinPlant);
+                shell.AppFrame.Navigate(typeof(PlantBewerken),message.SelectedTuinPlant);
             }
             else if(message.PageNumber == 8) // Profiel historiek pagina
             {
-                frame.Navigate(typeof(Profiel_Historiek));
+                shell.AppFrame.Navigate(typeof(Profiel_Historiek));
             }
             else if (message.PageNumber == 9) // profiel favorieten pagina
             {
-                frame.Navigate(typeof(Profiel_Favorieten));
+                shell.AppFrame.Navigate(typeof(Profiel_Favorieten));
             }
             else if(message.PageNumber == 10) // profiel plantinfo pagina
             {
-                frame.Navigate(typeof(Profiel));
+                shell.AppFrame.Navigate(typeof(Profiel));
             }
             else if(message.PageNumber == 11)//home page
             {
-                rootFrame.Navigate(typeof(Shell));
+                //rootFrame.Navigate(typeof(Shell));
             }
             else if (message.PageNumber == 12)//home page
             {
-                frame.Navigate(typeof(Home));
+                shell.AppFrame.Navigate(typeof(Home));
             }
             /*if (message.PageNumber == 1)
             {
@@ -176,42 +177,109 @@ namespace Gardenr
             InstallVoiceCommands();
         }
 
-        public static void dsdo(){
-            
-                     Frame rootFrame = Window.Current.Content as Frame;
+        public static void dfo() {
+
+            AppShell shell = Window.Current.Content as AppShell;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
-            if (rootFrame == null)
+            if (shell == null)
             {
-                // Create a Frame to act as the navigation context and navigate to the first page
-                rootFrame = new Frame();
+                // Create a AppShell to act as the navigation context and navigate to the first page
+                shell = new AppShell();
 
-        rootFrame.NavigationFailed += OnNavigationFailed;
+                // Set the default language
+                shell.Language = Windows.Globalization.ApplicationLanguages.Languages[0];
+
+                shell.AppFrame.NavigationFailed += OnNavigationFailed;
 
                 if (globale.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application
                 }
-
-              
-
-                // Place the frame in the current Window
-                Window.Current.Content = rootFrame;
             }
 
-            if (rootFrame.Content == null)
+            // Place our app shell in the current Window
+            Window.Current.Content = shell;
+
+            if (shell.AppFrame.Content == null)
             {
-                // When the navigation stack isn't restored navigate to the first page,
-                // configuring the new page by passing required information as a navigation
-                // parameter
-                rootFrame.Navigate(typeof(Login), globale.Arguments);
+                // When the navigation stack isn't restored, navigate to the first page
+                // suppressing the initial entrance animation.
+                shell.AppFrame.Navigate(typeof(Home), globale.Arguments, new Windows.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
             }
 
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
-            Messenger.Default.Send<GoToPageMessage>(message);
+            // Ensure the current window is active
+            Window.Current.Activate();
+
+
         }
 
+
+        public static void dsdo(){
+
+            shell = Window.Current.Content as AppShell;
+
+            // Do not repeat app initialization when the Window already has content,
+            // just ensure that the window is active
+            if (shell == null)
+            {
+                // Create a AppShell to act as the navigation context and navigate to the first page
+                shell = new AppShell();
+
+                // Set the default language
+                shell.Language = Windows.Globalization.ApplicationLanguages.Languages[0];
+
+                shell.AppFrame.NavigationFailed += OnNavigationFailed;
+                shell.AppFrame.Navigated += OnNavigated;
+                if (globale.PreviousExecutionState == ApplicationExecutionState.Terminated)
+                {
+                    //TODO: Load state from previously suspended application
+                }
+            }
+
+            // Place our app shell in the current Window
+            Window.Current.Content = shell;
+
+            if (shell.AppFrame.Content == null)
+            {
+                // When the navigation stack isn't restored, navigate to the first page
+                // suppressing the initial entrance animation.
+                shell.AppFrame.Navigate(typeof(Home), globale.Arguments, new Windows.UI.Xaml.Media.Animation.SuppressNavigationTransitionInfo());
+            }
+
+            // Register a handler for BackRequested events and set the
+            // visibility of the Back button
+            SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                 shell.AppFrame.CanGoBack ?
+                AppViewBackButtonVisibility.Visible :
+                AppViewBackButtonVisibility.Collapsed;
+
+            // Ensure the current window is active
+            Window.Current.Activate();
+           // GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
+         //   Messenger.Default.Send<GoToPageMessage>(message);
+        }
+        private static void OnNavigated(object sender, NavigationEventArgs e)
+        {
+            // Each time a navigation event occurs, update the Back button's visibility
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
+                ((Frame)sender).CanGoBack ?
+                AppViewBackButtonVisibility.Visible :
+                AppViewBackButtonVisibility.Collapsed;
+        }
+        private static void OnBackRequested(object sender, BackRequestedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            if (shell.AppFrame.CanGoBack)
+            {
+                e.Handled = true;
+                shell.AppFrame.GoBack();
+            }
+        }
         protected override void OnActivated(IActivatedEventArgs args)
         {
             // Windows Phone 8.1 requires you to handle the respose from the WebAuthenticationBroker.

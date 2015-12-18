@@ -185,6 +185,9 @@
     <Compile Include="ViewModels\ProfielVM.cs" />
     <Compile Include="ViewModels\SplitViewVM.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\AppShell.xaml.cs">
+      <DependentUpon>AppShell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Catalogus.xaml.cs">
       <DependentUpon>Catalogus.xaml</DependentUpon>
     </Compile>
@@ -206,6 +209,7 @@
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\NavMenuItem.cs" />
     <Compile Include="Views\Notificaties.xaml.cs">
       <DependentUpon>Notificaties.xaml</DependentUpon>
     </Compile>
@@ -300,6 +304,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserClass\Profiel_Info_plant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppShell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
