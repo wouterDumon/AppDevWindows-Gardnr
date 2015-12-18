@@ -6,6 +6,7 @@ using Microsoft.WindowsAzure.Messaging;
 using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using System;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Media.SpeechRecognition;
@@ -41,6 +42,8 @@ namespace Gardenr
            "https://gardenr2.azure-mobile.net/",
      "DMHwnJmHwPivFxaTWjDNXjzAxykHpq92"
         );
+        private static LaunchActivatedEventArgs globale;
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -156,8 +159,26 @@ namespace Gardenr
                 this.DebugSettings.EnableFrameRateCounter = false;
             }
 #endif
+            globale = e;
+
             Messenger.Default.Register<GoToPageMessage>(this, NavigateToPage);
-            Frame rootFrame = Window.Current.Content as Frame;
+   
+
+            if (e.PreviousExecutionState != ApplicationExecutionState.Running)
+            {
+                bool loadState = (e.PreviousExecutionState == ApplicationExecutionState.Terminated);
+                ExtendedSplash extendedSplash = new ExtendedSplash(e.SplashScreen, loadState);
+                Window.Current.Content = extendedSplash;
+
+            }
+            // Ensure the current window is active
+            Window.Current.Activate();
+            InstallVoiceCommands();
+        }
+
+        public static void dsdo(){
+            
+                     Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -166,12 +187,14 @@ namespace Gardenr
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
 
-                rootFrame.NavigationFailed += OnNavigationFailed;
+        rootFrame.NavigationFailed += OnNavigationFailed;
 
-                if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+                if (globale.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application
                 }
+
+              
 
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
@@ -182,12 +205,13 @@ namespace Gardenr
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(Login), e.Arguments);
+                rootFrame.Navigate(typeof(Login), globale.Arguments);
             }
-            // Ensure the current window is active
-            Window.Current.Activate();
-            InstallVoiceCommands();
+
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
+
         protected override void OnActivated(IActivatedEventArgs args)
         {
             // Windows Phone 8.1 requires you to handle the respose from the WebAuthenticationBroker.
@@ -241,7 +265,7 @@ namespace Gardenr
         /// </summary>
         /// <param name="sender">The Frame which failed navigation</param>
         /// <param name="e">Details about the navigation failure</param>
-        void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
+        static void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }

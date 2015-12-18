@@ -8,37 +8,6 @@
     mc:Ignorable="d"
     xmlns:vm="using:Gardenr.ViewModels"
   >
-    <Page.DataContext>
-        <vm:LoginVM></vm:LoginVM>
-    </Page.DataContext>
 
-    <Page.Resources>
-        <Style x:Key="header" TargetType="Rectangle">
-            <Setter Property="Fill" Value="#329465">
-               
-            </Setter>
-        </Style>
-        <Style x:Key="Text" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="#FFFFFF"/>
-        </Style>
-
-        <Style x:Key="BtnText" TargetType="Button">
-            <Setter Property="Foreground" Value="#FFFFFF"/>
-            <Setter Property="FontSize" Value="30"/>
-        </Style>
-    </Page.Resources>
-
-
-    <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="583*"/>
-        </Grid.RowDefinitions>
-        <Rectangle Style="{StaticResource header}" Grid.Row="0" Grid.RowSpan="2"></Rectangle>
-        
-        <TextBlock x:Name="txta" Style="{StaticResource Text}" HorizontalAlignment="Center" FontSize="35"  TextWrapping="Wrap" Text="Welkom bij Gardenr!" VerticalAlignment="Top" Grid.Row="1" Margin="21,170,21,0"/>
-        
-        <TextBlock Text="Inloggen" Style="{StaticResource Text}" HorizontalAlignment="Center" FontSize="35"  Grid.Row="1" Margin="112,475,111,128"></TextBlock>
-        <Button Grid.Column="0" Style="{StaticResource BtnText}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"  Command="{Binding Testing}" x:Name="btnlogin" Width="auto" Height="auto"/>
-    </Grid>
+    <Grid></Grid>
 </Page>

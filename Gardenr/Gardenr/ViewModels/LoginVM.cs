@@ -31,6 +31,12 @@ namespace Gardenr.ViewModels
         private IInstellingenRepository repoInstellingen = SimpleIoc.Default.GetInstance<IInstellingenRepository>();
         private string AppId = Constants.FacebookAppId;
         private const string ExtendedPermissions = "public_profile";
+
+        internal void checkdevice()
+        {
+            throw new NotImplementedException();
+        }
+
         private async Task<string> Facebook()
         {
             try
@@ -174,9 +180,9 @@ Windows.Storage.CreationCollisionOption.OpenIfExists);
                     Gebruiker gebruiker = await repoGebruiker.GetGebruiker(App.FacebookId);
                     App.Gebruiker = gebruiker;
                     App.Fotourl = mijnarray[2];
-
-                    GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
-                    Messenger.Default.Send<GoToPageMessage>(message);
+                    App.dsdo();
+                    //GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
+                    //Messenger.Default.Send<GoToPageMessage>(message);
 
                 }
             }
@@ -260,9 +266,8 @@ Windows.Storage.ApplicationData.Current.LocalFolder;
 
 
                     await Windows.Storage.FileIO.WriteTextAsync(sampleFile, App.isAuthenticated +";"+App.FacebookId+";"+App.Fotourl);
-
-                    GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
-                    Messenger.Default.Send<GoToPageMessage>(message);
+                    App.dsdo();
+                    
                 }
                 catch (Exception)
                 {

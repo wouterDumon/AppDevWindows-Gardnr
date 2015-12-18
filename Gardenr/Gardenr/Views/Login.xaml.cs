@@ -29,17 +29,11 @@ namespace Gardenr.Views
         {
             this.InitializeComponent();
             setuptitle();
-            setupbutton();
+         
            
         }
 
-        private async  void setupbutton()
-        {
-            btnlogin.Visibility = Visibility.Collapsed;
-            LoginVM lvm = (LoginVM)this.DataContext;
-          await lvm.watchlogin();
-            btnlogin.Visibility = Visibility.Visible;
-        }
+  
 
         public void setuptitle() {
             var view = ApplicationView.GetForCurrentView();

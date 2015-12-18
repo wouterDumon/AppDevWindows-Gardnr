@@ -106,6 +106,8 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Style" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ManipulationMode" />
@@ -130,11 +132,10 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="FontSize" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="FontFamily" />
+      <RootProperty Name="Height" />
       <RootProperty Name="BorderThickness" />
       <RootEvent Name="Click" />
     </RootType>
@@ -167,6 +168,7 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="FontWeight" />
@@ -268,6 +270,22 @@
     </RootType>
     <RootType FullName="Gardenr.Views.CatalogusPlant" />
     <RootType FullName="Gardenr.Views.Contact" />
+    <RootType FullName="Gardenr.ViewModels.LoginVM" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
+      <RootProperty Name="IsActive" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Gardenr.Views.ExtendedSplash" />
     <RootType FullName="Gardenr.ViewModels.HomeVM" />
     <RootType FullName="Gardenr.Views.StringFormatConverter" />
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
@@ -290,11 +308,6 @@
       <RootEvent Name="Toggled" />
     </RootType>
     <RootType FullName="Gardenr.Views.Instellingen" />
-    <RootType FullName="Gardenr.ViewModels.LoginVM" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Control">
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="FontSize" />
-    </RootType>
     <RootType FullName="Gardenr.Views.Login" />
     <RootType FullName="Gardenr.ViewModels.NotificatiesVM" />
     <RootType FullName="Gardenr.Views.Notificaties" />
@@ -341,10 +354,6 @@
     </RootType>
     <RootType FullName="Gardenr.Views.PlantBewerken" />
     <RootType FullName="Gardenr.ViewModels.ProfielVM" />
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Children" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -402,12 +411,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="Margin" />
       <RootProperty Name="Child" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="IsActive" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition">
