@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Graphics.Display;
+using Windows.UI;
 using Windows.UI.Core;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -22,10 +24,33 @@ namespace Gardenr.Views
         private SplashScreen splash; // Variable to hold the splash screen object.
         private double ScaleFactor; //Variable to hold the device scale factor (use to determine phone screen resolution)
 
+        public void setuptitle()
+        {
+            var view = ApplicationView.GetForCurrentView();
+
+            view.TitleBar.BackgroundColor = Colors.DarkGreen;
+            view.TitleBar.ForegroundColor = Colors.White;
+
+            view.TitleBar.ButtonBackgroundColor = Colors.DarkGreen;
+            view.TitleBar.ButtonForegroundColor = Colors.White;
+
+            view.TitleBar.ButtonHoverBackgroundColor = Colors.Green;
+            view.TitleBar.ButtonHoverForegroundColor = Colors.White;
+
+            view.TitleBar.ButtonPressedBackgroundColor = Color.FromArgb(255, 0, 120, 0);
+            view.TitleBar.ButtonPressedForegroundColor = Colors.White;
+
+            view.TitleBar.ButtonInactiveBackgroundColor = Colors.DarkGray;
+            view.TitleBar.ButtonInactiveForegroundColor = Colors.Gray;
+
+            view.TitleBar.InactiveBackgroundColor = Colors.DarkGreen;
+            view.TitleBar.InactiveForegroundColor = Colors.Gray;
+        }
+
         public ExtendedSplash(SplashScreen splashscreen, bool loadState)
         {
             InitializeComponent();
-
+            setuptitle();
             LoginVM vm = this.DataContext as LoginVM;
             STARTUP(vm);
 
