@@ -167,8 +167,11 @@ namespace Gardenr.ViewModels
                 BewNotificatie.AlarmID = "1";
                 BewNotificatie.datum = "01/01/2015";
                 BewNotificatie.TypeID = "1";
-
+               
                 nieuwNotificatie = true;
+
+                string[] temp = BewNotificatie.datum.Split('/');
+                Date = new DateTime(int.Parse(temp[2]), int.Parse(temp[1]), int.Parse(temp[0]));
             }
             else
             {
