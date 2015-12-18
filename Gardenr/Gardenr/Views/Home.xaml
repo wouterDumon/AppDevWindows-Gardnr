@@ -82,7 +82,7 @@
 
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Grid  Background="Transparent" Width="150">
+                    <Grid  Background="Transparent" Height="150" Width="150">
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="1*"/>
