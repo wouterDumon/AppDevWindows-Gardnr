@@ -196,7 +196,7 @@ namespace Gardenr.Repositories
             await SyncAsync();
             await RefreshItems();
         }
-        public async void AddNotificatie(Notificaties nitem)
+        public async Task AddNotificatie(Notificaties nitem)
         {
             await InitLocalStoreAsync();
             await Table.InsertAsync(nitem);

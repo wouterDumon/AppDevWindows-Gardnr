@@ -6,7 +6,7 @@ namespace Gardenr.Repositories
 {
     interface INotificatiesRepository
     {
-        void AddNotificatie(Notificaties nitem);
+        Task AddNotificatie(Notificaties nitem);
         void AdjustNotificatie(Notificaties nitem);
         void DeleteNotificatie(Notificaties nitem);
         Task<Notificaties> GetNotificatie(string nitem);

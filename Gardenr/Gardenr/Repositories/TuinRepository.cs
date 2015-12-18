@@ -166,6 +166,7 @@ namespace Gardenr.Repositories
                     idstring += not.ID + ";";
                 }
                 temp.NotificationID = idstring;
+
             }
             else
             {
@@ -239,12 +240,17 @@ namespace Gardenr.Repositories
                     newT.extra = nieuws.extra;
                     newT.Plant = await repoPlant.GetPlantById(nieuws.PlantenID);
                     newT.plantDatum = nieuws.plantDatum;
+                    newT.Notificaties = new ObservableCollection<Notificaties>();
                     if (nieuws.NotificationID != null && nieuws.NotificationID!="")
                     {
                         var tempinstid = nieuws.NotificationID.Split(";".ToCharArray());
                         for (int i = 0; i < tempinstid.Length; i++)
                         {
-                            newT.Notificaties.Add(await repoInst.GetNotificatie(tempinstid[i]));
+                            if(tempinstid[i]!= "")
+                            {
+                                newT.Notificaties.Add(await repoInst.GetNotificatie(tempinstid[i]));
+                            }
+                            
                         }
                     }
                    

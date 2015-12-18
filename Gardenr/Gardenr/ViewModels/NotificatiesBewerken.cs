@@ -92,9 +92,14 @@ namespace Gardenr.ViewModels
 
                 if (GegevenTuinObject != null)
                 {
-                    BewNotificatie.PlantID = GegevenTuinObject.ID;
+                    BewNotificatie.PlantID = GegevenTuinObject.Plant.ID;
 
-                    if(GegevenTuinObject.Notificaties == null)
+                    await repoAlarm.AddNewsItem(NotAlarm);
+                    BewNotificatie.AlarmID = NotAlarm.ID;
+
+                    await reponotif.AddNotificatie(BewNotificatie);
+
+                    if (GegevenTuinObject.Notificaties == null)
                     {
                         GegevenTuinObject.Notificaties = new ObservableCollection<Notificaties>();
                         GegevenTuinObject.Notificaties.Add(BewNotificatie);
@@ -107,10 +112,7 @@ namespace Gardenr.ViewModels
                     
                     repoTuin.AdjustTO(GegevenTuinObject);
 
-                    await repoAlarm.AddNewsItem(NotAlarm);
-                    BewNotificatie.AlarmID = NotAlarm.ID;
-
-                    reponotif.AddNotificatie(BewNotificatie);
+                  
                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = GegevenTuinObject };
                     Messenger.Default.Send<GoToPageMessage>(message);
                 }
@@ -118,7 +120,7 @@ namespace Gardenr.ViewModels
                 {
                     await repoAlarm.AddNewsItem(NotAlarm);
                     BewNotificatie.AlarmID = NotAlarm.ID;
-                    reponotif.AddNotificatie(BewNotificatie);
+                    await reponotif.AddNotificatie(BewNotificatie);
                     GoToPageMessage message1 = new GoToPageMessage() { PageNumber = 12 };
                     Messenger.Default.Send<GoToPageMessage>(message1);
                 }
