@@ -32,8 +32,17 @@ namespace Gardenr.Views
         {
             NotificatiesBewerkenVM a = this.DataContext as NotificatiesBewerkenVM;
             NotificatieMessage temp = e.Parameter as Gardenr.Mesages.NotificatieMessage;
-            a.BewNotificatie = temp.SelectedNotificatie;
-            a.GegevenTuinObject = temp.SelectedTuinPlant;
+            if(temp != null)
+            {
+                a.BewNotificatie = temp.SelectedNotificatie;
+                a.GegevenTuinObject = temp.SelectedTuinPlant;
+            }
+            else
+            {
+                a.BewNotificatie = null;
+                a.GegevenTuinObject = null;
+            }
+        
             a.OnMessageGet();
         }
 
