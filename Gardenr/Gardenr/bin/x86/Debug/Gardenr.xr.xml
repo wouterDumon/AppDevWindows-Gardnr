@@ -115,6 +115,7 @@
       <RootProperty Name="DataContext" />
       <RootProperty Name="Height" />
       <RootEvent Name="ManipulationCompleted" />
+      <RootEvent Name="Tapped" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetRowSpan" />
