@@ -69,7 +69,8 @@ namespace Gardenr.ViewModels
         }
         public void BewerkNotificatieM()
         {
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6, SelectedNotificatie = IngesteldeNotificaties };
+            NotificatieMessage temp = new NotificatieMessage { SelectedNotificatie = IngesteldeNotificaties};
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6, Notificatie = temp };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
         private INotificatiesRepository reponotif = SimpleIoc.Default.GetInstance<INotificatiesRepository>();

@@ -1,4 +1,5 @@
-﻿using Gardenr.ViewModels;
+﻿using Gardenr.Mesages;
+using Gardenr.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -30,8 +31,9 @@ namespace Gardenr.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             NotificatiesBewerkenVM a = this.DataContext as NotificatiesBewerkenVM;
-            a.BewNotificatie = e.Parameter as Gardenr.Models.Notificaties;
-            a.GegevenTuinObject = e.Parameter as Gardenr.Models.Tuin;
+            NotificatieMessage temp = e.Parameter as Gardenr.Mesages.NotificatieMessage;
+            a.BewNotificatie = temp.SelectedNotificatie;
+            a.GegevenTuinObject = temp.SelectedTuinPlant;
             a.OnMessageGet();
         }
 

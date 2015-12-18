@@ -1,4 +1,5 @@
-﻿using Gardenr.Models;
+﻿using Gardenr.Mesages;
+using Gardenr.Models;
 using Gardenr.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,11 @@ namespace Gardenr.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             NotificatiesVM a = this.DataContext as NotificatiesVM;
-            a.IngesteldeNotificaties = e.Parameter as Gardenr.Models.Notificaties;
+            NotificatieMessage temp = e.Parameter as Gardenr.Mesages.NotificatieMessage;
+            // a.IngesteldeNotificaties = e.Parameter as Gardenr.Models.Notificaties;
+            a.IngesteldeNotificaties = temp.SelectedNotificatie;
+            
+            
             
         }
     }

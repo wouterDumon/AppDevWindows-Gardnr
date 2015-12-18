@@ -81,6 +81,7 @@ namespace Gardenr.ViewModels
         private INotificatiesRepository reponotif = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
         private ITypeRepository repoType = SimpleIoc.Default.GetInstance<ITypeRepository>();
         private IAlarmRepository repoAlarm = SimpleIoc.Default.GetInstance<IAlarmRepository>();
+        private ITuinRepository repoTuin = SimpleIoc.Default.GetInstance<ITuinRepository>();
 
         public async void SaveSettingsM()
         {
@@ -92,18 +93,36 @@ namespace Gardenr.ViewModels
                 if (GegevenTuinObject != null)
                 {
                     BewNotificatie.PlantID = GegevenTuinObject.ID;
+
+                    if(GegevenTuinObject.Notificaties == null)
+                    {
+                        GegevenTuinObject.Notificaties = new ObservableCollection<Notificaties>();
+                        GegevenTuinObject.Notificaties.Add(BewNotificatie);
+                    }
+                    else
+                    {
+                        GegevenTuinObject.Notificaties.Add(BewNotificatie);
+                    }
+
+                    
+                    repoTuin.AdjustTO(GegevenTuinObject);
+
                     await repoAlarm.AddNewsItem(NotAlarm);
                     BewNotificatie.AlarmID = NotAlarm.ID;
+
                     reponotif.AddNotificatie(BewNotificatie);
                     GoToPageMessage message = new GoToPageMessage() { PageNumber = 7, SelectedTuinPlant = GegevenTuinObject };
                     Messenger.Default.Send<GoToPageMessage>(message);
                 }
-
-                await repoAlarm.AddNewsItem(NotAlarm);
-                BewNotificatie.AlarmID = NotAlarm.ID;
-                reponotif.AddNotificatie(BewNotificatie);
-                GoToPageMessage message1 = new GoToPageMessage() { PageNumber = 12 };
-                Messenger.Default.Send<GoToPageMessage>(message1);
+                else
+                {
+                    await repoAlarm.AddNewsItem(NotAlarm);
+                    BewNotificatie.AlarmID = NotAlarm.ID;
+                    reponotif.AddNotificatie(BewNotificatie);
+                    GoToPageMessage message1 = new GoToPageMessage() { PageNumber = 12 };
+                    Messenger.Default.Send<GoToPageMessage>(message1);
+                }
+                
             }
             else
             {
@@ -121,7 +140,10 @@ namespace Gardenr.ViewModels
                 BewNotificatie.datum = Date.Day + "/" + Date.Month + "/" + Date.Year;
                 BewNotificatie.TypeID = SelectedType.ID;
                 reponotif.AdjustNotificatie(BewNotificatie);
-                GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = BewNotificatie };
+
+                NotificatieMessage temp = new NotificatieMessage() { SelectedNotificatie = BewNotificatie };
+
+                GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, Notificatie = temp };
                 Messenger.Default.Send<GoToPageMessage>(message);
             }
 

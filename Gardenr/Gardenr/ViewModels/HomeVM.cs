@@ -163,7 +163,9 @@ namespace Gardenr.ViewModels
             if (SelectedNotificatie == null) return;
             Notificaties ddf = new Notificaties();
             ddf = SelectedNotificatie.n;
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = ddf };
+
+            NotificatieMessage temp = new NotificatieMessage() { SelectedNotificatie = ddf };
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5,Notificatie =temp };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
         public RelayCommand VieuwNieuwsItem { get; set; }

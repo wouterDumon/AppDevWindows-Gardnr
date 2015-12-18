@@ -40,23 +40,28 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
             <ColumnDefinition Width="180"/>
-            <ColumnDefinition Width="40"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+      
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition Height="150"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="100"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="3"></Rectangle>
-        <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="3"/>
-        <TextBlock Style="{StaticResource TextS}"  Text="Plant bewerken"  FontSize="28" Margin="48 0 0 0" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
-
-        <Button Content="B" Margin="25,0,0,0" Grid.Column="0" Command="{Binding GoBack}"></Button>
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="5"></Rectangle>
+        <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="5"/>
+        <TextBlock Style="{StaticResource TextS}"  Text="Plant bewerken"  FontSize="28" Margin="48 0 0 0" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></TextBlock>
+        <TextBlock Style="{StaticResource TextS}" Grid.Column="1" Text="&lt;" Margin="20,0,0,0" FontSize="28" Tapped="TextBlock_Tapped"></TextBlock>
+        <!--Binding GoBack}"></Button>-->
            
      
 
@@ -66,21 +71,22 @@
                 <AppBarButton Command="{Binding SavePlant}" Label="Opslaan"/>
                 <AppBarButton Command="{Binding AddFavorites}" Label="Favoriet"/>
                 <AppBarButton Command="{Binding DeletePlant}" Label="Verwijderen"/>
+                <AppBarButton Command="{Binding AddNotification}" Label="Notificatie Toevoegen"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
 
-        <Image x:Name="image" Source="{ Binding TeBewerkenTuin.Plant.FotoUrl}" Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Top" Width="370"/>
+        <Image x:Name="image" Source="{ Binding TeBewerkenTuin.Plant.FotoUrl}" Grid.Row="1" Grid.ColumnSpan="4" VerticalAlignment="Top" Stretch="UniformToFill"/>
         
-        <TextBlock Text="Zaaidag: " Grid.Row="3" Margin="20,0,0,0"/>
+        <TextBlock Text="Zaaidag: " Grid.Row="3" Grid.Column="1"/>
         <TextBlock Text="{Binding TeBewerkenTuin.Plant.ZaaiBegin,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  Grid.Row="3" Grid.Column="2"/>
-        <TextBlock Text="OogstDatum: " Grid.Row="3" Margin="20,30,0,0"/>
+        <TextBlock Text="OogstDatum: " Grid.Row="3"  Grid.Column="1" Margin="0,30,0,0"/>
         <TextBlock Text="{Binding OogstDatum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  Grid.Row="3" Grid.Column="2" Margin="0,30,0,0"/>
-        <TextBlock Text="Laatst water gegeven: " Grid.Row="3" Margin="20,60,0,0" />
+        <TextBlock Text="Laatst water gegeven: "  Grid.Column="1" Grid.Row="3" Margin="0,60,0,0" />
         <TextBlock Text="{Binding TeBewerkenTuin.LaatstWater,
   Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  Grid.Row="3" Grid.Column="2" Margin="0,60,0,0"/>
-        
-        <TextBlock Text="Notificaties" FontSize="20" Grid.Row="4" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding TeBewerkenTuin.Notificaties, Mode=OneWay}" Grid.Row="4" Grid.ColumnSpan="3" Margin="20,35,90,0" Tapped="ListItems_Tapped" >
+
+        <TextBlock Style="{StaticResource Text2}" Text="Notificaties" FontSize="20" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
+        <ListView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" ItemsSource="{Binding TeBewerkenTuin.Notificaties, Mode=OneWay}" Grid.Row="5" Grid.ColumnSpan="2"  Grid.Column="1" Tapped="ListItems_Tapped" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid >
@@ -98,12 +104,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Grid.Row="4" Margin="63,40,20,0" Grid.Column="2" Tapped="Grid_Tapped" >
-            <TextBlock Text="Add" TextAlignment="Center"/>
-            <!--image van + idp-->
-            <TextBlock Text="+" FontSize="40" TextAlignment="Center" VerticalAlignment="Center"/>
-        </Grid>
-        <TextBlock Text="MemoBlock" FontSize="20" Grid.Row="5" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="5" Grid.ColumnSpan="3" Text="{Binding TeBewerkenTuin.extra, Mode=TwoWay}" Margin="10,30,10,30"/>
+
+       
+
+        <TextBlock Style="{StaticResource Text2}" Text="MemoBlock" FontSize="20" Grid.Row="6"  Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="7" Grid.ColumnSpan="2" Text="{Binding TeBewerkenTuin.extra, Mode=TwoWay}"  Grid.Column="1"/>
     </Grid>
 </Page>

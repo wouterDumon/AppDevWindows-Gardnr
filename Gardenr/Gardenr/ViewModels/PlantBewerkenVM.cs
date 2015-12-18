@@ -124,13 +124,16 @@ namespace Gardenr.ViewModels
             //eers tmoet plant opgeslaan worden
             //naar notificatiepagina gaan 
             //en plant meegeven al sparameter
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6 ,SelectedTuinPlant = TeBewerkenTuin };
+            NotificatieMessage temp = new NotificatieMessage() { SelectedTuinPlant = TeBewerkenTuin };
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 6 , Notificatie = temp };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
          public RelayCommand GoNotification { get; set; }
         public void GoNotificationM()
         {
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, SelectedNotificatie = SelectedNotificatie  };
+            NotificatieMessage temp = new NotificatieMessage() { SelectedTuinPlant = TeBewerkenTuin ,SelectedNotificatie = SelectedNotificatie};
+           
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 5, Notificatie = temp  };
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 

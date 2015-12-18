@@ -48,5 +48,11 @@ namespace Gardenr.Views
             PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
             a.AddNotification.Execute("iets");
         }
+
+        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
+            a.GoBack.Execute("lalaala");
+        }
     }
 }

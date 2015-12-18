@@ -112,11 +112,11 @@ namespace Gardenr
             }
             else if (message.PageNumber == 5) //Notificaties pagina
             {
-                frame.Navigate(typeof(Views.Notificaties), message.SelectedNotificatie);
+                frame.Navigate(typeof(Views.Notificaties), message.Notificatie);
             }
             else if(message.PageNumber == 6) // Notificaties bewerken pagina
             {
-                frame.Navigate(typeof(NotificatiesBewerken), message.SelectedNotificatie);
+                frame.Navigate(typeof(NotificatiesBewerken), message.Notificatie);
             }
             else if (message.PageNumber == 7) // Plant bewerken pagina
             {

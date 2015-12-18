@@ -107,6 +107,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mesages\GoToPageMessage.cs" />
+    <Compile Include="Mesages\NotificatieMessage.cs" />
     <Compile Include="Models\Alarm.cs" />
     <Compile Include="Models\Constants.cs" />
     <Compile Include="Models\DrawerInstellingen.cs" />

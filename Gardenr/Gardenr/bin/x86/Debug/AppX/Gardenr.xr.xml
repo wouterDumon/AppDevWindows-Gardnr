@@ -56,10 +56,10 @@
     <RootPropertyPathName Name="extra" />
     <RootPropertyPathName Name="LaatstWater" />
     <RootPropertyPathName Name="OogstDatum" />
+    <RootPropertyPathName Name="AddNotification" />
     <RootPropertyPathName Name="DeletePlant" />
     <RootPropertyPathName Name="AddFavorites" />
     <RootPropertyPathName Name="SavePlant" />
-    <RootPropertyPathName Name="GoBack" />
     <RootPropertyPathName Name="FavorietenPlant" />
     <RootPropertyPathName Name="GoHistoriek" />
     <RootPropertyPathName Name="GoHuiding" />
@@ -110,7 +110,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ManipulationMode" />
       <RootProperty Name="IsHitTestVisible" />
-      <RootEvent Name="Tapped" />
       <RootEvent Name="ManipulationCompleted" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
@@ -333,8 +332,8 @@
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="Tapped" />
       <RootEvent Name="SelectionChanged" />
