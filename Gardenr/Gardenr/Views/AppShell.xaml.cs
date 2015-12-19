@@ -38,6 +38,18 @@ namespace Gardenr.Views
                 mijnhamburger = HamburgerButton;
                 SetupNotificationsHub();
                 setuptitle();
+                //   if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.ViewManagement.StatusBar"))
+                //   { //do something 
+                try
+                {
+                    var statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
+                    statusBar.BackgroundColor = Windows.UI.Colors.DarkGreen;
+                    statusBar.BackgroundOpacity = 1;
+                }
+                catch (Exception e) {
+                    //DESKTOP
+
+                }
             };
            
         }
@@ -61,11 +73,11 @@ namespace Gardenr.Views
             view.TitleBar.ButtonPressedBackgroundColor = Color.FromArgb(255, 0, 120, 0);
             view.TitleBar.ButtonPressedForegroundColor = Colors.White;
 
-            view.TitleBar.ButtonInactiveBackgroundColor = Colors.DarkGray;
-            view.TitleBar.ButtonInactiveForegroundColor = Colors.Gray;
+            view.TitleBar.ButtonInactiveBackgroundColor = Colors.DarkGreen;
+            view.TitleBar.ButtonInactiveForegroundColor = Colors.Green;
 
             view.TitleBar.InactiveBackgroundColor = Colors.DarkGreen;
-            view.TitleBar.InactiveForegroundColor = Colors.Gray;
+            view.TitleBar.InactiveForegroundColor = Colors.Green;
         }
 
         private void Menu_SelectionChanged(object sender, SelectionChangedEventArgs e)

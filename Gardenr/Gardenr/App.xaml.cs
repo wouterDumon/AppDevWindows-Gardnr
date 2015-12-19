@@ -165,7 +165,12 @@ namespace Gardenr
             globale = e;
 
             Messenger.Default.Register<GoToPageMessage>(this, NavigateToPage);
-   
+            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.ViewManagement.StatusBar"))
+            { //do something 
+                var statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
+                statusBar.BackgroundColor = Windows.UI.Colors.DarkGreen;
+                statusBar.BackgroundOpacity = 1;
+            }
 
             if (e.PreviousExecutionState != ApplicationExecutionState.Running)
             {
@@ -267,7 +272,12 @@ namespace Gardenr
                  shell.AppFrame.CanGoBack ?
                 AppViewBackButtonVisibility.Visible :
                 AppViewBackButtonVisibility.Collapsed;
-
+            if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.ViewManagement.StatusBar"))
+            { //do something 
+                var statusBar = Windows.UI.ViewManagement.StatusBar.GetForCurrentView();
+                statusBar.BackgroundColor = Windows.UI.Colors.DarkGreen;
+                statusBar.BackgroundOpacity = 1;
+            }
             // Ensure the current window is active
             Window.Current.Activate();
            // GoToPageMessage message = new GoToPageMessage() { PageNumber = 11 };
