@@ -51,7 +51,7 @@ Windows.Storage.CreationCollisionOption.OpenIfExists);
                 {
                     string[] df = text.Split(';');
 
-                    WAARBENIK.Text = "Huidige ingestelde locatie: " + df[0] + "," + df[1];
+                    WAARBENIK.Text = "" + df[0] + "," + df[1];
                 }
             }
             catch (Exception e)
@@ -223,7 +223,7 @@ Windows.Storage.CreationCollisionOption.ReplaceExisting);
                 //string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
 
                 await Windows.Storage.FileIO.WriteTextAsync(sampleFile, s+";"+l+";"+lat + ";" + lon);
-                WAARBENIK.Text = "Huidige ingestelde locatie: " + s + "," + l;
+                WAARBENIK.Text = "" + s + "," + l;
 
             }
             catch (Exception e)

@@ -50,7 +50,7 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-                        <Rectangle Fill="DarkGray" Height="3" Margin="10" ></Rectangle>
+                        <Rectangle Fill="White" Height="1" Margin="10" ></Rectangle>
                         <StackPanel >
                             <ListView ItemsSource="{Binding Custom}"
                               SelectionChanged="ListView_SelectionChanged"
