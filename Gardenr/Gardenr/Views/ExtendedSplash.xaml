@@ -17,7 +17,7 @@
     </Grid.RowDefinitions>
 
     <Canvas Grid.Row="0" Grid.RowSpan="2">
-        <Image x:Name="extendedSplashImage" Source="/Assets/SplashScreen.scale-200.png"/>
+        <Image x:Name="extendedSplashImage" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Assets/SplashScreen.scale-200.png"/>
     </Canvas>
     <StackPanel x:Name="stack1" Grid.Row="1" HorizontalAlignment="Center">
         <TextBlock TextWrapping="Wrap" FontSize="22" Foreground="White" TextAlignment="Center" Padding="5" HorizontalAlignment="Center">

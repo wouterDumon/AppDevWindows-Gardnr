@@ -175,7 +175,14 @@ namespace Gardenr.ViewModels
         public async void Startup()
         {
             NotificatieTypes = await repoType.GetTypes();
-           
+            foreach (var item in NotificatieTypes)
+            {
+                if (item.ID == BewNotificatie.TypeID)
+                {
+                    SelectedType = item;
+                }
+            }
+
 
         }
         public async void OnMessageGet()
@@ -187,10 +194,16 @@ namespace Gardenr.ViewModels
                 
                 BewNotificatie = new Notificaties();
                 BewNotificatie.GebruikerID = App.Gebruiker.ID;
-                BewNotificatie.Omschrijving = "kkkkkk";
+                BewNotificatie.Omschrijving = "";
                 BewNotificatie.AlarmID = "1";
-                BewNotificatie.datum = "01/01/2015";
+                DateTime vandaag = DateTime.Now;
+                string datum = vandaag.Day + "/" + vandaag.Month + "/" + vandaag.Year;
+                BewNotificatie.datum = datum;
                 BewNotificatie.TypeID = "1";
+                //if (NotificatieTypes.Count() != 0) {
+                //    SelectedType = NotificatieTypes.ToList().First();
+
+                //}
                
                 nieuwNotificatie = true;
 

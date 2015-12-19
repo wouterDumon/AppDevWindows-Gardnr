@@ -54,7 +54,7 @@
 
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="4"></Rectangle>
 
-        <TextBlock Grid.Row="0" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="2" Grid.Column="1" Height="37" Margin="57,2,70,1" Width="203" >Notificatie detail</TextBlock>
+        <TextBlock Grid.Row="0" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="3" Grid.Column="1"  >Notificatie detail</TextBlock>
 
 
 
@@ -67,7 +67,7 @@
         <DatePicker  Date="{Binding Date, Mode=TwoWay}" VerticalAlignment="Stretch" Grid.Column="2"  FontSize="15" Grid.Row="1" HorizontalAlignment="Stretch" AllowDrop="True" Grid.ColumnSpan="1" Header="" Height="70" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
 
         <TextBlock  Grid.Column="1" Text="Notificatie type"  FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"/>
-        <ComboBox  SelectedItem="{Binding SelectedType, Mode=TwoWay}" Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Stretch" VerticalAlignment="Center" ItemsSource="{Binding NotificatieTypes}" DisplayMemberPath="Naam" Height="32"
+        <ComboBox  SelectedItem="{Binding SelectedType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Stretch" VerticalAlignment="Center" ItemsSource="{Binding NotificatieTypes}" DisplayMemberPath="Naam" Height="32"
                    ></ComboBox>
 
         <TextBlock  Grid.Column="1" Text="Herhalen periode" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
