@@ -76,7 +76,7 @@
         
 
         <TextBlock  Grid.Column="1" Text="Mededeling" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" Margin="0,15,0,0"></TextBlock>
-        <TextBlock  Grid.Column="2" Text="{Binding IngesteldeNotificaties.Omschrijving}" FontSize="20" Grid.Row="4" Margin="0,15,0,0" Style="{StaticResource Text2}" ></TextBlock>
+        <TextBlock TextWrapping="Wrap" Grid.Column="2" Text="{Binding IngesteldeNotificaties.Omschrijving}" FontSize="20" Grid.Row="4" Margin="0,15,0,0" Style="{StaticResource Text2}" ></TextBlock>
 
     </Grid>
 </Page>

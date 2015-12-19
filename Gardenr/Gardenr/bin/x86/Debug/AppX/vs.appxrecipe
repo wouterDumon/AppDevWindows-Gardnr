@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-19T18:55:20.495</Modified>
+      <Modified>2015-12-19T19:01:42.444</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +130,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\entrypoint\Gardenr.exe">
       <PackagePath>entrypoint\Gardenr.exe</PackagePath>
-      <Modified>2015-12-19T18:55:18.970</Modified>
+      <Modified>2015-12-19T19:01:40.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\es\Microsoft.Data.Edm.resources.dll">
       <PackagePath>es\Microsoft.Data.Edm.resources.dll</PackagePath>
@@ -230,11 +230,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
       <PackagePath>Gardenr.exe</PackagePath>
-      <Modified>2015-12-19T18:55:20.493</Modified>
+      <Modified>2015-12-19T19:01:42.444</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.xr.xml">
       <PackagePath>Gardenr.xr.xml</PackagePath>
-      <Modified>2015-12-19T18:53:40.128</Modified>
+      <Modified>2015-12-19T19:01:40.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\GardenrCommands.xml">
       <PackagePath>GardenrCommands.xml</PackagePath>
@@ -342,7 +342,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-19T18:55:19.535</Modified>
+      <Modified>2015-12-19T19:01:41.670</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ru\Microsoft.Data.Edm.resources.dll">
       <PackagePath>ru\Microsoft.Data.Edm.resources.dll</PackagePath>

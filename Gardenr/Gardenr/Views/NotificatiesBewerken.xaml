@@ -75,8 +75,8 @@
         <TextBlock Grid.Column="2" Text="{Binding ElementName=slider, Path=Value}" HorizontalAlignment="Right" Grid.Row="3" VerticalAlignment="Center" FontSize="20" Style="{StaticResource Text2}"></TextBlock>
  
         <TextBlock Grid.Column="1" Text="Mededeling" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" Margin="0,15,0,0"></TextBlock>
-        <TextBox  Grid.Column="2" Text="{Binding BewNotificatie.Omschrijving, Mode=TwoWay}" FontSize="23" Grid.Row="4" Margin="0,15,0,5" TextWrapping="Wrap"></TextBox>
-       
+        <TextBox  Grid.Column="2" Text="{Binding BewNotificatie.Omschrijving, Mode=TwoWay}" FontSize="23" Grid.Row="4" Margin="0,15,0,5" TextWrapping="Wrap" PlaceholderText="Omshrijving"/>
+
 
 
     </Grid>
