@@ -110,6 +110,7 @@ namespace Gardenr.Views
             {
                 extendedSplashImage.Height = splashImageRect.Height / ScaleFactor;
                 extendedSplashImage.Width = splashImageRect.Width / ScaleFactor;
+                extendedSplashImage.SetValue(Canvas.TopProperty, splashImageRect.Top-100);
             }
             else
             {
