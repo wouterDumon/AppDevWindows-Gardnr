@@ -181,12 +181,6 @@
         </TextBlock>
         <Image     HorizontalAlignment="Center" VerticalAlignment="Center"  Source="{Binding DagFoto}" Stretch="UniformToFill"  Grid.Row="5" ></Image>
        -->
-        <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" x:Name="LocationDisabledMessage"  Margin="10,10,10,10" FontStyle="Italic" Visibility="Collapsed">
-                <Run Text="Weer kan niet worden opgehaald zonder locatie toestemming. Gelieve te gaan naar " />
-                <Hyperlink NavigateUri="ms-settings:privacy-location">
-                    <Run Text="Settings" />
-                </Hyperlink>
-                <Run Text=" Om de permissies te wijzigen."/>
-        </TextBlock>
+       
     </Grid>
 </Page>

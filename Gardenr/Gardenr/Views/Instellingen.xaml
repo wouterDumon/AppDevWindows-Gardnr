@@ -63,8 +63,8 @@
             <RadioButton GroupName="push" Checked="RadioButton_Checked" FontSize="20" IsChecked="{Binding Aan, Mode=TwoWay}" Content="Aan" Grid.Column="0" Grid.Row="1" ></RadioButton>
             <RadioButton GroupName="push" Checked="RadioButton_Checked" FontSize="20"  Content="Uit" IsChecked="{Binding Uit, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" ></RadioButton>
             <TextBlock Text="Zet je lokatie" Grid.Row="2" Grid.RowSpan="2" FontSize="20"></TextBlock>
-            <TextBlock Text="Locatie:" FontSize="20" Grid.Row="3" Grid.ColumnSpan="2"></TextBlock>
-            <Button Background="Transparent" Content="Haal je locatie op" Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Stretch" Width="Auto" HorizontalAlignment="Stretch" ></Button>
+            <TextBlock Text="Locatie:" x:Name="WAARBENIK" FontSize="20" Grid.Row="3" Grid.ColumnSpan="2"></TextBlock>
+            <Button Background="Transparent" Click="Button_Click" Content="Haal je locatie op" Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Stretch" Width="Auto" HorizontalAlignment="Stretch" ></Button>
             <StackPanel
                 Visibility="Collapsed"
             Grid.Row="5"
@@ -74,7 +74,14 @@
                 <TextBlock Text="Bezig met ophalen" TextAlignment="Center"></TextBlock>
                 <ProgressRing IsActive="True" Width="100" Height="100"></ProgressRing>
             </StackPanel>
-            
+            <TextBlock Grid.Row="5" Grid.ColumnSpan="2" TextWrapping="Wrap" x:Name="LocationDisabledMessage"  Margin="10,10,10,10" FontStyle="Italic" Visibility="Collapsed">
+                <Run Text="Weer kan niet worden opgehaald zonder locatie toestemming. Gelieve te gaan naar " />
+                <Hyperlink NavigateUri="ms-settings:privacy-location">
+                    <Run Text="Settings" />
+                </Hyperlink>
+                <Run Text=" Om de permissies te wijzigen."/>
+            </TextBlock>
+
         </Grid>
         
         

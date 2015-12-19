@@ -171,9 +171,9 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="MaxWidth" />
@@ -328,13 +328,6 @@
     <RootType FullName="Gardenr.Views.ExtendedSplash" />
     <RootType FullName="Gardenr.ViewModels.HomeVM" />
     <RootType FullName="Gardenr.Views.StringFormatConverter" />
-    <RootType FullName="Windows.UI.Xaml.Documents.Run">
-      <RootProperty Name="Text" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Documents.Hyperlink">
-      <RootProperty Name="NavigateUri" />
-      <RootProperty Name="Inlines" />
-    </RootType>
     <RootType FullName="Gardenr.Views.Home" />
     <RootType FullName="Gardenr.ViewModels.InstellingenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
@@ -343,6 +336,13 @@
       <RootProperty Name="IsChecked" />
       <RootProperty Name="Content" />
       <RootEvent Name="Checked" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Hyperlink">
+      <RootProperty Name="NavigateUri" />
+      <RootProperty Name="Inlines" />
     </RootType>
     <RootType FullName="Gardenr.Views.Instellingen" />
     <RootType FullName="Gardenr.Views.Login" />
