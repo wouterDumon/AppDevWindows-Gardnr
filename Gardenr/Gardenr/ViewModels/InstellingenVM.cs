@@ -34,13 +34,15 @@ namespace Gardenr.ViewModels
         {
           UserSettings =   await repoInst.GetInst(App.Gebruiker.InstellingenID);
             
-            Talen = await repotaal.GetTalen();
-            foreach (Taal t in Talen) {
-                if (UserSettings.TaalID == t.ID) {
-                    Taale = t;
-                }
+            if (UserSettings.PushNotificaties == true)
+            {
+                Aan = true;
+                Uit = false;
             }
-         
+            else {
+                Aan = false;
+                Uit = true;
+            }         
 
         }
 
@@ -49,12 +51,19 @@ namespace Gardenr.ViewModels
         private IInstellingenRepository repoInst = SimpleIoc.Default.GetInstance<IInstellingenRepository>();
         private IGebruikerRepository repogebruiker = SimpleIoc.Default.GetInstance<IGebruikerRepository>();
         private ITaalRepository repotaal = SimpleIoc.Default.GetInstance<ITaalRepository>();
-        private ObservableCollection<Taal> _talen;
+        private Boolean _aan;
 
-        public ObservableCollection<Taal> Talen
+        public Boolean Aan
         {
-            get { return _talen; }
-            set { _talen = value; OnPropertyChanged("Talen"); }
+            get { return _aan; }
+            set { _aan = value; OnPropertyChanged("Aan"); }
+        }
+        private Boolean _uit;
+
+        public Boolean Uit
+        {
+            get { return _uit; }
+            set { _uit = value; OnPropertyChanged("Uit"); }
         }
 
 
@@ -80,17 +89,24 @@ namespace Gardenr.ViewModels
         public async void Settings()
         {
             iii++;
-            if (iii > 3) {
-                if (Taale != null)
-                {
+            if (iii > 1) {
+               
                     if (App.Gebruiker.InstellingenID == "1")
                     {
                         //STANDAARD INSTELLING MAAK NIEUWE
                         Instellingen Nieuw = new Instellingen();
                         
-                        Nieuw.Cortana = UserSettings.Cortana;
-                        Nieuw.PushNotificaties = UserSettings.PushNotificaties;
-                        Nieuw.TaalID = Taale.ID;
+                        Nieuw.Cortana = true;
+                        if (Aan == true)
+                        {
+                            Nieuw.PushNotificaties = true;
+                        }
+                        else {
+                            Nieuw.PushNotificaties = false;
+                        }
+
+                       
+                        Nieuw.TaalID = "1";
                     await repoInst.AddInst(Nieuw);
                         string nieuwid = Nieuw.ID;
                        Gebruiker n = App.Gebruiker;
@@ -102,12 +118,19 @@ namespace Gardenr.ViewModels
                     {
                         Instellingen Nieuw = new Instellingen();
                         Nieuw = UserSettings;
-                        Nieuw.TaalID = Taale.ID;
+                        if (Aan == true)
+                        {
+                            Nieuw.PushNotificaties = true;
+                        }
+                        else
+                        {
+                            Nieuw.PushNotificaties = false;
+                        }
                         repoInst.AdjustInst(Nieuw);
 
                     }
                 }
-            }
+            
         }
 
         

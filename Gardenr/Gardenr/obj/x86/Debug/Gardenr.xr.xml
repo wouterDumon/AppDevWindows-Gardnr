@@ -43,8 +43,8 @@
     <RootPropertyPathName Name="Weerlocatie" />
     <RootPropertyPathName Name="Weerstatus" />
     <RootPropertyPathName Name="Weertext" />
-    <RootPropertyPathName Name="UserSettings" />
-    <RootPropertyPathName Name="PushNotificaties" />
+    <RootPropertyPathName Name="Uit" />
+    <RootPropertyPathName Name="Aan" />
     <RootPropertyPathName Name="IngesteldeNotificaties" />
     <RootPropertyPathName Name="NotAlarm" />
     <RootPropertyPathName Name="herhalen" />
@@ -203,6 +203,7 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
@@ -336,15 +337,12 @@
     </RootType>
     <RootType FullName="Gardenr.Views.Home" />
     <RootType FullName="Gardenr.ViewModels.InstellingenVM" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="IsOn" />
-      <RootProperty Name="OnContent" />
-      <RootProperty Name="OffContent" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
-      <RootEvent Name="Toggled" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
+      <RootProperty Name="GroupName" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="IsChecked" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="Checked" />
     </RootType>
     <RootType FullName="Gardenr.Views.Instellingen" />
     <RootType FullName="Gardenr.Views.Login" />
