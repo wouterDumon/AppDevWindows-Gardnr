@@ -54,7 +54,9 @@
                         <StackPanel >
                             <ListView ItemsSource="{Binding Custom}"
                               SelectionChanged="ListView_SelectionChanged"
-                                       x:Name="df"               >
+                                       x:Name="df" 
+                                      Tapped="df_Tapped"
+                                      >
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>

@@ -72,7 +72,7 @@
                 x:Name="ophalen"
             >
                 <TextBlock Text="Bezig met ophalen" TextAlignment="Center"></TextBlock>
-                <ProgressRing IsActive="True" Width="100" Height="100"></ProgressRing>
+                <ProgressRing IsActive="True" Margin="0,10,0,0" Width="50" Height="50"></ProgressRing>
             </StackPanel>
             <TextBlock Grid.Row="5" Grid.ColumnSpan="2" TextWrapping="Wrap" x:Name="LocationDisabledMessage"  Margin="10,10,10,10" FontStyle="Italic" Visibility="Collapsed">
                 <Run Text="Weer kan niet worden opgehaald zonder locatie toestemming. Gelieve te gaan naar " />

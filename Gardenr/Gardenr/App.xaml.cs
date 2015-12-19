@@ -151,6 +151,8 @@ namespace Gardenr
                 rootFrame.Navigate(typeof(Page2));
             }*/
         }
+        private static LaunchActivatedEventArgs df;
+        private static Boolean bbb;
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
@@ -168,6 +170,8 @@ namespace Gardenr
             if (e.PreviousExecutionState != ApplicationExecutionState.Running)
             {
                 bool loadState = (e.PreviousExecutionState == ApplicationExecutionState.Terminated);
+                df = e;
+                bbb = loadState;
                 ExtendedSplash extendedSplash = new ExtendedSplash(e.SplashScreen, loadState);
                 Window.Current.Content = extendedSplash;
 
@@ -215,6 +219,13 @@ namespace Gardenr
 
         }
 
+        internal static void returntologin()
+        {
+            ExtendedSplash extendedSplash = new ExtendedSplash(df.SplashScreen, bbb);
+            Window.Current.Content = extendedSplash;
+            Window.Current.Activate();
+
+        }
 
         public static void dsdo(){
 

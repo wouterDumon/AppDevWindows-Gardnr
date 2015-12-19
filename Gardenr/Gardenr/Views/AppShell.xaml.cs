@@ -187,5 +187,30 @@ namespace Gardenr.Views
 
 
         public Frame AppFrame { get { return this.frame; } }
+        private Windows.Storage.StorageFolder storageFolder =
+Windows.Storage.ApplicationData.Current.LocalFolder;
+        private async void df_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            //LOGOUT :-)
+            try
+            {
+                Windows.Storage.StorageFile sampleFile = null;
+                sampleFile =
+                         sampleFile =
+await storageFolder.CreateFileAsync("islogin.txt",
+Windows.Storage.CreationCollisionOption.ReplaceExisting);
+                sampleFile =
+                sampleFile =
+await storageFolder.CreateFileAsync("weer.txt",
+Windows.Storage.CreationCollisionOption.ReplaceExisting);
+                App.returntologin();
+
+            }
+            catch (Exception error)
+            {
+
+
+            }
+        }
     }
 }
