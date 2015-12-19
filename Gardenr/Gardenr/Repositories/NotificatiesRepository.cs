@@ -221,12 +221,21 @@ namespace Gardenr.Repositories
             {
                 SpecNotificaties df = new SpecNotificaties();
                 df.n = nieuws;
+                if (nieuws.PlantID == null) {
+                    Plant plo = new Plant();
+                    plo.FotoUrl = "/Assets/Home/NOT.png";
+                    df.plantje = plo;
+                }
+                else
+                {
+                  
                 foreach (Plant pl in items2) {
                     if (pl.ID == nieuws.PlantID) {
-
+                        
                         df.plantje = pl;
                     }
                 }
+          }
 
                 ni.Add(df);
             }

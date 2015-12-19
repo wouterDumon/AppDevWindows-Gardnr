@@ -290,8 +290,6 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="IsReadOnly" />
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Gardenr.Views.Catalogus" />

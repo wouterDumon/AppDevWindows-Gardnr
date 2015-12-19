@@ -257,6 +257,7 @@
     <Content Include="Assets\CatalogusIcons\ZaaiDiepte.png" />
     <Content Include="Assets\Drawer\LINKS.png" />
     <Content Include="Assets\Drawer\rechts.png" />
+    <Content Include="Assets\Home\NOT.png" />
     <Content Include="Assets\LOGO.png" />
     <Content Include="GardenrCommands.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

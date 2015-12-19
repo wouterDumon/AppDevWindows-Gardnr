@@ -24,8 +24,7 @@ namespace Gardenr.ViewModels
             //WeatherNet.Clients.CurrentWeather mijnweer= new WeatherNet.Clients.CurrentWeather();
 
             //  mijnweer.GetByCityNameAsync("Rekkem", "Belgium");
-            NaamFoto = "radijzen";
-            DagFoto = "http://student.howest.be/lucas.balcaen/androidappfotos/radijzen.png";
+          
                StartUpGetItems();
             naam = App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
             VieuwNotification = new RelayCommand(VieuwNotificationM);
@@ -146,7 +145,7 @@ namespace Gardenr.ViewModels
 
             }
 
-            NieuwsItems = await repoNieuws.GetNewsItems();
+           // NieuwsItems = await repoNieuws.GetNewsItems();
    
           //  string a =ClientSettings.ApiKey;
           //  string b = ClientSettings.ApiUrl;
