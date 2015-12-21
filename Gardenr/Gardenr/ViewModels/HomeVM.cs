@@ -81,7 +81,8 @@ namespace Gardenr.ViewModels
             var weerresult = await CurrentWeather.GetByCoordinatesAsync(la, lo, "nl", "metric");
             //http://openweathermap.org/img/w/10d.png
             //site om icoon op te halen
-            Fotourl = "http://openweathermap.org/img/w/" + weerresult.Item.Icon+".png";
+            // Fotourl = "http://openweathermap.org/img/w/" + weerresult.Item.Icon+".png";
+            Fotourl = "http://student.howest.be/cedric.lecat/Gardnr/Weather/mobile/" + weerresult.Item.Icon + ".jpg";
             Weertext = "" + weerresult.Item.Temp + "°C";
             Weerstatus = "" + weerresult.Item.Description;
             Weerlocatie = "" + weerresult.Item.City + "," + weerresult.Item.Country;

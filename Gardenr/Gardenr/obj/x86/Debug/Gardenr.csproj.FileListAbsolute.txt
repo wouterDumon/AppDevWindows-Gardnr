@@ -1527,3 +1527,4 @@ C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\De
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Views\AppShell.xaml
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Views\AppShell.xbf
 C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Core\Assets\Home\NOT.png
+C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\Gardenr.csprojResolveAssemblyReference.cache
