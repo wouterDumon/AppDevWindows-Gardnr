@@ -1,0 +1,2 @@
+MainPackage=C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Release\Gardenr_1.1.0.0_x86.appx
+SymbolPackage=C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\AppPackages\Gardenr_1.1.0.0_Test\Gardenr_1.1.0.0_x86.appxsym

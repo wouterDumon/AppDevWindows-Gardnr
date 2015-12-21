@@ -281,6 +281,8 @@
       <RootProperty Name="Content" />
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
+      <RootMethod Name="GetIsScrollInertiaEnabled" />
+      <RootMethod Name="SetIsScrollInertiaEnabled" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Background" />
