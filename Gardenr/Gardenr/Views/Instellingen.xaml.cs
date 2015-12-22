@@ -32,7 +32,24 @@ namespace Gardenr.Views
         public Instellingen()
         {
             this.InitializeComponent();
+#if (!DEBUG)
+                    //kijken of release > ADS MOGEN NIET IN TEST GEBRUIKT WORDEN
+               bool isHardwareButtonsAPIPresent =
+        Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            if (isHardwareButtonsAPIPresent)
+            {
+                //IS MOBILE
 
+                add.AdUnitId = App.MobileADID;
+                add.ApplicationId = App.MobileappID;
+            }
+            else {
+                //is desktop
+                add.AdUnitId = App.adID;
+                add.ApplicationId = App.appID;
+            }
+           
+#endif
             ini();
 
         }

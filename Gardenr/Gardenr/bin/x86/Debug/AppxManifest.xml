@@ -11,11 +11,12 @@
   <mp:PhoneIdentity PhoneProductId="1dda983c-36a1-44e1-84a6-76f304faa7a2" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Gardenr</DisplayName>
-    <PublisherDisplayName>Cedric and Wouter Company</PublisherDisplayName>
+    <PublisherDisplayName>WouterDumon</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
+    <PackageDependency Name="Microsoft.Advertising.Xaml" MinVersion="10.0.1510.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
     <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.22929.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>

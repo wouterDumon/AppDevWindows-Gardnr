@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+         xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
     xmlns:vm="using:Gardenr.ViewModels">
     <Page.Resources>
         <local:Stringformat2 x:Key="StringFormatConverter" />
@@ -37,80 +38,90 @@
         <vm:PlantBewerkenVM></vm:PlantBewerkenVM>
     </Page.DataContext>
 
+    <Grid>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="15"/>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15"/>
-            <ColumnDefinition Width="180"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="15"/>
-      
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="150"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
-        </Grid.RowDefinitions>
-        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="5"></Rectangle>
-        <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="5"/>
-        <TextBlock Style="{StaticResource TextS}"  Text="Plant bewerken"  FontSize="28" Margin="20 0 0 0" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></TextBlock>
-        <!--Binding GoBack}"></Button>-->
-           
-     
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="5"></Rectangle>
+            <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="5"/>
+            <TextBlock Style="{StaticResource TextS}"  Text="Plant bewerken"  FontSize="28" Margin="20 0 0 0" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></TextBlock>
+            <!--Binding GoBack}"></Button>-->
 
 
-        <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
-            <CommandBar.SecondaryCommands>
-                <AppBarButton Command="{Binding SavePlant}" Label="Opslaan"/>
-                <AppBarButton Command="{Binding AddFavorites}" Label="Favoriet"/>
-                <AppBarButton Command="{Binding DeletePlant}" Label="Verwijderen"/>
-                <AppBarButton Command="{Binding AddNotification}" Label="Notificatie Toevoegen"/>
-            </CommandBar.SecondaryCommands>
-        </CommandBar>
 
-        <Image x:Name="image" Source="{ Binding TeBewerkenTuin.Plant.FotoUrl}" Grid.Row="1" Grid.ColumnSpan="4" VerticalAlignment="Top" Stretch="UniformToFill"/>
-        
-        <TextBlock Text="Zaaidag: " Grid.Row="3" Grid.Column="1"/>
-        <TextBlock Text="{Binding TeBewerkenTuin.Plant.ZaaiBegin,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  Grid.Row="3" Grid.Column="2"/>
-        <TextBlock Text="OogstDatum: " Grid.Row="3"  Grid.Column="1" Margin="0,30,0,0"/>
-        <TextBlock Text="{Binding OogstDatum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  Grid.Row="3" Grid.Column="2" Margin="0,30,0,0"/>
-        <TextBlock Text="Laatst water gegeven: "  Grid.Column="1" Grid.Row="3" Margin="0,60,0,0" />
-        <TextBlock Text="{Binding TeBewerkenTuin.LaatstWater,
+
+            <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Command="{Binding SavePlant}" Label="Opslaan"/>
+                    <AppBarButton Command="{Binding AddFavorites}" Label="Favoriet"/>
+                    <AppBarButton Command="{Binding DeletePlant}" Label="Verwijderen"/>
+                    <AppBarButton Command="{Binding AddNotification}" Label="Notificatie Toevoegen"/>
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
+
+            <Image x:Name="image" Source="{ Binding TeBewerkenTuin.Plant.FotoUrl}" Grid.Row="1" Grid.ColumnSpan="4" VerticalAlignment="Top" Stretch="UniformToFill"/>
+
+            <TextBlock Text="Zaaidag: " Grid.Row="3" Grid.Column="1"/>
+            <TextBlock Text="{Binding TeBewerkenTuin.Plant.ZaaiBegin,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  Grid.Row="3" Grid.Column="2"/>
+            <TextBlock Text="OogstDatum: " Grid.Row="3"  Grid.Column="1" Margin="0,30,0,0"/>
+            <TextBlock Text="{Binding OogstDatum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  Grid.Row="3" Grid.Column="2" Margin="0,30,0,0"/>
+            <TextBlock Text="Laatst water gegeven: "  Grid.Column="1" Grid.Row="3" Margin="0,60,0,0" />
+            <TextBlock Text="{Binding TeBewerkenTuin.LaatstWater,
   Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  Grid.Row="3" Grid.Column="2" Margin="0,60,0,0"/>
 
-        <TextBlock Style="{StaticResource Text2}" Text="Notificaties" FontSize="20" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
-     
-        <GridView  Grid.Column="1" HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding TeBewerkenTuin.Notificaties, Mode=OneWay}" Grid.Row="5" Grid.ColumnSpan="2" Tapped="ListItems_Tapped" >
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <Grid  Background="Transparent" Height="150" Width="150">
+            <TextBlock Style="{StaticResource Text2}" Text="Notificaties" FontSize="20" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="35"/>
-                            <RowDefinition Height="30"/>
-                        </Grid.RowDefinitions>
+            <GridView  Grid.Column="1" HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding TeBewerkenTuin.Notificaties, Mode=OneWay}" Grid.Row="5" Grid.ColumnSpan="2" Tapped="ListItems_Tapped" >
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid  Background="Transparent" Height="150" Width="150">
 
-                       <!-- <Image Source="{Binding  plantje.FotoUrl}"   Grid.Row="0" Margin="0 0 0 -65"></Image>-->
-                        <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7" Grid.RowSpan="2" Margin="0 0 0 0" ></Rectangle>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
 
-                        <TextBlock    Style="{ThemeResource BodyTextBlockStyle}"  TextAlignment="Center"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"></TextBlock>
+                            <!-- <Image Source="{Binding  plantje.FotoUrl}"   Grid.Row="0" Margin="0 0 0 -65"></Image>-->
+                            <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7" Grid.RowSpan="2" Margin="0 0 0 0" ></Rectangle>
 
-                        <TextBlock TextAlignment="Center" FontSize="12"  TextWrapping="Wrap"  Grid.Row="2" Margin="0 0 0 0" Foreground="White"   Text="{Binding Omschrijving}"></TextBlock>
+                            <TextBlock    Style="{ThemeResource BodyTextBlockStyle}"  TextAlignment="Center"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"></TextBlock>
+
+                            <TextBlock TextAlignment="Center" FontSize="12"  TextWrapping="Wrap"  Grid.Row="2" Margin="0 0 0 0" Foreground="White"   Text="{Binding Omschrijving}"></TextBlock>
 
 
-                    </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
 
-        <TextBlock Style="{StaticResource Text2}" Text="MemoBlock" FontSize="20" Grid.Row="6"  Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="7" Grid.ColumnSpan="2" Text="{Binding TeBewerkenTuin.extra, Mode=TwoWay}"  Grid.Column="1"/>
+            <TextBlock Style="{StaticResource Text2}" Text="MemoBlock" FontSize="20" Grid.Row="6"  Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+            <TextBox Grid.Row="7" Grid.ColumnSpan="2" Text="{Binding TeBewerkenTuin.extra, Mode=TwoWay}"  Grid.Column="1"/>
+        </Grid>
+        <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" 
+                      AdUnitId="10043121" 
+               x:Name="add"
+                      HorizontalAlignment="Center" 
+                      Height="50" 
+                   
+                      VerticalAlignment="Bottom" 
+               
+                      Width="320"/>
     </Grid>
 </Page>

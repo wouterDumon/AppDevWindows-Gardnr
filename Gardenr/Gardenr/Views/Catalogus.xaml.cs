@@ -31,6 +31,25 @@ namespace Gardenr.Views
             //  var sdkfjslkqdfj =  Screen.PrimaryScreen.Bounds.Width;
             //   var x = 0;
 
+#if (!DEBUG)
+                    //kijken of release > ADS MOGEN NIET IN TEST GEBRUIKT WORDEN
+               bool isHardwareButtonsAPIPresent =
+        Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            if (isHardwareButtonsAPIPresent)
+            {
+                //IS MOBILE
+
+                add.AdUnitId = App.MobileADID;
+                add.ApplicationId = App.MobileappID;
+            }
+            else {
+                //is desktop
+                add.AdUnitId = App.adID;
+                add.ApplicationId = App.appID;
+            }
+           
+#endif
+
             var bla = ApplicationView.GetForCurrentView().VisibleBounds;
             double adjf = bla.Width;
             CatalogusVM a = this.DataContext as CatalogusVM;

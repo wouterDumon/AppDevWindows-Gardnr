@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+     xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
    xmlns:vm="using:Gardenr.ViewModels">
     <Page.Resources>
         <Style x:Key="headerS" TargetType="Rectangle">
@@ -35,57 +36,68 @@
     <Page.DataContext>
         <vm:InstellingenVM></vm:InstellingenVM>
     </Page.DataContext>
-    <Grid Background="#01FF70">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="2"></Rectangle>
-        <Rectangle Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
-        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" Style="{StaticResource TextS}" VerticalAlignment="Center">Instellingen</TextBlock>
-       
-        
-   
-        <Grid Margin="15,0" Grid.Row="1">
+    <Grid>
+        <Grid Background="#01FF70">
             <Grid.RowDefinitions>
-                <RowDefinition Height="35"/>
-                <RowDefinition Height="35"/>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="35"/>
-                <RowDefinition Height="35"/>
                 <RowDefinition Height="40"/>
-                <RowDefinition Height="1*"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Text="Leg Pushnotificatie's aan" FontSize="20" Grid.ColumnSpan="2"></TextBlock>
-            <RadioButton GroupName="push" Checked="RadioButton_Checked" FontSize="20" IsChecked="{Binding Aan, Mode=TwoWay}" Content="Aan" Grid.Column="0" Grid.Row="1" ></RadioButton>
-            <RadioButton GroupName="push" Checked="RadioButton_Checked" FontSize="20"  Content="Uit" IsChecked="{Binding Uit, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" ></RadioButton>
+            <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="2"></Rectangle>
+            <Rectangle Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
+            <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" Style="{StaticResource TextS}" VerticalAlignment="Center">Instellingen</TextBlock>
 
-            <TextBlock Text="Huidige ingestelde locatie:" FontSize="20" Grid.Row="3" Grid.ColumnSpan="2"></TextBlock>
-            <TextBlock Text="Locatie:" x:Name="WAARBENIK" FontSize="20" Grid.Row="4" Grid.ColumnSpan="2"></TextBlock>
-            <Button Background="#0ba14b" Foreground="White" FontSize="20" Click="Button_Click" Content="Haal je locatie op" Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Stretch" Width="Auto" HorizontalAlignment="Stretch" ></Button>
-            <StackPanel
+
+
+            <Grid Margin="15,0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Leg Pushnotificatie's aan" FontSize="20" Grid.ColumnSpan="2"></TextBlock>
+                <RadioButton GroupName="push" Checked="RadioButton_Checked" FontSize="20" IsChecked="{Binding Aan, Mode=TwoWay}" Content="Aan" Grid.Column="0" Grid.Row="1" ></RadioButton>
+                <RadioButton GroupName="push" Checked="RadioButton_Checked" FontSize="20"  Content="Uit" IsChecked="{Binding Uit, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" ></RadioButton>
+
+                <TextBlock Text="Huidige ingestelde locatie:" FontSize="20" Grid.Row="3" Grid.ColumnSpan="2"></TextBlock>
+                <TextBlock Text="Locatie:" x:Name="WAARBENIK" FontSize="20" Grid.Row="4" Grid.ColumnSpan="2"></TextBlock>
+                <Button Background="#0ba14b" Foreground="White" FontSize="20" Click="Button_Click" Content="Haal je locatie op" Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Stretch" Width="Auto" HorizontalAlignment="Stretch" ></Button>
+                <StackPanel
                 Visibility="Collapsed"
             Grid.Row="6"
                 Grid.ColumnSpan="2"
                 x:Name="ophalen"
             >
-                <TextBlock Text="Bezig met ophalen" TextAlignment="Center"></TextBlock>
-                <ProgressRing IsActive="True" Margin="0,10,0,0" Width="50" Height="50"></ProgressRing>
-            </StackPanel>
-            <TextBlock Grid.Row="6" Grid.ColumnSpan="2" TextWrapping="Wrap" x:Name="LocationDisabledMessage"  Margin="10,10,10,10" FontStyle="Italic" Visibility="Collapsed">
+                    <TextBlock Text="Bezig met ophalen" TextAlignment="Center"></TextBlock>
+                    <ProgressRing IsActive="True" Margin="0,10,0,0" Width="50" Height="50"></ProgressRing>
+                </StackPanel>
+                <TextBlock Grid.Row="6" Grid.ColumnSpan="2" TextWrapping="Wrap" x:Name="LocationDisabledMessage"  Margin="10,10,10,10" FontStyle="Italic" Visibility="Collapsed">
                 <Run Text="Weer kan niet worden opgehaald zonder locatie toestemming. Gelieve te gaan naar " />
                 <Hyperlink NavigateUri="ms-settings:privacy-location">
                     <Run Text="Settings" />
                 </Hyperlink>
                 <Run Text=" Om de permissies te wijzigen."/>
-            </TextBlock>
+                </TextBlock>
+
+            </Grid>
+
 
         </Grid>
-        
-        
+        <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" 
+                      AdUnitId="10043121" 
+               x:Name="add"
+                      HorizontalAlignment="Center" 
+                      Height="50" 
+                   
+                      VerticalAlignment="Bottom" 
+               
+                      Width="320"/>
     </Grid>
 </Page>

@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+         xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
     xmlns:vm="using:Gardenr.ViewModels">
   
     <Page.DataContext>
@@ -36,48 +37,59 @@
             <Setter Property="Foreground" Value="#659d46"/>
         </Style>
     </Page.Resources>
-    <Grid Background="#01FF70">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15"/>
-            <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="15"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="379*"/>
-            <RowDefinition Height="60"/>
+    <Grid>
+        <Grid Background="#01FF70">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="15"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="379*"/>
+                <RowDefinition Height="60"/>
 
-        </Grid.RowDefinitions>
-        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="5"></Rectangle>
-   
-        <TextBlock Grid.Row="0" FontSize="28" Margin="57,1,0,1" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="5" >Notificatie detail</TextBlock>
-        <CommandBar  ScrollViewer.IsScrollInertiaEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="Transparent" Margin="0 0 -5 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
-            <CommandBar.SecondaryCommands>
-                <AppBarButton Command="{Binding BewerkNotificatie}" Label="Bewerken"/>
-                <AppBarButton Command="{Binding DeleteNotificatie}" Label="Verwijderen"/>
-                
-            </CommandBar.SecondaryCommands>
-        </CommandBar>
+            </Grid.RowDefinitions>
+            <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="5"></Rectangle>
+
+            <TextBlock Grid.Row="0" FontSize="28" Margin="57,1,0,1" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="5" >Notificatie detail</TextBlock>
+            <CommandBar  ScrollViewer.IsScrollInertiaEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="Transparent" Margin="0 0 -5 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Command="{Binding BewerkNotificatie}" Label="Bewerken"/>
+                    <AppBarButton Command="{Binding DeleteNotificatie}" Label="Verwijderen"/>
+
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
 
 
-        <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}" Grid.ColumnSpan="4"/>
-        <TextBlock  Grid.Column="1" Text="Datum" FontSize="20" Grid.Row="1" Style="{StaticResource Text2}" VerticalAlignment="Center" ></TextBlock>
-        <TextBlock  Grid.Column="2" Text="{Binding IngesteldeNotificaties.datum , Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  FontSize="20" Grid.Row="1" VerticalAlignment="Center"  Style="{StaticResource Text2}" ></TextBlock>
+            <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}" Grid.ColumnSpan="4"/>
+            <TextBlock  Grid.Column="1" Text="Datum" FontSize="20" Grid.Row="1" Style="{StaticResource Text2}" VerticalAlignment="Center" ></TextBlock>
+            <TextBlock  Grid.Column="2" Text="{Binding IngesteldeNotificaties.datum , Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  FontSize="20" Grid.Row="1" VerticalAlignment="Center"  Style="{StaticResource Text2}" ></TextBlock>
 
-        <TextBlock  Grid.Column="1" Text="Notificatie type"  FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="2" Text="{Binding NotificatieType.Naam}" FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
-        
-        <TextBlock  Grid.Column="1" Text="Herhalen" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
-        <TextBlock  Grid.Column="2" Text="{Binding NotAlarm.herhalen}" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="1" Text="Notificatie type"  FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="2" Text="{Binding NotificatieType.Naam}" FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
 
-        
+            <TextBlock  Grid.Column="1" Text="Herhalen" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="2" Text="{Binding NotAlarm.herhalen}" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
 
-        <TextBlock  Grid.Column="1" Text="Mededeling" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" Margin="0,15,0,0"></TextBlock>
-        <TextBlock TextWrapping="Wrap" Grid.Column="2" Text="{Binding IngesteldeNotificaties.Omschrijving}" FontSize="20" Grid.Row="4" Margin="0,15,0,0" Style="{StaticResource Text2}" ></TextBlock>
 
+
+            <TextBlock  Grid.Column="1" Text="Mededeling" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" Margin="0,15,0,0"></TextBlock>
+            <TextBlock TextWrapping="Wrap" Grid.Column="2" Text="{Binding IngesteldeNotificaties.Omschrijving}" FontSize="20" Grid.Row="4" Margin="0,15,0,0" Style="{StaticResource Text2}" ></TextBlock>
+
+        </Grid>
+        <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" 
+                      AdUnitId="10043121" 
+               x:Name="add"
+                      HorizontalAlignment="Center" 
+                      Height="50" 
+                   
+                      VerticalAlignment="Bottom" 
+               
+                      Width="320"/>
     </Grid>
 </Page>
