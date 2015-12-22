@@ -26,6 +26,24 @@ namespace Gardenr.Views
         public Profiel_Historiek()
         {
             this.InitializeComponent();
+#if (!DEBUG)
+                    //kijken of release > ADS MOGEN NIET IN TEST GEBRUIKT WORDEN
+               bool isHardwareButtonsAPIPresent =
+        Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            if (isHardwareButtonsAPIPresent)
+            {
+                //IS MOBILE
+
+                add.AdUnitId = App.MobileADID;
+                add.ApplicationId = App.MobileappID;
+            }
+            else {
+                //is desktop
+                add.AdUnitId = App.adID;
+                add.ApplicationId = App.appID;
+            }
+           
+#endif
         }
         private void ListItems_Tapped(object sender, TappedRoutedEventArgs e)
         {

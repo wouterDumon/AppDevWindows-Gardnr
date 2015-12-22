@@ -6,7 +6,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
    xmlns:uc="using:Gardenr.UserClass"
-    xmlns:fa="using:FontAwesome.Portable"
     mc:Ignorable="d"
   xmlns:vm="using:Gardenr.ViewModels">
     <Page.DataContext>

@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:uc="using:Gardenr.UserClass"
+             xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
     mc:Ignorable="d"
     xmlns:vm="using:Gardenr.ViewModels">
     <Page.DataContext>
@@ -36,67 +37,78 @@
         </Style>
         <local:Stringformat2 x:Key="StringFormatConverter" />
     </Page.Resources>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="3"></Rectangle>
-        <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="3"/>
-        <TextBlock Style="{StaticResource TextS}"  Text="Profiel"  FontSize="28" Margin="48 0 0 0" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
+    <Grid>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="3"></Rectangle>
+            <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="3"/>
+            <TextBlock Style="{StaticResource TextS}"  Text="Profiel"  FontSize="28" Margin="48 0 0 0" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
 
-        <!-- App bar button with symbol icon. -->
-        <AppBarButton x:Name="fa" Background="LightGray" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Label="Huidig"   Command="{Binding GoHuiding}" Width="Auto" Icon="Street"/>
-        <AppBarButton Background="LightGray"  Icon="Library" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Label="Historiek"  Command="{Binding GoHistoriek}" Width="Auto"/>
-        <AppBarButton Background="#e7e7e7"  Icon="Favorite" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Label="Favorieten"  Width="Auto"/>
+            <!-- App bar button with symbol icon. -->
+            <AppBarButton x:Name="fa" Background="LightGray" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Label="Huidig"   Command="{Binding GoHuiding}" Width="Auto" Icon="Street"/>
+            <AppBarButton Background="LightGray"  Icon="Library" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Label="Historiek"  Command="{Binding GoHistoriek}" Width="Auto"/>
+            <AppBarButton Background="#e7e7e7"  Icon="Favorite" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Label="Favorieten"  Width="Auto"/>
 
-        <GridView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding FavorietenPlant, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3" Tapped="ListItems_Tapped">
+            <GridView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding FavorietenPlant, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3" Tapped="ListItems_Tapped">
 
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Vertical">
-                        <Ellipse x:Name="Ellipse" 
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <Ellipse x:Name="Ellipse" 
                              Width ="140"
                              Height="140"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center"
                 
                              Margin="4,4,4,4">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="{Binding Plant.FotoUrl}"/>
-                            </Ellipse.Fill>
-                        </Ellipse>
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="{Binding Plant.FotoUrl}"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
 
-                        <TextBlock x:Name="Plantnaam" 
+                            <TextBlock x:Name="Plantnaam" 
                                Margin="4,4,0,4"
                                Text="{Binding Plant.Naam, Mode=OneWay}" 
                              
                                Style="{ThemeResource BodyTextBlockStyle}" 
                                HorizontalAlignment="Center"/>
 
-                        
-                        <AppBarButton x:Name="Position" 
+
+                            <AppBarButton x:Name="Position" 
                                       Icon="UnFavorite"                             
                                Margin="4,4,0,4"                           
                                Foreground="Gray"
                                HorizontalAlignment="Center"/>
-                    </StackPanel>
+                        </StackPanel>
 
 
-                </DataTemplate>
-            </GridView.ItemTemplate>
-            <!-- <ListView.ItemContainerStyle>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+                <!-- <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                 </Style>
             </ListView.ItemContainerStyle>
             -->
-        </GridView>
+            </GridView>
+        </Grid>
+        <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" 
+                      AdUnitId="10043121" 
+               x:Name="add"
+                      HorizontalAlignment="Center" 
+                      Height="50" 
+                   
+                      VerticalAlignment="Bottom" 
+               
+                      Width="320"/>
     </Grid>
 </Page>

@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     xmlns:vm="using:Gardenr.ViewModels"
+     xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
     xmlns:uc="using:Gardenr.UserClass"
  >
     <Page.Resources>
@@ -37,46 +38,57 @@
     <Page.DataContext>
         <vm:CatalogusVM></vm:CatalogusVM>
     </Page.DataContext>
-    <Grid x:Name="mijngrid"  Background="#01FF70">
+    <Grid>
+        <Grid x:Name="mijngrid"  Background="#01FF70">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="2"></Rectangle>
-        <Rectangle Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
-        <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" Style="{StaticResource TextS}" VerticalAlignment="Center">Catalogus</TextBlock>
-
-
-        <GridView   VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Hidden" Name="ListItems" SelectedItem="{Binding SelectedPlant, Mode=TwoWay}"    ItemsSource="{Binding ToonPlanten, Mode=OneWay}" Grid.Row="1" Tapped="ListItems_Tapped">
-
-            <GridView.ItemTemplate>
-                <DataTemplate>
-
-                    <Grid  Background="Transparent" Width="240">
-
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*"/>
-                              <RowDefinition Height="40"/>
-                        </Grid.RowDefinitions>
-
-                        <Image Source="{Binding FotoUrl}"  Grid.Row="0" Margin="0 0 0 -40"></Image>
-                        <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7" Margin="0 0 0 0" ></Rectangle>
-                        <TextBlock TextAlignment="Center" FontSize="22"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding Naam}"></TextBlock>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="2"></Rectangle>
+            <Rectangle Grid.Row="1" Grid.RowSpan="3" Style="{StaticResource bodyS}" Grid.ColumnSpan="2"/>
+            <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" Style="{StaticResource TextS}" VerticalAlignment="Center">Catalogus</TextBlock>
 
 
-                    </Grid>
+            <GridView   VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Hidden" Name="ListItems" SelectedItem="{Binding SelectedPlant, Mode=TwoWay}"    ItemsSource="{Binding ToonPlanten, Mode=OneWay}" Grid.Row="1" Tapped="ListItems_Tapped">
 
-            </DataTemplate>
-            </GridView.ItemTemplate>
-           <!-- <ListView.ItemContainerStyle>
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Grid  Background="Transparent" Width="240">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+
+                            <Image Source="{Binding FotoUrl}"  Grid.Row="0" Margin="0 0 0 -40"></Image>
+                            <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7" Margin="0 0 0 0" ></Rectangle>
+                            <TextBlock TextAlignment="Center" FontSize="22"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding Naam}"></TextBlock>
+
+
+                        </Grid>
+
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+                <!-- <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                     <Setter Property="HorizontalAlignment" Value="Stretch" />
                 </Style>
             </ListView.ItemContainerStyle>-->
-        </GridView>
-        <TextBox Background="Transparent" x:Name="textBox"  Grid.Row="0" PlaceholderText="Zoek" HorizontalAlignment="Right" Margin="5" TextWrapping="Wrap" Text="{Binding Zoek, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+            </GridView>
+            <TextBox Background="Transparent" x:Name="textBox"  Grid.Row="0" PlaceholderText="Zoek" HorizontalAlignment="Right" Margin="5" TextWrapping="Wrap" Text="{Binding Zoek, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
 
+        </Grid>
+        <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" 
+                      AdUnitId="10043121" 
+               x:Name="add"
+                      HorizontalAlignment="Center" 
+                      Height="50" 
+                   
+                      VerticalAlignment="Bottom" 
+               
+                      Width="320"/>
     </Grid>
 </Page>
