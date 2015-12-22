@@ -86,6 +86,7 @@ Windows.Storage.CreationCollisionOption.OpenIfExists);
             }
             catch (Exception e)
             {
+                Exception mijnexceptie = e;
 
 
             }

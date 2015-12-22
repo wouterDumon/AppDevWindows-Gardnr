@@ -97,7 +97,7 @@ namespace NotificationAPI.Controllers
                 //windows
                 var toast = @"<toast><visual><binding template=""ToastText01""><text id=""1"">" + send + "</text></binding></visual></toast>";
                 outcome = await Notifications.Instance.Hub.SendWindowsNativeNotificationAsync(toast, userTag);
-            } catch (Exception ex) { }
+            } catch (Exception ex) { Exception mijnexceptie = ex; }
             try { 
             // Android
                 var notif = "{ \"data\" : {\"message\":\"" + send + "\"}}";
@@ -107,7 +107,7 @@ namespace NotificationAPI.Controllers
             }
             catch (Exception ex)
             {
-
+                Exception mijnexceptie = ex;
             }
         }
 

@@ -197,8 +197,9 @@ namespace Gardenr.Views
             }
             catch (Exception ex)
             {
-            //    MessageDialog alert = new MessageDialog(ex.Message, "Failed to register with RegisterClient");
-              //  alert.ShowAsync();
+                Exception mijnexceptie = ex;
+                //    MessageDialog alert = new MessageDialog(ex.Message, "Failed to register with RegisterClient");
+                //  alert.ShowAsync();
             }
         }
 

@@ -54,6 +54,7 @@ namespace Gardenr.ViewModels
             }
             catch(Exception e)
             {
+                Exception mijnexceptie = e;
                 return 0;
             }
            

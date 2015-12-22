@@ -137,9 +137,9 @@ namespace Gardenr.ViewModels
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 
-        public async void Startup()
+       /* public async void Startup()
         {
 
-        }
+        }*/
     }
 }

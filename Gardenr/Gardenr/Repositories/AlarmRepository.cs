@@ -138,7 +138,7 @@ namespace Gardenr.Repositories
                 await SyncAsync();
                 await RefreshItems();
             }
-            catch (Exception e) { }
+            catch (Exception e) { Exception mijnexceptie = e; }
             }
 
     }

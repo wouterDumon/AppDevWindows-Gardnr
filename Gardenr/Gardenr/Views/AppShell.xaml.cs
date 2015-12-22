@@ -47,6 +47,7 @@ namespace Gardenr.Views
                     statusBar.BackgroundOpacity = 1;
                 }
                 catch (Exception e) {
+                    Exception mijnexceptie = e;
                     //DESKTOP
 
                 }
@@ -187,6 +188,7 @@ namespace Gardenr.Views
             }
             catch (Exception ex)
             {
+                Exception mijnexceptie = ex;
                 //    MessageDialog alert = new MessageDialog(ex.Message, "Failed to register with RegisterClient");
                 //  alert.ShowAsync();
             }
@@ -220,7 +222,7 @@ Windows.Storage.CreationCollisionOption.ReplaceExisting);
             }
             catch (Exception error)
             {
-
+                Exception mijnexceptie = error;
 
             }
         }

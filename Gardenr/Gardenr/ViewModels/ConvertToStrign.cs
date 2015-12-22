@@ -30,7 +30,7 @@ namespace Gardenr.ViewModels
                     return "Ja";
                 }
 
-            } catch (Exception e) { }
+            } catch (Exception e) { Exception mijnexceptie = e; }
 
             return "/";
         }

@@ -88,7 +88,7 @@ namespace Gardenr
             }
             catch(Exception e)
             {
-              
+                Exception mijnexceptie = e;
             }
            
         }

@@ -154,7 +154,7 @@ namespace Gardenr.ViewModels
                 }
                 //HistoriekPlant = TuinPlanten;
             }
-            catch (Exception ex) { }
+            catch (Exception ex) { Exception mijnexceptie = ex; }
             }
     }
 

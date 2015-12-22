@@ -94,7 +94,7 @@ namespace Gardenr.ViewModels
                 NotAlarm = await repoAlarm.GetAlarmBID(IngesteldeNotificaties.AlarmID);
             }
             catch (Exception e) {
-
+                Exception mijnexceptie = e;
             }
         }
 

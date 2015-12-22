@@ -143,7 +143,7 @@ namespace Gardenr.Repositories
             return null;
         }
 
-        public async Task<TuinObject> convertNaarObject (Tuin tuin)
+        public  TuinObject convertNaarObject (Tuin tuin)
         {
             TuinObject temp = new TuinObject();
             temp.ID = tuin.ID;
@@ -188,10 +188,10 @@ namespace Gardenr.Repositories
             return temp;
         }
 
-        public async void AdjustTO(Tuin nitem)
+        public void AdjustTO(Tuin nitem)
         {
 
-            TuinObject temp = await convertNaarObject(nitem);
+            TuinObject temp =  convertNaarObject(nitem);
 
           //  await InitLocalStoreAsync();
             //await Table.UpdateAsync(JObject.Parse(temp.ToString()));
@@ -213,7 +213,7 @@ namespace Gardenr.Repositories
         }
         public async void DeleteTO(Tuin nitem)
         {
-            TuinObject temp = await convertNaarObject(nitem);
+            TuinObject temp =  convertNaarObject(nitem);
 
             await InitLocalStoreAsync();
             await Table.DeleteAsync(temp);

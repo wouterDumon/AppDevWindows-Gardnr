@@ -20,9 +20,8 @@
     <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.22929.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
-    <Resource Language="NL-BE" />
-    <Resource Language="EN" />
     <Resource Language="EN-US" />
+    <Resource Language="EN" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="Gardenr.exe" EntryPoint="Gardenr.App">
@@ -48,13 +47,13 @@
     <build:Item Name="VisualStudio" Version="14.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2015" />
     <build:Item Name="OperatingSystem" Version="10.0.10586.0 (th2_release.151029-1700)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.23311.4" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.24720.0" />
     <build:Item Name="ProjectGUID" Value="{7A9F6443-EEFD-49CF-8076-DA6F2E550F18}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
-    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.23309.0" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.24720.0" />
     <build:Item Name="SQLite.UAP.2015" Version="3.9.2" />
     <build:Item Name="WindowsMobile" Version="10.0.10240.0" />
-    <build:Item Name="MakePri.exe" Version="10.0.10240.16384 (th1.150709-1700)" />
+    <build:Item Name="MakePri.exe" Version="10.0.10586.15 (th2_release.151119-1817)" />
   </build:Metadata>
 </Package>
