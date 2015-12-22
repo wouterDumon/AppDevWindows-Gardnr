@@ -10,25 +10,50 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>1dda983c-36a1-44e1-84a6-76f304faa7a2</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>F52290863078B6B00BC455432880BC84FB9C1467BF86D4911441E36839279D05</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>52473WouterDumon.Gardenr_1.1.0.0_x86__ny6ja2a0xej7y</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>06B3C071C02AAF84B2E35261FA718E9E1123E73CC0146A8D1F4F8EF98389BC4E</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>52473WouterDumon.Gardenr_1.1.1.0_x86__ny6ja2a0xej7y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>52473WouterDumon.Gardenr_ny6ja2a0xej7y!App</RegisteredUserModeAppID>
     <RegisteredPackageID>52473WouterDumon.Gardenr</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=2BC03B75-DF24-4773-97E8-87B1E3610123</RegisteredPackagePublisher>
-    <RegisteredVersion>1.1.0.0</RegisteredVersion>
+    <RegisteredVersion>1.1.1.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-21T16:07:19.110</Modified>
+      <Modified>2015-12-22T12:16:12.950</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2015-10-20T13:42:10.046</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:36.001</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.998</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.016</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.994</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.990</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\CatalogusIcons\DagenOogst.png">
       <PackagePath>Assets\CatalogusIcons\DagenOogst.png</PackagePath>
@@ -86,35 +111,205 @@
       <PackagePath>Assets\LOGO.png</PackagePath>
       <Modified>2015-11-29T22:32:34.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.988</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.020</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.021</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-12-18T07:57:39.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.024</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.025</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.026</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.027</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-12-18T07:57:39.067</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.028</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square310x310Logo.scale-100.png">
+      <PackagePath>Assets\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.029</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square310x310Logo.scale-125.png">
+      <PackagePath>Assets\Square310x310Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.030</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square310x310Logo.scale-150.png">
+      <PackagePath>Assets\Square310x310Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.032</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square310x310Logo.scale-200.png">
+      <PackagePath>Assets\Square310x310Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.033</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square310x310Logo.scale-400.png">
+      <PackagePath>Assets\Square310x310Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.034</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.035</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.037</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.038</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-12-18T07:57:39.068</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.040</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.041</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.042</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-12-18T07:57:39.069</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-18T07:57:39.070</Modified>
+      <Modified>2015-12-21T16:13:35.044</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.045</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.063</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square71x71Logo.scale-125.png">
+      <PackagePath>Assets\Square71x71Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.985</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square71x71Logo.scale-150.png">
+      <PackagePath>Assets\Square71x71Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square71x71Logo.scale-200.png">
+      <PackagePath>Assets\Square71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.066</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Square71x71Logo.scale-400.png">
+      <PackagePath>Assets\Square71x71Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.067</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.982</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.069</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.070</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.071</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.073</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.075</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.076</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.078</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-12-18T07:57:39.072</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-21T16:13:35.081</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
@@ -134,7 +329,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\entrypoint\Gardenr.exe">
       <PackagePath>entrypoint\Gardenr.exe</PackagePath>
-      <Modified>2015-12-21T16:07:13.871</Modified>
+      <Modified>2015-12-22T12:15:49.268</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\es\Microsoft.Data.Edm.resources.dll">
       <PackagePath>es\Microsoft.Data.Edm.resources.dll</PackagePath>
@@ -234,11 +429,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
       <PackagePath>Gardenr.exe</PackagePath>
-      <Modified>2015-12-21T16:07:19.108</Modified>
+      <Modified>2015-12-22T12:16:12.945</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.xr.xml">
       <PackagePath>Gardenr.xr.xml</PackagePath>
-      <Modified>2015-12-20T21:49:25.801</Modified>
+      <Modified>2015-12-22T12:09:30.093</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\GardenrCommands.xml">
       <PackagePath>GardenrCommands.xml</PackagePath>
@@ -346,7 +541,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-21T16:07:15.138</Modified>
+      <Modified>2015-12-22T12:15:57.264</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ru\Microsoft.Data.Edm.resources.dll">
       <PackagePath>ru\Microsoft.Data.Edm.resources.dll</PackagePath>

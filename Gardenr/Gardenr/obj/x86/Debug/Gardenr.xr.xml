@@ -43,6 +43,7 @@
     <RootPropertyPathName Name="Weerlocatie" />
     <RootPropertyPathName Name="Weerstatus" />
     <RootPropertyPathName Name="Weertext" />
+    <RootPropertyPathName Name="Iconurl" />
     <RootPropertyPathName Name="Uit" />
     <RootPropertyPathName Name="Aan" />
     <RootPropertyPathName Name="IngesteldeNotificaties" />

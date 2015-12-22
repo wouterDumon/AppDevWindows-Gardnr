@@ -34,6 +34,7 @@ namespace Gardenr.ViewModels
 
         private string naam { get; set; }
         private string _fotourl;
+        private string _iconurl;
         private string _weertext;
         private string _weerstatus;
         private string _weerlocatie;
@@ -58,9 +59,13 @@ namespace Gardenr.ViewModels
             get { return _fotourl; }
             set { _fotourl = value; OnPropertyChanged("Fotourl"); }
         }
+        public string Iconurl
+        {
+            get { return _iconurl; }
+            set { _iconurl = value; OnPropertyChanged("Iconurl"); }
+        }
 
         private String _dagfoto;
-
         public String DagFoto
         {
             get { return _dagfoto; }
@@ -83,6 +88,7 @@ namespace Gardenr.ViewModels
             //site om icoon op te halen
             // Fotourl = "http://openweathermap.org/img/w/" + weerresult.Item.Icon+".png";
             Fotourl = "http://student.howest.be/cedric.lecat/Gardnr/Weather/mobile/" + weerresult.Item.Icon + ".jpg";
+            Iconurl = "http://student.howest.be/cedric.lecat/Gardnr/Weather/icons/" + weerresult.Item.Icon + ".png";
             Weertext = "" + weerresult.Item.Temp + "°C";
             Weerstatus = "" + weerresult.Item.Description;
             Weerlocatie = "" + weerresult.Item.City + "," + weerresult.Item.Country;

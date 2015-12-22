@@ -7,11 +7,11 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="52473WouterDumon.Gardenr" Publisher="CN=2BC03B75-DF24-4773-97E8-87B1E3610123" Version="1.1.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="52473WouterDumon.Gardenr" Publisher="CN=2BC03B75-DF24-4773-97E8-87B1E3610123" Version="1.1.1.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="1dda983c-36a1-44e1-84a6-76f304faa7a2" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Gardenr</DisplayName>
-    <PublisherDisplayName>Cedric and Wouter Company</PublisherDisplayName>
+    <PublisherDisplayName>WouterDumon</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -47,13 +47,13 @@
     <build:Item Name="VisualStudio" Version="14.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2015" />
     <build:Item Name="OperatingSystem" Version="10.0.10586.0 (th2_release.151029-1700)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.24720.0" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.23311.4" />
     <build:Item Name="ProjectGUID" Value="{7A9F6443-EEFD-49CF-8076-DA6F2E550F18}" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
-    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.24720.0" />
+    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="14.0.23309.0" />
     <build:Item Name="SQLite.UAP.2015" Version="3.9.2" />
     <build:Item Name="WindowsMobile" Version="10.0.10240.0" />
-    <build:Item Name="MakePri.exe" Version="10.0.10586.15 (th2_release.151119-1817)" />
+    <build:Item Name="MakePri.exe" Version="10.0.10240.16384 (th1.150709-1700)" />
   </build:Metadata>
 </Package>

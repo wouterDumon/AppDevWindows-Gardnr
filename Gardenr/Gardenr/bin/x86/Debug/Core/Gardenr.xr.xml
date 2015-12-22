@@ -43,6 +43,7 @@
     <RootPropertyPathName Name="Weerlocatie" />
     <RootPropertyPathName Name="Weerstatus" />
     <RootPropertyPathName Name="Weertext" />
+    <RootPropertyPathName Name="Iconurl" />
     <RootPropertyPathName Name="Uit" />
     <RootPropertyPathName Name="Aan" />
     <RootPropertyPathName Name="IngesteldeNotificaties" />
@@ -281,6 +282,8 @@
       <RootProperty Name="Content" />
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
+      <RootMethod Name="GetIsScrollInertiaEnabled" />
+      <RootMethod Name="SetIsScrollInertiaEnabled" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Background" />
