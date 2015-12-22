@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,8 +82,9 @@ namespace Gardenr.ViewModels
 
 
         public async void FILLUPWEER(string lat, string lon) {
-            double la = Double.Parse(lat);
-            double lo = Double.Parse(lon);
+        
+            Double la = Double.Parse(lat,CultureInfo.InvariantCulture);
+            Double lo = Double.Parse(lon,CultureInfo.InvariantCulture);
             var weerresult = await CurrentWeather.GetByCoordinatesAsync(la, lo, "nl", "metric");
             //http://openweathermap.org/img/w/10d.png
             //site om icoon op te halen
