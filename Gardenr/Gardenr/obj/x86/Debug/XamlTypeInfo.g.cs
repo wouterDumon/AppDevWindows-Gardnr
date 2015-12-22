@@ -156,7 +156,7 @@ namespace Gardenr.Gardenr_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[84];
+            _typeNameTable = new string[86];
             _typeNameTable[0] = "Gardenr.BaseViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Gardenr.ViewModels.MainPageVM";
@@ -199,50 +199,52 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             _typeNameTable[39] = "Gardenr.Models.Plant";
             _typeNameTable[40] = "Int32";
             _typeNameTable[41] = "GalaSoft.MvvmLight.Command.RelayCommand";
-            _typeNameTable[42] = "Gardenr.Views.Catalogus";
-            _typeNameTable[43] = "Gardenr.ViewModels.ConvertToStrign";
-            _typeNameTable[44] = "Gardenr.Views.CatalogusPlant";
-            _typeNameTable[45] = "Gardenr.Views.Contact";
-            _typeNameTable[46] = "Gardenr.ViewModels.LoginVM";
-            _typeNameTable[47] = "Gardenr.Views.ExtendedSplash";
-            _typeNameTable[48] = "Windows.UI.Xaml.Controls.Grid";
-            _typeNameTable[49] = "Windows.UI.Xaml.Controls.Panel";
-            _typeNameTable[50] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.SpecNotificaties>";
-            _typeNameTable[51] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.SpecNotificaties>";
-            _typeNameTable[52] = "Gardenr.Models.SpecNotificaties";
-            _typeNameTable[53] = "Gardenr.Models.Notificaties";
-            _typeNameTable[54] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.NieuwsItem>";
-            _typeNameTable[55] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.NieuwsItem>";
-            _typeNameTable[56] = "Gardenr.Models.NieuwsItem";
-            _typeNameTable[57] = "Gardenr.Views.StringFormatConverter";
-            _typeNameTable[58] = "Gardenr.Views.Home";
-            _typeNameTable[59] = "Gardenr.Models.Instellingen";
-            _typeNameTable[60] = "Gardenr.Models.Taal";
-            _typeNameTable[61] = "Gardenr.Views.Instellingen";
-            _typeNameTable[62] = "Gardenr.Views.Login";
-            _typeNameTable[63] = "Gardenr.Models.Alarm";
-            _typeNameTable[64] = "Gardenr.Models.TypeC";
-            _typeNameTable[65] = "Gardenr.Views.Notificaties";
-            _typeNameTable[66] = "System.DateTimeOffset";
-            _typeNameTable[67] = "System.ValueType";
-            _typeNameTable[68] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.TypeC>";
-            _typeNameTable[69] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.TypeC>";
-            _typeNameTable[70] = "Gardenr.Models.Tuin";
-            _typeNameTable[71] = "Gardenr.Views.NotificatiesBewerken";
-            _typeNameTable[72] = "Gardenr.Views.Stringformat2";
-            _typeNameTable[73] = "System.DateTime";
-            _typeNameTable[74] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Notificaties>";
-            _typeNameTable[75] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.Notificaties>";
-            _typeNameTable[76] = "Gardenr.Views.PlantBewerken";
-            _typeNameTable[77] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>";
-            _typeNameTable[78] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>";
-            _typeNameTable[79] = "Gardenr.Views.Profiel_Favorieten";
-            _typeNameTable[80] = "Gardenr.Views.Profiel_Historiek";
-            _typeNameTable[81] = "Gardenr.Views.Profiel";
-            _typeNameTable[82] = "Gardenr.Views.Profiel_PlantInfo";
-            _typeNameTable[83] = "Gardenr.Views.Shell";
+            _typeNameTable[42] = "Microsoft.Advertising.WinRT.UI.AdControl";
+            _typeNameTable[43] = "Windows.UI.Xaml.Controls.StackPanel";
+            _typeNameTable[44] = "Windows.UI.Xaml.Controls.Panel";
+            _typeNameTable[45] = "Gardenr.Views.Catalogus";
+            _typeNameTable[46] = "Gardenr.ViewModels.ConvertToStrign";
+            _typeNameTable[47] = "Gardenr.Views.CatalogusPlant";
+            _typeNameTable[48] = "Gardenr.Views.Contact";
+            _typeNameTable[49] = "Gardenr.ViewModels.LoginVM";
+            _typeNameTable[50] = "Gardenr.Views.ExtendedSplash";
+            _typeNameTable[51] = "Windows.UI.Xaml.Controls.Grid";
+            _typeNameTable[52] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.SpecNotificaties>";
+            _typeNameTable[53] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.SpecNotificaties>";
+            _typeNameTable[54] = "Gardenr.Models.SpecNotificaties";
+            _typeNameTable[55] = "Gardenr.Models.Notificaties";
+            _typeNameTable[56] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.NieuwsItem>";
+            _typeNameTable[57] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.NieuwsItem>";
+            _typeNameTable[58] = "Gardenr.Models.NieuwsItem";
+            _typeNameTable[59] = "Gardenr.Views.StringFormatConverter";
+            _typeNameTable[60] = "Gardenr.Views.Home";
+            _typeNameTable[61] = "Gardenr.Models.Instellingen";
+            _typeNameTable[62] = "Gardenr.Models.Taal";
+            _typeNameTable[63] = "Gardenr.Views.Instellingen";
+            _typeNameTable[64] = "Gardenr.Views.Login";
+            _typeNameTable[65] = "Gardenr.Models.Alarm";
+            _typeNameTable[66] = "Gardenr.Models.TypeC";
+            _typeNameTable[67] = "Gardenr.Views.Notificaties";
+            _typeNameTable[68] = "System.DateTimeOffset";
+            _typeNameTable[69] = "System.ValueType";
+            _typeNameTable[70] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.TypeC>";
+            _typeNameTable[71] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.TypeC>";
+            _typeNameTable[72] = "Gardenr.Models.Tuin";
+            _typeNameTable[73] = "Gardenr.Views.NotificatiesBewerken";
+            _typeNameTable[74] = "Gardenr.Views.Stringformat2";
+            _typeNameTable[75] = "System.DateTime";
+            _typeNameTable[76] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Notificaties>";
+            _typeNameTable[77] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.Notificaties>";
+            _typeNameTable[78] = "Gardenr.Views.PlantBewerken";
+            _typeNameTable[79] = "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>";
+            _typeNameTable[80] = "System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>";
+            _typeNameTable[81] = "Gardenr.Views.Profiel_Favorieten";
+            _typeNameTable[82] = "Gardenr.Views.Profiel_Historiek";
+            _typeNameTable[83] = "Gardenr.Views.Profiel";
+            _typeNameTable[84] = "Gardenr.Views.Profiel_PlantInfo";
+            _typeNameTable[85] = "Gardenr.Views.Shell";
 
-            _typeTable = new global::System.Type[84];
+            _typeTable = new global::System.Type[86];
             _typeTable[0] = typeof(global::Gardenr.BaseViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Gardenr.ViewModels.MainPageVM);
@@ -285,48 +287,50 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             _typeTable[39] = typeof(global::Gardenr.Models.Plant);
             _typeTable[40] = typeof(global::System.Int32);
             _typeTable[41] = typeof(global::GalaSoft.MvvmLight.Command.RelayCommand);
-            _typeTable[42] = typeof(global::Gardenr.Views.Catalogus);
-            _typeTable[43] = typeof(global::Gardenr.ViewModels.ConvertToStrign);
-            _typeTable[44] = typeof(global::Gardenr.Views.CatalogusPlant);
-            _typeTable[45] = typeof(global::Gardenr.Views.Contact);
-            _typeTable[46] = typeof(global::Gardenr.ViewModels.LoginVM);
-            _typeTable[47] = typeof(global::Gardenr.Views.ExtendedSplash);
-            _typeTable[48] = typeof(global::Windows.UI.Xaml.Controls.Grid);
-            _typeTable[49] = typeof(global::Windows.UI.Xaml.Controls.Panel);
-            _typeTable[50] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.SpecNotificaties>);
-            _typeTable[51] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.SpecNotificaties>);
-            _typeTable[52] = typeof(global::Gardenr.Models.SpecNotificaties);
-            _typeTable[53] = typeof(global::Gardenr.Models.Notificaties);
-            _typeTable[54] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.NieuwsItem>);
-            _typeTable[55] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.NieuwsItem>);
-            _typeTable[56] = typeof(global::Gardenr.Models.NieuwsItem);
-            _typeTable[57] = typeof(global::Gardenr.Views.StringFormatConverter);
-            _typeTable[58] = typeof(global::Gardenr.Views.Home);
-            _typeTable[59] = typeof(global::Gardenr.Models.Instellingen);
-            _typeTable[60] = typeof(global::Gardenr.Models.Taal);
-            _typeTable[61] = typeof(global::Gardenr.Views.Instellingen);
-            _typeTable[62] = typeof(global::Gardenr.Views.Login);
-            _typeTable[63] = typeof(global::Gardenr.Models.Alarm);
-            _typeTable[64] = typeof(global::Gardenr.Models.TypeC);
-            _typeTable[65] = typeof(global::Gardenr.Views.Notificaties);
-            _typeTable[66] = typeof(global::System.DateTimeOffset);
-            _typeTable[67] = typeof(global::System.ValueType);
-            _typeTable[68] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.TypeC>);
-            _typeTable[69] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.TypeC>);
-            _typeTable[70] = typeof(global::Gardenr.Models.Tuin);
-            _typeTable[71] = typeof(global::Gardenr.Views.NotificatiesBewerken);
-            _typeTable[72] = typeof(global::Gardenr.Views.Stringformat2);
-            _typeTable[73] = typeof(global::System.DateTime);
-            _typeTable[74] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Notificaties>);
-            _typeTable[75] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Notificaties>);
-            _typeTable[76] = typeof(global::Gardenr.Views.PlantBewerken);
-            _typeTable[77] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>);
-            _typeTable[78] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Tuin>);
-            _typeTable[79] = typeof(global::Gardenr.Views.Profiel_Favorieten);
-            _typeTable[80] = typeof(global::Gardenr.Views.Profiel_Historiek);
-            _typeTable[81] = typeof(global::Gardenr.Views.Profiel);
-            _typeTable[82] = typeof(global::Gardenr.Views.Profiel_PlantInfo);
-            _typeTable[83] = typeof(global::Gardenr.Views.Shell);
+            _typeTable[42] = typeof(global::Microsoft.Advertising.WinRT.UI.AdControl);
+            _typeTable[43] = typeof(global::Windows.UI.Xaml.Controls.StackPanel);
+            _typeTable[44] = typeof(global::Windows.UI.Xaml.Controls.Panel);
+            _typeTable[45] = typeof(global::Gardenr.Views.Catalogus);
+            _typeTable[46] = typeof(global::Gardenr.ViewModels.ConvertToStrign);
+            _typeTable[47] = typeof(global::Gardenr.Views.CatalogusPlant);
+            _typeTable[48] = typeof(global::Gardenr.Views.Contact);
+            _typeTable[49] = typeof(global::Gardenr.ViewModels.LoginVM);
+            _typeTable[50] = typeof(global::Gardenr.Views.ExtendedSplash);
+            _typeTable[51] = typeof(global::Windows.UI.Xaml.Controls.Grid);
+            _typeTable[52] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.SpecNotificaties>);
+            _typeTable[53] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.SpecNotificaties>);
+            _typeTable[54] = typeof(global::Gardenr.Models.SpecNotificaties);
+            _typeTable[55] = typeof(global::Gardenr.Models.Notificaties);
+            _typeTable[56] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.NieuwsItem>);
+            _typeTable[57] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.NieuwsItem>);
+            _typeTable[58] = typeof(global::Gardenr.Models.NieuwsItem);
+            _typeTable[59] = typeof(global::Gardenr.Views.StringFormatConverter);
+            _typeTable[60] = typeof(global::Gardenr.Views.Home);
+            _typeTable[61] = typeof(global::Gardenr.Models.Instellingen);
+            _typeTable[62] = typeof(global::Gardenr.Models.Taal);
+            _typeTable[63] = typeof(global::Gardenr.Views.Instellingen);
+            _typeTable[64] = typeof(global::Gardenr.Views.Login);
+            _typeTable[65] = typeof(global::Gardenr.Models.Alarm);
+            _typeTable[66] = typeof(global::Gardenr.Models.TypeC);
+            _typeTable[67] = typeof(global::Gardenr.Views.Notificaties);
+            _typeTable[68] = typeof(global::System.DateTimeOffset);
+            _typeTable[69] = typeof(global::System.ValueType);
+            _typeTable[70] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.TypeC>);
+            _typeTable[71] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.TypeC>);
+            _typeTable[72] = typeof(global::Gardenr.Models.Tuin);
+            _typeTable[73] = typeof(global::Gardenr.Views.NotificatiesBewerken);
+            _typeTable[74] = typeof(global::Gardenr.Views.Stringformat2);
+            _typeTable[75] = typeof(global::System.DateTime);
+            _typeTable[76] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Notificaties>);
+            _typeTable[77] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Notificaties>);
+            _typeTable[78] = typeof(global::Gardenr.Views.PlantBewerken);
+            _typeTable[79] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>);
+            _typeTable[80] = typeof(global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Tuin>);
+            _typeTable[81] = typeof(global::Gardenr.Views.Profiel_Favorieten);
+            _typeTable[82] = typeof(global::Gardenr.Views.Profiel_Historiek);
+            _typeTable[83] = typeof(global::Gardenr.Views.Profiel);
+            _typeTable[84] = typeof(global::Gardenr.Views.Profiel_PlantInfo);
+            _typeTable[85] = typeof(global::Gardenr.Views.Shell);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -392,42 +396,43 @@ namespace Gardenr.Gardenr_XamlTypeInfo
         private object Activate_37_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Plant>(); }
         private object Activate_38_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Plant>(); }
         private object Activate_39_Plant() { return new global::Gardenr.Models.Plant(); }
-        private object Activate_42_Catalogus() { return new global::Gardenr.Views.Catalogus(); }
-        private object Activate_43_ConvertToStrign() { return new global::Gardenr.ViewModels.ConvertToStrign(); }
-        private object Activate_44_CatalogusPlant() { return new global::Gardenr.Views.CatalogusPlant(); }
-        private object Activate_45_Contact() { return new global::Gardenr.Views.Contact(); }
-        private object Activate_46_LoginVM() { return new global::Gardenr.ViewModels.LoginVM(); }
-        private object Activate_50_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.SpecNotificaties>(); }
-        private object Activate_51_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.SpecNotificaties>(); }
-        private object Activate_52_SpecNotificaties() { return new global::Gardenr.Models.SpecNotificaties(); }
-        private object Activate_53_Notificaties() { return new global::Gardenr.Models.Notificaties(); }
-        private object Activate_54_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.NieuwsItem>(); }
-        private object Activate_55_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.NieuwsItem>(); }
-        private object Activate_56_NieuwsItem() { return new global::Gardenr.Models.NieuwsItem(); }
-        private object Activate_57_StringFormatConverter() { return new global::Gardenr.Views.StringFormatConverter(); }
-        private object Activate_58_Home() { return new global::Gardenr.Views.Home(); }
-        private object Activate_59_Instellingen() { return new global::Gardenr.Models.Instellingen(); }
-        private object Activate_60_Taal() { return new global::Gardenr.Models.Taal(); }
-        private object Activate_61_Instellingen() { return new global::Gardenr.Views.Instellingen(); }
-        private object Activate_62_Login() { return new global::Gardenr.Views.Login(); }
-        private object Activate_63_Alarm() { return new global::Gardenr.Models.Alarm(); }
-        private object Activate_64_TypeC() { return new global::Gardenr.Models.TypeC(); }
-        private object Activate_65_Notificaties() { return new global::Gardenr.Views.Notificaties(); }
-        private object Activate_68_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.TypeC>(); }
-        private object Activate_69_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.TypeC>(); }
-        private object Activate_70_Tuin() { return new global::Gardenr.Models.Tuin(); }
-        private object Activate_71_NotificatiesBewerken() { return new global::Gardenr.Views.NotificatiesBewerken(); }
-        private object Activate_72_Stringformat2() { return new global::Gardenr.Views.Stringformat2(); }
-        private object Activate_74_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Notificaties>(); }
-        private object Activate_75_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Notificaties>(); }
-        private object Activate_76_PlantBewerken() { return new global::Gardenr.Views.PlantBewerken(); }
-        private object Activate_77_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>(); }
-        private object Activate_78_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Tuin>(); }
-        private object Activate_79_Profiel_Favorieten() { return new global::Gardenr.Views.Profiel_Favorieten(); }
-        private object Activate_80_Profiel_Historiek() { return new global::Gardenr.Views.Profiel_Historiek(); }
-        private object Activate_81_Profiel() { return new global::Gardenr.Views.Profiel(); }
-        private object Activate_82_Profiel_PlantInfo() { return new global::Gardenr.Views.Profiel_PlantInfo(); }
-        private object Activate_83_Shell() { return new global::Gardenr.Views.Shell(); }
+        private object Activate_42_AdControl() { return new global::Microsoft.Advertising.WinRT.UI.AdControl(); }
+        private object Activate_45_Catalogus() { return new global::Gardenr.Views.Catalogus(); }
+        private object Activate_46_ConvertToStrign() { return new global::Gardenr.ViewModels.ConvertToStrign(); }
+        private object Activate_47_CatalogusPlant() { return new global::Gardenr.Views.CatalogusPlant(); }
+        private object Activate_48_Contact() { return new global::Gardenr.Views.Contact(); }
+        private object Activate_49_LoginVM() { return new global::Gardenr.ViewModels.LoginVM(); }
+        private object Activate_52_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.SpecNotificaties>(); }
+        private object Activate_53_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.SpecNotificaties>(); }
+        private object Activate_54_SpecNotificaties() { return new global::Gardenr.Models.SpecNotificaties(); }
+        private object Activate_55_Notificaties() { return new global::Gardenr.Models.Notificaties(); }
+        private object Activate_56_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.NieuwsItem>(); }
+        private object Activate_57_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.NieuwsItem>(); }
+        private object Activate_58_NieuwsItem() { return new global::Gardenr.Models.NieuwsItem(); }
+        private object Activate_59_StringFormatConverter() { return new global::Gardenr.Views.StringFormatConverter(); }
+        private object Activate_60_Home() { return new global::Gardenr.Views.Home(); }
+        private object Activate_61_Instellingen() { return new global::Gardenr.Models.Instellingen(); }
+        private object Activate_62_Taal() { return new global::Gardenr.Models.Taal(); }
+        private object Activate_63_Instellingen() { return new global::Gardenr.Views.Instellingen(); }
+        private object Activate_64_Login() { return new global::Gardenr.Views.Login(); }
+        private object Activate_65_Alarm() { return new global::Gardenr.Models.Alarm(); }
+        private object Activate_66_TypeC() { return new global::Gardenr.Models.TypeC(); }
+        private object Activate_67_Notificaties() { return new global::Gardenr.Views.Notificaties(); }
+        private object Activate_70_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.TypeC>(); }
+        private object Activate_71_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.TypeC>(); }
+        private object Activate_72_Tuin() { return new global::Gardenr.Models.Tuin(); }
+        private object Activate_73_NotificatiesBewerken() { return new global::Gardenr.Views.NotificatiesBewerken(); }
+        private object Activate_74_Stringformat2() { return new global::Gardenr.Views.Stringformat2(); }
+        private object Activate_76_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Notificaties>(); }
+        private object Activate_77_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Notificaties>(); }
+        private object Activate_78_PlantBewerken() { return new global::Gardenr.Views.PlantBewerken(); }
+        private object Activate_79_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>(); }
+        private object Activate_80_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Gardenr.Models.Tuin>(); }
+        private object Activate_81_Profiel_Favorieten() { return new global::Gardenr.Views.Profiel_Favorieten(); }
+        private object Activate_82_Profiel_Historiek() { return new global::Gardenr.Views.Profiel_Historiek(); }
+        private object Activate_83_Profiel() { return new global::Gardenr.Views.Profiel(); }
+        private object Activate_84_Profiel_PlantInfo() { return new global::Gardenr.Views.Profiel_PlantInfo(); }
+        private object Activate_85_Shell() { return new global::Gardenr.Views.Shell(); }
         private void VectorAdd_25_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.DrawerInstellingen>)instance;
@@ -464,61 +469,61 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             var newItem = (global::Gardenr.Models.Plant)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_50_ObservableCollection(object instance, object item)
+        private void VectorAdd_52_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.SpecNotificaties>)instance;
             var newItem = (global::Gardenr.Models.SpecNotificaties)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_51_Collection(object instance, object item)
+        private void VectorAdd_53_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.SpecNotificaties>)instance;
             var newItem = (global::Gardenr.Models.SpecNotificaties)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_54_ObservableCollection(object instance, object item)
+        private void VectorAdd_56_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.NieuwsItem>)instance;
             var newItem = (global::Gardenr.Models.NieuwsItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_55_Collection(object instance, object item)
+        private void VectorAdd_57_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.NieuwsItem>)instance;
             var newItem = (global::Gardenr.Models.NieuwsItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_68_ObservableCollection(object instance, object item)
+        private void VectorAdd_70_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.TypeC>)instance;
             var newItem = (global::Gardenr.Models.TypeC)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_69_Collection(object instance, object item)
+        private void VectorAdd_71_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.TypeC>)instance;
             var newItem = (global::Gardenr.Models.TypeC)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_74_ObservableCollection(object instance, object item)
+        private void VectorAdd_76_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.Notificaties>)instance;
             var newItem = (global::Gardenr.Models.Notificaties)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_75_Collection(object instance, object item)
+        private void VectorAdd_77_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.Notificaties>)instance;
             var newItem = (global::Gardenr.Models.Notificaties)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_77_ObservableCollection(object instance, object item)
+        private void VectorAdd_79_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.Tuin>)instance;
             var newItem = (global::Gardenr.Models.Tuin)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_78_Collection(object instance, object item)
+        private void VectorAdd_80_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Gardenr.Models.Tuin>)instance;
             var newItem = (global::Gardenr.Models.Tuin)item;
@@ -922,82 +927,102 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 42:   //  Gardenr.Views.Catalogus
+            case 42:   //  Microsoft.Advertising.WinRT.UI.AdControl
+                userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.StackPanel"));
+                userType.Activator = Activate_42_AdControl;
+                userType.AddMemberName("ApplicationId");
+                userType.AddMemberName("AdUnitId");
+                userType.AddMemberName("HasAd");
+                userType.AddMemberName("IsSuspended");
+                userType.AddMemberName("PostalCode");
+                userType.AddMemberName("CountryOrRegion");
+                userType.AddMemberName("Keywords");
+                userType.AddMemberName("AutoRefreshIntervalInSeconds");
+                userType.AddMemberName("IsAutoRefreshEnabled");
+                userType.AddMemberName("IsEngaged");
+                xamlType = userType;
+                break;
+
+            case 43:   //  Windows.UI.Xaml.Controls.StackPanel
+                xamlType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 44:   //  Windows.UI.Xaml.Controls.Panel
+                xamlType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 45:   //  Gardenr.Views.Catalogus
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_42_Catalogus;
+                userType.Activator = Activate_45_Catalogus;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 43:   //  Gardenr.ViewModels.ConvertToStrign
+            case 46:   //  Gardenr.ViewModels.ConvertToStrign
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_43_ConvertToStrign;
+                userType.Activator = Activate_46_ConvertToStrign;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 44:   //  Gardenr.Views.CatalogusPlant
+            case 47:   //  Gardenr.Views.CatalogusPlant
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_44_CatalogusPlant;
+                userType.Activator = Activate_47_CatalogusPlant;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 45:   //  Gardenr.Views.Contact
+            case 48:   //  Gardenr.Views.Contact
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_45_Contact;
+                userType.Activator = Activate_48_Contact;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 46:   //  Gardenr.ViewModels.LoginVM
+            case 49:   //  Gardenr.ViewModels.LoginVM
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Gardenr.ViewModels.ViewModelBase"));
-                userType.Activator = Activate_46_LoginVM;
+                userType.Activator = Activate_49_LoginVM;
                 userType.AddMemberName("Testing");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 47:   //  Gardenr.Views.ExtendedSplash
+            case 50:   //  Gardenr.Views.ExtendedSplash
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Grid"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 48:   //  Windows.UI.Xaml.Controls.Grid
+            case 51:   //  Windows.UI.Xaml.Controls.Grid
                 xamlType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 49:   //  Windows.UI.Xaml.Controls.Panel
-                xamlType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 50:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.SpecNotificaties>
+            case 52:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.SpecNotificaties>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Gardenr.Models.SpecNotificaties>"));
-                userType.CollectionAdd = VectorAdd_50_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_52_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 51:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.SpecNotificaties>
+            case 53:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.SpecNotificaties>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_51_Collection;
-                userType.CollectionAdd = VectorAdd_51_Collection;
+                userType.Activator = Activate_53_Collection;
+                userType.CollectionAdd = VectorAdd_53_Collection;
                 xamlType = userType;
                 break;
 
-            case 52:   //  Gardenr.Models.SpecNotificaties
+            case 54:   //  Gardenr.Models.SpecNotificaties
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_52_SpecNotificaties;
+                userType.Activator = Activate_54_SpecNotificaties;
                 userType.AddMemberName("n");
                 userType.AddMemberName("plantje");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 53:   //  Gardenr.Models.Notificaties
+            case 55:   //  Gardenr.Models.Notificaties
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_53_Notificaties;
+                userType.Activator = Activate_55_Notificaties;
                 userType.AddMemberName("ID");
                 userType.AddMemberName("TypeID");
                 userType.AddMemberName("Omschrijving");
@@ -1009,23 +1034,23 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 54:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.NieuwsItem>
+            case 56:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.NieuwsItem>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Gardenr.Models.NieuwsItem>"));
-                userType.CollectionAdd = VectorAdd_54_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_56_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 55:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.NieuwsItem>
+            case 57:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.NieuwsItem>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_55_Collection;
-                userType.CollectionAdd = VectorAdd_55_Collection;
+                userType.Activator = Activate_57_Collection;
+                userType.CollectionAdd = VectorAdd_57_Collection;
                 xamlType = userType;
                 break;
 
-            case 56:   //  Gardenr.Models.NieuwsItem
+            case 58:   //  Gardenr.Models.NieuwsItem
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_56_NieuwsItem;
+                userType.Activator = Activate_58_NieuwsItem;
                 userType.AddMemberName("ID");
                 userType.AddMemberName("Titel");
                 userType.AddMemberName("Description");
@@ -1033,37 +1058,37 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 57:   //  Gardenr.Views.StringFormatConverter
+            case 59:   //  Gardenr.Views.StringFormatConverter
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_57_StringFormatConverter;
+                userType.Activator = Activate_59_StringFormatConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 58:   //  Gardenr.Views.Home
+            case 60:   //  Gardenr.Views.Home
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_58_Home;
+                userType.Activator = Activate_60_Home;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 59:   //  Gardenr.Models.Instellingen
+            case 61:   //  Gardenr.Models.Instellingen
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 60:   //  Gardenr.Models.Taal
+            case 62:   //  Gardenr.Models.Taal
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 61:   //  Gardenr.Views.Instellingen
+            case 63:   //  Gardenr.Views.Instellingen
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_61_Instellingen;
+                userType.Activator = Activate_63_Instellingen;
                 userType.AddMemberName("ScenarioOutput_Longitude");
                 userType.AddMemberName("ScenarioOutput_Latitude");
                 userType.AddMemberName("ScenarioOutput_Accuracy");
@@ -1075,64 +1100,64 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 62:   //  Gardenr.Views.Login
+            case 64:   //  Gardenr.Views.Login
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_62_Login;
+                userType.Activator = Activate_64_Login;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 63:   //  Gardenr.Models.Alarm
+            case 65:   //  Gardenr.Models.Alarm
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 64:   //  Gardenr.Models.TypeC
+            case 66:   //  Gardenr.Models.TypeC
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_64_TypeC;
+                userType.Activator = Activate_66_TypeC;
                 userType.AddMemberName("ID");
                 userType.AddMemberName("Naam");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 65:   //  Gardenr.Views.Notificaties
+            case 67:   //  Gardenr.Views.Notificaties
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_65_Notificaties;
+                userType.Activator = Activate_67_Notificaties;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 66:   //  System.DateTimeOffset
+            case 68:   //  System.DateTimeOffset
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 67:   //  System.ValueType
+            case 69:   //  System.ValueType
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 68:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.TypeC>
+            case 70:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.TypeC>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Gardenr.Models.TypeC>"));
-                userType.CollectionAdd = VectorAdd_68_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_70_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 69:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.TypeC>
+            case 71:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.TypeC>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_69_Collection;
-                userType.CollectionAdd = VectorAdd_69_Collection;
+                userType.Activator = Activate_71_Collection;
+                userType.CollectionAdd = VectorAdd_71_Collection;
                 xamlType = userType;
                 break;
 
-            case 70:   //  Gardenr.Models.Tuin
+            case 72:   //  Gardenr.Models.Tuin
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_70_Tuin;
+                userType.Activator = Activate_72_Tuin;
                 userType.AddMemberName("ID");
                 userType.AddMemberName("Plant");
                 userType.AddMemberName("gebruikerID");
@@ -1147,92 +1172,92 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 71:   //  Gardenr.Views.NotificatiesBewerken
+            case 73:   //  Gardenr.Views.NotificatiesBewerken
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_71_NotificatiesBewerken;
+                userType.Activator = Activate_73_NotificatiesBewerken;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 72:   //  Gardenr.Views.Stringformat2
+            case 74:   //  Gardenr.Views.Stringformat2
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_72_Stringformat2;
+                userType.Activator = Activate_74_Stringformat2;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 73:   //  System.DateTime
+            case 75:   //  System.DateTime
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 74:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Notificaties>
+            case 76:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Notificaties>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Gardenr.Models.Notificaties>"));
-                userType.CollectionAdd = VectorAdd_74_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_76_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 75:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.Notificaties>
+            case 77:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.Notificaties>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_75_Collection;
-                userType.CollectionAdd = VectorAdd_75_Collection;
+                userType.Activator = Activate_77_Collection;
+                userType.CollectionAdd = VectorAdd_77_Collection;
                 xamlType = userType;
                 break;
 
-            case 76:   //  Gardenr.Views.PlantBewerken
+            case 78:   //  Gardenr.Views.PlantBewerken
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_76_PlantBewerken;
+                userType.Activator = Activate_78_PlantBewerken;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 77:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>
+            case 79:   //  System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>"));
-                userType.CollectionAdd = VectorAdd_77_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_79_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 78:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>
+            case 80:   //  System.Collections.ObjectModel.Collection`1<Gardenr.Models.Tuin>
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_78_Collection;
-                userType.CollectionAdd = VectorAdd_78_Collection;
+                userType.Activator = Activate_80_Collection;
+                userType.CollectionAdd = VectorAdd_80_Collection;
                 xamlType = userType;
                 break;
 
-            case 79:   //  Gardenr.Views.Profiel_Favorieten
+            case 81:   //  Gardenr.Views.Profiel_Favorieten
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_79_Profiel_Favorieten;
+                userType.Activator = Activate_81_Profiel_Favorieten;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 80:   //  Gardenr.Views.Profiel_Historiek
+            case 82:   //  Gardenr.Views.Profiel_Historiek
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_80_Profiel_Historiek;
+                userType.Activator = Activate_82_Profiel_Historiek;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 81:   //  Gardenr.Views.Profiel
+            case 83:   //  Gardenr.Views.Profiel
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_81_Profiel;
+                userType.Activator = Activate_83_Profiel;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 82:   //  Gardenr.Views.Profiel_PlantInfo
+            case 84:   //  Gardenr.Views.Profiel_PlantInfo
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_82_Profiel_PlantInfo;
+                userType.Activator = Activate_84_Profiel_PlantInfo;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 83:   //  Gardenr.Views.Shell
+            case 85:   //  Gardenr.Views.Shell
                 userType = new global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_83_Shell;
+                userType.Activator = Activate_85_Shell;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -1249,6 +1274,8 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 {
                     var otherProviders = new global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider>();
                     global::Windows.UI.Xaml.Markup.IXamlMetadataProvider provider;
+                    provider = new global::Microsoft.Advertising.MicrosoftAdvertising_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
+                    otherProviders.Add(provider); 
                     provider = new global::Facebook.Client.Facebook_Client_Universal_Windows_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
                     otherProviders.Add(provider); 
                     _otherProviders = otherProviders;
@@ -1675,1017 +1702,1102 @@ namespace Gardenr.Gardenr_XamlTypeInfo
             var that = (global::Gardenr.ViewModels.CatalogusVM)instance;
             that.GoToDetail = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_45_CatalogusPlantVM_Plant(object instance)
+        private object get_45_AdControl_ApplicationId(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.ApplicationId;
+        }
+        private void set_45_AdControl_ApplicationId(object instance, object Value)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            that.ApplicationId = (global::System.String)Value;
+        }
+        private object get_46_AdControl_AdUnitId(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.AdUnitId;
+        }
+        private void set_46_AdControl_AdUnitId(object instance, object Value)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            that.AdUnitId = (global::System.String)Value;
+        }
+        private object get_47_AdControl_HasAd(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.HasAd;
+        }
+        private object get_48_AdControl_IsSuspended(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.IsSuspended;
+        }
+        private object get_49_AdControl_PostalCode(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.PostalCode;
+        }
+        private void set_49_AdControl_PostalCode(object instance, object Value)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            that.PostalCode = (global::System.String)Value;
+        }
+        private object get_50_AdControl_CountryOrRegion(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.CountryOrRegion;
+        }
+        private void set_50_AdControl_CountryOrRegion(object instance, object Value)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            that.CountryOrRegion = (global::System.String)Value;
+        }
+        private object get_51_AdControl_Keywords(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.Keywords;
+        }
+        private void set_51_AdControl_Keywords(object instance, object Value)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            that.Keywords = (global::System.String)Value;
+        }
+        private object get_52_AdControl_AutoRefreshIntervalInSeconds(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.AutoRefreshIntervalInSeconds;
+        }
+        private void set_52_AdControl_AutoRefreshIntervalInSeconds(object instance, object Value)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            that.AutoRefreshIntervalInSeconds = (global::System.Int32)Value;
+        }
+        private object get_53_AdControl_IsAutoRefreshEnabled(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.IsAutoRefreshEnabled;
+        }
+        private void set_53_AdControl_IsAutoRefreshEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            that.IsAutoRefreshEnabled = (global::System.Boolean)Value;
+        }
+        private object get_54_AdControl_IsEngaged(object instance)
+        {
+            var that = (global::Microsoft.Advertising.WinRT.UI.AdControl)instance;
+            return that.IsEngaged;
+        }
+        private object get_55_CatalogusPlantVM_Plant(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.Plant;
         }
-        private void set_45_CatalogusPlantVM_Plant(object instance, object Value)
+        private void set_55_CatalogusPlantVM_Plant(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.Plant = (global::Gardenr.Models.Plant)Value;
         }
-        private object get_46_CatalogusPlantVM_GoBack(object instance)
+        private object get_56_CatalogusPlantVM_GoBack(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.GoBack;
         }
-        private void set_46_CatalogusPlantVM_GoBack(object instance, object Value)
+        private void set_56_CatalogusPlantVM_GoBack(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.GoBack = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_47_CatalogusPlantVM_AddFavorieten(object instance)
+        private object get_57_CatalogusPlantVM_AddFavorieten(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.AddFavorieten;
         }
-        private void set_47_CatalogusPlantVM_AddFavorieten(object instance, object Value)
+        private void set_57_CatalogusPlantVM_AddFavorieten(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.AddFavorieten = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_48_CatalogusPlantVM_AddGarden(object instance)
+        private object get_58_CatalogusPlantVM_AddGarden(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.AddGarden;
         }
-        private void set_48_CatalogusPlantVM_AddGarden(object instance, object Value)
+        private void set_58_CatalogusPlantVM_AddGarden(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.AddGarden = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_49_CatalogusPlantVM_MakeNotification(object instance)
+        private object get_59_CatalogusPlantVM_MakeNotification(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.MakeNotification;
         }
-        private void set_49_CatalogusPlantVM_MakeNotification(object instance, object Value)
+        private void set_59_CatalogusPlantVM_MakeNotification(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.MakeNotification = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_50_CatalogusPlantVM_ZaaiBegin(object instance)
+        private object get_60_CatalogusPlantVM_ZaaiBegin(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.ZaaiBegin;
         }
-        private void set_50_CatalogusPlantVM_ZaaiBegin(object instance, object Value)
+        private void set_60_CatalogusPlantVM_ZaaiBegin(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.ZaaiBegin = (global::System.Int32)Value;
         }
-        private object get_51_CatalogusPlantVM_ZaaiLengte(object instance)
+        private object get_61_CatalogusPlantVM_ZaaiLengte(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.ZaaiLengte;
         }
-        private void set_51_CatalogusPlantVM_ZaaiLengte(object instance, object Value)
+        private void set_61_CatalogusPlantVM_ZaaiLengte(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.ZaaiLengte = (global::System.Int32)Value;
         }
-        private object get_52_CatalogusPlantVM_PlantBegin(object instance)
+        private object get_62_CatalogusPlantVM_PlantBegin(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.PlantBegin;
         }
-        private void set_52_CatalogusPlantVM_PlantBegin(object instance, object Value)
+        private void set_62_CatalogusPlantVM_PlantBegin(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.PlantBegin = (global::System.Int32)Value;
         }
-        private object get_53_CatalogusPlantVM_PlantLengte(object instance)
+        private object get_63_CatalogusPlantVM_PlantLengte(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.PlantLengte;
         }
-        private void set_53_CatalogusPlantVM_PlantLengte(object instance, object Value)
+        private void set_63_CatalogusPlantVM_PlantLengte(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.PlantLengte = (global::System.Int32)Value;
         }
-        private object get_54_CatalogusPlantVM_OogstBegin(object instance)
+        private object get_64_CatalogusPlantVM_OogstBegin(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.OogstBegin;
         }
-        private void set_54_CatalogusPlantVM_OogstBegin(object instance, object Value)
+        private void set_64_CatalogusPlantVM_OogstBegin(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.OogstBegin = (global::System.Int32)Value;
         }
-        private object get_55_CatalogusPlantVM_OogstLengte(object instance)
+        private object get_65_CatalogusPlantVM_OogstLengte(object instance)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             return that.OogstLengte;
         }
-        private void set_55_CatalogusPlantVM_OogstLengte(object instance, object Value)
+        private void set_65_CatalogusPlantVM_OogstLengte(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.CatalogusPlantVM)instance;
             that.OogstLengte = (global::System.Int32)Value;
         }
-        private object get_56_LoginVM_Testing(object instance)
+        private object get_66_LoginVM_Testing(object instance)
         {
             var that = (global::Gardenr.ViewModels.LoginVM)instance;
             return that.Testing;
         }
-        private void set_56_LoginVM_Testing(object instance, object Value)
+        private void set_66_LoginVM_Testing(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.LoginVM)instance;
             that.Testing = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_57_HomeVM_Weerlocatie(object instance)
+        private object get_67_HomeVM_Weerlocatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.Weerlocatie;
         }
-        private void set_57_HomeVM_Weerlocatie(object instance, object Value)
+        private void set_67_HomeVM_Weerlocatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.Weerlocatie = (global::System.String)Value;
         }
-        private object get_58_HomeVM_Weerstatus(object instance)
+        private object get_68_HomeVM_Weerstatus(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.Weerstatus;
         }
-        private void set_58_HomeVM_Weerstatus(object instance, object Value)
+        private void set_68_HomeVM_Weerstatus(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.Weerstatus = (global::System.String)Value;
         }
-        private object get_59_HomeVM_Weertext(object instance)
+        private object get_69_HomeVM_Weertext(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.Weertext;
         }
-        private void set_59_HomeVM_Weertext(object instance, object Value)
+        private void set_69_HomeVM_Weertext(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.Weertext = (global::System.String)Value;
         }
-        private object get_60_HomeVM_Fotourl(object instance)
+        private object get_70_HomeVM_Fotourl(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.Fotourl;
         }
-        private void set_60_HomeVM_Fotourl(object instance, object Value)
+        private void set_70_HomeVM_Fotourl(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.Fotourl = (global::System.String)Value;
         }
-        private object get_61_HomeVM_Iconurl(object instance)
+        private object get_71_HomeVM_Iconurl(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.Iconurl;
         }
-        private void set_61_HomeVM_Iconurl(object instance, object Value)
+        private void set_71_HomeVM_Iconurl(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.Iconurl = (global::System.String)Value;
         }
-        private object get_62_HomeVM_DagFoto(object instance)
+        private object get_72_HomeVM_DagFoto(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.DagFoto;
         }
-        private void set_62_HomeVM_DagFoto(object instance, object Value)
+        private void set_72_HomeVM_DagFoto(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.DagFoto = (global::System.String)Value;
         }
-        private object get_63_HomeVM_NaamFoto(object instance)
+        private object get_73_HomeVM_NaamFoto(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.NaamFoto;
         }
-        private void set_63_HomeVM_NaamFoto(object instance, object Value)
+        private void set_73_HomeVM_NaamFoto(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.NaamFoto = (global::System.String)Value;
         }
-        private object get_64_HomeVM_Notificaties(object instance)
+        private object get_74_HomeVM_Notificaties(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.Notificaties;
         }
-        private void set_64_HomeVM_Notificaties(object instance, object Value)
+        private void set_74_HomeVM_Notificaties(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.Notificaties = (global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.SpecNotificaties>)Value;
         }
-        private object get_65_SpecNotificaties_n(object instance)
+        private object get_75_SpecNotificaties_n(object instance)
         {
             var that = (global::Gardenr.Models.SpecNotificaties)instance;
             return that.n;
         }
-        private void set_65_SpecNotificaties_n(object instance, object Value)
+        private void set_75_SpecNotificaties_n(object instance, object Value)
         {
             var that = (global::Gardenr.Models.SpecNotificaties)instance;
             that.n = (global::Gardenr.Models.Notificaties)Value;
         }
-        private object get_66_SpecNotificaties_plantje(object instance)
+        private object get_76_SpecNotificaties_plantje(object instance)
         {
             var that = (global::Gardenr.Models.SpecNotificaties)instance;
             return that.plantje;
         }
-        private void set_66_SpecNotificaties_plantje(object instance, object Value)
+        private void set_76_SpecNotificaties_plantje(object instance, object Value)
         {
             var that = (global::Gardenr.Models.SpecNotificaties)instance;
             that.plantje = (global::Gardenr.Models.Plant)Value;
         }
-        private object get_67_HomeVM_SelectedNotificatie(object instance)
+        private object get_77_HomeVM_SelectedNotificatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.SelectedNotificatie;
         }
-        private void set_67_HomeVM_SelectedNotificatie(object instance, object Value)
+        private void set_77_HomeVM_SelectedNotificatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.SelectedNotificatie = (global::Gardenr.Models.SpecNotificaties)Value;
         }
-        private object get_68_HomeVM_NieuwsItems(object instance)
+        private object get_78_HomeVM_NieuwsItems(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.NieuwsItems;
         }
-        private void set_68_HomeVM_NieuwsItems(object instance, object Value)
+        private void set_78_HomeVM_NieuwsItems(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.NieuwsItems = (global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.NieuwsItem>)Value;
         }
-        private object get_69_NieuwsItem_ID(object instance)
+        private object get_79_NieuwsItem_ID(object instance)
         {
             var that = (global::Gardenr.Models.NieuwsItem)instance;
             return that.ID;
         }
-        private void set_69_NieuwsItem_ID(object instance, object Value)
+        private void set_79_NieuwsItem_ID(object instance, object Value)
         {
             var that = (global::Gardenr.Models.NieuwsItem)instance;
             that.ID = (global::System.String)Value;
         }
-        private object get_70_NieuwsItem_Titel(object instance)
+        private object get_80_NieuwsItem_Titel(object instance)
         {
             var that = (global::Gardenr.Models.NieuwsItem)instance;
             return that.Titel;
         }
-        private void set_70_NieuwsItem_Titel(object instance, object Value)
+        private void set_80_NieuwsItem_Titel(object instance, object Value)
         {
             var that = (global::Gardenr.Models.NieuwsItem)instance;
             that.Titel = (global::System.String)Value;
         }
-        private object get_71_NieuwsItem_Description(object instance)
+        private object get_81_NieuwsItem_Description(object instance)
         {
             var that = (global::Gardenr.Models.NieuwsItem)instance;
             return that.Description;
         }
-        private void set_71_NieuwsItem_Description(object instance, object Value)
+        private void set_81_NieuwsItem_Description(object instance, object Value)
         {
             var that = (global::Gardenr.Models.NieuwsItem)instance;
             that.Description = (global::System.String)Value;
         }
-        private object get_72_HomeVM_SelectedNieuwsItem(object instance)
+        private object get_82_HomeVM_SelectedNieuwsItem(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.SelectedNieuwsItem;
         }
-        private void set_72_HomeVM_SelectedNieuwsItem(object instance, object Value)
+        private void set_82_HomeVM_SelectedNieuwsItem(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.SelectedNieuwsItem = (global::Gardenr.Models.NieuwsItem)Value;
         }
-        private object get_73_HomeVM_VieuwNotification(object instance)
+        private object get_83_HomeVM_VieuwNotification(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.VieuwNotification;
         }
-        private void set_73_HomeVM_VieuwNotification(object instance, object Value)
+        private void set_83_HomeVM_VieuwNotification(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.VieuwNotification = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_74_HomeVM_VieuwNieuwsItem(object instance)
+        private object get_84_HomeVM_VieuwNieuwsItem(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.VieuwNieuwsItem;
         }
-        private void set_74_HomeVM_VieuwNieuwsItem(object instance, object Value)
+        private void set_84_HomeVM_VieuwNieuwsItem(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.VieuwNieuwsItem = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_75_HomeVM_AddNotificatie(object instance)
+        private object get_85_HomeVM_AddNotificatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             return that.AddNotificatie;
         }
-        private void set_75_HomeVM_AddNotificatie(object instance, object Value)
+        private void set_85_HomeVM_AddNotificatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.HomeVM)instance;
             that.AddNotificatie = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_76_InstellingenVM_Aan(object instance)
+        private object get_86_InstellingenVM_Aan(object instance)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             return that.Aan;
         }
-        private void set_76_InstellingenVM_Aan(object instance, object Value)
+        private void set_86_InstellingenVM_Aan(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             that.Aan = (global::System.Boolean)Value;
         }
-        private object get_77_InstellingenVM_Uit(object instance)
+        private object get_87_InstellingenVM_Uit(object instance)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             return that.Uit;
         }
-        private void set_77_InstellingenVM_Uit(object instance, object Value)
+        private void set_87_InstellingenVM_Uit(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             that.Uit = (global::System.Boolean)Value;
         }
-        private object get_78_InstellingenVM_UserSettings(object instance)
+        private object get_88_InstellingenVM_UserSettings(object instance)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             return that.UserSettings;
         }
-        private void set_78_InstellingenVM_UserSettings(object instance, object Value)
+        private void set_88_InstellingenVM_UserSettings(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             that.UserSettings = (global::Gardenr.Models.Instellingen)Value;
         }
-        private object get_79_InstellingenVM_Taale(object instance)
+        private object get_89_InstellingenVM_Taale(object instance)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             return that.Taale;
         }
-        private void set_79_InstellingenVM_Taale(object instance, object Value)
+        private void set_89_InstellingenVM_Taale(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             that.Taale = (global::Gardenr.Models.Taal)Value;
         }
-        private object get_80_InstellingenVM_SaveSettings(object instance)
+        private object get_90_InstellingenVM_SaveSettings(object instance)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             return that.SaveSettings;
         }
-        private void set_80_InstellingenVM_SaveSettings(object instance, object Value)
+        private void set_90_InstellingenVM_SaveSettings(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.InstellingenVM)instance;
             that.SaveSettings = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_81_Instellingen_ScenarioOutput_Longitude(object instance)
+        private object get_91_Instellingen_ScenarioOutput_Longitude(object instance)
         {
             var that = (global::Gardenr.Views.Instellingen)instance;
             return that.ScenarioOutput_Longitude;
         }
-        private object get_82_Instellingen_ScenarioOutput_Latitude(object instance)
+        private object get_92_Instellingen_ScenarioOutput_Latitude(object instance)
         {
             var that = (global::Gardenr.Views.Instellingen)instance;
             return that.ScenarioOutput_Latitude;
         }
-        private object get_83_Instellingen_ScenarioOutput_Accuracy(object instance)
+        private object get_93_Instellingen_ScenarioOutput_Accuracy(object instance)
         {
             var that = (global::Gardenr.Views.Instellingen)instance;
             return that.ScenarioOutput_Accuracy;
         }
-        private object get_84_Instellingen_ScenarioOutput_Source(object instance)
+        private object get_94_Instellingen_ScenarioOutput_Source(object instance)
         {
             var that = (global::Gardenr.Views.Instellingen)instance;
             return that.ScenarioOutput_Source;
         }
-        private object get_85_Instellingen_ScenarioOutput_PosPrecision(object instance)
+        private object get_95_Instellingen_ScenarioOutput_PosPrecision(object instance)
         {
             var that = (global::Gardenr.Views.Instellingen)instance;
             return that.ScenarioOutput_PosPrecision;
         }
-        private object get_86_Instellingen_ScenarioOutput_HorzPrecision(object instance)
+        private object get_96_Instellingen_ScenarioOutput_HorzPrecision(object instance)
         {
             var that = (global::Gardenr.Views.Instellingen)instance;
             return that.ScenarioOutput_HorzPrecision;
         }
-        private object get_87_Instellingen_ScenarioOutput_VertPrecision(object instance)
+        private object get_97_Instellingen_ScenarioOutput_VertPrecision(object instance)
         {
             var that = (global::Gardenr.Views.Instellingen)instance;
             return that.ScenarioOutput_VertPrecision;
         }
-        private object get_88_NotificatiesVM_NotAlarm(object instance)
+        private object get_98_NotificatiesVM_NotAlarm(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             return that.NotAlarm;
         }
-        private void set_88_NotificatiesVM_NotAlarm(object instance, object Value)
+        private void set_98_NotificatiesVM_NotAlarm(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             that.NotAlarm = (global::Gardenr.Models.Alarm)Value;
         }
-        private object get_89_NotificatiesVM_NotificatieType(object instance)
+        private object get_99_NotificatiesVM_NotificatieType(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             return that.NotificatieType;
         }
-        private void set_89_NotificatiesVM_NotificatieType(object instance, object Value)
+        private void set_99_NotificatiesVM_NotificatieType(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             that.NotificatieType = (global::Gardenr.Models.TypeC)Value;
         }
-        private object get_90_NotificatiesVM_IngesteldeNotificaties(object instance)
+        private object get_100_NotificatiesVM_IngesteldeNotificaties(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             return that.IngesteldeNotificaties;
         }
-        private void set_90_NotificatiesVM_IngesteldeNotificaties(object instance, object Value)
+        private void set_100_NotificatiesVM_IngesteldeNotificaties(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             that.IngesteldeNotificaties = (global::Gardenr.Models.Notificaties)Value;
         }
-        private object get_91_NotificatiesVM_SelectedNotificatie(object instance)
+        private object get_101_NotificatiesVM_SelectedNotificatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             return that.SelectedNotificatie;
         }
-        private void set_91_NotificatiesVM_SelectedNotificatie(object instance, object Value)
+        private void set_101_NotificatiesVM_SelectedNotificatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             that.SelectedNotificatie = (global::Gardenr.Models.Notificaties)Value;
         }
-        private object get_92_NotificatiesVM_AddNotificatie(object instance)
+        private object get_102_NotificatiesVM_AddNotificatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             return that.AddNotificatie;
         }
-        private void set_92_NotificatiesVM_AddNotificatie(object instance, object Value)
+        private void set_102_NotificatiesVM_AddNotificatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             that.AddNotificatie = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_93_NotificatiesVM_BewerkNotificatie(object instance)
+        private object get_103_NotificatiesVM_BewerkNotificatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             return that.BewerkNotificatie;
         }
-        private void set_93_NotificatiesVM_BewerkNotificatie(object instance, object Value)
+        private void set_103_NotificatiesVM_BewerkNotificatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             that.BewerkNotificatie = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_94_NotificatiesVM_DeleteNotificatie(object instance)
+        private object get_104_NotificatiesVM_DeleteNotificatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             return that.DeleteNotificatie;
         }
-        private void set_94_NotificatiesVM_DeleteNotificatie(object instance, object Value)
+        private void set_104_NotificatiesVM_DeleteNotificatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesVM)instance;
             that.DeleteNotificatie = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_95_NotificatiesBewerkenVM_Date(object instance)
+        private object get_105_NotificatiesBewerkenVM_Date(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.Date;
         }
-        private void set_95_NotificatiesBewerkenVM_Date(object instance, object Value)
+        private void set_105_NotificatiesBewerkenVM_Date(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.Date = (global::System.DateTimeOffset)Value;
         }
-        private object get_96_NotificatiesBewerkenVM_NotAlarm(object instance)
+        private object get_106_NotificatiesBewerkenVM_NotAlarm(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.NotAlarm;
         }
-        private void set_96_NotificatiesBewerkenVM_NotAlarm(object instance, object Value)
+        private void set_106_NotificatiesBewerkenVM_NotAlarm(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.NotAlarm = (global::Gardenr.Models.Alarm)Value;
         }
-        private object get_97_NotificatiesBewerkenVM_NotificatieTypes(object instance)
+        private object get_107_NotificatiesBewerkenVM_NotificatieTypes(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.NotificatieTypes;
         }
-        private void set_97_NotificatiesBewerkenVM_NotificatieTypes(object instance, object Value)
+        private void set_107_NotificatiesBewerkenVM_NotificatieTypes(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.NotificatieTypes = (global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.TypeC>)Value;
         }
-        private object get_98_TypeC_ID(object instance)
+        private object get_108_TypeC_ID(object instance)
         {
             var that = (global::Gardenr.Models.TypeC)instance;
             return that.ID;
         }
-        private void set_98_TypeC_ID(object instance, object Value)
+        private void set_108_TypeC_ID(object instance, object Value)
         {
             var that = (global::Gardenr.Models.TypeC)instance;
             that.ID = (global::System.String)Value;
         }
-        private object get_99_TypeC_Naam(object instance)
+        private object get_109_TypeC_Naam(object instance)
         {
             var that = (global::Gardenr.Models.TypeC)instance;
             return that.Naam;
         }
-        private void set_99_TypeC_Naam(object instance, object Value)
+        private void set_109_TypeC_Naam(object instance, object Value)
         {
             var that = (global::Gardenr.Models.TypeC)instance;
             that.Naam = (global::System.String)Value;
         }
-        private object get_100_NotificatiesBewerkenVM_SelectedType(object instance)
+        private object get_110_NotificatiesBewerkenVM_SelectedType(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.SelectedType;
         }
-        private void set_100_NotificatiesBewerkenVM_SelectedType(object instance, object Value)
+        private void set_110_NotificatiesBewerkenVM_SelectedType(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.SelectedType = (global::Gardenr.Models.TypeC)Value;
         }
-        private object get_101_NotificatiesBewerkenVM_BewNotificatie(object instance)
+        private object get_111_NotificatiesBewerkenVM_BewNotificatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.BewNotificatie;
         }
-        private void set_101_NotificatiesBewerkenVM_BewNotificatie(object instance, object Value)
+        private void set_111_NotificatiesBewerkenVM_BewNotificatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.BewNotificatie = (global::Gardenr.Models.Notificaties)Value;
         }
-        private object get_102_NotificatiesBewerkenVM_GegevenTuinObject(object instance)
+        private object get_112_NotificatiesBewerkenVM_GegevenTuinObject(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.GegevenTuinObject;
         }
-        private void set_102_NotificatiesBewerkenVM_GegevenTuinObject(object instance, object Value)
+        private void set_112_NotificatiesBewerkenVM_GegevenTuinObject(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.GegevenTuinObject = (global::Gardenr.Models.Tuin)Value;
         }
-        private object get_103_NotificatiesBewerkenVM_SaveSettings(object instance)
+        private object get_113_NotificatiesBewerkenVM_SaveSettings(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.SaveSettings;
         }
-        private void set_103_NotificatiesBewerkenVM_SaveSettings(object instance, object Value)
+        private void set_113_NotificatiesBewerkenVM_SaveSettings(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.SaveSettings = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_104_NotificatiesBewerkenVM_DeleteNotificatie(object instance)
+        private object get_114_NotificatiesBewerkenVM_DeleteNotificatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.DeleteNotificatie;
         }
-        private void set_104_NotificatiesBewerkenVM_DeleteNotificatie(object instance, object Value)
+        private void set_114_NotificatiesBewerkenVM_DeleteNotificatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.DeleteNotificatie = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_105_NotificatiesBewerkenVM_GoBack(object instance)
+        private object get_115_NotificatiesBewerkenVM_GoBack(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.GoBack;
         }
-        private void set_105_NotificatiesBewerkenVM_GoBack(object instance, object Value)
+        private void set_115_NotificatiesBewerkenVM_GoBack(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.GoBack = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_106_NotificatiesBewerkenVM_DatePicker(object instance)
+        private object get_116_NotificatiesBewerkenVM_DatePicker(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.DatePicker;
         }
-        private void set_106_NotificatiesBewerkenVM_DatePicker(object instance, object Value)
+        private void set_116_NotificatiesBewerkenVM_DatePicker(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.DatePicker = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_107_NotificatiesBewerkenVM_PickImage(object instance)
+        private object get_117_NotificatiesBewerkenVM_PickImage(object instance)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             return that.PickImage;
         }
-        private void set_107_NotificatiesBewerkenVM_PickImage(object instance, object Value)
+        private void set_117_NotificatiesBewerkenVM_PickImage(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.NotificatiesBewerkenVM)instance;
             that.PickImage = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_108_PlantBewerkenVM_OogstDatum(object instance)
+        private object get_118_PlantBewerkenVM_OogstDatum(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.OogstDatum;
         }
-        private void set_108_PlantBewerkenVM_OogstDatum(object instance, object Value)
+        private void set_118_PlantBewerkenVM_OogstDatum(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.OogstDatum = (global::System.DateTime)Value;
         }
-        private object get_109_PlantBewerkenVM_TeBewerkenTuin(object instance)
+        private object get_119_PlantBewerkenVM_TeBewerkenTuin(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.TeBewerkenTuin;
         }
-        private void set_109_PlantBewerkenVM_TeBewerkenTuin(object instance, object Value)
+        private void set_119_PlantBewerkenVM_TeBewerkenTuin(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.TeBewerkenTuin = (global::Gardenr.Models.Tuin)Value;
         }
-        private object get_110_PlantBewerkenVM_SelectedTuin(object instance)
+        private object get_120_PlantBewerkenVM_SelectedTuin(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.SelectedTuin;
         }
-        private void set_110_PlantBewerkenVM_SelectedTuin(object instance, object Value)
+        private void set_120_PlantBewerkenVM_SelectedTuin(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.SelectedTuin = (global::Gardenr.Models.Tuin)Value;
         }
-        private object get_111_PlantBewerkenVM_Notificaties(object instance)
+        private object get_121_PlantBewerkenVM_Notificaties(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.Notificaties;
         }
-        private void set_111_PlantBewerkenVM_Notificaties(object instance, object Value)
+        private void set_121_PlantBewerkenVM_Notificaties(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.Notificaties = (global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Notificaties>)Value;
         }
-        private object get_112_Notificaties_ID(object instance)
+        private object get_122_Notificaties_ID(object instance)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             return that.ID;
         }
-        private void set_112_Notificaties_ID(object instance, object Value)
+        private void set_122_Notificaties_ID(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             that.ID = (global::System.String)Value;
         }
-        private object get_113_Notificaties_TypeID(object instance)
+        private object get_123_Notificaties_TypeID(object instance)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             return that.TypeID;
         }
-        private void set_113_Notificaties_TypeID(object instance, object Value)
+        private void set_123_Notificaties_TypeID(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             that.TypeID = (global::System.String)Value;
         }
-        private object get_114_Notificaties_Omschrijving(object instance)
+        private object get_124_Notificaties_Omschrijving(object instance)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             return that.Omschrijving;
         }
-        private void set_114_Notificaties_Omschrijving(object instance, object Value)
+        private void set_124_Notificaties_Omschrijving(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             that.Omschrijving = (global::System.String)Value;
         }
-        private object get_115_Notificaties_AlarmID(object instance)
+        private object get_125_Notificaties_AlarmID(object instance)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             return that.AlarmID;
         }
-        private void set_115_Notificaties_AlarmID(object instance, object Value)
+        private void set_125_Notificaties_AlarmID(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             that.AlarmID = (global::System.String)Value;
         }
-        private object get_116_Notificaties_GebruikerID(object instance)
+        private object get_126_Notificaties_GebruikerID(object instance)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             return that.GebruikerID;
         }
-        private void set_116_Notificaties_GebruikerID(object instance, object Value)
+        private void set_126_Notificaties_GebruikerID(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             that.GebruikerID = (global::System.String)Value;
         }
-        private object get_117_Notificaties_datum(object instance)
+        private object get_127_Notificaties_datum(object instance)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             return that.datum;
         }
-        private void set_117_Notificaties_datum(object instance, object Value)
+        private void set_127_Notificaties_datum(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             that.datum = (global::System.String)Value;
         }
-        private object get_118_Notificaties_PlantID(object instance)
+        private object get_128_Notificaties_PlantID(object instance)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             return that.PlantID;
         }
-        private void set_118_Notificaties_PlantID(object instance, object Value)
+        private void set_128_Notificaties_PlantID(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Notificaties)instance;
             that.PlantID = (global::System.String)Value;
         }
-        private object get_119_PlantBewerkenVM_SelectedNotificatie(object instance)
+        private object get_129_PlantBewerkenVM_SelectedNotificatie(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.SelectedNotificatie;
         }
-        private void set_119_PlantBewerkenVM_SelectedNotificatie(object instance, object Value)
+        private void set_129_PlantBewerkenVM_SelectedNotificatie(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.SelectedNotificatie = (global::Gardenr.Models.Notificaties)Value;
         }
-        private object get_120_PlantBewerkenVM_SavePlant(object instance)
+        private object get_130_PlantBewerkenVM_SavePlant(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.SavePlant;
         }
-        private void set_120_PlantBewerkenVM_SavePlant(object instance, object Value)
+        private void set_130_PlantBewerkenVM_SavePlant(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.SavePlant = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_121_PlantBewerkenVM_DeletePlant(object instance)
+        private object get_131_PlantBewerkenVM_DeletePlant(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.DeletePlant;
         }
-        private void set_121_PlantBewerkenVM_DeletePlant(object instance, object Value)
+        private void set_131_PlantBewerkenVM_DeletePlant(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.DeletePlant = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_122_PlantBewerkenVM_AddFavorites(object instance)
+        private object get_132_PlantBewerkenVM_AddFavorites(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.AddFavorites;
         }
-        private void set_122_PlantBewerkenVM_AddFavorites(object instance, object Value)
+        private void set_132_PlantBewerkenVM_AddFavorites(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.AddFavorites = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_123_PlantBewerkenVM_SetPicture(object instance)
+        private object get_133_PlantBewerkenVM_SetPicture(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.SetPicture;
         }
-        private void set_123_PlantBewerkenVM_SetPicture(object instance, object Value)
+        private void set_133_PlantBewerkenVM_SetPicture(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.SetPicture = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_124_PlantBewerkenVM_GoBack(object instance)
+        private object get_134_PlantBewerkenVM_GoBack(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.GoBack;
         }
-        private void set_124_PlantBewerkenVM_GoBack(object instance, object Value)
+        private void set_134_PlantBewerkenVM_GoBack(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.GoBack = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_125_PlantBewerkenVM_AddNotification(object instance)
+        private object get_135_PlantBewerkenVM_AddNotification(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.AddNotification;
         }
-        private void set_125_PlantBewerkenVM_AddNotification(object instance, object Value)
+        private void set_135_PlantBewerkenVM_AddNotification(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.AddNotification = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_126_PlantBewerkenVM_GoNotification(object instance)
+        private object get_136_PlantBewerkenVM_GoNotification(object instance)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             return that.GoNotification;
         }
-        private void set_126_PlantBewerkenVM_GoNotification(object instance, object Value)
+        private void set_136_PlantBewerkenVM_GoNotification(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.PlantBewerkenVM)instance;
             that.GoNotification = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_127_ProfielVM_TuinPlanten(object instance)
+        private object get_137_ProfielVM_TuinPlanten(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.TuinPlanten;
         }
-        private void set_127_ProfielVM_TuinPlanten(object instance, object Value)
+        private void set_137_ProfielVM_TuinPlanten(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.TuinPlanten = (global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>)Value;
         }
-        private object get_128_Tuin_ID(object instance)
+        private object get_138_Tuin_ID(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.ID;
         }
-        private void set_128_Tuin_ID(object instance, object Value)
+        private void set_138_Tuin_ID(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.ID = (global::System.String)Value;
         }
-        private object get_129_Tuin_Plant(object instance)
+        private object get_139_Tuin_Plant(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.Plant;
         }
-        private void set_129_Tuin_Plant(object instance, object Value)
+        private void set_139_Tuin_Plant(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.Plant = (global::Gardenr.Models.Plant)Value;
         }
-        private object get_130_Tuin_gebruikerID(object instance)
+        private object get_140_Tuin_gebruikerID(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.gebruikerID;
         }
-        private void set_130_Tuin_gebruikerID(object instance, object Value)
+        private void set_140_Tuin_gebruikerID(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.gebruikerID = (global::System.String)Value;
         }
-        private object get_131_Tuin_favoriet(object instance)
+        private object get_141_Tuin_favoriet(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.favoriet;
         }
-        private void set_131_Tuin_favoriet(object instance, object Value)
+        private void set_141_Tuin_favoriet(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.favoriet = (global::System.Boolean)Value;
         }
-        private object get_132_Tuin_Aantal(object instance)
+        private object get_142_Tuin_Aantal(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.Aantal;
         }
-        private void set_132_Tuin_Aantal(object instance, object Value)
+        private void set_142_Tuin_Aantal(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.Aantal = (global::System.Int32)Value;
         }
-        private object get_133_Tuin_LaatstWater(object instance)
+        private object get_143_Tuin_LaatstWater(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.LaatstWater;
         }
-        private void set_133_Tuin_LaatstWater(object instance, object Value)
+        private void set_143_Tuin_LaatstWater(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.LaatstWater = (global::System.String)Value;
         }
-        private object get_134_Tuin_extra(object instance)
+        private object get_144_Tuin_extra(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.extra;
         }
-        private void set_134_Tuin_extra(object instance, object Value)
+        private void set_144_Tuin_extra(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.extra = (global::System.String)Value;
         }
-        private object get_135_Tuin_Notificaties(object instance)
+        private object get_145_Tuin_Notificaties(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.Notificaties;
         }
-        private void set_135_Tuin_Notificaties(object instance, object Value)
+        private void set_145_Tuin_Notificaties(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.Notificaties = (global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Notificaties>)Value;
         }
-        private object get_136_Tuin_historiek(object instance)
+        private object get_146_Tuin_historiek(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.historiek;
         }
-        private void set_136_Tuin_historiek(object instance, object Value)
+        private void set_146_Tuin_historiek(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.historiek = (global::System.Boolean)Value;
         }
-        private object get_137_Tuin_plantDatum(object instance)
+        private object get_147_Tuin_plantDatum(object instance)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             return that.plantDatum;
         }
-        private void set_137_Tuin_plantDatum(object instance, object Value)
+        private void set_147_Tuin_plantDatum(object instance, object Value)
         {
             var that = (global::Gardenr.Models.Tuin)instance;
             that.plantDatum = (global::System.String)Value;
         }
-        private object get_138_ProfielVM_SelectedPlant(object instance)
+        private object get_148_ProfielVM_SelectedPlant(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.SelectedPlant;
         }
-        private void set_138_ProfielVM_SelectedPlant(object instance, object Value)
+        private void set_148_ProfielVM_SelectedPlant(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.SelectedPlant = (global::Gardenr.Models.Tuin)Value;
         }
-        private object get_139_ProfielVM_HistoriekPlant(object instance)
+        private object get_149_ProfielVM_HistoriekPlant(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.HistoriekPlant;
         }
-        private void set_139_ProfielVM_HistoriekPlant(object instance, object Value)
+        private void set_149_ProfielVM_HistoriekPlant(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.HistoriekPlant = (global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>)Value;
         }
-        private object get_140_ProfielVM_goadd(object instance)
+        private object get_150_ProfielVM_goadd(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.goadd;
         }
-        private void set_140_ProfielVM_goadd(object instance, object Value)
+        private void set_150_ProfielVM_goadd(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.goadd = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_141_ProfielVM_FavorietenPlant(object instance)
+        private object get_151_ProfielVM_FavorietenPlant(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.FavorietenPlant;
         }
-        private void set_141_ProfielVM_FavorietenPlant(object instance, object Value)
+        private void set_151_ProfielVM_FavorietenPlant(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.FavorietenPlant = (global::System.Collections.ObjectModel.ObservableCollection<global::Gardenr.Models.Tuin>)Value;
         }
-        private object get_142_ProfielVM_SearchTerm(object instance)
+        private object get_152_ProfielVM_SearchTerm(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.SearchTerm;
         }
-        private void set_142_ProfielVM_SearchTerm(object instance, object Value)
+        private void set_152_ProfielVM_SearchTerm(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.SearchTerm = (global::System.String)Value;
         }
-        private object get_143_ProfielVM_GoToTuinObject(object instance)
+        private object get_153_ProfielVM_GoToTuinObject(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.GoToTuinObject;
         }
-        private void set_143_ProfielVM_GoToTuinObject(object instance, object Value)
+        private void set_153_ProfielVM_GoToTuinObject(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.GoToTuinObject = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_144_ProfielVM_GoToPlant(object instance)
+        private object get_154_ProfielVM_GoToPlant(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.GoToPlant;
         }
-        private void set_144_ProfielVM_GoToPlant(object instance, object Value)
+        private void set_154_ProfielVM_GoToPlant(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.GoToPlant = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_145_ProfielVM_GoHuiding(object instance)
+        private object get_155_ProfielVM_GoHuiding(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.GoHuiding;
         }
-        private void set_145_ProfielVM_GoHuiding(object instance, object Value)
+        private void set_155_ProfielVM_GoHuiding(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.GoHuiding = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_146_ProfielVM_GoHistoriek(object instance)
+        private object get_156_ProfielVM_GoHistoriek(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.GoHistoriek;
         }
-        private void set_146_ProfielVM_GoHistoriek(object instance, object Value)
+        private void set_156_ProfielVM_GoHistoriek(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.GoHistoriek = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_147_ProfielVM_GoFavoriet(object instance)
+        private object get_157_ProfielVM_GoFavoriet(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.GoFavoriet;
         }
-        private void set_147_ProfielVM_GoFavoriet(object instance, object Value)
+        private void set_157_ProfielVM_GoFavoriet(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.GoFavoriet = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_148_ProfielVM_AddTuinObject(object instance)
+        private object get_158_ProfielVM_AddTuinObject(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.AddTuinObject;
         }
-        private void set_148_ProfielVM_AddTuinObject(object instance, object Value)
+        private void set_158_ProfielVM_AddTuinObject(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.AddTuinObject = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
         }
-        private object get_149_ProfielVM_NoMoreFav(object instance)
+        private object get_159_ProfielVM_NoMoreFav(object instance)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             return that.NoMoreFav;
         }
-        private void set_149_ProfielVM_NoMoreFav(object instance, object Value)
+        private void set_159_ProfielVM_NoMoreFav(object instance, object Value)
         {
             var that = (global::Gardenr.ViewModels.ProfielVM)instance;
             that.NoMoreFav = (global::GalaSoft.MvvmLight.Command.RelayCommand)Value;
@@ -2968,635 +3080,695 @@ namespace Gardenr.Gardenr_XamlTypeInfo
                 xamlMember.Getter = get_44_CatalogusVM_GoToDetail;
                 xamlMember.Setter = set_44_CatalogusVM_GoToDetail;
                 break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.ApplicationId":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ApplicationId", "String");
+                xamlMember.Getter = get_45_AdControl_ApplicationId;
+                xamlMember.Setter = set_45_AdControl_ApplicationId;
+                break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.AdUnitId":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AdUnitId", "String");
+                xamlMember.Getter = get_46_AdControl_AdUnitId;
+                xamlMember.Setter = set_46_AdControl_AdUnitId;
+                break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.HasAd":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "HasAd", "Boolean");
+                xamlMember.Getter = get_47_AdControl_HasAd;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.IsSuspended":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "IsSuspended", "Boolean");
+                xamlMember.Getter = get_48_AdControl_IsSuspended;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.PostalCode":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "PostalCode", "String");
+                xamlMember.Getter = get_49_AdControl_PostalCode;
+                xamlMember.Setter = set_49_AdControl_PostalCode;
+                break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.CountryOrRegion":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "CountryOrRegion", "String");
+                xamlMember.Getter = get_50_AdControl_CountryOrRegion;
+                xamlMember.Setter = set_50_AdControl_CountryOrRegion;
+                break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.Keywords":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Keywords", "String");
+                xamlMember.Getter = get_51_AdControl_Keywords;
+                xamlMember.Setter = set_51_AdControl_Keywords;
+                break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.AutoRefreshIntervalInSeconds":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AutoRefreshIntervalInSeconds", "Int32");
+                xamlMember.Getter = get_52_AdControl_AutoRefreshIntervalInSeconds;
+                xamlMember.Setter = set_52_AdControl_AutoRefreshIntervalInSeconds;
+                break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.IsAutoRefreshEnabled":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "IsAutoRefreshEnabled", "Boolean");
+                xamlMember.Getter = get_53_AdControl_IsAutoRefreshEnabled;
+                xamlMember.Setter = set_53_AdControl_IsAutoRefreshEnabled;
+                break;
+            case "Microsoft.Advertising.WinRT.UI.AdControl.IsEngaged":
+                userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Advertising.WinRT.UI.AdControl");
+                xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "IsEngaged", "Boolean");
+                xamlMember.Getter = get_54_AdControl_IsEngaged;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Gardenr.ViewModels.CatalogusPlantVM.Plant":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Plant", "Gardenr.Models.Plant");
-                xamlMember.Getter = get_45_CatalogusPlantVM_Plant;
-                xamlMember.Setter = set_45_CatalogusPlantVM_Plant;
+                xamlMember.Getter = get_55_CatalogusPlantVM_Plant;
+                xamlMember.Setter = set_55_CatalogusPlantVM_Plant;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.GoBack":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GoBack", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_46_CatalogusPlantVM_GoBack;
-                xamlMember.Setter = set_46_CatalogusPlantVM_GoBack;
+                xamlMember.Getter = get_56_CatalogusPlantVM_GoBack;
+                xamlMember.Setter = set_56_CatalogusPlantVM_GoBack;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.AddFavorieten":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AddFavorieten", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_47_CatalogusPlantVM_AddFavorieten;
-                xamlMember.Setter = set_47_CatalogusPlantVM_AddFavorieten;
+                xamlMember.Getter = get_57_CatalogusPlantVM_AddFavorieten;
+                xamlMember.Setter = set_57_CatalogusPlantVM_AddFavorieten;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.AddGarden":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AddGarden", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_48_CatalogusPlantVM_AddGarden;
-                xamlMember.Setter = set_48_CatalogusPlantVM_AddGarden;
+                xamlMember.Getter = get_58_CatalogusPlantVM_AddGarden;
+                xamlMember.Setter = set_58_CatalogusPlantVM_AddGarden;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.MakeNotification":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "MakeNotification", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_49_CatalogusPlantVM_MakeNotification;
-                xamlMember.Setter = set_49_CatalogusPlantVM_MakeNotification;
+                xamlMember.Getter = get_59_CatalogusPlantVM_MakeNotification;
+                xamlMember.Setter = set_59_CatalogusPlantVM_MakeNotification;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.ZaaiBegin":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ZaaiBegin", "Int32");
-                xamlMember.Getter = get_50_CatalogusPlantVM_ZaaiBegin;
-                xamlMember.Setter = set_50_CatalogusPlantVM_ZaaiBegin;
+                xamlMember.Getter = get_60_CatalogusPlantVM_ZaaiBegin;
+                xamlMember.Setter = set_60_CatalogusPlantVM_ZaaiBegin;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.ZaaiLengte":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ZaaiLengte", "Int32");
-                xamlMember.Getter = get_51_CatalogusPlantVM_ZaaiLengte;
-                xamlMember.Setter = set_51_CatalogusPlantVM_ZaaiLengte;
+                xamlMember.Getter = get_61_CatalogusPlantVM_ZaaiLengte;
+                xamlMember.Setter = set_61_CatalogusPlantVM_ZaaiLengte;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.PlantBegin":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "PlantBegin", "Int32");
-                xamlMember.Getter = get_52_CatalogusPlantVM_PlantBegin;
-                xamlMember.Setter = set_52_CatalogusPlantVM_PlantBegin;
+                xamlMember.Getter = get_62_CatalogusPlantVM_PlantBegin;
+                xamlMember.Setter = set_62_CatalogusPlantVM_PlantBegin;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.PlantLengte":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "PlantLengte", "Int32");
-                xamlMember.Getter = get_53_CatalogusPlantVM_PlantLengte;
-                xamlMember.Setter = set_53_CatalogusPlantVM_PlantLengte;
+                xamlMember.Getter = get_63_CatalogusPlantVM_PlantLengte;
+                xamlMember.Setter = set_63_CatalogusPlantVM_PlantLengte;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.OogstBegin":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "OogstBegin", "Int32");
-                xamlMember.Getter = get_54_CatalogusPlantVM_OogstBegin;
-                xamlMember.Setter = set_54_CatalogusPlantVM_OogstBegin;
+                xamlMember.Getter = get_64_CatalogusPlantVM_OogstBegin;
+                xamlMember.Setter = set_64_CatalogusPlantVM_OogstBegin;
                 break;
             case "Gardenr.ViewModels.CatalogusPlantVM.OogstLengte":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.CatalogusPlantVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "OogstLengte", "Int32");
-                xamlMember.Getter = get_55_CatalogusPlantVM_OogstLengte;
-                xamlMember.Setter = set_55_CatalogusPlantVM_OogstLengte;
+                xamlMember.Getter = get_65_CatalogusPlantVM_OogstLengte;
+                xamlMember.Setter = set_65_CatalogusPlantVM_OogstLengte;
                 break;
             case "Gardenr.ViewModels.LoginVM.Testing":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.LoginVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Testing", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_56_LoginVM_Testing;
-                xamlMember.Setter = set_56_LoginVM_Testing;
+                xamlMember.Getter = get_66_LoginVM_Testing;
+                xamlMember.Setter = set_66_LoginVM_Testing;
                 break;
             case "Gardenr.ViewModels.HomeVM.Weerlocatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Weerlocatie", "String");
-                xamlMember.Getter = get_57_HomeVM_Weerlocatie;
-                xamlMember.Setter = set_57_HomeVM_Weerlocatie;
+                xamlMember.Getter = get_67_HomeVM_Weerlocatie;
+                xamlMember.Setter = set_67_HomeVM_Weerlocatie;
                 break;
             case "Gardenr.ViewModels.HomeVM.Weerstatus":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Weerstatus", "String");
-                xamlMember.Getter = get_58_HomeVM_Weerstatus;
-                xamlMember.Setter = set_58_HomeVM_Weerstatus;
+                xamlMember.Getter = get_68_HomeVM_Weerstatus;
+                xamlMember.Setter = set_68_HomeVM_Weerstatus;
                 break;
             case "Gardenr.ViewModels.HomeVM.Weertext":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Weertext", "String");
-                xamlMember.Getter = get_59_HomeVM_Weertext;
-                xamlMember.Setter = set_59_HomeVM_Weertext;
+                xamlMember.Getter = get_69_HomeVM_Weertext;
+                xamlMember.Setter = set_69_HomeVM_Weertext;
                 break;
             case "Gardenr.ViewModels.HomeVM.Fotourl":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Fotourl", "String");
-                xamlMember.Getter = get_60_HomeVM_Fotourl;
-                xamlMember.Setter = set_60_HomeVM_Fotourl;
+                xamlMember.Getter = get_70_HomeVM_Fotourl;
+                xamlMember.Setter = set_70_HomeVM_Fotourl;
                 break;
             case "Gardenr.ViewModels.HomeVM.Iconurl":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Iconurl", "String");
-                xamlMember.Getter = get_61_HomeVM_Iconurl;
-                xamlMember.Setter = set_61_HomeVM_Iconurl;
+                xamlMember.Getter = get_71_HomeVM_Iconurl;
+                xamlMember.Setter = set_71_HomeVM_Iconurl;
                 break;
             case "Gardenr.ViewModels.HomeVM.DagFoto":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "DagFoto", "String");
-                xamlMember.Getter = get_62_HomeVM_DagFoto;
-                xamlMember.Setter = set_62_HomeVM_DagFoto;
+                xamlMember.Getter = get_72_HomeVM_DagFoto;
+                xamlMember.Setter = set_72_HomeVM_DagFoto;
                 break;
             case "Gardenr.ViewModels.HomeVM.NaamFoto":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "NaamFoto", "String");
-                xamlMember.Getter = get_63_HomeVM_NaamFoto;
-                xamlMember.Setter = set_63_HomeVM_NaamFoto;
+                xamlMember.Getter = get_73_HomeVM_NaamFoto;
+                xamlMember.Setter = set_73_HomeVM_NaamFoto;
                 break;
             case "Gardenr.ViewModels.HomeVM.Notificaties":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Notificaties", "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.SpecNotificaties>");
-                xamlMember.Getter = get_64_HomeVM_Notificaties;
-                xamlMember.Setter = set_64_HomeVM_Notificaties;
+                xamlMember.Getter = get_74_HomeVM_Notificaties;
+                xamlMember.Setter = set_74_HomeVM_Notificaties;
                 break;
             case "Gardenr.Models.SpecNotificaties.n":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.SpecNotificaties");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "n", "Gardenr.Models.Notificaties");
-                xamlMember.Getter = get_65_SpecNotificaties_n;
-                xamlMember.Setter = set_65_SpecNotificaties_n;
+                xamlMember.Getter = get_75_SpecNotificaties_n;
+                xamlMember.Setter = set_75_SpecNotificaties_n;
                 break;
             case "Gardenr.Models.SpecNotificaties.plantje":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.SpecNotificaties");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "plantje", "Gardenr.Models.Plant");
-                xamlMember.Getter = get_66_SpecNotificaties_plantje;
-                xamlMember.Setter = set_66_SpecNotificaties_plantje;
+                xamlMember.Getter = get_76_SpecNotificaties_plantje;
+                xamlMember.Setter = set_76_SpecNotificaties_plantje;
                 break;
             case "Gardenr.ViewModels.HomeVM.SelectedNotificatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SelectedNotificatie", "Gardenr.Models.SpecNotificaties");
-                xamlMember.Getter = get_67_HomeVM_SelectedNotificatie;
-                xamlMember.Setter = set_67_HomeVM_SelectedNotificatie;
+                xamlMember.Getter = get_77_HomeVM_SelectedNotificatie;
+                xamlMember.Setter = set_77_HomeVM_SelectedNotificatie;
                 break;
             case "Gardenr.ViewModels.HomeVM.NieuwsItems":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "NieuwsItems", "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.NieuwsItem>");
-                xamlMember.Getter = get_68_HomeVM_NieuwsItems;
-                xamlMember.Setter = set_68_HomeVM_NieuwsItems;
+                xamlMember.Getter = get_78_HomeVM_NieuwsItems;
+                xamlMember.Setter = set_78_HomeVM_NieuwsItems;
                 break;
             case "Gardenr.Models.NieuwsItem.ID":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.NieuwsItem");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ID", "String");
-                xamlMember.Getter = get_69_NieuwsItem_ID;
-                xamlMember.Setter = set_69_NieuwsItem_ID;
+                xamlMember.Getter = get_79_NieuwsItem_ID;
+                xamlMember.Setter = set_79_NieuwsItem_ID;
                 break;
             case "Gardenr.Models.NieuwsItem.Titel":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.NieuwsItem");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Titel", "String");
-                xamlMember.Getter = get_70_NieuwsItem_Titel;
-                xamlMember.Setter = set_70_NieuwsItem_Titel;
+                xamlMember.Getter = get_80_NieuwsItem_Titel;
+                xamlMember.Setter = set_80_NieuwsItem_Titel;
                 break;
             case "Gardenr.Models.NieuwsItem.Description":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.NieuwsItem");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Description", "String");
-                xamlMember.Getter = get_71_NieuwsItem_Description;
-                xamlMember.Setter = set_71_NieuwsItem_Description;
+                xamlMember.Getter = get_81_NieuwsItem_Description;
+                xamlMember.Setter = set_81_NieuwsItem_Description;
                 break;
             case "Gardenr.ViewModels.HomeVM.SelectedNieuwsItem":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SelectedNieuwsItem", "Gardenr.Models.NieuwsItem");
-                xamlMember.Getter = get_72_HomeVM_SelectedNieuwsItem;
-                xamlMember.Setter = set_72_HomeVM_SelectedNieuwsItem;
+                xamlMember.Getter = get_82_HomeVM_SelectedNieuwsItem;
+                xamlMember.Setter = set_82_HomeVM_SelectedNieuwsItem;
                 break;
             case "Gardenr.ViewModels.HomeVM.VieuwNotification":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "VieuwNotification", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_73_HomeVM_VieuwNotification;
-                xamlMember.Setter = set_73_HomeVM_VieuwNotification;
+                xamlMember.Getter = get_83_HomeVM_VieuwNotification;
+                xamlMember.Setter = set_83_HomeVM_VieuwNotification;
                 break;
             case "Gardenr.ViewModels.HomeVM.VieuwNieuwsItem":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "VieuwNieuwsItem", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_74_HomeVM_VieuwNieuwsItem;
-                xamlMember.Setter = set_74_HomeVM_VieuwNieuwsItem;
+                xamlMember.Getter = get_84_HomeVM_VieuwNieuwsItem;
+                xamlMember.Setter = set_84_HomeVM_VieuwNieuwsItem;
                 break;
             case "Gardenr.ViewModels.HomeVM.AddNotificatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.HomeVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AddNotificatie", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_75_HomeVM_AddNotificatie;
-                xamlMember.Setter = set_75_HomeVM_AddNotificatie;
+                xamlMember.Getter = get_85_HomeVM_AddNotificatie;
+                xamlMember.Setter = set_85_HomeVM_AddNotificatie;
                 break;
             case "Gardenr.ViewModels.InstellingenVM.Aan":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.InstellingenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Aan", "Boolean");
-                xamlMember.Getter = get_76_InstellingenVM_Aan;
-                xamlMember.Setter = set_76_InstellingenVM_Aan;
+                xamlMember.Getter = get_86_InstellingenVM_Aan;
+                xamlMember.Setter = set_86_InstellingenVM_Aan;
                 break;
             case "Gardenr.ViewModels.InstellingenVM.Uit":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.InstellingenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Uit", "Boolean");
-                xamlMember.Getter = get_77_InstellingenVM_Uit;
-                xamlMember.Setter = set_77_InstellingenVM_Uit;
+                xamlMember.Getter = get_87_InstellingenVM_Uit;
+                xamlMember.Setter = set_87_InstellingenVM_Uit;
                 break;
             case "Gardenr.ViewModels.InstellingenVM.UserSettings":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.InstellingenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "UserSettings", "Gardenr.Models.Instellingen");
-                xamlMember.Getter = get_78_InstellingenVM_UserSettings;
-                xamlMember.Setter = set_78_InstellingenVM_UserSettings;
+                xamlMember.Getter = get_88_InstellingenVM_UserSettings;
+                xamlMember.Setter = set_88_InstellingenVM_UserSettings;
                 break;
             case "Gardenr.ViewModels.InstellingenVM.Taale":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.InstellingenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Taale", "Gardenr.Models.Taal");
-                xamlMember.Getter = get_79_InstellingenVM_Taale;
-                xamlMember.Setter = set_79_InstellingenVM_Taale;
+                xamlMember.Getter = get_89_InstellingenVM_Taale;
+                xamlMember.Setter = set_89_InstellingenVM_Taale;
                 break;
             case "Gardenr.ViewModels.InstellingenVM.SaveSettings":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.InstellingenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SaveSettings", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_80_InstellingenVM_SaveSettings;
-                xamlMember.Setter = set_80_InstellingenVM_SaveSettings;
+                xamlMember.Getter = get_90_InstellingenVM_SaveSettings;
+                xamlMember.Setter = set_90_InstellingenVM_SaveSettings;
                 break;
             case "Gardenr.Views.Instellingen.ScenarioOutput_Longitude":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Views.Instellingen");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ScenarioOutput_Longitude", "String");
-                xamlMember.Getter = get_81_Instellingen_ScenarioOutput_Longitude;
+                xamlMember.Getter = get_91_Instellingen_ScenarioOutput_Longitude;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Gardenr.Views.Instellingen.ScenarioOutput_Latitude":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Views.Instellingen");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ScenarioOutput_Latitude", "String");
-                xamlMember.Getter = get_82_Instellingen_ScenarioOutput_Latitude;
+                xamlMember.Getter = get_92_Instellingen_ScenarioOutput_Latitude;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Gardenr.Views.Instellingen.ScenarioOutput_Accuracy":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Views.Instellingen");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ScenarioOutput_Accuracy", "String");
-                xamlMember.Getter = get_83_Instellingen_ScenarioOutput_Accuracy;
+                xamlMember.Getter = get_93_Instellingen_ScenarioOutput_Accuracy;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Gardenr.Views.Instellingen.ScenarioOutput_Source":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Views.Instellingen");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ScenarioOutput_Source", "String");
-                xamlMember.Getter = get_84_Instellingen_ScenarioOutput_Source;
+                xamlMember.Getter = get_94_Instellingen_ScenarioOutput_Source;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Gardenr.Views.Instellingen.ScenarioOutput_PosPrecision":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Views.Instellingen");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ScenarioOutput_PosPrecision", "String");
-                xamlMember.Getter = get_85_Instellingen_ScenarioOutput_PosPrecision;
+                xamlMember.Getter = get_95_Instellingen_ScenarioOutput_PosPrecision;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Gardenr.Views.Instellingen.ScenarioOutput_HorzPrecision":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Views.Instellingen");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ScenarioOutput_HorzPrecision", "String");
-                xamlMember.Getter = get_86_Instellingen_ScenarioOutput_HorzPrecision;
+                xamlMember.Getter = get_96_Instellingen_ScenarioOutput_HorzPrecision;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Gardenr.Views.Instellingen.ScenarioOutput_VertPrecision":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Views.Instellingen");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ScenarioOutput_VertPrecision", "String");
-                xamlMember.Getter = get_87_Instellingen_ScenarioOutput_VertPrecision;
+                xamlMember.Getter = get_97_Instellingen_ScenarioOutput_VertPrecision;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Gardenr.ViewModels.NotificatiesVM.NotAlarm":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "NotAlarm", "Gardenr.Models.Alarm");
-                xamlMember.Getter = get_88_NotificatiesVM_NotAlarm;
-                xamlMember.Setter = set_88_NotificatiesVM_NotAlarm;
+                xamlMember.Getter = get_98_NotificatiesVM_NotAlarm;
+                xamlMember.Setter = set_98_NotificatiesVM_NotAlarm;
                 break;
             case "Gardenr.ViewModels.NotificatiesVM.NotificatieType":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "NotificatieType", "Gardenr.Models.TypeC");
-                xamlMember.Getter = get_89_NotificatiesVM_NotificatieType;
-                xamlMember.Setter = set_89_NotificatiesVM_NotificatieType;
+                xamlMember.Getter = get_99_NotificatiesVM_NotificatieType;
+                xamlMember.Setter = set_99_NotificatiesVM_NotificatieType;
                 break;
             case "Gardenr.ViewModels.NotificatiesVM.IngesteldeNotificaties":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "IngesteldeNotificaties", "Gardenr.Models.Notificaties");
-                xamlMember.Getter = get_90_NotificatiesVM_IngesteldeNotificaties;
-                xamlMember.Setter = set_90_NotificatiesVM_IngesteldeNotificaties;
+                xamlMember.Getter = get_100_NotificatiesVM_IngesteldeNotificaties;
+                xamlMember.Setter = set_100_NotificatiesVM_IngesteldeNotificaties;
                 break;
             case "Gardenr.ViewModels.NotificatiesVM.SelectedNotificatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SelectedNotificatie", "Gardenr.Models.Notificaties");
-                xamlMember.Getter = get_91_NotificatiesVM_SelectedNotificatie;
-                xamlMember.Setter = set_91_NotificatiesVM_SelectedNotificatie;
+                xamlMember.Getter = get_101_NotificatiesVM_SelectedNotificatie;
+                xamlMember.Setter = set_101_NotificatiesVM_SelectedNotificatie;
                 break;
             case "Gardenr.ViewModels.NotificatiesVM.AddNotificatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AddNotificatie", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_92_NotificatiesVM_AddNotificatie;
-                xamlMember.Setter = set_92_NotificatiesVM_AddNotificatie;
+                xamlMember.Getter = get_102_NotificatiesVM_AddNotificatie;
+                xamlMember.Setter = set_102_NotificatiesVM_AddNotificatie;
                 break;
             case "Gardenr.ViewModels.NotificatiesVM.BewerkNotificatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "BewerkNotificatie", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_93_NotificatiesVM_BewerkNotificatie;
-                xamlMember.Setter = set_93_NotificatiesVM_BewerkNotificatie;
+                xamlMember.Getter = get_103_NotificatiesVM_BewerkNotificatie;
+                xamlMember.Setter = set_103_NotificatiesVM_BewerkNotificatie;
                 break;
             case "Gardenr.ViewModels.NotificatiesVM.DeleteNotificatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "DeleteNotificatie", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_94_NotificatiesVM_DeleteNotificatie;
-                xamlMember.Setter = set_94_NotificatiesVM_DeleteNotificatie;
+                xamlMember.Getter = get_104_NotificatiesVM_DeleteNotificatie;
+                xamlMember.Setter = set_104_NotificatiesVM_DeleteNotificatie;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.Date":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Date", "System.DateTimeOffset");
-                xamlMember.Getter = get_95_NotificatiesBewerkenVM_Date;
-                xamlMember.Setter = set_95_NotificatiesBewerkenVM_Date;
+                xamlMember.Getter = get_105_NotificatiesBewerkenVM_Date;
+                xamlMember.Setter = set_105_NotificatiesBewerkenVM_Date;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.NotAlarm":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "NotAlarm", "Gardenr.Models.Alarm");
-                xamlMember.Getter = get_96_NotificatiesBewerkenVM_NotAlarm;
-                xamlMember.Setter = set_96_NotificatiesBewerkenVM_NotAlarm;
+                xamlMember.Getter = get_106_NotificatiesBewerkenVM_NotAlarm;
+                xamlMember.Setter = set_106_NotificatiesBewerkenVM_NotAlarm;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.NotificatieTypes":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "NotificatieTypes", "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.TypeC>");
-                xamlMember.Getter = get_97_NotificatiesBewerkenVM_NotificatieTypes;
-                xamlMember.Setter = set_97_NotificatiesBewerkenVM_NotificatieTypes;
+                xamlMember.Getter = get_107_NotificatiesBewerkenVM_NotificatieTypes;
+                xamlMember.Setter = set_107_NotificatiesBewerkenVM_NotificatieTypes;
                 break;
             case "Gardenr.Models.TypeC.ID":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.TypeC");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ID", "String");
-                xamlMember.Getter = get_98_TypeC_ID;
-                xamlMember.Setter = set_98_TypeC_ID;
+                xamlMember.Getter = get_108_TypeC_ID;
+                xamlMember.Setter = set_108_TypeC_ID;
                 break;
             case "Gardenr.Models.TypeC.Naam":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.TypeC");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Naam", "String");
-                xamlMember.Getter = get_99_TypeC_Naam;
-                xamlMember.Setter = set_99_TypeC_Naam;
+                xamlMember.Getter = get_109_TypeC_Naam;
+                xamlMember.Setter = set_109_TypeC_Naam;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.SelectedType":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SelectedType", "Gardenr.Models.TypeC");
-                xamlMember.Getter = get_100_NotificatiesBewerkenVM_SelectedType;
-                xamlMember.Setter = set_100_NotificatiesBewerkenVM_SelectedType;
+                xamlMember.Getter = get_110_NotificatiesBewerkenVM_SelectedType;
+                xamlMember.Setter = set_110_NotificatiesBewerkenVM_SelectedType;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.BewNotificatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "BewNotificatie", "Gardenr.Models.Notificaties");
-                xamlMember.Getter = get_101_NotificatiesBewerkenVM_BewNotificatie;
-                xamlMember.Setter = set_101_NotificatiesBewerkenVM_BewNotificatie;
+                xamlMember.Getter = get_111_NotificatiesBewerkenVM_BewNotificatie;
+                xamlMember.Setter = set_111_NotificatiesBewerkenVM_BewNotificatie;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.GegevenTuinObject":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GegevenTuinObject", "Gardenr.Models.Tuin");
-                xamlMember.Getter = get_102_NotificatiesBewerkenVM_GegevenTuinObject;
-                xamlMember.Setter = set_102_NotificatiesBewerkenVM_GegevenTuinObject;
+                xamlMember.Getter = get_112_NotificatiesBewerkenVM_GegevenTuinObject;
+                xamlMember.Setter = set_112_NotificatiesBewerkenVM_GegevenTuinObject;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.SaveSettings":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SaveSettings", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_103_NotificatiesBewerkenVM_SaveSettings;
-                xamlMember.Setter = set_103_NotificatiesBewerkenVM_SaveSettings;
+                xamlMember.Getter = get_113_NotificatiesBewerkenVM_SaveSettings;
+                xamlMember.Setter = set_113_NotificatiesBewerkenVM_SaveSettings;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.DeleteNotificatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "DeleteNotificatie", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_104_NotificatiesBewerkenVM_DeleteNotificatie;
-                xamlMember.Setter = set_104_NotificatiesBewerkenVM_DeleteNotificatie;
+                xamlMember.Getter = get_114_NotificatiesBewerkenVM_DeleteNotificatie;
+                xamlMember.Setter = set_114_NotificatiesBewerkenVM_DeleteNotificatie;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.GoBack":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GoBack", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_105_NotificatiesBewerkenVM_GoBack;
-                xamlMember.Setter = set_105_NotificatiesBewerkenVM_GoBack;
+                xamlMember.Getter = get_115_NotificatiesBewerkenVM_GoBack;
+                xamlMember.Setter = set_115_NotificatiesBewerkenVM_GoBack;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.DatePicker":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "DatePicker", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_106_NotificatiesBewerkenVM_DatePicker;
-                xamlMember.Setter = set_106_NotificatiesBewerkenVM_DatePicker;
+                xamlMember.Getter = get_116_NotificatiesBewerkenVM_DatePicker;
+                xamlMember.Setter = set_116_NotificatiesBewerkenVM_DatePicker;
                 break;
             case "Gardenr.ViewModels.NotificatiesBewerkenVM.PickImage":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.NotificatiesBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "PickImage", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_107_NotificatiesBewerkenVM_PickImage;
-                xamlMember.Setter = set_107_NotificatiesBewerkenVM_PickImage;
+                xamlMember.Getter = get_117_NotificatiesBewerkenVM_PickImage;
+                xamlMember.Setter = set_117_NotificatiesBewerkenVM_PickImage;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.OogstDatum":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "OogstDatum", "System.DateTime");
-                xamlMember.Getter = get_108_PlantBewerkenVM_OogstDatum;
-                xamlMember.Setter = set_108_PlantBewerkenVM_OogstDatum;
+                xamlMember.Getter = get_118_PlantBewerkenVM_OogstDatum;
+                xamlMember.Setter = set_118_PlantBewerkenVM_OogstDatum;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.TeBewerkenTuin":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "TeBewerkenTuin", "Gardenr.Models.Tuin");
-                xamlMember.Getter = get_109_PlantBewerkenVM_TeBewerkenTuin;
-                xamlMember.Setter = set_109_PlantBewerkenVM_TeBewerkenTuin;
+                xamlMember.Getter = get_119_PlantBewerkenVM_TeBewerkenTuin;
+                xamlMember.Setter = set_119_PlantBewerkenVM_TeBewerkenTuin;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.SelectedTuin":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SelectedTuin", "Gardenr.Models.Tuin");
-                xamlMember.Getter = get_110_PlantBewerkenVM_SelectedTuin;
-                xamlMember.Setter = set_110_PlantBewerkenVM_SelectedTuin;
+                xamlMember.Getter = get_120_PlantBewerkenVM_SelectedTuin;
+                xamlMember.Setter = set_120_PlantBewerkenVM_SelectedTuin;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.Notificaties":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Notificaties", "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Notificaties>");
-                xamlMember.Getter = get_111_PlantBewerkenVM_Notificaties;
-                xamlMember.Setter = set_111_PlantBewerkenVM_Notificaties;
+                xamlMember.Getter = get_121_PlantBewerkenVM_Notificaties;
+                xamlMember.Setter = set_121_PlantBewerkenVM_Notificaties;
                 break;
             case "Gardenr.Models.Notificaties.ID":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Notificaties");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ID", "String");
-                xamlMember.Getter = get_112_Notificaties_ID;
-                xamlMember.Setter = set_112_Notificaties_ID;
+                xamlMember.Getter = get_122_Notificaties_ID;
+                xamlMember.Setter = set_122_Notificaties_ID;
                 break;
             case "Gardenr.Models.Notificaties.TypeID":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Notificaties");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "TypeID", "String");
-                xamlMember.Getter = get_113_Notificaties_TypeID;
-                xamlMember.Setter = set_113_Notificaties_TypeID;
+                xamlMember.Getter = get_123_Notificaties_TypeID;
+                xamlMember.Setter = set_123_Notificaties_TypeID;
                 break;
             case "Gardenr.Models.Notificaties.Omschrijving":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Notificaties");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Omschrijving", "String");
-                xamlMember.Getter = get_114_Notificaties_Omschrijving;
-                xamlMember.Setter = set_114_Notificaties_Omschrijving;
+                xamlMember.Getter = get_124_Notificaties_Omschrijving;
+                xamlMember.Setter = set_124_Notificaties_Omschrijving;
                 break;
             case "Gardenr.Models.Notificaties.AlarmID":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Notificaties");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AlarmID", "String");
-                xamlMember.Getter = get_115_Notificaties_AlarmID;
-                xamlMember.Setter = set_115_Notificaties_AlarmID;
+                xamlMember.Getter = get_125_Notificaties_AlarmID;
+                xamlMember.Setter = set_125_Notificaties_AlarmID;
                 break;
             case "Gardenr.Models.Notificaties.GebruikerID":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Notificaties");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GebruikerID", "String");
-                xamlMember.Getter = get_116_Notificaties_GebruikerID;
-                xamlMember.Setter = set_116_Notificaties_GebruikerID;
+                xamlMember.Getter = get_126_Notificaties_GebruikerID;
+                xamlMember.Setter = set_126_Notificaties_GebruikerID;
                 break;
             case "Gardenr.Models.Notificaties.datum":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Notificaties");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "datum", "String");
-                xamlMember.Getter = get_117_Notificaties_datum;
-                xamlMember.Setter = set_117_Notificaties_datum;
+                xamlMember.Getter = get_127_Notificaties_datum;
+                xamlMember.Setter = set_127_Notificaties_datum;
                 break;
             case "Gardenr.Models.Notificaties.PlantID":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Notificaties");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "PlantID", "String");
-                xamlMember.Getter = get_118_Notificaties_PlantID;
-                xamlMember.Setter = set_118_Notificaties_PlantID;
+                xamlMember.Getter = get_128_Notificaties_PlantID;
+                xamlMember.Setter = set_128_Notificaties_PlantID;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.SelectedNotificatie":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SelectedNotificatie", "Gardenr.Models.Notificaties");
-                xamlMember.Getter = get_119_PlantBewerkenVM_SelectedNotificatie;
-                xamlMember.Setter = set_119_PlantBewerkenVM_SelectedNotificatie;
+                xamlMember.Getter = get_129_PlantBewerkenVM_SelectedNotificatie;
+                xamlMember.Setter = set_129_PlantBewerkenVM_SelectedNotificatie;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.SavePlant":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SavePlant", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_120_PlantBewerkenVM_SavePlant;
-                xamlMember.Setter = set_120_PlantBewerkenVM_SavePlant;
+                xamlMember.Getter = get_130_PlantBewerkenVM_SavePlant;
+                xamlMember.Setter = set_130_PlantBewerkenVM_SavePlant;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.DeletePlant":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "DeletePlant", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_121_PlantBewerkenVM_DeletePlant;
-                xamlMember.Setter = set_121_PlantBewerkenVM_DeletePlant;
+                xamlMember.Getter = get_131_PlantBewerkenVM_DeletePlant;
+                xamlMember.Setter = set_131_PlantBewerkenVM_DeletePlant;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.AddFavorites":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AddFavorites", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_122_PlantBewerkenVM_AddFavorites;
-                xamlMember.Setter = set_122_PlantBewerkenVM_AddFavorites;
+                xamlMember.Getter = get_132_PlantBewerkenVM_AddFavorites;
+                xamlMember.Setter = set_132_PlantBewerkenVM_AddFavorites;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.SetPicture":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SetPicture", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_123_PlantBewerkenVM_SetPicture;
-                xamlMember.Setter = set_123_PlantBewerkenVM_SetPicture;
+                xamlMember.Getter = get_133_PlantBewerkenVM_SetPicture;
+                xamlMember.Setter = set_133_PlantBewerkenVM_SetPicture;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.GoBack":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GoBack", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_124_PlantBewerkenVM_GoBack;
-                xamlMember.Setter = set_124_PlantBewerkenVM_GoBack;
+                xamlMember.Getter = get_134_PlantBewerkenVM_GoBack;
+                xamlMember.Setter = set_134_PlantBewerkenVM_GoBack;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.AddNotification":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AddNotification", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_125_PlantBewerkenVM_AddNotification;
-                xamlMember.Setter = set_125_PlantBewerkenVM_AddNotification;
+                xamlMember.Getter = get_135_PlantBewerkenVM_AddNotification;
+                xamlMember.Setter = set_135_PlantBewerkenVM_AddNotification;
                 break;
             case "Gardenr.ViewModels.PlantBewerkenVM.GoNotification":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.PlantBewerkenVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GoNotification", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_126_PlantBewerkenVM_GoNotification;
-                xamlMember.Setter = set_126_PlantBewerkenVM_GoNotification;
+                xamlMember.Getter = get_136_PlantBewerkenVM_GoNotification;
+                xamlMember.Setter = set_136_PlantBewerkenVM_GoNotification;
                 break;
             case "Gardenr.ViewModels.ProfielVM.TuinPlanten":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "TuinPlanten", "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>");
-                xamlMember.Getter = get_127_ProfielVM_TuinPlanten;
-                xamlMember.Setter = set_127_ProfielVM_TuinPlanten;
+                xamlMember.Getter = get_137_ProfielVM_TuinPlanten;
+                xamlMember.Setter = set_137_ProfielVM_TuinPlanten;
                 break;
             case "Gardenr.Models.Tuin.ID":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "ID", "String");
-                xamlMember.Getter = get_128_Tuin_ID;
-                xamlMember.Setter = set_128_Tuin_ID;
+                xamlMember.Getter = get_138_Tuin_ID;
+                xamlMember.Setter = set_138_Tuin_ID;
                 break;
             case "Gardenr.Models.Tuin.Plant":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Plant", "Gardenr.Models.Plant");
-                xamlMember.Getter = get_129_Tuin_Plant;
-                xamlMember.Setter = set_129_Tuin_Plant;
+                xamlMember.Getter = get_139_Tuin_Plant;
+                xamlMember.Setter = set_139_Tuin_Plant;
                 break;
             case "Gardenr.Models.Tuin.gebruikerID":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "gebruikerID", "String");
-                xamlMember.Getter = get_130_Tuin_gebruikerID;
-                xamlMember.Setter = set_130_Tuin_gebruikerID;
+                xamlMember.Getter = get_140_Tuin_gebruikerID;
+                xamlMember.Setter = set_140_Tuin_gebruikerID;
                 break;
             case "Gardenr.Models.Tuin.favoriet":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "favoriet", "Boolean");
-                xamlMember.Getter = get_131_Tuin_favoriet;
-                xamlMember.Setter = set_131_Tuin_favoriet;
+                xamlMember.Getter = get_141_Tuin_favoriet;
+                xamlMember.Setter = set_141_Tuin_favoriet;
                 break;
             case "Gardenr.Models.Tuin.Aantal":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Aantal", "Int32");
-                xamlMember.Getter = get_132_Tuin_Aantal;
-                xamlMember.Setter = set_132_Tuin_Aantal;
+                xamlMember.Getter = get_142_Tuin_Aantal;
+                xamlMember.Setter = set_142_Tuin_Aantal;
                 break;
             case "Gardenr.Models.Tuin.LaatstWater":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "LaatstWater", "String");
-                xamlMember.Getter = get_133_Tuin_LaatstWater;
-                xamlMember.Setter = set_133_Tuin_LaatstWater;
+                xamlMember.Getter = get_143_Tuin_LaatstWater;
+                xamlMember.Setter = set_143_Tuin_LaatstWater;
                 break;
             case "Gardenr.Models.Tuin.extra":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "extra", "String");
-                xamlMember.Getter = get_134_Tuin_extra;
-                xamlMember.Setter = set_134_Tuin_extra;
+                xamlMember.Getter = get_144_Tuin_extra;
+                xamlMember.Setter = set_144_Tuin_extra;
                 break;
             case "Gardenr.Models.Tuin.Notificaties":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "Notificaties", "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Notificaties>");
-                xamlMember.Getter = get_135_Tuin_Notificaties;
-                xamlMember.Setter = set_135_Tuin_Notificaties;
+                xamlMember.Getter = get_145_Tuin_Notificaties;
+                xamlMember.Setter = set_145_Tuin_Notificaties;
                 break;
             case "Gardenr.Models.Tuin.historiek":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "historiek", "Boolean");
-                xamlMember.Getter = get_136_Tuin_historiek;
-                xamlMember.Setter = set_136_Tuin_historiek;
+                xamlMember.Getter = get_146_Tuin_historiek;
+                xamlMember.Setter = set_146_Tuin_historiek;
                 break;
             case "Gardenr.Models.Tuin.plantDatum":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.Models.Tuin");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "plantDatum", "String");
-                xamlMember.Getter = get_137_Tuin_plantDatum;
-                xamlMember.Setter = set_137_Tuin_plantDatum;
+                xamlMember.Getter = get_147_Tuin_plantDatum;
+                xamlMember.Setter = set_147_Tuin_plantDatum;
                 break;
             case "Gardenr.ViewModels.ProfielVM.SelectedPlant":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SelectedPlant", "Gardenr.Models.Tuin");
-                xamlMember.Getter = get_138_ProfielVM_SelectedPlant;
-                xamlMember.Setter = set_138_ProfielVM_SelectedPlant;
+                xamlMember.Getter = get_148_ProfielVM_SelectedPlant;
+                xamlMember.Setter = set_148_ProfielVM_SelectedPlant;
                 break;
             case "Gardenr.ViewModels.ProfielVM.HistoriekPlant":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "HistoriekPlant", "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>");
-                xamlMember.Getter = get_139_ProfielVM_HistoriekPlant;
-                xamlMember.Setter = set_139_ProfielVM_HistoriekPlant;
+                xamlMember.Getter = get_149_ProfielVM_HistoriekPlant;
+                xamlMember.Setter = set_149_ProfielVM_HistoriekPlant;
                 break;
             case "Gardenr.ViewModels.ProfielVM.goadd":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "goadd", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_140_ProfielVM_goadd;
-                xamlMember.Setter = set_140_ProfielVM_goadd;
+                xamlMember.Getter = get_150_ProfielVM_goadd;
+                xamlMember.Setter = set_150_ProfielVM_goadd;
                 break;
             case "Gardenr.ViewModels.ProfielVM.FavorietenPlant":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "FavorietenPlant", "System.Collections.ObjectModel.ObservableCollection`1<Gardenr.Models.Tuin>");
-                xamlMember.Getter = get_141_ProfielVM_FavorietenPlant;
-                xamlMember.Setter = set_141_ProfielVM_FavorietenPlant;
+                xamlMember.Getter = get_151_ProfielVM_FavorietenPlant;
+                xamlMember.Setter = set_151_ProfielVM_FavorietenPlant;
                 break;
             case "Gardenr.ViewModels.ProfielVM.SearchTerm":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "SearchTerm", "String");
-                xamlMember.Getter = get_142_ProfielVM_SearchTerm;
-                xamlMember.Setter = set_142_ProfielVM_SearchTerm;
+                xamlMember.Getter = get_152_ProfielVM_SearchTerm;
+                xamlMember.Setter = set_152_ProfielVM_SearchTerm;
                 break;
             case "Gardenr.ViewModels.ProfielVM.GoToTuinObject":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GoToTuinObject", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_143_ProfielVM_GoToTuinObject;
-                xamlMember.Setter = set_143_ProfielVM_GoToTuinObject;
+                xamlMember.Getter = get_153_ProfielVM_GoToTuinObject;
+                xamlMember.Setter = set_153_ProfielVM_GoToTuinObject;
                 break;
             case "Gardenr.ViewModels.ProfielVM.GoToPlant":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GoToPlant", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_144_ProfielVM_GoToPlant;
-                xamlMember.Setter = set_144_ProfielVM_GoToPlant;
+                xamlMember.Getter = get_154_ProfielVM_GoToPlant;
+                xamlMember.Setter = set_154_ProfielVM_GoToPlant;
                 break;
             case "Gardenr.ViewModels.ProfielVM.GoHuiding":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GoHuiding", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_145_ProfielVM_GoHuiding;
-                xamlMember.Setter = set_145_ProfielVM_GoHuiding;
+                xamlMember.Getter = get_155_ProfielVM_GoHuiding;
+                xamlMember.Setter = set_155_ProfielVM_GoHuiding;
                 break;
             case "Gardenr.ViewModels.ProfielVM.GoHistoriek":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GoHistoriek", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_146_ProfielVM_GoHistoriek;
-                xamlMember.Setter = set_146_ProfielVM_GoHistoriek;
+                xamlMember.Getter = get_156_ProfielVM_GoHistoriek;
+                xamlMember.Setter = set_156_ProfielVM_GoHistoriek;
                 break;
             case "Gardenr.ViewModels.ProfielVM.GoFavoriet":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "GoFavoriet", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_147_ProfielVM_GoFavoriet;
-                xamlMember.Setter = set_147_ProfielVM_GoFavoriet;
+                xamlMember.Getter = get_157_ProfielVM_GoFavoriet;
+                xamlMember.Setter = set_157_ProfielVM_GoFavoriet;
                 break;
             case "Gardenr.ViewModels.ProfielVM.AddTuinObject":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "AddTuinObject", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_148_ProfielVM_AddTuinObject;
-                xamlMember.Setter = set_148_ProfielVM_AddTuinObject;
+                xamlMember.Getter = get_158_ProfielVM_AddTuinObject;
+                xamlMember.Setter = set_158_ProfielVM_AddTuinObject;
                 break;
             case "Gardenr.ViewModels.ProfielVM.NoMoreFav":
                 userType = (global::Gardenr.Gardenr_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Gardenr.ViewModels.ProfielVM");
                 xamlMember = new global::Gardenr.Gardenr_XamlTypeInfo.XamlMember(this, "NoMoreFav", "GalaSoft.MvvmLight.Command.RelayCommand");
-                xamlMember.Getter = get_149_ProfielVM_NoMoreFav;
-                xamlMember.Setter = set_149_ProfielVM_NoMoreFav;
+                xamlMember.Getter = get_159_ProfielVM_NoMoreFav;
+                xamlMember.Setter = set_159_ProfielVM_NoMoreFav;
                 break;
             }
             return xamlMember;

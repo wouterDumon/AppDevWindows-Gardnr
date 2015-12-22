@@ -73,7 +73,7 @@ Windows.Storage.CreationCollisionOption.OpenIfExists);
             }
             catch (Exception e)
             {
-
+                Exception mijnexceptie = e;
 
             }
 
@@ -245,7 +245,7 @@ Windows.Storage.CreationCollisionOption.ReplaceExisting);
             }
             catch (Exception e)
             {
-
+                Exception mijnexceptie = e;
 
             }
 

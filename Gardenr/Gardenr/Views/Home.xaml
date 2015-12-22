@@ -75,13 +75,14 @@
                 <ColumnDefinition Width="15"/>
             </Grid.ColumnDefinitions>
         
-            <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Style="{StaticResource TextS}" FontSize="10">weer door openweathermap.org</TextBlock>
-
+            
 
            
             <Image  Source="{Binding Fotourl, Mode=OneWay}" VerticalAlignment="Stretch" Stretch="Fill" Grid.RowSpan="5" Grid.ColumnSpan="3"></Image>
-            <Image  Source="{Binding Iconurl, Mode=OneWay}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1"></Image>
-            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Weertext, Mode=OneWay}"    HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
+            <Image  Source="{Binding Iconurl, Mode=OneWay}"  Height="80" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1"></Image>
+                <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Style="{StaticResource TextS}" FontSize="10">weer door openweathermap.org</TextBlock>
+
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Weertext, Mode=OneWay}"    HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Weerstatus, Mode=OneWay}"  HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" ></TextBlock>
             <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Weerlocatie, Mode=OneWay}" HorizontalAlignment="Left" Style="{StaticResource TextS}" TextAlignment="Center" FontWeight="Bold"></TextBlock>
         </Grid>

@@ -189,6 +189,7 @@ Windows.Storage.CreationCollisionOption.OpenIfExists);
             catch (Exception e)
             {
                 //VINDT FILE NIET AKA maak 1 aan
+                Exception mijnexceptie = e;
 
             }
 
@@ -211,6 +212,7 @@ Windows.Storage.CreationCollisionOption.OpenIfExists);
             catch (Exception ex)
             {
                 //? handle
+                Exception mijnexceptie = ex;
             }
             finally
             {
