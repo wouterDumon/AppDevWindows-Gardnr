@@ -41,6 +41,7 @@ namespace Gardenr.ViewModels
 
 
         public ITuinRepository repoTuin = SimpleIoc.Default.GetInstance<ITuinRepository>();
+        public IAlarmRepository repoAlarm = SimpleIoc.Default.GetInstance<IAlarmRepository>();
 
         private Tuin _teBewerkenTuin;
         public Tuin TeBewerkenTuin
@@ -137,6 +138,20 @@ namespace Gardenr.ViewModels
             Messenger.Default.Send<GoToPageMessage>(message);
         }
 
+        public async void Startup()
+        {
+            ObservableCollection<Notificaties> temp = new ObservableCollection<Models.Notificaties>();
+            foreach(Notificaties not in SelectedTuin.Notificaties)
+            {
+                Alarm notalarm = await repoAlarm.GetAlarmBID(not.AlarmID);
+                if(notalarm.Activate)
+                {
+                    temp.Add(not);
+                }
+            }
+
+            Notificaties = temp;
+        }
        /* public async void Startup()
         {
 

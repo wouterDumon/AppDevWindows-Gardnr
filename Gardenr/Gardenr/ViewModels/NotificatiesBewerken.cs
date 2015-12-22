@@ -93,7 +93,7 @@ namespace Gardenr.ViewModels
                 if (GegevenTuinObject != null)
                 {
                     BewNotificatie.PlantID = GegevenTuinObject.Plant.ID;
-
+                    NotAlarm.Activate = true;
                     await repoAlarm.AddNewsItem(NotAlarm);
                     BewNotificatie.AlarmID = NotAlarm.ID;
 
@@ -118,6 +118,7 @@ namespace Gardenr.ViewModels
                 }
                 else
                 {
+                    NotAlarm.Activate = true;
                     await repoAlarm.AddNewsItem(NotAlarm);
                     BewNotificatie.AlarmID = NotAlarm.ID;
                     await reponotif.AddNotificatie(BewNotificatie);
@@ -132,11 +133,13 @@ namespace Gardenr.ViewModels
                
                 if(NotAlarm.ID == null)
                 {
+                    NotAlarm.Activate = true;
                     await repoAlarm.AddNewsItem(NotAlarm);
                     BewNotificatie.AlarmID = NotAlarm.ID;
                 }
                 else
                 {
+                    NotAlarm.Activate = true;
                     repoAlarm.AdjustNewsItem(NotAlarm);
                 }
                 BewNotificatie.datum = Date.Day + "/" + Date.Month + "/" + Date.Year;

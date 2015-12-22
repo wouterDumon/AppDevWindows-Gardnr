@@ -79,7 +79,11 @@ namespace Gardenr.ViewModels
 
         public void DeleteNotificatieM()
         {
-            reponotif.DeleteNotificatie(IngesteldeNotificaties);
+            NotAlarm.Activate = false;
+            repoAlarm.AdjustNewsItem(NotAlarm);//soft delete
+
+            // reponotif.AdjustNotificatie(IngesteldeNotificaties);
+            // reponotif.DeleteNotificatie(IngesteldeNotificaties);//hard delete
             GoToPageMessage message = new GoToPageMessage() { PageNumber = 12 };
             Messenger.Default.Send<GoToPageMessage>(message);
 

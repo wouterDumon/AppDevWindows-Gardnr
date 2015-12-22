@@ -120,6 +120,7 @@ namespace Gardenr.ViewModels
 
         //misschiencommands voor naar notificatie detail te gaan
         private INieuwsRepository repoNieuws = SimpleIoc.Default.GetInstance<INieuwsRepository>();
+        private IAlarmRepository repoAlarm = SimpleIoc.Default.GetInstance<IAlarmRepository>();
 
         private ObservableCollection<NieuwsItem> _nieuwsItems;
         public ObservableCollection<NieuwsItem> NieuwsItems
@@ -147,10 +148,16 @@ namespace Gardenr.ViewModels
             allenotif = await repoNotification.GetpecNotificaties();
             foreach(SpecNotificaties not in allenotif)
             {
+                
                 if (not.n.GebruikerID == App.Gebruiker.ID) {
-                    Notificaties.Add(not);
                     
+                    Alarm notAlarm = await repoAlarm.GetAlarmBID(not.n.AlarmID);
+                    if(notAlarm.Activate)
+                    {
+                        Notificaties.Add(not);
+                    }
                 }
+
 
             }
 

@@ -56,9 +56,8 @@ namespace Gardenr.Views
         {
             PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
             a.TeBewerkenTuin = e.Parameter as Tuin;
-             //   this.TeBewerkenTuin = e.Parameter as Tuin;
-             //   this.Notificaties = _teBewerkenTuin.Notificaties;
-            
+            a.Startup();
+
         }
 
         private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
