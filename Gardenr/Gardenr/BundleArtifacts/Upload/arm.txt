@@ -1,7 +1,6 @@
-MainPackage=C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\ARM\Release\Upload\Gardenr_1.1.1.0_ARM.appx
-SymbolPackage=C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\AppPackages\Gardenr_1.1.1.0\Gardenr_1.1.1.0_ARM.appxsym
-ResourcePack=C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\_language-en.appx
-ResourcePack=C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\_scale-100.appx
-ResourcePack=C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\_scale-125.appx
-ResourcePack=C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\_scale-150.appx
-ResourcePack=C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\_scale-400.appx
+MainPackage=C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\ARM\Release\Upload\Gardenr_2.1.6.0_ARM.appx
+SymbolPackage=C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\AppPackages\Gardenr_2.1.6.0\Gardenr_2.1.6.0_ARM.appxsym
+ResourcePack=C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\_scale-100.appx
+ResourcePack=C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\_scale-125.appx
+ResourcePack=C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\_scale-150.appx
+ResourcePack=C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\_scale-400.appx
