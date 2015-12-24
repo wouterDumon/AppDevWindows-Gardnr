@@ -34,7 +34,7 @@ namespace Gardenr
         internal static Gebruiker Gebruiker = null;
         internal static string BACKEND_ENDPOINT = "http://notifgardenr.azurewebsites.net/";
         public static bool isAuthenticated = false;
-        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore18.db");
+        public static MobileServiceSQLiteStore store = new MobileServiceSQLiteStore("localstore19.db");
         internal static Frame frame;
            
 

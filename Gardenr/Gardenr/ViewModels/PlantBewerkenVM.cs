@@ -141,7 +141,8 @@ namespace Gardenr.ViewModels
         public async void Startup()
         {
             ObservableCollection<Notificaties> temp = new ObservableCollection<Models.Notificaties>();
-            foreach(Notificaties not in SelectedTuin.Notificaties)
+       
+            foreach (Notificaties not in TeBewerkenTuin.Notificaties)
             {
                 Alarm notalarm = await repoAlarm.GetAlarmBID(not.AlarmID);
                 if(notalarm.Activate)

@@ -29,9 +29,12 @@ namespace Gardenr.ViewModels
                 Menu.Add(new MenuItem() { Glyph = "", Text = "Profiel", NavigationDestination = typeof(Profiel) });
                 Menu.Add(new MenuItem() { Glyph = "", Text = "Catalogus", NavigationDestination = typeof(Catalogus) });
                 DrawerInstellingen d = new DrawerInstellingen();
-                d.Naam = "" + App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
-                d.Fotourl = App.Fotourl;
-                Custom.Add(d);
+                if (App.Gebruiker != null)
+                {
+                    d.Naam = "" + App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
+                    d.Fotourl = App.Fotourl;
+                    Custom.Add(d);
+                }
                 //   cus.Add(new MenuItem() { Glyph = "", Text = "Log out", NavigationDestination = typeof(Instellingen) });
                 Menu.Add(new MenuItem() { Glyph = "", Text = "Instellingen", NavigationDestination = typeof(Gardenr.Views.Instellingen) });
             }

@@ -27,6 +27,7 @@ namespace Gardenr.ViewModels
             //  mijnweer.GetByCityNameAsync("Rekkem", "Belgium");
           
                StartUpGetItems();
+            if(App.Gebruiker!=null)
             naam = App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
             VieuwNotification = new RelayCommand(VieuwNotificationM);
             VieuwNieuwsItem = new RelayCommand(VieuwNieuwsItemM);

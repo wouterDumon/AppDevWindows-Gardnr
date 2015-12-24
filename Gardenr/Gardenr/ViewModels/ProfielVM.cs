@@ -136,7 +136,7 @@ namespace Gardenr.ViewModels
                 TuinPlanten = await repoTuin.GetTOs(App.Gebruiker.ID);
                 FavorietenPlant = new ObservableCollection<Tuin>();
                 HistoriekPlant = new ObservableCollection<Tuin>();
-                foreach(Tuin tplant in TuinPlanten)
+                 foreach(Tuin tplant in TuinPlanten)
                 {
                     if(tplant.favoriet==true)
                     {

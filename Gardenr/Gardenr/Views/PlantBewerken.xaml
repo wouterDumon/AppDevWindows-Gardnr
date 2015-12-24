@@ -10,6 +10,7 @@
     xmlns:vm="using:Gardenr.ViewModels">
     <Page.Resources>
         <local:Stringformat2 x:Key="StringFormatConverter" />
+        <local:StringFormatConverter x:Key="StringFormatConverter2" />
         <Style x:Key="headerS" TargetType="Rectangle">
             
             <Setter Property="Fill">
@@ -98,10 +99,10 @@
                                 <RowDefinition Height="30"/>
                             </Grid.RowDefinitions>
 
-                            <!-- <Image Source="{Binding  plantje.FotoUrl}"   Grid.Row="0" Margin="0 0 0 -65"></Image>-->
+                             <Image Source="/Assets/Home/NOT.png"   Grid.Row="0" Margin="0 0 0 -65"></Image>
                             <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7" Grid.RowSpan="2" Margin="0 0 0 0" ></Rectangle>
 
-                            <TextBlock    Style="{ThemeResource BodyTextBlockStyle}"  TextAlignment="Center"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"></TextBlock>
+                            <TextBlock    Style="{ThemeResource BodyTextBlockStyle}"  TextAlignment="Center"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding datum,  Converter={StaticResource StringFormatConverter2}, ConverterParameter='{}{0:dd/mm/yy }'}"></TextBlock>
 
                             <TextBlock TextAlignment="Center" FontSize="12"  TextWrapping="Wrap"  Grid.Row="2" Margin="0 0 0 0" Foreground="White"   Text="{Binding Omschrijving}"></TextBlock>
 

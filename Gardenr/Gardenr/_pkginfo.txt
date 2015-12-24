@@ -1,1 +1,1 @@
-C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\AppPackages\Gardenr_2.1.6.0\Gardenr_2.1.6.0_x86_x64_arm.appxbundle
+C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\AppPackages\Gardenr_2.2.9.0\Gardenr_2.2.9.0_x86_x64_arm.appxbundle
