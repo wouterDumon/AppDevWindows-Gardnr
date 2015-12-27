@@ -241,20 +241,23 @@ namespace Gardenr.Repositories
                     newT.Plant = await repoPlant.GetPlantById(nieuws.PlantenID);
                     newT.plantDatum = nieuws.plantDatum;
                     newT.Notificaties = new ObservableCollection<Notificaties>();
-                    if (nieuws.NotificationID != null && nieuws.NotificationID!="")
-                    {
-                        var tempinstid = nieuws.NotificationID.Split(";".ToCharArray());
-                        for (int i = 0; i < tempinstid.Length; i++)
-                        {
-                            if(tempinstid[i]!= "")
-                            {
-                                newT.Notificaties.Add(await repoInst.GetNotificatie(tempinstid[i]));
+
+
+                    String mijngebruiker = nieuws.gebruikerID;
+                    String plant = nieuws.PlantenID;
+
+                    ObservableCollection<Notificaties> mijnlijst = await repoInst.GetNotificaties();
+
+                    foreach (Notificaties mijnnot in mijnlijst) {
+                        if (mijnnot.GebruikerID.Equals(mijngebruiker)) {
+                            if (mijnnot.PlantID == null) { }else
+                            if (mijnnot.PlantID.Equals(plant)) {
+                                //zelfde gebruiker en plant
+                                newT.Notificaties.Add(mijnnot);
                             }
-                            
-                        }
-                    }
-                   
-                    
+                              }
+
+                    }                   
 
                     ni.Add(newT);
                 }
