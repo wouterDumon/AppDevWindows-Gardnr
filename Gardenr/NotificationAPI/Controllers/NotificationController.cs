@@ -117,9 +117,11 @@ namespace NotificationAPI.Controllers
                                                     if (ins.PushNotificaties == true)
                                                     {
                                                         n.datum = vandaagintoekomst;
+                                                        await updatealarm(mijnalarm);
+                                                        n.AlarmID = mijnalarm.ID;
                                                         await updatenotificatie(n);
                                                         mijnalarm.Activate = true;
-                                                        await updatealarm(mijnalarm);
+                                                       
                                                 
                                                         await dosomething(id, message, plantnaam);
                                                     }
