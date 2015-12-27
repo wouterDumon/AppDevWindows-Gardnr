@@ -61,6 +61,26 @@ namespace Gardenr.ViewModels
             get { return _fotourl; }
             set { _fotourl = value; OnPropertyChanged("Fotourl"); }
         }
+        private IInstellingenRepository repoInst = SimpleIoc.Default.GetInstance<IInstellingenRepository>();
+
+
+        internal async Task<string> getweather(string instellingenID)
+        {
+            Instellingen mijninstelling = await repoInst.GetInst(instellingenID);
+
+            if (mijninstelling.TaalID.Equals("332e6b7e-a6da-4ed7-a819-b18793ad91b8"))
+            {
+                //GEEN WEER
+                return "";
+            }
+            else {
+
+                return mijninstelling.TaalID;
+            }
+
+
+        }
+
         public string Iconurl
         {
             get { return _iconurl; }

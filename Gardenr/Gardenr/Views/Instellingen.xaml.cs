@@ -229,6 +229,9 @@ Windows.Storage.ApplicationData.Current.LocalFolder;
 
         private async Task weefr(string s, string l,string lat, string lon)
         {
+            //in db stoppen
+            InstellingenVM mijnvm = (InstellingenVM)this.DataContext;
+            mijnvm.changeme(s, l, lat, lon);
             try
             {
                 Windows.Storage.StorageFile sampleFile = null;

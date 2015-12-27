@@ -47,7 +47,6 @@ namespace Gardenr.ViewModels
         }
 
 
-
         private IInstellingenRepository repoInst = SimpleIoc.Default.GetInstance<IInstellingenRepository>();
         private IGebruikerRepository repogebruiker = SimpleIoc.Default.GetInstance<IGebruikerRepository>();
         private ITaalRepository repotaal = SimpleIoc.Default.GetInstance<ITaalRepository>();
@@ -133,7 +132,14 @@ namespace Gardenr.ViewModels
             
         }
 
-      
+        internal void changeme(string s, string l, string lat, string lon)
+        {
+            String plats = s + ";" + l + ";" + lat + ";" + lon;
+            UserSettings.TaalID = plats;
+            repoInst.AdjustInst(UserSettings);
 
+
+
+        }
     }
 }

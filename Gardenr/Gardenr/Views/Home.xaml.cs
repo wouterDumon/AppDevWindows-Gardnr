@@ -58,6 +58,9 @@ namespace Gardenr.Views
         private Windows.Storage.StorageFolder storageFolder =
 Windows.Storage.ApplicationData.Current.LocalFolder;
         private async void getmesomething() {
+            HomeVM a = this.DataContext as HomeVM;
+            String heeftweer = await a.getweather(App.Gebruiker.InstellingenID);
+            
 
             try
             {
@@ -68,17 +71,29 @@ await storageFolder.CreateFileAsync("weer.txt",
 Windows.Storage.CreationCollisionOption.OpenIfExists);
                 //indien file bestaat
                 string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
-                if (text == "")
+                if (text == "" && heeftweer== "")
                 {
                     await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Kortrijk" + ";" + "Belgium" + ";" + "50.83053" + ";" + "3.26446");
                     HomeVM hdata = (HomeVM)this.DataContext;
                     hdata.FILLUPWEER("50.83053", "3.26446");
                 }
                 else {
-                    string[] df = text.Split(';');
-                    HomeVM hdata = (HomeVM)this.DataContext;
-                    hdata.FILLUPWEER(df[2], df[3]);
+                    if (heeftweer != "")
+                    {
+                        string[] ddf = heeftweer.Split(';');
+                        await Windows.Storage.FileIO.WriteTextAsync(sampleFile, ddf[0] + ";" + ddf[1] + ";" + ddf[2] + ";" + ddf[3]);
+                        HomeVM hdatad = (HomeVM)this.DataContext;
+                        hdatad.FILLUPWEER(ddf[2], ddf[3]);
 
+                    }
+                    else {
+
+
+
+                        string[] df = text.Split(';');
+                        HomeVM hdata = (HomeVM)this.DataContext;
+                        hdata.FILLUPWEER(df[2], df[3]);
+                    }
                 }
                // 
                // WAARBENIK.Text = "Huidige ingestelde locatie: " + s + "," + l;
