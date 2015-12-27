@@ -26,6 +26,8 @@
         <Style x:Key="bodyS" TargetType="Rectangle">
             <Setter Property="Fill" Value="#FFFFFF"/>
         </Style>
+    
+        
         <Style x:Key="notificationS" TargetType="Grid">
             <Setter Property="Background" Value="#abd3a8"/>
         </Style>
@@ -84,10 +86,11 @@
 
 
                             <AppBarButton x:Name="Position" 
-                                      Icon="UnFavorite"                             
+                                      Icon="UnFavorite"                                       
                                Margin="4,4,0,4"                           
                                Foreground="Gray"
-                               HorizontalAlignment="Center"/>
+                               
+                               HorizontalAlignment="Center" Tapped="Position_Tapped"/> 
                         </StackPanel>
 
 

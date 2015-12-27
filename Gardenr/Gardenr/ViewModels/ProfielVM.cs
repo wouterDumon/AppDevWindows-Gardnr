@@ -89,6 +89,14 @@ namespace Gardenr.ViewModels
         }
 
 
+
+ 
+        public void UnfavoriteM(string id)
+        {
+           SelectedPlant.favoriet = false;
+           repoTuin.AdjustTO(SelectedPlant);
+        }
+
         public RelayCommand GoHuiding { get; set; }
         public void GoHuidigM()
         {
