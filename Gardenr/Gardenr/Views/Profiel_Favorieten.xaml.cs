@@ -56,9 +56,10 @@ namespace Gardenr.Views
         private void Position_Tapped(object sender, TappedRoutedEventArgs e)
         {
             ProfielVM a = this.DataContext as ProfielVM;
+            FrameworkElement parent = (FrameworkElement)((Button)sender).Parent;
+            string parent_name = parent.Tag.ToString();
 
-            
-           
+            a.UnfavoriteM(parent_name);
         }
     }
 }

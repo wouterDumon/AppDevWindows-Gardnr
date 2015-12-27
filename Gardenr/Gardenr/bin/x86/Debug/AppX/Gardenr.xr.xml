@@ -207,6 +207,7 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Tag" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
@@ -326,8 +327,6 @@
       <RootProperty Name="Icon" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="Tag" />
-      <RootProperty Name="Content" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Gardenr.Views.CatalogusPlant" />
