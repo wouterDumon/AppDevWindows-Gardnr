@@ -47,7 +47,15 @@ namespace NotificationAPI.Controllers
             string vandaag = t.Day + "/" + t.Month + "/" + t.Year;
             foreach (Notificaties n in items) {
                 if (n.datum.Equals(vandaag)) {
-                    string id = n.GebruikerID;
+                    foreach (Alarm mijnalarm in itemsalarm)
+                    {
+                        if (mijnalarm.ID.Equals(n.AlarmID))
+                        {
+                            if (mijnalarm.Activate) {
+
+
+                          
+                            string id = n.GebruikerID;
                     string message = n.Omschrijving;
                     string plantnaam = await getplantnaam(n.PlantID);
                     foreach (Gebruiker gb in itemsgebruiker) {
@@ -66,9 +74,15 @@ namespace NotificationAPI.Controllers
                     }
 
 
+                            }
+                            else {
 
+                            }
+                        }
+                    }
 
-                }else
+                }
+                else
                 {
                     //Datum niet vandaag
               
