@@ -1,4 +1,5 @@
-﻿using Gardenr.Models;
+﻿using GalaSoft.MvvmLight.Ioc;
+using Gardenr.Models;
 using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.Sync;
 using System;
@@ -162,16 +163,28 @@ namespace Gardenr.Repositories
                 //  this.ButtonSave.IsEnabled = true;
             }
         }
-
+        public IAlarmRepository REPOALARM = SimpleIoc.Default.GetInstance<IAlarmRepository>();
         public async Task<ObservableCollection<Notificaties>> GetNotificaties()
         {
             await InitLocalStoreAsync();
             await RefreshItems();
             ObservableCollection<Notificaties> ni = new ObservableCollection<Notificaties>();
-
+            ObservableCollection<Alarm> lijstalarm = await REPOALARM.GetAlarmItems();
             foreach (Notificaties nieuws in items)
             {
-                ni.Add(nieuws);
+                foreach (Alarm mijnalarm in lijstalarm) {
+                    if (mijnalarm.ID.Equals(nieuws.AlarmID))
+                    {
+                        if (mijnalarm.Activate) {
+                            ni.Add(nieuws);
+                        }
+                    }
+
+                }
+
+
+
+    
             }
             return ni;
         }
