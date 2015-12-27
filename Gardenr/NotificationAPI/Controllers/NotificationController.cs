@@ -21,6 +21,8 @@ namespace NotificationAPI.Controllers
         private MobileServiceCollection<Plant, Plant> itemsplant;
         private IMobileServiceTable<Notificaties> todoTable;
         private MobileServiceCollection<Gebruiker, Gebruiker> itemsgebruiker;
+        private MobileServiceCollection<Alarm, Alarm> itemsalarm;
+        private IMobileServiceTable<Alarm> tableAlarm;
         private IMobileServiceTable<Gebruiker> todogebruiker;
         private MobileServiceCollection<Instellingen, Instellingen> itemsInstellingen;
         private IMobileServiceTable<Instellingen> todoInstellingen;
@@ -32,10 +34,11 @@ namespace NotificationAPI.Controllers
             todoplant = MobileService.GetTable<Plant>();
             todogebruiker = MobileService.GetTable<Gebruiker>();
             todoInstellingen = MobileService.GetTable<Instellingen>();
+            tableAlarm = MobileService.GetTable<Alarm>();
             // var hub = new NotificationHub("notific", "Endpoint=sb://gardenrnotif.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=8bPfKiz9h4jY/e0JtAUqN/tCybd+dOtj3X/tA6zndxM=");
             //HttpStatusCode ret = HttpStatusCode.InternalServerError;
 
-
+            itemsalarm = await tableAlarm.ToCollectionAsync();
             items = await todoTable.ToCollectionAsync();
 
             itemsgebruiker = await todogebruiker.ToCollectionAsync();
@@ -52,7 +55,7 @@ namespace NotificationAPI.Controllers
                             foreach (Instellingen ins in itemsInstellingen) {
                                 if (ins.ID.Equals(gb.InstellingenID)) {
                                     if (ins.PushNotificaties == true)
-                                    {
+                                    {                                      
                                         await dosomething(id, message, plantnaam);
                                     }
                                 }
@@ -63,10 +66,82 @@ namespace NotificationAPI.Controllers
                     }
 
 
-                 
 
-                }
-            }           
+
+                }else
+                {
+                    //Datum niet vandaag
+              
+
+                    foreach (Alarm mijnalarm in itemsalarm) {
+                        if (mijnalarm.ID.Equals(n.AlarmID)) {
+                            //ALARM GEVONDEN 
+                            int herhalen = mijnalarm.herhalen;
+                            String datum = n.datum;
+                            String[] df = datum.Split('/');
+
+                            DateTime tt = new DateTime(Int32.Parse(df[2]), Int32.Parse(df[1]), Int32.Parse(df[0]));
+
+                            for (int i = 0; i < 5; i++) {
+                              
+                               tt = tt.AddDays(herhalen);
+                                string vandaagintoekomst = tt.Day + "/" + tt.Month + "/" + tt.Year;                                
+                             
+                                if (vandaag.Equals(vandaagintoekomst))
+                                {
+                                    string id = n.GebruikerID;
+                                    string message = n.Omschrijving;
+                                    string plantnaam = await getplantnaam(n.PlantID);
+                                    foreach (Gebruiker gb in itemsgebruiker)
+                                    {
+                                        if (gb.ID.Equals(n.GebruikerID))
+                                        {
+                                            foreach (Instellingen ins in itemsInstellingen)
+                                            {
+                                                if (ins.ID.Equals(gb.InstellingenID))
+                                                {
+                                                    if (ins.PushNotificaties == true)
+                                                    {
+                                                        n.datum = vandaagintoekomst;
+                                                        await updatenotificatie(n);
+                                                        mijnalarm.Activate = true;
+                                                        await updatealarm(mijnalarm);
+                                                
+                                                        await dosomething(id, message, plantnaam);
+                                                    }
+                                                }
+
+
+                                            }
+                                        }
+                                    }
+
+
+
+
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+                                }
+            }
+        }
+
+        private async Task updatenotificatie(Notificaties n)
+        {
+            await todoTable.DeleteAsync(n);
+            await todoTable.InsertAsync(n);
+        }
+
+        private async Task updatealarm(Alarm mijnalarm)
+        {
+            await tableAlarm.DeleteAsync(mijnalarm);
+            await tableAlarm.InsertAsync(mijnalarm);
+
         }
 
         private async Task<string> getplantnaam(string plantID)
