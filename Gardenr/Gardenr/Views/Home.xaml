@@ -41,8 +41,28 @@
     </Page.Resources>
 
     <Grid>
-    <Grid >
-        <Grid.RowDefinitions>
+    <Grid x:Name="HeadGrid">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="State">
+                    <VisualState x:Name="TabletState">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="1000" />
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="WeatherBack.(Grid.RowSpan)" Value="1" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="MobileState">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="0" />
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="WeatherBack.Width" Value="200" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="170"/>
             <RowDefinition Height="40"/>
@@ -76,7 +96,7 @@
             </Grid.ColumnDefinitions>
 
                          
-            <Image  Source="{Binding Fotourl, Mode=OneWay}" VerticalAlignment="Stretch" Stretch="Fill" Grid.RowSpan="5" Grid.ColumnSpan="3"></Image>
+            <Image x:Name="WeatherBack"  Source="{Binding Fotourl, Mode=OneWay}" VerticalAlignment="Stretch" Stretch="Fill" Grid.RowSpan="5" Grid.ColumnSpan="3"></Image>
             <Image  Source="{Binding Iconurl, Mode=OneWay}" Width="50" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1"></Image>
             <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Weertext, Mode=OneWay}"    HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Weerstatus, Mode=OneWay}"  HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" ></TextBlock>

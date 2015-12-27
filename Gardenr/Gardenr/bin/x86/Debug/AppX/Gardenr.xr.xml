@@ -68,7 +68,6 @@
     <RootPropertyPathName Name="AddFavorites" />
     <RootPropertyPathName Name="SavePlant" />
     <RootPropertyPathName Name="FavorietenPlant" />
-    <RootPropertyPathName Name="ID" />
     <RootPropertyPathName Name="GoHistoriek" />
     <RootPropertyPathName Name="GoHuiding" />
     <RootPropertyPathName Name="HistoriekPlant" />
@@ -207,7 +206,6 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="Tag" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
@@ -257,6 +255,7 @@
     <RootType FullName="Windows.UI.Xaml.Setter">
       <RootProperty Name="Property" />
       <RootProperty Name="Value" />
+      <RootProperty Name="Target" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">
       <RootProperty Name="StartPoint" />
@@ -284,7 +283,6 @@
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Margin" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
@@ -345,6 +343,19 @@
     <RootType FullName="Gardenr.Views.ExtendedSplash" />
     <RootType FullName="Gardenr.ViewModels.HomeVM" />
     <RootType FullName="Gardenr.Views.StringFormatConverter" />
+    <RootType FullName="Windows.UI.Xaml.VisualStateManager">
+      <RootMethod Name="GetVisualStateGroups" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualStateGroup">
+      <RootProperty Name="States" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.VisualState">
+      <RootProperty Name="StateTriggers" />
+      <RootProperty Name="Setters" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.AdaptiveTrigger">
+      <RootProperty Name="MinWindowWidth" />
+    </RootType>
     <RootType FullName="Gardenr.Views.Home" />
     <RootType FullName="Gardenr.ViewModels.InstellingenVM" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">

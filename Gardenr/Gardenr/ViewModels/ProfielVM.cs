@@ -93,19 +93,8 @@ namespace Gardenr.ViewModels
  
         public void UnfavoriteM(string id)
         {
-            Tuin temp = new Tuin();
-            foreach(Tuin favoriet in FavorietenPlant)
-            {
-                if(favoriet.Plant.ID== id)
-                {
-                    favoriet.favoriet = false;
-                    repoTuin.AdjustTO(favoriet);
-
-                    GoToPageMessage message = new GoToPageMessage() { PageNumber = 9 };
-                    Messenger.Default.Send<GoToPageMessage>(message);
-                }
-            }
-          
+           SelectedPlant.favoriet = false;
+           repoTuin.AdjustTO(SelectedPlant);
         }
 
         public RelayCommand GoHuiding { get; set; }
