@@ -118,11 +118,8 @@ namespace NotificationAPI.Controllers
                                                     {
                                                         n.datum = vandaagintoekomst;
                                                         await updatealarm(mijnalarm);
-                                                        n.AlarmID = mijnalarm.ID;
-                                                        await updatenotificatie(n);
-                                                        mijnalarm.Activate = true;
-                                                       
-                                                
+                                                        n.AlarmID = mijnalarm.ID; 
+                                                        await updatenotificatie(n);           
                                                         await dosomething(id, message, plantnaam);
                                                     }
                                                 }
@@ -156,6 +153,7 @@ namespace NotificationAPI.Controllers
         private async Task updatealarm(Alarm mijnalarm)
         {
             await tableAlarm.DeleteAsync(mijnalarm);
+            mijnalarm.Activate = true;
             await tableAlarm.InsertAsync(mijnalarm);
 
         }
