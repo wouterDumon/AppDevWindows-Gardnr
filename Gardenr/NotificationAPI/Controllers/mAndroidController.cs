@@ -10,11 +10,11 @@ using NotificationAPI.Models;
 using Microsoft.WindowsAzure.MobileServices;
 namespace NotificationAPI.Controllers
 {
-    class AndroidController : Controller
+    public class mAndroidController : Controller
     {
-        public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient MobileService = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient("https://gardenr2.azure-mobile.net/",
-  "DMHwnJmHwPivFxaTWjDNXjzAxykHpq92"
-     );
+        public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient MobileService = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient("https://gardenr3.azure-mobile.net/",
+ "bvivDcGhjVDwvefNcMOqKVsPbgyBDs53"
+    );
         private MobileServiceCollection<Notificaties, Notificaties> items;
         private MobileServiceCollection<Plant, Plant> itemsplant;
         private IMobileServiceTable<Notificaties> todoTable;
@@ -25,7 +25,7 @@ namespace NotificationAPI.Controllers
         private MobileServiceCollection<Instellingen, Instellingen> itemsInstellingen;
         private IMobileServiceTable<Instellingen> todoInstellingen;
         private IMobileServiceTable<Plant> todoplant;
-        // GET: Notification
+        // GET: mAndroid
         public async Task Index()
         {
             todoTable = MobileService.GetTable<Notificaties>();
@@ -154,8 +154,12 @@ namespace NotificationAPI.Controllers
 
         private async Task updatenotificatie(Notificaties n)
         {
+            String id = n.ID;
             await todoTable.DeleteAsync(n);
+            n.ID = id;
             await todoTable.InsertAsync(n);
+          
+
         }
 
         private async Task updatealarm(Alarm mijnalarm)
@@ -191,8 +195,8 @@ namespace NotificationAPI.Controllers
             userTag[1] = "from:" + id;
             string send = plantnaam + " Heeft je attentie nodig" + "\n" + message;
 
-         
-      
+
+
             try
             {
                 // Android
@@ -221,7 +225,7 @@ namespace NotificationAPI.Controllers
             string mijnnotificatie = "" + n.ID + "---" + n.AlarmID + "---" + n.datum + "---" + n.GebruikerID + "---" + n.Omschrijving + "---" + n.PlantID + "---" + n.TypeID;
             string androidsend = "" + send + "@@@" + mijnalarm + "@@@" + mijnnotificatie;
 
-          
+
             try
             {
                 // Android
