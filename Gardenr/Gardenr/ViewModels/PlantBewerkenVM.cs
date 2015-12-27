@@ -28,8 +28,9 @@ namespace Gardenr.ViewModels
             //optie
             AddNotification = new RelayCommand(AddNotificationM);
             GoNotification = new RelayCommand(GoNotificationM);
-
           
+
+
         }
 
         private DateTime _oogstDatum;

@@ -52,5 +52,13 @@ namespace Gardenr.Views
             ProfielVM a = this.DataContext as ProfielVM;
             a.GoToPlant.Execute("iets");
         }
+
+        private void Position_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            ProfielVM a = this.DataContext as ProfielVM;
+
+            
+           
+        }
     }
 }

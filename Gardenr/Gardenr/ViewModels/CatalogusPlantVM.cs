@@ -80,7 +80,20 @@ namespace Gardenr.ViewModels
         }
         public void AddFavorietenM()
         {
+            TuinObject t = new TuinObject();
+            t.gebruikerID = App.Gebruiker.ID;
+            t.PlantenID = Plant.ID;
+            t.LaatstWater = "" + DateTime.Now;
+            t.favoriet = true;
+            t.extra = "";
+            t.Aantal = 1;
+            t.historiek = false;
+            t.plantDatum = "" + DateTime.Now;
+            t.NotificationID = "";
 
+            repotuin.AddTO(t);
+            GoToPageMessage message = new GoToPageMessage() { PageNumber = 10 };
+            Messenger.Default.Send<GoToPageMessage>(message);
         }
         public  void AddGardM()
         {
