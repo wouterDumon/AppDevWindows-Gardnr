@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Data.Xml.Dom;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -45,6 +47,18 @@ namespace Gardenr.Views
             }
            
 #endif
+
+
+            dosomething();
+        }
+
+        private String t = "";
+        private async void dosomething()
+        {
+
+            PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
+            t = await a.CheckFavoriet();
+            APPBAR.Label = t;
         }
 
         private void ListItems_Tapped(object sender, TappedRoutedEventArgs e)
@@ -70,6 +84,52 @@ namespace Gardenr.Views
         {
             PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
             a.GoBack.Execute("lalaala");
+        }
+
+        private async void APPBAR_Click(object sender, RoutedEventArgs e)
+        {
+            PlantBewerkenVM a = this.DataContext as PlantBewerkenVM;
+            await a.AddFavo();
+            if (t.Equals("Toevoegen aan favorieten"))
+            {
+                zend("Succesvol aan favorieten toegevoegd");
+                APPBAR.Label = "Verwijder uit favorieten";
+            }
+            else {
+                zend("Succesvol uit favorieten gehaald");
+                APPBAR.Label = "Toevoegen aan favorieten";
+            }
+        }
+        private void zend(String t)
+        {
+            // Clear all existing notifications
+            ToastNotificationManager.History.Clear();
+
+            var longTime = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longtime");
+            DateTimeOffset expiryTime = DateTime.Now.AddSeconds(10);
+            string expiryTimeString = longTime.Format(expiryTime);
+
+            Windows.Data.Xml.Dom.XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(ToastTemplateType.ToastText02);
+            //Find the text component of the content
+            Windows.Data.Xml.Dom.XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
+
+            // Set the text on the toast. 
+            // The first line of text in the ToastText02 template is treated as header text, and will be bold.
+            toastTextElements[0].AppendChild(toastXml.CreateTextNode("Info"));
+            toastTextElements[1].AppendChild(toastXml.CreateTextNode(t));
+
+            // Set the duration on the toast
+            IXmlNode toastNode = toastXml.SelectSingleNode("/toast");
+            ((Windows.Data.Xml.Dom.XmlElement)toastNode).SetAttribute("duration", "long");
+
+            // Create the actual toast object using this toast specification.
+            ToastNotification toast = new ToastNotification(toastXml);
+
+            toast.ExpirationTime = expiryTime;
+
+            // Send the toast.
+            ToastNotificationManager.CreateToastNotifier().Show(toast);
+
         }
     }
 }

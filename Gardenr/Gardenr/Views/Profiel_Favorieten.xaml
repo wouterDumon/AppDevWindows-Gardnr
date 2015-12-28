@@ -44,7 +44,7 @@
             <VisualStateGroup x:Name="SplitModeWide">
                 <VisualState x:Name="TabletState">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="1000" />
+                        <AdaptiveTrigger MinWindowWidth="1100" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="Mobile.Visibility" Value="Collapsed"/>
@@ -221,7 +221,7 @@
                                       Icon="UnFavorite"                                       
                                Margin="4,4,0,4"                           
                                Foreground="Gray"
-                               
+                                 Tag="{Binding ID, Mode=OneWay}"
                                HorizontalAlignment="Center" Tapped="Position_Tapped"/>
                             </StackPanel>
 
@@ -236,6 +236,15 @@
             -->
                 </ListView>
             </Grid>
+            <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" 
+                      AdUnitId="10043121" 
+               x:Name="add2"
+                      HorizontalAlignment="Center" 
+                      Height="50" 
+                      Grid.Row="8"
+                      VerticalAlignment="Bottom" 
+               
+                      Width="320"/>
         </Grid> 
     <Grid x:Name="Mobile">
         <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -286,7 +295,7 @@
                                       Icon="UnFavorite"                                       
                                Margin="4,4,0,4"                           
                                Foreground="Gray"
-                               
+                                 Tag="{Binding ID, Mode=OneWay}"
                                HorizontalAlignment="Center" Tapped="Position_Tapped"/> 
                         </StackPanel>
 

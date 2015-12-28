@@ -32,7 +32,6 @@
     <RootPropertyPathName Name="PlantLengte" />
     <RootPropertyPathName Name="ZaaiBegin" />
     <RootPropertyPathName Name="ZaaiLengte" />
-    <RootPropertyPathName Name="AddFavorieten" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="SelectedNotificatie" />
@@ -66,9 +65,9 @@
     <RootPropertyPathName Name="OogstDatum" />
     <RootPropertyPathName Name="AddNotification" />
     <RootPropertyPathName Name="DeletePlant" />
-    <RootPropertyPathName Name="AddFavorites" />
     <RootPropertyPathName Name="SavePlant" />
     <RootPropertyPathName Name="FavorietenPlant" />
+    <RootPropertyPathName Name="ID" />
     <RootPropertyPathName Name="GoHistoriek" />
     <RootPropertyPathName Name="GoHuiding" />
     <RootPropertyPathName Name="HistoriekPlant" />
@@ -343,6 +342,8 @@
       <RootProperty Name="Icon" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="Tag" />
+      <RootEvent Name="Click" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Gardenr.Views.CatalogusPlant" />

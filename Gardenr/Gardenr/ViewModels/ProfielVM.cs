@@ -93,8 +93,28 @@ namespace Gardenr.ViewModels
  
         public void UnfavoriteM(string id)
         {
-           SelectedPlant.favoriet = false;
-           repoTuin.AdjustTO(SelectedPlant);
+            foreach (Tuin mnt in FavorietenPlant) {
+                if (mnt.ID.Equals(id)) {
+                    Tuin objectindb = mnt;
+                    TuinObject t = new TuinObject();
+                    t.gebruikerID = App.Gebruiker.ID;
+                    t.PlantenID = objectindb.Plant.ID;
+                    t.LaatstWater = objectindb.LaatstWater;
+                    t.ID = objectindb.ID;
+                    t.favoriet = false;
+                    t.extra = objectindb.extra;
+                    t.Aantal = objectindb.Aantal;
+                    t.historiek = objectindb.historiek;
+                    t.plantDatum = objectindb.plantDatum;
+                    t.NotificationID = "";
+                    repoTuin.AdjustFAV(t);
+                    FavorietenPlant.Remove(mnt);
+                    return;
+                }
+            }
+
+
+
         }
 
         public RelayCommand GoHuiding { get; set; }
@@ -141,23 +161,36 @@ namespace Gardenr.ViewModels
             //planten ophalen van de user
             try
             {
-                TuinPlanten = await repoTuin.GetTOs(App.Gebruiker.ID);
+                ObservableCollection<Tuin> Alleplanten = new ObservableCollection<Tuin>();
+                Alleplanten = await repoTuin.GetTOs(App.Gebruiker.ID);
                 FavorietenPlant = new ObservableCollection<Tuin>();
+                TuinPlanten = new ObservableCollection<Tuin>();
                 HistoriekPlant = new ObservableCollection<Tuin>();
-                 foreach(Tuin tplant in TuinPlanten)
+                 foreach(Tuin tplant in Alleplanten)
                 {
-                    if(tplant.favoriet==true)
+                    if (tplant.Aantal == 0)
                     {
-                        if (FavorietenPlant.Contains(tplant)) { }
-                        else
+                        if (tplant.favoriet == true)
                         {
-                            FavorietenPlant.Add(tplant);
+                            if (FavorietenPlant.Contains(tplant)) { }
+                            else
+                            {
+                                FavorietenPlant.Add(tplant);
+                            }
+                            //checken of in historiek of nietook
                         }
-                        //checken of in historiek of nietook
                     }
-                    if (tplant.historiek == true) {
-                        HistoriekPlant.Add(tplant);
+                    else
+                    {
+                        if (tplant.historiek == true)
+                        {
+                            HistoriekPlant.Add(tplant);
+                        }
+                        else {
+                            TuinPlanten.Add(tplant);
+                        }
                     }
+                    
                     
                 }
                 //HistoriekPlant = TuinPlanten;

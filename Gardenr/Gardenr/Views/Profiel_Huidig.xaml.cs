@@ -27,7 +27,26 @@ namespace Gardenr.Views
         public Profiel()
         {
             this.InitializeComponent();
+#if (!DEBUG)
+                    //kijken of release > ADS MOGEN NIET IN TEST GEBRUIKT WORDEN
+               bool isHardwareButtonsAPIPresent =
+        Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            if (isHardwareButtonsAPIPresent)
+            {
+                //IS MOBILE
 
+             
+                      add2.AdUnitId = App.MobileADID;
+                add2.ApplicationId = App.MobileappID;
+            }
+            else {
+                //is desktop
+             
+            add2.AdUnitId = App.adID;
+                add2.ApplicationId = App.appID;
+            }
+           
+#endif
 
         }
 
@@ -40,14 +59,8 @@ namespace Gardenr.Views
         private void Position_Tapped(object sender, TappedRoutedEventArgs e)
         {
             ProfielVM a = this.DataContext as ProfielVM;
-            FrameworkElement parent = (FrameworkElement)((Button)sender).Parent;
-            string parent_name = parent.Tag.ToString();
-
-
-
-            a.UnfavoriteM(parent_name);
-
-
+            AppBarButton mijnbutton = sender as AppBarButton;
+            a.UnfavoriteM(mijnbutton.Tag.ToString());
         }
 
         private void StackPanel_Loaded(object sender, RoutedEventArgs e)

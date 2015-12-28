@@ -68,7 +68,7 @@
         <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right">
             <CommandBar.SecondaryCommands>
                 <AppBarButton Command="{Binding AddGarden}" Label="Toevoegen aan tuin"/>
-                <AppBarButton Command="{Binding AddFavorieten}" Label="Toevoegen als favoriet"/>
+                <AppBarButton Click="APPBAR_Click" x:Name="APPBAR" Label="Toevoegen als favoriet"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
         <!---->
