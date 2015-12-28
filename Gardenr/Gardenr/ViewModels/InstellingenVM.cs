@@ -132,12 +132,40 @@ namespace Gardenr.ViewModels
             
         }
 
-        internal void changeme(string s, string l, string lat, string lon)
+        internal async void changeme(string s, string l, string lat, string lon)
         {
-            String plats = s + ";" + l + ";" + lat + ";" + lon;
-            UserSettings.TaalID = plats;
-            repoInst.AdjustInst(UserSettings);
+            if (App.Gebruiker.InstellingenID == "1")
+            {
+                //STANDAARD INSTELLING MAAK NIEUWE
+                Instellingen Nieuw = new Instellingen();
 
+                Nieuw.Cortana = true;
+                if (Aan == true)
+                {
+                    Nieuw.PushNotificaties = true;
+                }
+                else {
+                    Nieuw.PushNotificaties = false;
+                }
+                String platsd = s + ";" + l + ";" + lat + ";" + lon;
+                Nieuw.TaalID = platsd;
+
+
+                await repoInst.AddInst(Nieuw);
+                UserSettings = Nieuw;
+                string nieuwid = Nieuw.ID;
+                Gebruiker n = App.Gebruiker;
+                n.InstellingenID = nieuwid;
+                repogebruiker.AdjustGebruiker(n);
+
+            }
+            else {
+
+
+                String plats = s + ";" + l + ";" + lat + ";" + lon;
+                UserSettings.TaalID = plats;
+                repoInst.AdjustInst(UserSettings);
+            }
 
 
         }

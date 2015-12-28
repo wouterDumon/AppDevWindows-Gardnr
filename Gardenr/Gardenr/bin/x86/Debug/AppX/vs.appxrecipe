@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-28T21:54:56.975</Modified>
+      <Modified>2015-12-28T22:03:46.803</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Gardenr.exe">
       <PackagePath>entrypoint\Gardenr.exe</PackagePath>
-      <Modified>2015-12-28T21:54:55.958</Modified>
+      <Modified>2015-12-28T22:03:45.820</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -1009,7 +1009,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
       <PackagePath>Gardenr.exe</PackagePath>
-      <Modified>2015-12-28T21:54:56.972</Modified>
+      <Modified>2015-12-28T22:03:46.798</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
