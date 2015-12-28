@@ -39,6 +39,206 @@
         <local:Stringformat2 x:Key="StringFormatConverter" />
     </Page.Resources>
     <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="SplitModeWide">
+                <VisualState x:Name="TabletState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1000" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Mobile.Visibility" Value="Collapsed"/>
+                        <Setter Target="Desktop.Visibility" Value="Visible"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="SplitModeNarrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Mobile.Visibility" Value="Visible"/>
+                        <Setter Target="Desktop.Visibility" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="Desktop">
+            <Grid.ColumnDefinitions>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="65" />
+                <RowDefinition/>
+                <RowDefinition Height="65" />
+                <RowDefinition/>
+                <RowDefinition Height="65" />
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <AppBarButton Background="LightGray" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Label="Huidig"   Width="Auto" Icon="Street"/>
+            <AppBarButton Background="LightGray" Icon="Library" Grid.Row="3"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Label="Historiek"   Width="Auto"/>
+            <AppBarButton Background="LightGray" Icon="Favorite" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Label="Favorieten"  Width="Auto"/>
+
+            <Grid Grid.Row="0" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="60"/>
+
+                </Grid.RowDefinitions>
+                <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="3"></Rectangle>
+                <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="3"/>
+                <TextBlock Style="{StaticResource TextS}"  Text="Profiel"  FontSize="28" Margin="48 0 0 0" Grid.Row="0" Grid.ColumnSpan="2"></TextBlock>
+
+
+
+            </Grid>
+            <Grid x:Name="Huidig" Grid.Row="2"  Grid.Column="0">
+                <ListView ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollMode="Disabled"  SizeChanged="ListItemsHUID_SizeChanged" HorizontalContentAlignment="Stretch"  Name="ListItemsHUID"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding TuinPlanten, Mode=OneWay}" Tapped="ListItemsHUID_Tapped" Margin="15,0,15,0">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Loaded="StackPanel_Loaded_3"   Orientation="Vertical">
+                                <Ellipse Loaded="Ellipse_Loaded_3" x:Name="Ellipse" 
+                           Height="140"
+                                 Width="140"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                
+                             Margin="4,4,4,4">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{Binding Plant.FotoUrl}"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+
+                                <TextBlock x:Name="Plantnaam" 
+                               Margin="4,4,0,4"
+                               Text="{Binding Plant.Naam, Mode=OneWay}" 
+                             
+                               Style="{ThemeResource BodyTextBlockStyle}" 
+                               HorizontalAlignment="Center"/>
+
+                                <TextBlock x:Name="Position" 
+                               Text="{Binding LaatstWater, Mode=OneWay, Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}" 
+                               Margin="4,4,0,4"
+           
+                               Style="{ThemeResource BodyTextBlockStyle}"
+                               FontSize="12"
+                               Foreground="Gray"
+                               HorizontalAlignment="Center"/>
+                            </StackPanel>
+
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </Grid>
+            <Grid x:Name="Historiek" Grid.Row="4" Grid.Column="1">
+                <ListView SizeChanged="ListItemsHIST_SizeChanged"  HorizontalContentAlignment="Stretch"  Name="ListItemsHIST"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding HistoriekPlant, Mode=OneWay}" Tapped="ListItemsHIST_Tapped" Margin="15,0,15,0">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Loaded="StackPanel_Loaded_2" Orientation="Vertical">
+                                <Ellipse x:Name="Ellipse" 
+                           Loaded="Ellipse_Loaded_2"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                
+                             Margin="4,4,4,4">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{Binding Plant.FotoUrl}"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+
+                                <TextBlock x:Name="Plantnaam" 
+                               Margin="4,4,0,4"
+                               Text="{Binding Plant.Naam, Mode=OneWay}" 
+                             
+                               Style="{ThemeResource BodyTextBlockStyle}" 
+                               HorizontalAlignment="Center"/>
+
+                                <TextBlock x:Name="Position" 
+                               Text="{Binding LaatstWater, Mode=OneWay, Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}" 
+                               Margin="4,4,0,4"
+           
+                               Style="{ThemeResource BodyTextBlockStyle}"
+                               FontSize="12"
+                               Foreground="Gray"
+                               HorizontalAlignment="Center"/>
+                            </StackPanel>
+
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+            </Grid>
+            <Grid x:Name="Favorieten"  Grid.Row="6" Grid.Column="2">
+                <ListView SizeChanged="ListItemsDESK_SizeChanged" HorizontalContentAlignment="Stretch"  Name="ListItemsDESK"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding FavorietenPlant, Mode=OneWay}" Tapped="ListItemsDESK_Tapped" Margin="15,0,15,0">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Loaded="StackPanel_Loaded_1" Orientation="Vertical">
+                                <Ellipse x:Name="Ellipse" 
+                           Loaded="Ellipse_Loaded_1"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Center"
+                Width="140"
+                                         Height="140"
+                             Margin="4,4,4,4">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{Binding Plant.FotoUrl}"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+
+                                <TextBlock x:Name="Plantnaam" 
+                               Margin="4,4,0,4"
+                               Text="{Binding Plant.Naam, Mode=OneWay}" 
+                             
+                               Style="{ThemeResource BodyTextBlockStyle}" 
+                               HorizontalAlignment="Center"/>
+
+
+                                <AppBarButton x:Name="Position" 
+                                      Icon="UnFavorite"                                       
+                               Margin="4,4,0,4"                           
+                               Foreground="Gray"
+                               
+                               HorizontalAlignment="Center" Tapped="Position_Tapped"/>
+                            </StackPanel>
+
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <!-- <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            -->
+                </ListView>
+            </Grid>
+        </Grid>
+
+
+    <Grid x:Name="Mobile">
         <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -115,5 +315,6 @@
                       VerticalAlignment="Bottom" 
                
                       Width="320"/>
+    </Grid>
     </Grid>
 </Page>
