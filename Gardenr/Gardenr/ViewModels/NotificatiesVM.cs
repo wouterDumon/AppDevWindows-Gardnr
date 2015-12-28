@@ -25,6 +25,13 @@ namespace Gardenr.ViewModels
            
         }
 
+        private Plant _notificatiePlant;
+        public Plant NotificatiePlant
+        {
+            get { return _notificatiePlant; }
+            set { _notificatiePlant = value;OnPropertyChanged("NotificatiePlant"); }
+        }
+
         private Alarm _notAlarm;
         public Alarm NotAlarm
         {
@@ -75,7 +82,7 @@ namespace Gardenr.ViewModels
         }
         private INotificatiesRepository reponotif = SimpleIoc.Default.GetInstance<INotificatiesRepository>();
         private ITypeRepository repoType = SimpleIoc.Default.GetInstance<ITypeRepository>();
-
+        private IPlantRepository repoPlant = SimpleIoc.Default.GetInstance<IPlantRepository>();
 
         public void DeleteNotificatieM()
         {
@@ -96,6 +103,12 @@ namespace Gardenr.ViewModels
                 //IngesteldeNotificaties = await repoNotification.GetNotificaties();
                 NotificatieType = await repoType.GetType(IngesteldeNotificaties.TypeID);
                 NotAlarm = await repoAlarm.GetAlarmBID(IngesteldeNotificaties.AlarmID);
+                if(IngesteldeNotificaties.PlantID != null)
+                {
+                    NotificatiePlant = await repoPlant.GetPlantById(IngesteldeNotificaties.PlantID);
+                }
+                
+
             }
             catch (Exception e) {
                 Exception mijnexceptie = e;
