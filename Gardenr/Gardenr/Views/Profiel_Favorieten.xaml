@@ -60,14 +60,13 @@
             <AppBarButton Background="LightGray"  Icon="Library" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Label="Historiek"  Command="{Binding GoHistoriek}" Width="Auto"/>
             <AppBarButton Background="#e7e7e7"  Icon="Favorite" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Label="Favorieten"  Width="Auto"/>
 
-            <GridView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding FavorietenPlant, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3" Tapped="ListItems_Tapped">
+            <GridView SizeChanged="ListItems_SizeChanged" HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding FavorietenPlant, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3" Tapped="ListItems_Tapped">
 
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Loaded="StackPanel_Loaded" Orientation="Vertical">
                             <Ellipse x:Name="Ellipse" 
-                             Width ="140"
-                             Height="140"
+                           Loaded="Ellipse_Loaded"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center"
                 

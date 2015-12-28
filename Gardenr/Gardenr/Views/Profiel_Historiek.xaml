@@ -61,14 +61,13 @@
 
 
 
-            <GridView  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding HistoriekPlant, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3" Tapped="ListItems_Tapped">
+            <GridView SizeChanged="ListItems_SizeChanged"  HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedPlant, Mode=TwoWay}" ItemsSource="{Binding HistoriekPlant, Mode=OneWay}" Grid.Row="2" Grid.ColumnSpan="3" Tapped="ListItems_Tapped">
 
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Loaded="StackPanel_Loaded" Orientation="Vertical">
                             <Ellipse x:Name="Ellipse" 
-                             Width ="140"
-                             Height="140"
+                           Loaded="Ellipse_Loaded"
                              VerticalAlignment="Center"
                              HorizontalAlignment="Center"
                 
