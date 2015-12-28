@@ -69,14 +69,46 @@ namespace Gardenr.Repositories
 
         public async Task<ObservableCollection<Plant>> GetPlanten()
         {
-            await InitLocalStoreAsync(); // offline sync
-            await RefreshPlantItems();
-            ObservableCollection<Plant> a = new ObservableCollection<Plant>();
-            foreach (Plant p in items) {
-                a.Add(p);
+            if (App.DATUM == null)
+            {
+                App.DATUM = new DateTime();
+                App.DATUM = DateTime.Now;
             }
+            else {
+                string vandaag = App.DATUM.Day + "/" + App.DATUM.Month + "/" + App.DATUM.Year;
+                DateTime DATUM = DateTime.Now;
+                string vandaag2 = DATUM.Day + "/" + DATUM.Month + "/" + DATUM.Year;
 
-            return  a;
+   if(vandaag.Equals(vandaag2))
+                {
+                    //zelfde goed
+                }
+                else {
+                    //plant db veranderd?
+                    App.PLANTEN = null;
+                    App.DATUM = DateTime.Now;
+                }
+
+
+            }
+            if (App.PLANTEN == null)
+            {
+                App.PLANTEN = new ObservableCollection<Plant>();
+                await InitLocalStoreAsync(); // offline sync
+                await RefreshPlantItems();
+                ObservableCollection<Plant> a = new ObservableCollection<Plant>();
+                foreach (Plant p in items)
+                {
+                    a.Add(p);
+                    App.PLANTEN.Add(p);
+                }
+                return a;
+            }
+            else {
+
+                return App.PLANTEN;
+
+            }
 
         }
         public async Task<Plant> GetPlantById(string id)

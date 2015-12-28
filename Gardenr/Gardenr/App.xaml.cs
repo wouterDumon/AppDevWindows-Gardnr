@@ -16,6 +16,7 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using System.Collections.ObjectModel;
 
 namespace Gardenr
 {
@@ -157,6 +158,10 @@ namespace Gardenr
         }
         private static LaunchActivatedEventArgs df;
         private static Boolean bbb;
+
+        public static DateTime DATUM { get; internal set; }
+        public static ObservableCollection<Plant> PLANTEN { get; internal set; }
+
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
