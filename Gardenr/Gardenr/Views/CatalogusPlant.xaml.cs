@@ -32,15 +32,26 @@ namespace Gardenr.Views
         {
             this.InitializeComponent();
             dosomething();
+
+            bool isHardwareButtonsAPIPresent =
+       Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            if (isHardwareButtonsAPIPresent)
+            {
+                //IS MOBILE
+                Puntjes.Margin = new Thickness(-15, 0, -15, 0);
+
+            }
+            else { }
         }
         private String t = "";
-        private async void dosomething() {
+        private async void dosomething()
+        {
 
             CatalogusPlantVM a = this.DataContext as CatalogusPlantVM;
             t = await a.CheckFavoriet();
             APPBAR.Label = t;
         }
-    
+
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -53,7 +64,7 @@ namespace Gardenr.Views
         {
             CatalogusPlantVM a = this.DataContext as CatalogusPlantVM;
             a.GoBack.Execute("iets");
-            
+
         }
 
         private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
@@ -65,11 +76,12 @@ namespace Gardenr.Views
         private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
         {
             zend("ZaaiDiepte");
-         
+
         }
 
 
-        private void zend(String t) {
+        private void zend(String t)
+        {
             // Clear all existing notifications
             ToastNotificationManager.History.Clear();
 
@@ -147,6 +159,53 @@ namespace Gardenr.Views
             else {
                 zend("Succesvol uit favorieten gehaald");
                 APPBAR.Label = "Toevoegen aan favorieten";
+            }
+        }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            doiets();
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            doiets();
+        }
+        private void doiets()
+        {
+            bool isHardwareButtonsAPIPresent =
+       Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            if (isHardwareButtonsAPIPresent)
+            {
+                //IS MOBILE
+                Double a = Window.Current.Bounds.Width;
+                if (a > 1200)
+                {
+                    ROW2.Height = new GridLength(320);
+                }
+                else if (a > 800)
+                {
+                    ROW2.Height = new GridLength(200);
+                }
+                else {
+                    ROW2.Height = new GridLength(150);
+                }
+
+            }
+            else {
+
+                Double a = Window.Current.Bounds.Width;
+                if (a > 1200)
+                {
+                    ROW2.Height = new GridLength(320);
+                }
+                else if (a > 800)
+                {
+                    ROW2.Height = new GridLength(220);
+                }
+                else {
+                    ROW2.Height = new GridLength(200);
+                }
             }
         }
     }
