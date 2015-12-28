@@ -119,6 +119,7 @@
       <RootEvent Name="ManipulationCompleted" />
       <RootEvent Name="Loaded" />
       <RootEvent Name="Tapped" />
+      <RootEvent Name="SizeChanged" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetRowSpan" />
