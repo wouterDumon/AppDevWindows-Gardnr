@@ -111,12 +111,13 @@
       <RootProperty Name="ManipulationMode" />
       <RootProperty Name="Width" />
       <RootProperty Name="IsHitTestVisible" />
-      <RootProperty Name="CornerRadius" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="CornerRadius" />
       <RootProperty Name="Style" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="Height" />
       <RootEvent Name="ManipulationCompleted" />
+      <RootEvent Name="Loaded" />
       <RootEvent Name="Tapped" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
@@ -277,6 +278,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Name" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemsSource" />
@@ -284,6 +286,7 @@
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="Background" />
       <RootEvent Name="Tapped" />
+      <RootEvent Name="SizeChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollMode" />

@@ -77,6 +77,7 @@ namespace Gardenr.ViewModels
         }
         public void Detail()
         {
+            if (SelectedPlant == null) return;
         
             GoToPageMessage message = new GoToPageMessage() { PageNumber = 2, SelectedPlant = this.SelectedPlant };
             Messenger.Default.Send<GoToPageMessage>(message);

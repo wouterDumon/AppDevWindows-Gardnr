@@ -63,5 +63,42 @@ namespace Gardenr.Views
             CatalogusVM a = this.DataContext as CatalogusVM;
             a.GoToDetail.Execute("h"); 
         }
+       private List<Grid> grids= new List<Grid>();
+
+        private int berekenhoeveelitems() {
+            Double a = Window.Current.Bounds.Width;
+            if (a > 1200)
+            {
+                return 4;
+            }
+            else if (a > 700)
+            {
+                return 3;
+            }
+            else {
+                return 2;
+            }
+   
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            Grid mn = sender as Grid;
+   
+            if (grids.Contains(mn)) { }
+            else {
+                grids.Add(mn);
+            }
+            mn.Width = (ListItems.ActualWidth / berekenhoeveelitems()) -5;
+        }
+
+        private void ListItems_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (grids.Count != 0) {
+                foreach (Grid mn in grids) {
+                    mn.Width = (ListItems.ActualWidth / berekenhoeveelitems()) - 5;
+                }
+            }
+        }
     }
 }

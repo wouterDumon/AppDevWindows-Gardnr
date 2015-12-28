@@ -50,12 +50,12 @@
             <TextBlock Grid.Row="0"  FontSize="28" Margin="48 0 0 0" Style="{StaticResource TextS}" VerticalAlignment="Center">Catalogus</TextBlock>
 
 
-            <GridView   VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Hidden" Name="ListItems" SelectedItem="{Binding SelectedPlant, Mode=TwoWay}"    ItemsSource="{Binding ToonPlanten, Mode=OneWay}" Grid.Row="1" Tapped="ListItems_Tapped">
+            <GridView Margin="0 0 -10 -15"  VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Hidden" Name="ListItems" SelectedItem="{Binding SelectedPlant, Mode=TwoWay}"    ItemsSource="{Binding ToonPlanten, Mode=OneWay}" Grid.Row="1" Tapped="ListItems_Tapped" SizeChanged="ListItems_SizeChanged">
 
                 <GridView.ItemTemplate>
                     <DataTemplate>
 
-                        <Grid  Background="Transparent" Width="240">
+                        <Grid x:Name="tetekenengrid"  Background="Transparent" Width="240" Margin="0 0 0 0" Loaded="Grid_Loaded">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="1*"/>
