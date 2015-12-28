@@ -51,6 +51,7 @@
     <RootPropertyPathName Name="NotAlarm" />
     <RootPropertyPathName Name="herhalen" />
     <RootPropertyPathName Name="NotificatieType" />
+    <RootPropertyPathName Name="NotificatiePlant" />
     <RootPropertyPathName Name="DeleteNotificatie" />
     <RootPropertyPathName Name="BewerkNotificatie" />
     <RootPropertyPathName Name="BewNotificatie" />
