@@ -49,12 +49,13 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="HGRHeaderMargin.Height" Value="50"/>
-      
+
                         <Setter Target="HGCLeftMargin.Width" Value="50"/>
                         <Setter Target="HGCRightMargin.Width" Value="50"/>
                         <Setter Target="HGRWeatherMargin.Height" Value="220"/>
-                        <Setter Target="Notifiecaties.Height" Value="200"/>
-                       
+                        <Setter Target="HGRNotificationMargin.Height" Value="50"/>
+
+
 
                     </VisualState.Setters>
                 </VisualState>
@@ -64,93 +65,94 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="HGRHeaderMargin.Height" Value="40"/>
-            
+
                         <Setter Target="HGCLeftMargin.Width" Value="15"/>
                         <Setter Target="HGCRightMargin.Width" Value="15"/>
-                        <Setter Target="HGRWeatherMargin.Height" Value="170"/>                  
-                       
+                        <Setter Target="HGRWeatherMargin.Height" Value="170"/>
+                        <Setter Target="HGRNotificationMargin.Height" Value="40"/>
+
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         <Grid x:Name="HeadGrid" SizeChanged="HeadGrid_SizeChanged" >
-            
+
             <Grid.RowDefinitions>
-            <RowDefinition x:Name="HGRHeaderMargin" Height="40"/>
-            <RowDefinition x:Name="HGRWeatherMargin" Height="170"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="0"/>
-            <RowDefinition Height="0*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition x:Name="HGCLeftMargin" Width="15"/>
-            <ColumnDefinition x:Name="HGCMiddleMargin" Width="*"/>
-            <ColumnDefinition x:Name="HGCRightMargin" Width="15"/>
-        </Grid.ColumnDefinitions>
-
-        <Rectangle Grid.Row="0" Grid.ColumnSpan ="3"  Style="{StaticResource headerS}"></Rectangle>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan ="3" Text="" FontSize="28" Margin="57,4,0,4" VerticalAlignment="Center" Style="{StaticResource TextS}" >Home</TextBlock>
-        <Rectangle Grid.Row="1" Grid.ColumnSpan ="3" Grid.RowSpan="5" Style="{StaticResource bodyS}"/>
-        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
-               
-                <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="10"/>
-                
-
+                <RowDefinition x:Name="HGRHeaderMargin" Height="40"/>
+                <RowDefinition x:Name="HGRWeatherMargin" Height="170"/>
+                <RowDefinition x:Name="HGRNotificationMargin" Height="40"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="15"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="15"/>
+                <ColumnDefinition x:Name="HGCLeftMargin" Width="15"/>
+                <ColumnDefinition x:Name="HGCMiddleMargin" Width="*"/>
+                <ColumnDefinition x:Name="HGCRightMargin" Width="15"/>
             </Grid.ColumnDefinitions>
 
-                         
-            <Image x:Name="WeatherBack"  Source="{Binding Fotourl, Mode=OneWay}" VerticalAlignment="Center" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="5"></Image>
-            <Image  Source="{Binding Iconurl, Mode=OneWay}" Width="50" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1"></Image>
-            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Weertext, Mode=OneWay}"    HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Weerstatus, Mode=OneWay}"  HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" ></TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Weerlocatie, Mode=OneWay}" HorizontalAlignment="Left" Style="{StaticResource TextS}" TextAlignment="Center" FontWeight="Bold"></TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="1" Text="weer door openweatherapp" HorizontalAlignment="Right" Style="{StaticResource TextS}" FontSize="10"></TextBlock>
+            <Rectangle Grid.Row="0" Grid.ColumnSpan ="3"  Style="{StaticResource headerS}"></Rectangle>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan ="3" Text="" FontSize="28" Margin="57,4,0,4" VerticalAlignment="Center" Style="{StaticResource TextS}" >Home</TextBlock>
+            <Rectangle Grid.Row="1" Grid.ColumnSpan ="3" Grid.RowSpan="5" Style="{StaticResource bodyS}"/>
+            <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
 
-               
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="10"/>
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="15"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="15"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Image x:Name="WeatherBack"  Source="{Binding Fotourl, Mode=OneWay}" VerticalAlignment="Center" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="5"></Image>
+                <Image  Source="{Binding Iconurl, Mode=OneWay}" Width="50" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1"></Image>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Weertext, Mode=OneWay}"    HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Weerstatus, Mode=OneWay}"  HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" ></TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Weerlocatie, Mode=OneWay}" HorizontalAlignment="Left" Style="{StaticResource TextS}" TextAlignment="Center" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="1" Text="weer door openweatherapp" HorizontalAlignment="Right" Style="{StaticResource TextS}" FontSize="10"></TextBlock>
+
+
             </Grid>
 
 
 
-        <TextBlock Margin="15,0,0,0" Grid.Column="1" Text="Notificatie's" FontSize="25" Grid.Row="2" Style="{StaticResource Text2}"></TextBlock>
-        <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Text="+" Style="{StaticResource Text2}" FontSize="40" Margin="0,-10,0,0" Tapped="TextBlock_Tapped"></TextBlock>
-        <GridView SizeChanged="ListItems_SizeChanged"  Grid.Column="1" HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" >
+            <TextBlock VerticalAlignment="Bottom" Margin="15,0,0,0" Grid.Column="1" Text="Notificatie's" FontSize="25" Grid.Row="2" Style="{StaticResource Text2}"></TextBlock>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Text="+" Style="{StaticResource Text2}" FontSize="40" Tapped="TextBlock_Tapped" />
+            <GridView SizeChanged="ListItems_SizeChanged"  Grid.Column="1" HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding Notificaties, Mode=OneWay}" Grid.Row="3" Tapped="ListItems_Tapped" >
 
-            <GridView.ItemTemplate >
-                <DataTemplate x:Name="Notifiecaties">
-                    <Grid Loaded="Grid_Loaded"  Background="Transparent"  Height="150" Width="150">
+                <GridView.ItemTemplate >
+                    <DataTemplate x:Name="Notifiecaties">
+                        <Grid Loaded="Grid_Loaded"  Background="Transparent"  Height="150" Width="150">
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1*"/>
-                            <RowDefinition Height="35"/>
-                            <RowDefinition Height="30"/>
-                        </Grid.RowDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
 
-                        <Image Source="{Binding  plantje.FotoUrl}"  Stretch="UniformToFill"  VerticalAlignment="Center" Grid.Row="0" Margin="0 0 0 -65"></Image>
-                        <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7" Grid.RowSpan="2" Margin="0 0 0 0" ></Rectangle>
+                            <Image Source="{Binding  plantje.FotoUrl}"  Stretch="UniformToFill"  VerticalAlignment="Center" Grid.Row="0" Margin="0 0 0 -65"></Image>
+                            <Rectangle Grid.Row="1" Stretch="UniformToFill" Fill="Black" Opacity="0.7" Grid.RowSpan="2" Margin="0 0 0 0" ></Rectangle>
 
-                        <TextBlock    Style="{ThemeResource BodyTextBlockStyle}"  TextAlignment="Center"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding n.datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"></TextBlock>
+                            <TextBlock    Style="{ThemeResource BodyTextBlockStyle}"  TextAlignment="Center"  TextWrapping="Wrap"  Grid.Row="1" Margin="0 0 0 0" Foreground="White"   Text="{Binding n.datum,  Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"></TextBlock>
 
-                        <TextBlock TextAlignment="Center" FontSize="12"  TextWrapping="Wrap"  Grid.Row="2" Margin="0 0 0 0" Foreground="White"   Text="{Binding n.Omschrijving}"></TextBlock>
+                            <TextBlock TextAlignment="Center" FontSize="12"  TextWrapping="Wrap"  Grid.Row="2" Margin="0 0 0 0" Foreground="White"   Text="{Binding n.Omschrijving}"></TextBlock>
 
 
-                    </Grid>
-                   
+                        </Grid>
 
-                </DataTemplate>
-            </GridView.ItemTemplate>
 
-        </GridView>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+
+            </GridView>
 
         </Grid>
         <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" 
@@ -162,6 +164,6 @@
                       VerticalAlignment="Bottom" 
                
                       Width="320"/>
- 
+
     </Grid>
 </Page>

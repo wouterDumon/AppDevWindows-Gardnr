@@ -256,7 +256,8 @@
     <Content Include="Assets\BadgeLogo.scale-400.png" />
     <Content Include="Assets\CatalogusIcons\DagenOogst.png" />
     <Content Include="Assets\CatalogusIcons\DagenVerplanten.png" />
-    <Content Include="Assets\CatalogusIcons\Kalender.png" />
+    <Content Include="Assets\CatalogusIcons\KalenderD.png" />
+    <Content Include="Assets\CatalogusIcons\KalenderM.png" />
     <Content Include="Assets\CatalogusIcons\MagBinnen.png" />
     <Content Include="Assets\CatalogusIcons\MagBuiten.png" />
     <Content Include="Assets\CatalogusIcons\PlantAfstand.png" />

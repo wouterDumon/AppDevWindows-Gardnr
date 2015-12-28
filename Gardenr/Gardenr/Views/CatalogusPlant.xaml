@@ -104,7 +104,7 @@
             <Rectangle Fill="Red" Grid.Row="1" Grid.Column="{Binding ZaaiBegin}" Grid.ColumnSpan="{Binding ZaaiLengte}"></Rectangle>
             <Rectangle Fill="Yellow" Grid.Row="2" Grid.Column="{Binding PlantBegin}" Grid.ColumnSpan="{Binding PlantLengte }"></Rectangle>
             <Rectangle Fill="Green" Grid.Row="3" Grid.Column="{Binding OogstBegin}" Grid.ColumnSpan="{Binding OogstLengte}"></Rectangle>
-            <Image Source="/Assets/CatalogusIcons/Kalender.png" Grid.RowSpan="55" Grid.ColumnSpan="55" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,5,0"></Image>
+            <Image Source="/Assets/CatalogusIcons/KalenderM.png" Grid.RowSpan="55" Grid.ColumnSpan="55" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,5,0"></Image>
         </Grid>
 
         <!-- <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="ZaaiKalender" ></Button>-->

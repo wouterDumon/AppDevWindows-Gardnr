@@ -147,10 +147,20 @@ Windows.Storage.CreationCollisionOption.OpenIfExists);
                 HGRWeatherMargin.Height = new GridLength(320);
             } else if (a > 800) {
                 HGRWeatherMargin.Height = new GridLength(220);
+                foreach (Grid mn in grids)
+                {
+                    mn.Height = 200;
+
+                }
             }
 
             else {
                 HGRWeatherMargin.Height = new GridLength(170);
+                foreach (Grid mn in grids)
+                {
+                    mn.Height = 150;
+
+                }
             }
         }
 
@@ -161,6 +171,7 @@ Windows.Storage.CreationCollisionOption.OpenIfExists);
                 foreach (Grid mn in grids)
                 {
                     mn.Width = (ListItems.ActualWidth / berekenhoeveelitems()) - 5;
+                
                 }
             }
         }
