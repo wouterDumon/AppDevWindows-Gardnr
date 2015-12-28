@@ -111,6 +111,10 @@ namespace Gardenr.Repositories
         {
             await InitLocalStoreAsync();
             await RefreshItems();
+            ObservableCollection<Plant> lijstplant = await repoPlant.GetPlanten();
+            ObservableCollection<Notificaties> lijstnotificaites = await repoInst.GetNotificaties();
+
+
             foreach (TuinObject ni in items)
             {
                 if (ni.ID == nitem)
@@ -122,7 +126,12 @@ namespace Gardenr.Repositories
                     newT.Aantal = ni.Aantal;
                     newT.LaatstWater = ni.LaatstWater;
                     newT.extra = ni.extra;
-                    newT.Plant = await repoPlant.GetPlantById(ni.PlantenID);
+                    foreach (Plant p in lijstplant) {
+                        if (p.ID.Equals(ni.PlantenID)) {
+                            newT.Plant = p;
+                        }
+
+                    }             
                     newT.plantDatum = ni.plantDatum;
 
                     if (ni.NotificationID != null && ni.NotificationID=="")//geen notificaties voorlopig nog testen met notificaties
@@ -133,7 +142,11 @@ namespace Gardenr.Repositories
                             //TODO: HIER ERROR 
                             //KOMT ERIN ALS STRING LEEG IS 
                             // voorlopige fix
-                            newT.Notificaties.Add(await repoInst.GetNotificatie(tempinstid[i]));
+                            foreach (Notificaties not in lijstnotificaites) {
+                                if (not.ID.Equals(tempinstid[i])) {
+                                    newT.Notificaties.Add(not);
+                                }
+                            }
                         }
                     }
 
@@ -226,7 +239,8 @@ namespace Gardenr.Repositories
             await InitLocalStoreAsync();
             await RefreshItems();
             ObservableCollection<Tuin> ni = new ObservableCollection<Tuin>();
-
+            ObservableCollection<Notificaties> mijnlijst = await repoInst.GetNotificaties();
+            ObservableCollection<Plant> lijstplant = await repoPlant.GetPlanten();
             foreach (TuinObject nieuws in items)
             {
                 if (nieuws.gebruikerID == gebruikerid)
@@ -238,7 +252,17 @@ namespace Gardenr.Repositories
                     newT.Aantal = nieuws.Aantal;
                     newT.LaatstWater = nieuws.LaatstWater;
                     newT.extra = nieuws.extra;
-                    newT.Plant = await repoPlant.GetPlantById(nieuws.PlantenID);
+                   
+                    foreach (Plant p in lijstplant)
+                    {
+                        if (p.ID.Equals(nieuws.PlantenID))
+                        {
+                            newT.Plant = p;
+                        }
+
+                    }
+
+
                     newT.plantDatum = nieuws.plantDatum;
                     newT.Notificaties = new ObservableCollection<Notificaties>();
 
@@ -246,7 +270,7 @@ namespace Gardenr.Repositories
                     String mijngebruiker = nieuws.gebruikerID;
                     String plant = nieuws.PlantenID;
 
-                    ObservableCollection<Notificaties> mijnlijst = await repoInst.GetNotificaties();
+                 
 
                     foreach (Notificaties mijnnot in mijnlijst) {
                         if (mijnnot.GebruikerID.Equals(mijngebruiker)) {
