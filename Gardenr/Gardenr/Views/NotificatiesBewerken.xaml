@@ -36,46 +36,100 @@
             <Setter Property="Foreground" Value="#659d46"/>
         </Style>
     </Page.Resources>
+    
+
     <Grid Background="#01FF70">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="15"/>
-            <ColumnDefinition Width="160"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="15"/>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="SplitModeWide">
+                <VisualState x:Name="TabletState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="HGCLeft.Width" Value="50"/>
+                        <Setter Target="HGCRight.Width" Value="50"/>
+                        <Setter Target="HGCImage.Width" Value="*"/>
+                        <Setter Target="HGCData.Width" Value="300"/>
+                        <Setter Target="HGCLegende.Width" Value="250"/>
+                        <Setter Target="NotificatieFoto.(Grid.Column)" Value="1"/>
+                        <Setter Target="NotificatieFoto.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="NotificatieFoto.(Grid.Row)" Value="2"/>
+                        <Setter Target="NotificatieFoto.(Grid.RowSpan)" Value="4"/>
+                        <Setter Target="NotificatieFoto.Stretch" Value="Uniform"/>
+                        <Setter Target="NotificatieFoto.VerticalAlignment" Value="Top"/>
+                        <Setter Target="HGCMargin.Width" Value="20"/>
+                        <Setter Target="HGRFoto.Height" Value="50"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="SplitModeNarrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="HGCLeft.Width" Value="15"/>
+                        <Setter Target="HGCRight.Width" Value="15"/>
+                        <Setter Target="HGCImage.Width" Value="0"/>
+                        <Setter Target="HGCData.Width" Value="*"/>
+                        <Setter Target="HGCLegende.Width" Value="170"/>
+                        <Setter Target="NotificatieFoto.(Grid.Column)" Value="0"/>
+                        <Setter Target="NotificatieFoto.(Grid.ColumnSpan)" Value="6"/>
+                        <Setter Target="NotificatieFoto.(Grid.Row)" Value="1"/>
+                        <Setter Target="NotificatieFoto.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="NotificatieFoto.Stretch" Value="UniformToFill"/>
+                        <Setter Target="NotificatieFoto.VerticalAlignment" Value="Center"/>
+                        <Setter Target="HGRFoto.Height" Value="150"/>
+                        <Setter Target="HGCMargin.Width" Value="0"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.ColumnDefinitions>           
+            <ColumnDefinition x:Name="HGCLeft" Width="15"/>
+            <ColumnDefinition x:Name="HGCImage" Width="0"/>
+            <ColumnDefinition x:Name="HGCMargin" Width="0"/>
+            <ColumnDefinition x:Name="HGCLegende" Width="150"/>
+            <ColumnDefinition x:Name="HGCData" Width="*"/>
+            <ColumnDefinition x:Name="HGCRight" Width="15"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="379*"/>
+            <RowDefinition x:Name="HGRFoto" Height="150"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="60"/>
+
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="4"></Rectangle>
+        <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="6"></Rectangle>
 
-        <TextBlock Grid.Row="0" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="3" Grid.Column="1"  >Notificatie detail</TextBlock>
+        <TextBlock Grid.Row="0" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="5" Grid.Column="1"  >Notificatie detail</TextBlock>
 
+      
+        <Rectangle Grid.Row="1" Grid.RowSpan="6" Style="{StaticResource bodyS}" Grid.ColumnSpan="6"/>
+        <Image x:Name="NotificatieFoto" Source="{Binding NotificatiePlant.FotoUrl}" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="1" Stretch="UniformToFill" VerticalAlignment="Center"/>
 
+        <Button Content="Opslaan" Background="Transparent" Command="{Binding SaveSettings}" Grid.Row="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="6" FontSize="26" Foreground="DarkGreen"></Button>
 
-        <Rectangle Grid.Row="1" Grid.RowSpan="5" Style="{StaticResource bodyS}" Grid.ColumnSpan="4"/>
+        <TextBlock Grid.Column="3" Text="Datum" FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" Margin="0,10" VerticalAlignment="Center" />
 
-        <Button Content="Opslaan" Background="Transparent" Command="{Binding SaveSettings}" Grid.Row="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="4" FontSize="26" Foreground="DarkGreen"></Button>
+        <DatePicker  Date="{Binding Date, Mode=TwoWay}" VerticalAlignment="Stretch" Grid.Column="4"  FontSize="15" Grid.Row="2" HorizontalAlignment="Stretch" AllowDrop="True" Grid.ColumnSpan="1" Header="" Height="70" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
 
-        <TextBlock Grid.Column="1" Text="Datum" FontSize="20" Grid.Row="1" Style="{StaticResource Text2}" Margin="0,10" VerticalAlignment="Center" />
-
-        <DatePicker  Date="{Binding Date, Mode=TwoWay}" VerticalAlignment="Stretch" Grid.Column="2"  FontSize="15" Grid.Row="1" HorizontalAlignment="Stretch" AllowDrop="True" Grid.ColumnSpan="1" Header="" Height="70" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
-
-        <TextBlock  Grid.Column="1" Text="Notificatie type"  FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center"/>
-        <ComboBox  SelectedItem="{Binding SelectedType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="2"  HorizontalAlignment="Stretch" VerticalAlignment="Center" ItemsSource="{Binding NotificatieTypes}" DisplayMemberPath="Naam" Height="32"
+        <TextBlock  Grid.Column="3" Text="Notificatie type"  FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"/>
+        <ComboBox  SelectedItem="{Binding SelectedType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Grid.Column="4"  HorizontalAlignment="Stretch" VerticalAlignment="Center" ItemsSource="{Binding NotificatieTypes}" DisplayMemberPath="Naam" Height="32"
                    ></ComboBox>
 
-        <TextBlock  Grid.Column="1" Text="Herhalen periode" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
-        <Slider x:Name="slider" Grid.Column="2" Grid.Row="3" Value="{Binding NotAlarm.herhalen, Mode=TwoWay}" Minimum="0" Maximum="31" Margin="0,0,40,0" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="2" Text="{Binding ElementName=slider, Path=Value}" HorizontalAlignment="Right" Grid.Row="3" VerticalAlignment="Center" FontSize="20" Style="{StaticResource Text2}"></TextBlock>
+        <TextBlock  Grid.Column="3" Text="Herhalen periode" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
+        <Slider x:Name="slider" Grid.Column="4" Grid.Row="4" Value="{Binding NotAlarm.herhalen, Mode=TwoWay}" Minimum="0" Maximum="31" Margin="0,0,40,0" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="4" Text="{Binding ElementName=slider, Path=Value}" HorizontalAlignment="Right" Grid.Row="4" VerticalAlignment="Center" FontSize="20" Style="{StaticResource Text2}"></TextBlock>
  
-        <TextBlock Grid.Column="1" Text="Mededeling" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" Margin="0,15,0,0"></TextBlock>
-        <TextBox  Grid.Column="2" Text="{Binding BewNotificatie.Omschrijving, Mode=TwoWay}" FontSize="23" Grid.Row="4" Margin="0,15,0,5" TextWrapping="Wrap" PlaceholderText="Omshrijving"/>
+        <TextBlock Grid.Column="3" Text="Mededeling" FontSize="20" Grid.Row="5" Style="{StaticResource Text2}" Margin="0,15,0,0"></TextBlock>
+        <TextBox  Grid.Column="4" Text="{Binding BewNotificatie.Omschrijving, Mode=TwoWay}" FontSize="23" Grid.Row="5" Margin="0,15,0,5" TextWrapping="Wrap" PlaceholderText="Omshrijving"/>
 
 
 
