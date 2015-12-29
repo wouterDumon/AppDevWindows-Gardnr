@@ -7,6 +7,7 @@ using Gardenr.Models;
 using Gardenr.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -24,8 +25,33 @@ namespace Gardenr.ViewModels
             AddFavorieten = new RelayCommand(AddFavorietenM);
             AddGarden = new RelayCommand(AddGardM);
             MakeNotification = new RelayCommand(MakeNotificationM);
+ 
         }
+        private int zitindb = 0;
+        private Tuin objectindb;
+        public async Task<String> CheckFavoriet()
+        {
+            ObservableCollection<Tuin> tuin = await repotuin.GetTOs(App.Gebruiker.ID);
+            foreach (Tuin to in tuin) {
+                if (to.Aantal == 0) {
+                    if (to.Plant.ID.Equals(Plant.ID))
+                    {
+                        //ZIT IN DB
+                        zitindb = 1;
+                        objectindb = to;
+                        if (to.favoriet)
+                        {
+                            return "Verwijder uit favorieten";
+                        }
+                        else {
+                            return "Toevoegen aan favorieten";
+                        }
+                    }
 
+                }        
+            }
+            return "Toevoegen aan favorieten";
+        }
 
         private Plant _plant;
         public Plant Plant {
@@ -80,21 +106,62 @@ namespace Gardenr.ViewModels
         }
         public void AddFavorietenM()
         {
+
+
             TuinObject t = new TuinObject();
             t.gebruikerID = App.Gebruiker.ID;
             t.PlantenID = Plant.ID;
             t.LaatstWater = "" + DateTime.Now;
             t.favoriet = true;
             t.extra = "";
-            t.Aantal = 1;
+            t.Aantal = 0;
             t.historiek = false;
             t.plantDatum = "" + DateTime.Now;
             t.NotificationID = "";
 
             repotuin.AddTO(t);
-            GoToPageMessage message = new GoToPageMessage() { PageNumber = 10 };
-            Messenger.Default.Send<GoToPageMessage>(message);
+
+            //ZEND TOAST
+        //    GoToPageMessage message = new GoToPageMessage() { PageNumber = 9 };
+         //   Messenger.Default.Send<GoToPageMessage>(message);
         }
+        public async Task<int> AddFavo()
+        {
+            if (zitindb == 0)
+            {
+                TuinObject t = new TuinObject();
+                t.gebruikerID = App.Gebruiker.ID;
+                t.PlantenID = Plant.ID;
+                t.LaatstWater = "" + DateTime.Now;
+                t.favoriet = true;
+                t.extra = "";
+                t.Aantal = 0;
+                t.historiek = false;
+                t.plantDatum = "" + DateTime.Now;
+                t.NotificationID = "";
+
+                await repotuin.AddFAV(t);
+                return 1;
+            }
+            else {
+                TuinObject t = new TuinObject();
+                t.gebruikerID = App.Gebruiker.ID;
+                t.PlantenID = objectindb.Plant.ID;
+                t.LaatstWater =objectindb.LaatstWater;
+                t.ID = objectindb.ID;
+                bool b = true;
+                if (objectindb.favoriet) { b = false; }
+                t.favoriet = b;
+                t.extra = objectindb.extra;
+                t.Aantal = objectindb.Aantal;
+                t.historiek = objectindb.historiek;
+                t.plantDatum = objectindb.plantDatum;
+                t.NotificationID = "";
+                await repotuin.AdjustFAV(t);
+                return 1;
+            }
+        }
+
         public  void AddGardM()
         {
             TuinObject t = new TuinObject();

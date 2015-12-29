@@ -7,6 +7,8 @@ namespace Gardenr.Repositories
     interface ITuinRepository
     {
         void AddTO(TuinObject nitem);
+        Task AddFAV(TuinObject nitem);
+        Task AdjustFAV(TuinObject nitem);
         void AdjustTO(Tuin nitem);
         void DeleteTO(Tuin nitem);
         Task<ObservableCollection<Tuin>> GetTOs(string gebruikerid);

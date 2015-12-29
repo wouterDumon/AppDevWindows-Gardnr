@@ -43,10 +43,10 @@
 
 
 
-    <Grid Background="#01FF70">
+    <Grid SizeChanged="Grid_SizeChanged" Loaded="Grid_Loaded" Background="#01FF70">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="200"/>           
+            <RowDefinition x:Name="ROW2" Height="200"/>           
             <RowDefinition Height="130"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
@@ -65,10 +65,10 @@
         <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="6"/>
       
         <TextBlock Style="{StaticResource TextS}" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" FontSize="28" VerticalAlignment="Center" Margin="48,0,0,0" Text="{Binding Plant.Naam}" Tapped="TextBlock_Tapped"></TextBlock>
-        <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right">
+        <CommandBar Background="Transparent" Margin="0 -5 0 0" x:Name="Puntjes" IsSticky="true" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right">
             <CommandBar.SecondaryCommands>
                 <AppBarButton Command="{Binding AddGarden}" Label="Toevoegen aan tuin"/>
-                <AppBarButton Command="{Binding AddFavorieten}" Label="Toevoegen als favoriet"/>
+                <AppBarButton Click="APPBAR_Click" x:Name="APPBAR" Label="Toevoegen als favoriet"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
         <!---->
@@ -101,9 +101,9 @@
                 <ColumnDefinition Width="19"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Rectangle Fill="Red" Grid.Row="1" Grid.Column="{Binding ZaaiBegin}" Grid.ColumnSpan="{Binding ZaaiLengte}"></Rectangle>
-            <Rectangle Fill="Yellow" Grid.Row="2" Grid.Column="{Binding PlantBegin}" Grid.ColumnSpan="{Binding PlantLengte }"></Rectangle>
-            <Rectangle Fill="Green" Grid.Row="3" Grid.Column="{Binding OogstBegin}" Grid.ColumnSpan="{Binding OogstLengte}"></Rectangle>
+            <Rectangle Fill="#eb5757" Grid.Row="1" Grid.Column="{Binding ZaaiBegin}" Grid.ColumnSpan="{Binding ZaaiLengte}"></Rectangle>
+            <Rectangle Fill="#FFFF33" Grid.Row="2" Grid.Column="{Binding PlantBegin}" Grid.ColumnSpan="{Binding PlantLengte }"></Rectangle>
+            <Rectangle Fill="#4CAF50" Grid.Row="3" Grid.Column="{Binding OogstBegin}" Grid.ColumnSpan="{Binding OogstLengte}"></Rectangle>
             <Image Source="/Assets/CatalogusIcons/KalenderM.png" Grid.RowSpan="55" Grid.ColumnSpan="55" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,5,0"></Image>
         </Grid>
 
@@ -112,36 +112,68 @@
 
         <!--de catalogus plant informatie -->
         <Grid Grid.Column="1" Tapped="Grid_Tapped" Grid.Row="4" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
             <Image Source="/Assets/CatalogusIcons/ZaaiDiepte.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
-            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Plant.ZaaiDiepte}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Plant.ZaaiDiepte}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
         </Grid>
         <Grid Tapped="Grid_Tapped_1" Grid.Column="2" Grid.Row="4" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
             <Image Source="/Assets/CatalogusIcons/PlantAfstand.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
-            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Plant.AfstandTussen}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Plant.AfstandTussen}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
         </Grid>
         <Grid Grid.Column="3" Tapped="Grid_Tapped_2" Grid.Row="4" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
             <Image Source="/Assets/CatalogusIcons/RijAfstand.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
-            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Plant.AfstandRij}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Plant.AfstandRij}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
         </Grid>
         <Grid Grid.Column="4" Tapped="Grid_Tapped_3" Grid.Row="4" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
             <Image Source="/Assets/CatalogusIcons/watering11.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
-            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Plant.WaterGeven}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Plant.WaterGeven}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
         </Grid>
         <Grid Tapped="Grid_Tapped_4" Grid.Column="1" Grid.Row="5" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
             <Image Source="/Assets/CatalogusIcons/DagenOogst.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
-            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Plant.DagenOogst}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Plant.DagenOogst}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
         </Grid>
         <Grid Tapped="Grid_Tapped_5" Grid.Column="2" Grid.Row="5" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
             <Image Source="/Assets/CatalogusIcons/DagenVerplanten.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
-            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Plant.DagenVerplanten}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Plant.DagenVerplanten}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
         </Grid>
         <Grid Tapped="Grid_Tapped_6" Grid.Column="3" Grid.Row="5" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
             <Image Source="/Assets/CatalogusIcons/MagBinnen.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
-            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Plant.Binnen, Converter={StaticResource StringConverter}}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Plant.Binnen, Converter={StaticResource StringConverter}}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
         </Grid>
         <Grid Tapped="Grid_Tapped_7" Grid.Column="4" Grid.Row="5" Margin="5,0,5,5" Style="{StaticResource ItemBack}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
             <Image Source="/Assets/CatalogusIcons/MagBuiten.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
-            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="{Binding Plant.Buiten, Converter={StaticResource StringConverter}}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Plant.Buiten, Converter={StaticResource StringConverter}}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
         </Grid>
         
 

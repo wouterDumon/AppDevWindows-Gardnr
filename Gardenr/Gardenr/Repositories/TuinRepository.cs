@@ -288,5 +288,31 @@ namespace Gardenr.Repositories
             }
             return ni;
         }
+
+        public async Task AddFAV(TuinObject nitem)
+        {
+            await InitLocalStoreAsync();
+            await Table.InsertAsync(nitem);
+            await SyncAsync();
+            await RefreshItems();
+            return;
+        }
+        public async Task DeleteFAV(TuinObject nitem)
+        {
+            await InitLocalStoreAsync();
+            await Table.DeleteAsync(nitem);
+            await SyncAsync();
+            await RefreshItems();
+            return;
+        }
+
+
+        public async Task AdjustFAV(TuinObject nitem)
+        {
+            await DeleteFAV(nitem);
+            await AddFAV(nitem);   
+           
+            return;
+        }
     }
 }

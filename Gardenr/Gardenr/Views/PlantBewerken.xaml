@@ -70,7 +70,7 @@
             <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
                 <CommandBar.SecondaryCommands>
                     <AppBarButton Command="{Binding SavePlant}" Label="Opslaan"/>
-                    <AppBarButton Command="{Binding AddFavorites}" Label="Favoriet"/>
+                    <AppBarButton Click="APPBAR_Click" x:Name="APPBAR"  Label="Favoriet"/>
                     <AppBarButton Command="{Binding DeletePlant}" Label="Verwijderen"/>
                     <AppBarButton Command="{Binding AddNotification}" Label="Notificatie Toevoegen"/>
                 </CommandBar.SecondaryCommands>

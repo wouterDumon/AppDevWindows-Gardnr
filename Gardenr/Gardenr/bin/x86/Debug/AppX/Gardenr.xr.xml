@@ -32,7 +32,6 @@
     <RootPropertyPathName Name="PlantLengte" />
     <RootPropertyPathName Name="ZaaiBegin" />
     <RootPropertyPathName Name="ZaaiLengte" />
-    <RootPropertyPathName Name="AddFavorieten" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="SelectedNotificatie" />
@@ -66,14 +65,14 @@
     <RootPropertyPathName Name="OogstDatum" />
     <RootPropertyPathName Name="AddNotification" />
     <RootPropertyPathName Name="DeletePlant" />
-    <RootPropertyPathName Name="AddFavorites" />
     <RootPropertyPathName Name="SavePlant" />
     <RootPropertyPathName Name="FavorietenPlant" />
+    <RootPropertyPathName Name="ID" />
     <RootPropertyPathName Name="GoHistoriek" />
     <RootPropertyPathName Name="GoHuiding" />
     <RootPropertyPathName Name="HistoriekPlant" />
-    <RootPropertyPathName Name="GoFavoriet" />
     <RootPropertyPathName Name="TuinPlanten" />
+    <RootPropertyPathName Name="GoFavoriet" />
     <RootPropertyPathName Name="goadd" />
     <RootPropertyPathName Name="ActualWidth" />
   </Roots.PropertyPathNames>
@@ -119,8 +118,8 @@
       <RootProperty Name="Height" />
       <RootEvent Name="ManipulationCompleted" />
       <RootEvent Name="Loaded" />
-      <RootEvent Name="Tapped" />
       <RootEvent Name="SizeChanged" />
+      <RootEvent Name="Tapped" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetRowSpan" />
@@ -216,8 +215,13 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemsPanel" />
       <RootEvent Name="SelectionChanged" />
       <RootEvent Name="Tapped" />
+      <RootEvent Name="SizeChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Fill" />
@@ -300,6 +304,12 @@
       <RootMethod Name="SetVerticalScrollBarVisibility" />
       <RootMethod Name="GetIsScrollInertiaEnabled" />
       <RootMethod Name="SetIsScrollInertiaEnabled" />
+      <RootMethod Name="GetHorizontalScrollMode" />
+      <RootMethod Name="SetHorizontalScrollMode" />
+      <RootMethod Name="GetHorizontalScrollBarVisibility" />
+      <RootMethod Name="SetHorizontalScrollBarVisibility" />
+      <RootMethod Name="GetVerticalScrollMode" />
+      <RootMethod Name="SetVerticalScrollMode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Background" />
@@ -332,6 +342,8 @@
       <RootProperty Name="Icon" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="Tag" />
+      <RootEvent Name="Click" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Gardenr.Views.CatalogusPlant" />
@@ -419,12 +431,18 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Fill" />
-      <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsStackPanel">
+      <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Gardenr.Views.Profiel_Favorieten" />
     <RootType FullName="Gardenr.Views.Profiel_Historiek" />
