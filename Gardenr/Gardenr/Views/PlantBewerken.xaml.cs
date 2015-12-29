@@ -50,6 +50,15 @@ namespace Gardenr.Views
 
 
             dosomething();
+            bool isHardwareButtonsAPIPresent =
+     Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            if (isHardwareButtonsAPIPresent)
+            {
+                //IS MOBILE
+                Puntjes.Margin = new Thickness(-15, 0, -15, 0);
+
+            }
+            else { }
         }
 
         private String t = "";
@@ -129,6 +138,111 @@ namespace Gardenr.Views
 
             // Send the toast.
             ToastNotificationManager.CreateToastNotifier().Show(toast);
+
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            doiets();
+        }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            doiets();
+        }
+
+        private void doiets()
+        {
+            bool isHardwareButtonsAPIPresent =
+       Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            if (isHardwareButtonsAPIPresent)
+            {
+                //IS MOBILE
+                Double a = Window.Current.Bounds.Width;
+                if (a > 1200)
+                {
+                    ROW2.Height = new GridLength(320);
+                }
+                else if (a > 800)
+                {
+                    ROW2.Height = new GridLength(150);
+                }
+                else {
+                    ROW2.Height = new GridLength(100);
+                }
+
+            }
+            else {
+
+                Double a = Window.Current.Bounds.Width;
+                if (a > 1200)
+                {
+                    ROW2.Height = new GridLength(250);
+                }
+                else if (a > 800)
+                {
+                    ROW2.Height = new GridLength(200);
+                }
+                else {
+                    ROW2.Height = new GridLength(150);
+                }
+            }
+        }
+        private List<Grid> grids = new List<Grid>();
+        private void ListItems_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (grids.Count != 0)
+            {
+                foreach (Grid mn in grids)
+                {
+                    mn.Width = (ListItems.ActualWidth / berekenhoeveelitems()) - 5;
+
+
+                }
+            }
+        }
+
+        private double berekenhoeveelitems()
+        {
+
+
+            Double a = Window.Current.Bounds.Width;
+            if (a > 1600)
+            {
+                return 10;
+            }
+            else
+            if (a > 1200)
+            {
+                return 8;
+            }
+            else if (a > 1000)
+            {
+                return 6;
+            }
+            else if (a > 700)
+            {
+                return 5;
+            }
+            else if (a > 500)
+            {
+                return 4;
+            }
+            else {
+                return 3;
+            }
+        }
+
+        private void Grid_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            Grid mn = sender as Grid;
+
+            if (grids.Contains(mn)) { }
+            else {
+                grids.Add(mn);
+            }
+            mn.Width = (ListItems.ActualWidth / berekenhoeveelitems()) - 5;
+
 
         }
     }
