@@ -46,7 +46,7 @@
     <Grid SizeChanged="Grid_SizeChanged" Loaded="Grid_Loaded" Background="#01FF70">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition x:Name="ROW2" Height="200"/>           
+            <RowDefinition x:Name="ROW2" Height="200"/>
             <RowDefinition Height="130"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
@@ -63,7 +63,7 @@
         </Grid.ColumnDefinitions>
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="6"></Rectangle>
         <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="6"/>
-      
+
         <TextBlock Style="{StaticResource TextS}" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" FontSize="28" VerticalAlignment="Center" Margin="48,0,0,0" Text="{Binding Plant.Naam}" Tapped="TextBlock_Tapped"></TextBlock>
         <CommandBar Background="Transparent" Margin="0 -5 0 0" x:Name="Puntjes" IsSticky="true" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right">
             <CommandBar.SecondaryCommands>
@@ -72,39 +72,40 @@
             </CommandBar.SecondaryCommands>
         </CommandBar>
         <!---->
-        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding Plant.FotoUrl}"  Grid.Row="1" Grid.ColumnSpan="6" Stretch="UniformToFill" ></Image>
+        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding Plant.FotoUrl}"  Grid.Row="1" Grid.ColumnSpan="6" Stretch="Fill" ></Image>
 
 
         <!-- zaaikalender-->
         <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Width="330" >
             <Grid.RowDefinitions>
-               
-                 <RowDefinition Height="39"/>
+
+                <RowDefinition Height="39"/>
                 <RowDefinition Height="25"/>
                 <RowDefinition Height="25"/>
                 <RowDefinition Height="25"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="88"/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="19"/>
-                <ColumnDefinition Width="19"/>
-                <ColumnDefinition Width="19"/>
-                <ColumnDefinition Width="19"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition x:Name="Legende" Width="52.25"/>
+                <ColumnDefinition Width="35.75"/>
+                <ColumnDefinition x:Name="Jan" Width="20"/>
+                <ColumnDefinition x:Name="Feb" Width="20"/>
+                <ColumnDefinition x:Name="Mar" Width="20"/>
+                <ColumnDefinition x:Name="Apr" Width="20"/>
+                <ColumnDefinition x:Name="Mei" Width="20"/>
+                <ColumnDefinition x:Name="Jun" Width="20"/>         
+                <ColumnDefinition x:Name="Jul" Width="20"/>
+                <ColumnDefinition x:Name="aug" Width="20"/>
+                <ColumnDefinition x:Name="sep" Width="19"/>
+                <ColumnDefinition x:Name="Okt" Width="19"/>
+                <ColumnDefinition x:Name="Nov" Width="19"/>
+                <ColumnDefinition x:Name="Dec" Width="19"/>
+                <ColumnDefinition x:Name="Regs"    Width="*"/>
             </Grid.ColumnDefinitions>
-            <Rectangle Fill="#eb5757" Grid.Row="1" Grid.Column="{Binding ZaaiBegin}" Grid.ColumnSpan="{Binding ZaaiLengte}"></Rectangle>
-            <Rectangle Fill="#FFFF33" Grid.Row="2" Grid.Column="{Binding PlantBegin}" Grid.ColumnSpan="{Binding PlantLengte }"></Rectangle>
-            <Rectangle Fill="#4CAF50" Grid.Row="3" Grid.Column="{Binding OogstBegin}" Grid.ColumnSpan="{Binding OogstLengte}"></Rectangle>
-            <Image Source="/Assets/CatalogusIcons/KalenderM.png" Grid.RowSpan="55" Grid.ColumnSpan="55" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,5,0"></Image>
+            <Rectangle Fill="#eb5757" Grid.Row="1" Grid.Column="{Binding ZaaiBegin}" Grid.ColumnSpan="2"></Rectangle>
+            <Rectangle Fill="#FFFF33" Grid.Row="2" Grid.Column="{Binding PlantBegin}" Grid.ColumnSpan="2"></Rectangle>
+            <Rectangle Fill="#4CAF50" Grid.Row="3" Grid.Column="{Binding OogstBegin}" Grid.ColumnSpan="2"></Rectangle>
+            <Image Source="/Assets/CatalogusIcons/KalenderM.png"  HorizontalAlignment="Stretch" Grid.RowSpan="5" VerticalAlignment="Center" Margin="5,0,0,0" Grid.ColumnSpan="15"/>
         </Grid>
 
         <!-- <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="ZaaiKalender" ></Button>-->
@@ -175,7 +176,7 @@
             <Image Source="/Assets/CatalogusIcons/MagBuiten.png" VerticalAlignment="Top" Margin="5,15,5,5"/>
             <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Text="{Binding Plant.Buiten, Converter={StaticResource StringConverter}}" TextAlignment="Center" Margin="0,0,0,5"></TextBlock>
         </Grid>
-        
+
 
         <!-- <TextBlock VerticalAlignment="Center" Text="Mag binnen: " Grid.Column="1" Grid.Row="10" Margin="5" TextAlignment="Center"   ></TextBlock>
         <TextBlock VerticalAlignment="Center" Text="{Binding plant.Binnen, Converter={StaticResource StringConverter}}" Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="2" Margin="5" TextAlignment="Center" ></TextBlock>

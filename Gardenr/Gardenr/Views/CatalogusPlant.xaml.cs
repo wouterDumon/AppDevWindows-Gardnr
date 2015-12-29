@@ -165,6 +165,7 @@ namespace Gardenr.Views
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             doiets();
+
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
@@ -175,6 +176,18 @@ namespace Gardenr.Views
         {
             bool isHardwareButtonsAPIPresent =
        Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            Jan.Width = new GridLength(15);
+            Feb.Width = new GridLength(15);
+            Mar.Width = new GridLength(15);
+            Apr.Width = new GridLength(15);
+            Mei.Width = new GridLength(15);
+            Jun.Width = new GridLength(15);
+            Jul.Width = new GridLength(15);
+            aug.Width = new GridLength(15);
+            sep.Width = new GridLength(15);
+            Okt.Width = new GridLength(15);
+            Dec.Width = new GridLength(15);
+            Nov.Width = new GridLength(15);
             if (isHardwareButtonsAPIPresent)
             {
                 //IS MOBILE
@@ -186,10 +199,24 @@ namespace Gardenr.Views
                 else if (a > 800)
                 {
                     ROW2.Height = new GridLength(200);
+                    Jan.Width = new GridLength(20);
+                    Feb.Width = new GridLength(20);
+                    Mar.Width = new GridLength(20);
+                    Apr.Width = new GridLength(20);
+                    Mei.Width = new GridLength(20);
+                    Jun.Width = new GridLength(20);
+                    Jul.Width = new GridLength(20);
+                    aug.Width = new GridLength(20);
+                    sep.Width = new GridLength(20);
+                    Okt.Width = new GridLength(20);
+                    Dec.Width = new GridLength(20);
+                    Nov.Width = new GridLength(20);
                 }
                 else {
                     ROW2.Height = new GridLength(150);
+                   
                 }
+
 
             }
             else {
