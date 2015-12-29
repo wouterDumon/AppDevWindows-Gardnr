@@ -164,8 +164,10 @@ namespace NotificationAPI.Controllers
 
         private async Task updatealarm(Alarm mijnalarm)
         {
+            String id = mijnalarm.ID;
             await tableAlarm.DeleteAsync(mijnalarm);
             mijnalarm.Activate = true;
+            mijnalarm.ID = id;
             await tableAlarm.InsertAsync(mijnalarm);
 
         }
