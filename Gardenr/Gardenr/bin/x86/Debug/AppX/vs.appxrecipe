@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-28T23:34:25.314</Modified>
+      <Modified>2015-12-29T00:25:37.852</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Gardenr.exe">
       <PackagePath>entrypoint\Gardenr.exe</PackagePath>
-      <Modified>2015-12-28T23:34:24.170</Modified>
+      <Modified>2015-12-29T00:25:36.693</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -725,7 +725,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\Assets\Home\NOT.png">
       <PackagePath>Assets\Home\NOT.png</PackagePath>
-      <Modified>2015-12-19T19:08:23.388</Modified>
+      <Modified>2015-12-29T00:23:57.542</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\Assets\LOGO.png">
       <PackagePath>Assets\LOGO.png</PackagePath>
@@ -945,7 +945,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Gardenr.xr.xml">
       <PackagePath>Gardenr.xr.xml</PackagePath>
-      <Modified>2015-12-28T23:24:35.429</Modified>
+      <Modified>2015-12-29T00:01:51.023</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1005,11 +1005,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-28T23:34:24.858</Modified>
+      <Modified>2015-12-29T00:25:37.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
       <PackagePath>Gardenr.exe</PackagePath>
-      <Modified>2015-12-28T23:34:25.312</Modified>
+      <Modified>2015-12-29T00:25:37.850</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

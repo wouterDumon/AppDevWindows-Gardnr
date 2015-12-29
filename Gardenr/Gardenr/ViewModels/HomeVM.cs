@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using WeatherNet;
 using WeatherNet.Clients;
 using Windows.Devices.Geolocation;
+using Windows.UI;
 
 namespace Gardenr.ViewModels
 {
@@ -25,7 +26,7 @@ namespace Gardenr.ViewModels
             //WeatherNet.Clients.CurrentWeather mijnweer= new WeatherNet.Clients.CurrentWeather();
 
             //  mijnweer.GetByCityNameAsync("Rekkem", "Belgium");
-          
+            ColorMe = Colors.White;
                StartUpGetItems();
             if(App.Gebruiker!=null)
             naam = App.Gebruiker.Voornaam + " " + App.Gebruiker.Naam;
@@ -40,7 +41,12 @@ namespace Gardenr.ViewModels
         private string _weertext;
         private string _weerstatus;
         private string _weerlocatie;
-
+        private Color _ColorMe;
+        public Color ColorMe
+        {
+            get { return _ColorMe; }
+            set { _ColorMe = value; OnPropertyChanged("ColorMe"); }
+        }
         public string Weerlocatie
         {
             get { return _weerlocatie; }
@@ -103,7 +109,7 @@ namespace Gardenr.ViewModels
 
 
         public async void FILLUPWEER(string lat, string lon) {
-        
+            ColorMe = Colors.White;
             Double la = Double.Parse(lat,CultureInfo.InvariantCulture);
             Double lo = Double.Parse(lon,CultureInfo.InvariantCulture);
             var weerresult = await CurrentWeather.GetByCoordinatesAsync(la, lo, "nl", "metric");
@@ -112,6 +118,18 @@ namespace Gardenr.ViewModels
             // Fotourl = "http://openweathermap.org/img/w/" + weerresult.Item.Icon+".png";
             if (weerresult.Item != null)
             {
+                if (weerresult.Item.Icon.Equals("02d") ||
+                    weerresult.Item.Icon.Equals("02n") ||
+                    weerresult.Item.Icon.Equals("13d") ||
+                    weerresult.Item.Icon.Equals("13n") ||
+                    weerresult.Item.Icon.Equals("01n")
+                    )
+                {
+                    ColorMe = Colors.White;
+                }
+                else {
+                    ColorMe = Colors.White;
+                }
                 Fotourl = "http://student.howest.be/cedric.lecat/Gardnr/Weather/mobile/" + weerresult.Item.Icon + ".jpg";
                 Iconurl = "http://student.howest.be/cedric.lecat/Gardnr/Weather/icons/" + weerresult.Item.Icon + ".png";
                 Weertext = "" + weerresult.Item.Temp + "°C";

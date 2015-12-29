@@ -114,10 +114,10 @@
 
                 <Image x:Name="WeatherBack"  Source="{Binding Fotourl, Mode=OneWay}" VerticalAlignment="Center" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="5"></Image>
                 <Image  Source="{Binding Iconurl, Mode=OneWay}" Width="50" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="1"></Image>
-                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Weertext, Mode=OneWay}"    HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
-                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Weerstatus, Mode=OneWay}"  HorizontalAlignment="Left" Style="{StaticResource TextS}"  TextAlignment="Center" ></TextBlock>
-                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Weerlocatie, Mode=OneWay}" HorizontalAlignment="Left" Style="{StaticResource TextS}" TextAlignment="Center" FontWeight="Bold"></TextBlock>
-                <TextBlock Grid.Row="3" Grid.Column="1" Text="weer door openweatherapp" HorizontalAlignment="Right" Style="{StaticResource TextS}" FontSize="10"></TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Weertext, Mode=OneWay}"    HorizontalAlignment="Left" Foreground="{Binding ColorMe, Mode=OneWay}"  TextAlignment="Center" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Weerstatus, Mode=OneWay}"  HorizontalAlignment="Left" Foreground="{Binding ColorMe, Mode=OneWay}"  TextAlignment="Center" ></TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Weerlocatie, Mode=OneWay}" HorizontalAlignment="Left" Foreground="{Binding ColorMe, Mode=OneWay}" TextAlignment="Center" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Row="3" Grid.Column="1" Text="weer door openweatherapp" HorizontalAlignment="Right" Foreground="{Binding ColorMe, Mode=OneWay}" FontSize="10"></TextBlock>
 
 
             </Grid>

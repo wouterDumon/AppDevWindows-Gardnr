@@ -40,6 +40,7 @@
     <RootPropertyPathName Name="Omschrijving" />
     <RootPropertyPathName Name="datum" />
     <RootPropertyPathName Name="plantje" />
+    <RootPropertyPathName Name="ColorMe" />
     <RootPropertyPathName Name="Weerlocatie" />
     <RootPropertyPathName Name="Weerstatus" />
     <RootPropertyPathName Name="Weertext" />

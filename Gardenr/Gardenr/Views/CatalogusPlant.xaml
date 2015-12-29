@@ -64,7 +64,7 @@
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="6"></Rectangle>
         <Rectangle Grid.Row="1" Grid.RowSpan="15" Style="{StaticResource bodyS}" Grid.ColumnSpan="6"/>
       
-        <TextBlock Style="{StaticResource TextS}" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" FontSize="28" VerticalAlignment="Center" Margin="48,0,0,0" Text="{Binding Plant.Naam}" Tapped="TextBlock_Tapped"></TextBlock>
+        <TextBlock Style="{StaticResource TextS}" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" FontSize="28" VerticalAlignment="Center" Margin="20,0,0,0" Text="{Binding Plant.Naam}" Tapped="TextBlock_Tapped"></TextBlock>
         <CommandBar Background="Transparent" Margin="0 -5 0 0" x:Name="Puntjes" IsSticky="true" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right">
             <CommandBar.SecondaryCommands>
                 <AppBarButton Command="{Binding AddGarden}" Label="Toevoegen aan tuin"/>

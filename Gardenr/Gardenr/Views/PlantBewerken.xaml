@@ -40,7 +40,7 @@
     </Page.DataContext>
 
     <Grid>
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Loaded="Grid_Loaded" SizeChanged="Grid_SizeChanged" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="15"/>
                 <ColumnDefinition Width="180"/>
@@ -50,13 +50,13 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="45"/>
-                <RowDefinition Height="150"/>
+                <RowDefinition x:Name="ROW2" Height="150"/>
                 <RowDefinition Height="10"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="90"/>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="9*"/>
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
             <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="5"></Rectangle>
@@ -67,7 +67,7 @@
 
 
 
-            <CommandBar Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
+            <CommandBar x:Name="Puntjes" Background="Transparent" Margin="0 -5 0 0" IsSticky="true" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
                 <CommandBar.SecondaryCommands>
                     <AppBarButton Command="{Binding SavePlant}" Label="Opslaan"/>
                     <AppBarButton Click="APPBAR_Click" x:Name="APPBAR"  Label="Favoriet"/>
@@ -88,10 +88,10 @@
 
             <TextBlock Style="{StaticResource Text2}" Text="Notificaties" FontSize="20" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center"/>
 
-            <GridView  Grid.Column="1" HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding TeBewerkenTuin.Notificaties, Mode=OneWay}" Grid.Row="5" Grid.ColumnSpan="2" Tapped="ListItems_Tapped" >
+            <GridView SizeChanged="ListItems_SizeChanged" Grid.Column="1" HorizontalContentAlignment="Stretch"  Name="ListItems"  SelectedItem="{Binding SelectedNotificatie, Mode=TwoWay}" Background="Transparent" ItemsSource="{Binding TeBewerkenTuin.Notificaties, Mode=OneWay}" Grid.Row="5" Grid.ColumnSpan="2" Tapped="ListItems_Tapped" >
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <Grid  Background="Transparent" Height="150" Width="150">
+                        <Grid  Background="Transparent" Loaded="Grid_Loaded_1" Width="150">
 
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="1*"/>
