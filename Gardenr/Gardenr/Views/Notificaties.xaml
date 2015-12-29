@@ -56,7 +56,7 @@
                         <Setter Target="NotificatieFoto.(Grid.RowSpan)" Value="4"/>
                         <Setter Target="NotificatieFoto.Stretch" Value="Uniform"/>
                         <Setter Target="NotificatieFoto.VerticalAlignment" Value="Top"/>
-                      
+                        <Setter Target="HGCMargin.Width" Value="20"/>
                         <Setter Target="HGRFoto.Height" Value="50"/>
                         
                     </VisualState.Setters>
@@ -73,12 +73,14 @@
                         <Setter Target="HGCData.Width" Value="*"/>
                         <Setter Target="HGCLegende.Width" Value="150"/>
                         <Setter Target="NotificatieFoto.(Grid.Column)" Value="0"/>
-                        <Setter Target="NotificatieFoto.(Grid.ColumnSpan)" Value="5"/>                        
+                        <Setter Target="NotificatieFoto.(Grid.ColumnSpan)" Value="6"/>                        
                         <Setter Target="NotificatieFoto.(Grid.Row)" Value="1"/>
                         <Setter Target="NotificatieFoto.(Grid.RowSpan)" Value="1"/>
                         <Setter Target="NotificatieFoto.Stretch" Value="UniformToFill"/>
                         <Setter Target="NotificatieFoto.VerticalAlignment" Value="Center"/>
                         <Setter Target="HGRFoto.Height" Value="150"/>
+                        <Setter Target="HGCMargin.Width" Value="0"/>
+                        
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -88,6 +90,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="HGCLeft" Width="15"/>
                 <ColumnDefinition x:Name="HGCImage" Width="0"/>
+                <ColumnDefinition x:Name="HGCMargin" Width="0"/>
                 <ColumnDefinition x:Name="HGCLegende" Width="150"/>
                 <ColumnDefinition x:Name="HGCData" Width="*"/>
                 <ColumnDefinition x:Name="HGCRight" Width="15"/>
@@ -103,10 +106,10 @@
                 <RowDefinition Height="60"/>
 
             </Grid.RowDefinitions>
-            <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="5"></Rectangle>
+            <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="6"></Rectangle>
 
-            <TextBlock Grid.Row="0" FontSize="28" Margin="57,1,0,1" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="5" >Notificatie detail</TextBlock>
-            <CommandBar  ScrollViewer.IsScrollInertiaEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="Transparent" Margin="0 0 -5 0" IsSticky="true" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <TextBlock Grid.Row="0" FontSize="28" Margin="57,1,0,1" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="6" >Notificatie detail</TextBlock>
+            <CommandBar  ScrollViewer.IsScrollInertiaEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="Transparent" Margin="0 0 -5 0" IsSticky="true" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Right">
                 <CommandBar.SecondaryCommands>
                     <AppBarButton Command="{Binding BewerkNotificatie}" Label="Bewerken"/>
                     <AppBarButton Command="{Binding DeleteNotificatie}" Label="Verwijderen"/>
@@ -115,19 +118,19 @@
             </CommandBar>
 
 
-            <Rectangle Grid.Row="1" Grid.RowSpan="6" Style="{StaticResource bodyS}" Grid.ColumnSpan="5"/>
-            <Image x:Name="NotificatieFoto" Source="{Binding NotificatiePlant.FotoUrl}" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="1" Stretch="UniformToFill" VerticalAlignment="Center"/>
-            <TextBlock  Grid.Column="2" Text="Datum" FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center" ></TextBlock>
-            <TextBlock  Grid.Column="3" Text="{Binding IngesteldeNotificaties.datum , Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  FontSize="20" Grid.Row="2" VerticalAlignment="Center"  Style="{StaticResource Text2}" ></TextBlock>
+            <Rectangle Grid.Row="1" Grid.RowSpan="6" Style="{StaticResource bodyS}" Grid.ColumnSpan="6"/>
+            <Image x:Name="NotificatieFoto" Source="{Binding NotificatiePlant.FotoUrl}" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="1" Stretch="UniformToFill" VerticalAlignment="Center"/>
+            <TextBlock  Grid.Column="3" Text="Datum" FontSize="20" Grid.Row="2" Style="{StaticResource Text2}" VerticalAlignment="Center" ></TextBlock>
+            <TextBlock  Grid.Column="4" Text="{Binding IngesteldeNotificaties.datum , Converter={StaticResource StringFormatConverter}, ConverterParameter='{}{0:dd/mm/yy }'}"  FontSize="20" Grid.Row="2" VerticalAlignment="Center"  Style="{StaticResource Text2}" ></TextBlock>
 
-            <TextBlock  Grid.Column="2" Text="Notificatie type"  FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="3" Text="{Binding NotificatieType.Naam}" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="3" Text="Notificatie type"  FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="4" Text="{Binding NotificatieType.Naam}" FontSize="20" Grid.Row="3" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
 
-            <TextBlock  Grid.Column="2" Text="Herhalen" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
-            <TextBlock  Grid.Column="3" Text="{Binding NotAlarm.herhalen}" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="3" Text="Herhalen" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
+            <TextBlock  Grid.Column="4" Text="{Binding NotAlarm.herhalen}" FontSize="20" Grid.Row="4" Style="{StaticResource Text2}" VerticalAlignment="Center"></TextBlock>
 
-            <TextBlock  Grid.Column="2" Text="Mededeling" FontSize="20" Grid.Row="5" Style="{StaticResource Text2}" Margin="0,15,0,0"></TextBlock>
-            <TextBlock TextWrapping="Wrap" Grid.Column="3" Text="{Binding IngesteldeNotificaties.Omschrijving}" FontSize="20" Grid.Row="5" Margin="0,15,0,0" Style="{StaticResource Text2}" ></TextBlock>
+            <TextBlock  Grid.Column="3" Text="Mededeling" FontSize="20" Grid.Row="5" Style="{StaticResource Text2}" Margin="0,15,0,0"></TextBlock>
+            <TextBlock TextWrapping="Wrap" Grid.Column="4" Text="{Binding IngesteldeNotificaties.Omschrijving}" FontSize="20" Grid.Row="5" Margin="0,15,0,0" Style="{StaticResource Text2}" ></TextBlock>
 
         </Grid>
         <UI:AdControl ApplicationId="d25517cb-12d4-4699-8bdc-52040c712cab" 

@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-28T18:18:11.561</Modified>
+      <Modified>2015-12-29T00:02:41.064</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -333,7 +333,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\entrypoint\Gardenr.exe">
       <PackagePath>entrypoint\Gardenr.exe</PackagePath>
-      <Modified>2015-12-28T18:18:08.294</Modified>
+      <Modified>2015-12-29T00:02:38.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\es\Microsoft.Data.Edm.resources.dll">
       <PackagePath>es\Microsoft.Data.Edm.resources.dll</PackagePath>
@@ -433,7 +433,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
       <PackagePath>Gardenr.exe</PackagePath>
-      <Modified>2015-12-28T18:18:11.560</Modified>
+      <Modified>2015-12-29T00:02:41.059</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.xr.xml">
       <PackagePath>Gardenr.xr.xml</PackagePath>
@@ -545,7 +545,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-28T18:18:09.249</Modified>
+      <Modified>2015-12-28T23:58:22.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cedric\Documents\GitHub\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\ru\Microsoft.Data.Edm.resources.dll">
       <PackagePath>ru\Microsoft.Data.Edm.resources.dll</PackagePath>
