@@ -26,9 +26,19 @@
     <RootPropertyPathName Name="AfstandRij" />
     <RootPropertyPathName Name="AfstandTussen" />
     <RootPropertyPathName Name="ZaaiDiepte" />
-    <RootPropertyPathName Name="OogstBegin" />
-    <RootPropertyPathName Name="PlantBegin" />
-    <RootPropertyPathName Name="ZaaiBegin" />
+    <RootPropertyPathName Name="ZAAIKALENDER" />
+    <RootPropertyPathName Name="Dec" />
+    <RootPropertyPathName Name="Nov" />
+    <RootPropertyPathName Name="Okt" />
+    <RootPropertyPathName Name="Sep" />
+    <RootPropertyPathName Name="Aug" />
+    <RootPropertyPathName Name="Jul" />
+    <RootPropertyPathName Name="Jun" />
+    <RootPropertyPathName Name="Mei" />
+    <RootPropertyPathName Name="Apr" />
+    <RootPropertyPathName Name="Maa" />
+    <RootPropertyPathName Name="Feb" />
+    <RootPropertyPathName Name="Jan" />
     <RootPropertyPathName Name="AddGarden" />
     <RootPropertyPathName Name="Contact" />
     <RootPropertyPathName Name="SelectedNotificatie" />
@@ -60,6 +70,7 @@
     <RootPropertyPathName Name="extra" />
     <RootPropertyPathName Name="LaatstWater" />
     <RootPropertyPathName Name="OogstDatum" />
+    <RootPropertyPathName Name="ZaaiBegin" />
     <RootPropertyPathName Name="AddNotification" />
     <RootPropertyPathName Name="DeletePlant" />
     <RootPropertyPathName Name="SavePlant" />
@@ -212,6 +223,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="ItemContainerStyle" />
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="SelectedItem" />
@@ -328,6 +342,11 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="SecondaryCommands" />
       <RootProperty Name="PrimaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="VerticalContentAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Command" />

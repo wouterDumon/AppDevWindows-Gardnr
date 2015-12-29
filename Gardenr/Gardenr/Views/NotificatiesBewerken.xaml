@@ -108,7 +108,7 @@
 
         <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="6"></Rectangle>
 
-        <TextBlock Grid.Row="0" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="5" Grid.Column="1"  >Notificatie detail</TextBlock>
+        <TextBlock Grid.Row="0" FontSize="28"  Margin="20 0 0 0" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="5" Grid.Column="1"  >Notificatie detail</TextBlock>
 
       
         <Rectangle Grid.Row="1" Grid.RowSpan="6" Style="{StaticResource bodyS}" Grid.ColumnSpan="6"/>

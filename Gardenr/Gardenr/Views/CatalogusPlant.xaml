@@ -72,11 +72,11 @@
             </CommandBar.SecondaryCommands>
         </CommandBar>
         <!---->
-        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding Plant.FotoUrl}"  Grid.Row="1" Grid.ColumnSpan="6" Stretch="Fill" ></Image>
+        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding Plant.FotoUrl}"  Grid.Row="1" Grid.ColumnSpan="6" Stretch="UniformToFill" ></Image>
 
 
         <!-- zaaikalender-->
-        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Width="330" >
+      <!--  <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4">
             <Grid.RowDefinitions>
 
                 <RowDefinition Height="39"/>
@@ -86,28 +86,113 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="Legende" Width="52.25"/>
-                <ColumnDefinition Width="35.75"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="1" />
                 <ColumnDefinition x:Name="Jan" Width="20"/>
+                <ColumnDefinition Width="1" />
                 <ColumnDefinition x:Name="Feb" Width="20"/>
+                <ColumnDefinition Width="1" />
                 <ColumnDefinition x:Name="Mar" Width="20"/>
+                <ColumnDefinition Width="1" />
                 <ColumnDefinition x:Name="Apr" Width="20"/>
+                <ColumnDefinition Width="1" />
                 <ColumnDefinition x:Name="Mei" Width="20"/>
-                <ColumnDefinition x:Name="Jun" Width="20"/>         
+                <ColumnDefinition Width="1" />
+                <ColumnDefinition x:Name="Jun" Width="20"/>
+                <ColumnDefinition Width="1" />
                 <ColumnDefinition x:Name="Jul" Width="20"/>
+                <ColumnDefinition Width="1" />
                 <ColumnDefinition x:Name="aug" Width="20"/>
-                <ColumnDefinition x:Name="sep" Width="19"/>
-                <ColumnDefinition x:Name="Okt" Width="19"/>
-                <ColumnDefinition x:Name="Nov" Width="19"/>
-                <ColumnDefinition x:Name="Dec" Width="19"/>
-                <ColumnDefinition x:Name="Regs"    Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Rectangle Fill="#eb5757" Grid.Row="1" Grid.Column="{Binding ZaaiBegin}" Grid.ColumnSpan="2"></Rectangle>
-            <Rectangle Fill="#FFFF33" Grid.Row="2" Grid.Column="{Binding PlantBegin}" Grid.ColumnSpan="2"></Rectangle>
-            <Rectangle Fill="#4CAF50" Grid.Row="3" Grid.Column="{Binding OogstBegin}" Grid.ColumnSpan="2"></Rectangle>
-            <Image Source="/Assets/CatalogusIcons/KalenderM.png"  HorizontalAlignment="Stretch" Grid.RowSpan="5" VerticalAlignment="Center" Margin="5,0,0,0" Grid.ColumnSpan="15"/>
-        </Grid>
+                <ColumnDefinition Width="1" />
+                <ColumnDefinition x:Name="sep" Width="20"/>
+                <ColumnDefinition Width="1" />
+                <ColumnDefinition x:Name="Okt" Width="20"/>
+                <ColumnDefinition Width="1" />
+                <ColumnDefinition x:Name="Nov" Width="20"/>
+                <ColumnDefinition Width="1" />
+                <ColumnDefinition x:Name="Dec" Width="20"/>
+    
+            </Grid.ColumnDefinitions>-->
 
+
+        <ListView Margin="5 5 5 0"  IsItemClickEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="White" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" ItemsSource="{Binding ZAAIKALENDER, Mode=OneWay}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                    <DataTemplate>
+                    <Grid Margin="-12 1 -12 0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  >
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Rectangle Fill="Black" Grid.Column="1" Grid.ColumnSpan="50" Margin="0 0 0 -1"></Rectangle>
+                        <Rectangle Fill="White" Grid.Column="0" Margin="0 -1 0 0"/>
+                        <TextBlock Grid.Column="0" VerticalAlignment="Center" Text="{Binding Naam}"></TextBlock>
+                  
+                        <Rectangle Fill="Black" Grid.Column="1"/>
+                        <Rectangle Fill="{Binding Jan}" Grid.Column="2"/>
+                        <Rectangle Fill="Black" Grid.Column="3"/>
+                        <Rectangle Fill="{Binding Feb}" Grid.Column="4"/>
+                        <Rectangle Fill="Black" Grid.Column="5"/>
+                        <Rectangle Fill="{Binding Maa}" Grid.Column="6"/>
+                        <Rectangle Fill="Black" Grid.Column="7"/>
+                        <Rectangle Fill="{Binding Apr}" Grid.Column="8"/>
+                        <Rectangle Fill="Black" Grid.Column="9"/>
+                        <Rectangle Fill="{Binding Mei}" Grid.Column="10"/>
+                        <Rectangle Fill="Black" Grid.Column="11"/>
+                        <Rectangle Fill="{Binding Jun}" Grid.Column="12"/>
+                        <Rectangle Fill="Black" Grid.Column="13"/>
+                        <Rectangle Fill="{Binding Jul}" Grid.Column="14"/>
+                        <Rectangle Fill="Black" Grid.Column="15"/>
+                        <Rectangle Fill="{Binding Aug}" Grid.Column="16"/>
+                        <Rectangle Fill="Black" Grid.Column="17"/>
+                        <Rectangle Fill="{Binding Sep}" Grid.Column="18"/>
+                        <Rectangle Fill="Black" Grid.Column="19"/>
+                        <Rectangle Fill="{Binding Okt}" Grid.Column="20"/>
+                        <Rectangle Fill="Black" Grid.Column="21"/>
+                        <Rectangle Fill="{Binding Nov}" Grid.Column="22"/>
+                        <Rectangle Fill="Black" Grid.Column="23"/>
+                        <Rectangle Fill="{Binding Dec}" Grid.Column="24"/>
+                       
+                    </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+      <!--  </Grid>
+-->
         <!-- <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="ZaaiKalender" ></Button>-->
 
 

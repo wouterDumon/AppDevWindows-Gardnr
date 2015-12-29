@@ -14,6 +14,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media;
+using Windows.UI;
 
 namespace Gardenr.ViewModels
 {
@@ -25,7 +27,86 @@ namespace Gardenr.ViewModels
             AddFavorieten = new RelayCommand(AddFavorietenM);
             AddGarden = new RelayCommand(AddGardM);
             MakeNotification = new RelayCommand(MakeNotificationM);
+        
  
+        }
+
+        public void Maaklist()
+        {
+            ZAAIKALENDER = new ObservableCollection<ZaaiKalender>();
+            DateTime beginzaai = convert(Plant.ZaaiBegin);
+            DateTime eindezaai = convert(Plant.ZaaiEinde);
+            geefkleurtjes("Zaai periode", beginzaai, eindezaai);
+
+            DateTime beginplant = convert(Plant.PlantBegin);
+            DateTime eindeplant = convert(Plant.PlantBegin);
+            geefkleurtjes("Plant periode", beginplant, eindeplant);
+
+            DateTime begiinoogst = convert(Plant.OogstBegin);
+            DateTime eindeoogst = convert(Plant.OogstEinde);
+            geefkleurtjes("Oogst periode", begiinoogst, eindeoogst);
+        }
+
+        private void geefkleurtjes(string naam, DateTime begin, DateTime einde)
+        {
+            ZaaiKalender zk = new ZaaiKalender();
+            zk.Naam = naam;
+            zk.Jan = Checkmaand(1, begin, einde);
+            zk.Feb = Checkmaand(2, begin, einde);
+            zk.Maa = Checkmaand(3, begin, einde);
+            zk.Apr = Checkmaand(4, begin, einde);
+            zk.Mei = Checkmaand(5, begin, einde);
+            zk.Jun = Checkmaand(6, begin, einde);
+            zk.Jul = Checkmaand(7, begin, einde);
+            zk.Aug = Checkmaand(8, begin, einde);
+            zk.Sep = Checkmaand(9, begin, einde);
+            zk.Okt = Checkmaand(10, begin, einde);
+            zk.Nov = Checkmaand(11, begin, einde);
+            zk.Dec = Checkmaand(12, begin, einde);
+            ZAAIKALENDER.Add(zk);
+        }
+
+        private Brush Checkmaand(int v, DateTime begin, DateTime einde)
+        {
+            Color groen = new Color();
+            groen.A = 255;
+            groen.R = 76;
+            groen.G = 175;
+            groen.B = 80;
+            Color rood = new Color();
+            rood.A = 255;
+            rood.R = 235;
+            rood.G = 87;
+            rood.B = 87;
+            Brush red = new SolidColorBrush(rood);
+            Brush green = new SolidColorBrush(groen);
+            if (v < begin.Month || v > einde.Month)
+            {
+                return green;
+            }
+            else {
+                return red;
+            }
+
+        }
+
+        private DateTime convert(string plantBegin)
+        {
+            String[] str = plantBegin.Split('/');
+            int dag = Int32.Parse(str[0]);
+            int maand = Int32.Parse(str[1]);
+            int jaar = Int32.Parse(str[2]);
+            DateTime d = new DateTime(jaar, maand, dag);
+            return d;
+
+        }
+
+        private ObservableCollection<ZaaiKalender> _zaaikalender;
+
+        public ObservableCollection<ZaaiKalender> ZAAIKALENDER
+        {
+            get { return _zaaikalender; }
+            set { _zaaikalender = value; OnPropertyChanged("ZAAIKALENDER"); }
         }
         private int zitindb = 0;
         private Tuin objectindb;

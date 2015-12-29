@@ -50,9 +50,9 @@ namespace Gardenr.Views
 
 
             dosomething();
-            bool isHardwareButtonsAPIPresent =
+            bool isHardwareButtonsAPIPresent2 =
      Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
-            if (isHardwareButtonsAPIPresent)
+            if (isHardwareButtonsAPIPresent2)
             {
                 //IS MOBILE
                 Puntjes.Margin = new Thickness(-15, 0, -15, 0);

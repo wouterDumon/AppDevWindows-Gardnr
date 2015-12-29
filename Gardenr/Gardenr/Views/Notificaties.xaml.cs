@@ -44,8 +44,19 @@ namespace Gardenr.Views
                 add.AdUnitId = App.adID;
                 add.ApplicationId = App.appID;
             }
-           
+
 #endif
+
+
+            bool isHardwareButtonsAPIPresent2 =
+     Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
+            if (isHardwareButtonsAPIPresent2)
+            {
+                //IS MOBILE
+                Puntjes.Margin = new Thickness(-15, 0, -15, 0);
+
+            }
+            else { }
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {

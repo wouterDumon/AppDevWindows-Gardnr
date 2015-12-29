@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Gardenr</RootNamespace>
     <AssemblyName>Gardenr</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <DefaultLanguage>nl</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
@@ -128,6 +128,7 @@
     <Compile Include="Models\Tuin.cs" />
     <Compile Include="Models\TuinObject.cs" />
     <Compile Include="Models\TypeC.cs" />
+    <Compile Include="Models\ZaaiKalender.cs" />
     <Compile Include="Mvvm\BindableBase.cs" />
     <Compile Include="Opvuller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

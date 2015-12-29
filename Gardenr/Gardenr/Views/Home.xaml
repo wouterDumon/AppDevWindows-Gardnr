@@ -48,7 +48,7 @@
                         <AdaptiveTrigger MinWindowWidth="800" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="HGRHeaderMargin.Height" Value="50"/>
+                        <Setter Target="HGRHeaderMargin.Height" Value="40"/>
 
                         <Setter Target="HGCLeftMargin.Width" Value="50"/>
                         <Setter Target="HGCRightMargin.Width" Value="50"/>

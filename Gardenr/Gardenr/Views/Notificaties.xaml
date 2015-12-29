@@ -109,7 +109,7 @@
             <Rectangle Grid.Row="0" Style="{StaticResource headerS}" Grid.ColumnSpan="6"></Rectangle>
 
             <TextBlock Grid.Row="0" FontSize="28" Margin="57,1,0,1" VerticalAlignment="Center" Style="{StaticResource TextS}" Grid.ColumnSpan="6" >Notificatie detail</TextBlock>
-            <CommandBar  ScrollViewer.IsScrollInertiaEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="Transparent" Margin="0 0 -5 0" IsSticky="true" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <CommandBar x:Name="Puntjes" ScrollViewer.IsScrollInertiaEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="Transparent" Margin="0 0 -5 0" IsSticky="true" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Right">
                 <CommandBar.SecondaryCommands>
                     <AppBarButton Command="{Binding BewerkNotificatie}" Label="Bewerken"/>
                     <AppBarButton Command="{Binding DeleteNotificatie}" Label="Verwijderen"/>

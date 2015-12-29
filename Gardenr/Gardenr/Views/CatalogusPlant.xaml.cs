@@ -57,6 +57,7 @@ namespace Gardenr.Views
         {
             CatalogusPlantVM a = this.DataContext as CatalogusPlantVM;
             a.Plant = e.Parameter as Plant;
+            a.Maaklist();
         }
 
 
@@ -174,9 +175,9 @@ namespace Gardenr.Views
         }
         private void doiets()
         {
-            bool isHardwareButtonsAPIPresent =
+          bool isHardwareButtonsAPIPresent =
        Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons");
-            Jan.Width = new GridLength(15);
+        /*    Jan.Width = new GridLength(15);
             Feb.Width = new GridLength(15);
             Mar.Width = new GridLength(15);
             Apr.Width = new GridLength(15);
@@ -187,7 +188,7 @@ namespace Gardenr.Views
             sep.Width = new GridLength(15);
             Okt.Width = new GridLength(15);
             Dec.Width = new GridLength(15);
-            Nov.Width = new GridLength(15);
+            Nov.Width = new GridLength(15);*/
             if (isHardwareButtonsAPIPresent)
             {
                 //IS MOBILE
@@ -199,7 +200,7 @@ namespace Gardenr.Views
                 else if (a > 800)
                 {
                     ROW2.Height = new GridLength(200);
-                    Jan.Width = new GridLength(20);
+                   /* Jan.Width = new GridLength(20);
                     Feb.Width = new GridLength(20);
                     Mar.Width = new GridLength(20);
                     Apr.Width = new GridLength(20);
@@ -210,7 +211,7 @@ namespace Gardenr.Views
                     sep.Width = new GridLength(20);
                     Okt.Width = new GridLength(20);
                     Dec.Width = new GridLength(20);
-                    Nov.Width = new GridLength(20);
+                    Nov.Width = new GridLength(20);*/
                 }
                 else {
                     ROW2.Height = new GridLength(150);
