@@ -29,9 +29,9 @@ namespace Gardenr
         internal static string FacebookId = String.Empty;
         internal static string Fotourl = String.Empty;
         internal static string MobileappID = "30d4bed7-9246-416a-bdb1-e5a07a529a9a";
-        internal static string MobileADID = "11564149";
+        internal static string MobileADID = "11568022";
         internal static string appID = "b2a7267b-00bf-4cad-a066-c8d28a990302";
-        internal static string adID = "11564148";
+        internal static string adID = "11568021";
         internal static Gebruiker Gebruiker = null;
         internal static string BACKEND_ENDPOINT = "http://notifgardenr.azurewebsites.net/";
         public static bool isAuthenticated = false;

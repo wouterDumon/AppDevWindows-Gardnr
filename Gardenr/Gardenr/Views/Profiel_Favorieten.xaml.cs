@@ -35,7 +35,10 @@ namespace Gardenr.Views
             if (isHardwareButtonsAPIPresent)
             {
                 //IS MOBILE
-
+                add.Width = 480;
+                add.Height = 80;
+                add2.Width = 480;
+                add2.Height = 80;
                 add.AdUnitId = App.MobileADID;
                 add.ApplicationId = App.MobileappID;
                       add2.AdUnitId = App.MobileADID;
@@ -43,6 +46,10 @@ namespace Gardenr.Views
             }
             else {
                 //is desktop
+                add.Width = 728;
+                add.Height = 90;
+                add2.Width = 728;
+                add2.Height = 90;
                 add.AdUnitId = App.adID;
                 add.ApplicationId = App.appID;
             add2.AdUnitId = App.adID;

@@ -14,4 +14,8 @@
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>true</UseEmulator>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DeviceId>2DDADD82-5910-40E6-894F-17EB5CD463EF</DeviceId>
+    <UseEmulator>false</UseEmulator>
+  </PropertyGroup>
 </Project>

@@ -34,18 +34,23 @@ namespace Gardenr.Views
             if (isHardwareButtonsAPIPresent)
             {
                 //IS MOBILE
-
+              
+                add2.Width = 480;
+                add2.Height = 80;
              
-                      add2.AdUnitId = App.MobileADID;
+                add2.AdUnitId = App.MobileADID;
                 add2.ApplicationId = App.MobileappID;
             }
             else {
                 //is desktop
-             
-            add2.AdUnitId = App.adID;
+            
+                add2.Width = 728;
+                add2.Height = 90;
+               
+                add2.AdUnitId = App.adID;
                 add2.ApplicationId = App.appID;
             }
-           
+
 #endif
 
         }

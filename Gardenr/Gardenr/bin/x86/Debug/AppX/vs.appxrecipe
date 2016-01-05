@@ -10,25 +10,25 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>1dda983c-36a1-44e1-84a6-76f304faa7a2</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>7BD5499DBB5DE964F6FEA455834E3B688A683181B5AB8085684207C331A8112C</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>52473WouterDumon.Gardenr_2.2.9.0_x86__ny6ja2a0xej7y</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>4B5BABB6F1362C9501441E5D9518694E02303A506ACD4D4E1346B8255E79E769</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>52473WouterDumon.Gardenr_3.2.13.0_x86__ny6ja2a0xej7y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>52473WouterDumon.Gardenr_ny6ja2a0xej7y!App</RegisteredUserModeAppID>
     <RegisteredPackageID>52473WouterDumon.Gardenr</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=2BC03B75-DF24-4773-97E8-87B1E3610123</RegisteredPackagePublisher>
-    <RegisteredVersion>2.2.9.0</RegisteredVersion>
+    <RegisteredVersion>3.2.13.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-29T03:40:44.879</Modified>
+      <Modified>2016-01-03T00:17:38.301</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Gardenr.exe">
       <PackagePath>entrypoint\Gardenr.exe</PackagePath>
-      <Modified>2015-12-29T03:40:43.502</Modified>
+      <Modified>2016-01-03T00:17:36.039</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -945,7 +945,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Gardenr.xr.xml">
       <PackagePath>Gardenr.xr.xml</PackagePath>
-      <Modified>2015-12-29T03:36:48.515</Modified>
+      <Modified>2016-01-03T00:17:35.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1005,11 +1005,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-29T03:40:44.347</Modified>
+      <Modified>2016-01-03T00:17:37.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wouter\Desktop\AppDevWindows-Gardnr\Gardenr\Gardenr\bin\x86\Debug\Core\Gardenr.exe">
       <PackagePath>Gardenr.exe</PackagePath>
-      <Modified>2015-12-29T03:40:44.877</Modified>
+      <Modified>2016-01-03T00:17:38.294</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

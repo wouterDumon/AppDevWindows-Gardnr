@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="52473WouterDumon.Gardenr" Publisher="CN=2BC03B75-DF24-4773-97E8-87B1E3610123" Version="2.2.9.0" ProcessorArchitecture="x86" />
+  <Identity Name="52473WouterDumon.Gardenr" Publisher="CN=2BC03B75-DF24-4773-97E8-87B1E3610123" Version="3.2.13.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="1dda983c-36a1-44e1-84a6-76f304faa7a2" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Gardenr</DisplayName>
@@ -21,8 +21,9 @@
     <PackageDependency Name="Microsoft.NET.CoreRuntime.1.0" MinVersion="1.0.23430.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
-    <Resource Language="EN-US" />
+    <Resource Language="NL" />
     <Resource Language="EN" />
+    <Resource Language="EN-US" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="Gardenr.exe" EntryPoint="Gardenr.App">
